@@ -1,0 +1,1042 @@
+<!-- <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+/>
+<link
+  href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css"
+  rel="stylesheet"
+/>
+
+<script
+  src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  crossorigin=""
+></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+
+<style>
+  .map {
+    width: auto;
+    height: 800px;
+  }
+
+  .map-container {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+  }
+
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+
+  .legend {
+    max-width: 200px;
+    display: none;
+    background-color: #fff;
+    border-radius: 3px;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 14px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    vertical-align: middle;
+  }
+
+  .legendMobile {
+    background-color: #fff;
+    display: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: 14px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    vertical-align: middle;
+  }
+
+  .legend h4 {
+    margin: 0 0 10px;
+  }
+
+  .legendMobile h4 {
+    margin: 0 0 10px;
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+  .topdestination {
+    color: #cc0000;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 800;
+    font-family: "Open Sans Bold", sans-serif;
+  }
+
+  .worthyourtime {
+    color: #cc0000;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Open Sans Semibold", sans-serif;
+  }
+
+  .specialinterest {
+    font-size: small;
+    font-style: normal;
+    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .naturallandscape {
+    color: #285c3a;
+    font-size: medium;
+    font-style: italic;
+    font-weight: 800;
+    font-family: "Open Sans Semibold", sans-serif;
+  }
+
+  .legend div span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    margin-right: 5px;
+    width: 15px;
+  }
+
+  .legendMobile div span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+    margin-right: 5px;
+    width: 15px;
+  }
+</style>
+
+<div class="map-container">
+  <div id="map" class="map"></div>
+  <div id="legend" class="legend"></div>
+  <div id="legendMobile" class="legendMobile"></div>
+</div>
+
+<script>
+  function getLegend() {
+    return `<h4>Legend</h4>
+        <div class="topdestination">Top Destinations</div>
+        <div class="worthyourtime">Worth a Visit</div>
+        <div class="specialinterest">Special Interest</div>
+        <div class="naturallandscape">Beautiful Landscape</div>
+        <br />
+        <div>
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            xmlns="http://www.w3.org/2000/svg"
+            id="circle-stroked"
+          >
+            <path d="M7.5 12.3C4.84898 12.3 2.7 10.151 2.7 7.5C2.7 4.84898 4.84898 2.7 7.5 2.7C10.151 2.7 12.3 4.84898 12.3 7.5C12.3 10.151 10.151 12.3 7.5 12.3ZM7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.9101 11.0899 1 7.5 1C3.9101 1 1 3.9101 1 7.5C1 11.0899 3.9101 14 7.5 14Z" />
+          </svg>
+          Top Destination
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="town-hall"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              d="M13,4H9l0-3L7.5,0L6,1v3H2L1,5v1h13V5L13,4z M7.5,1.5c0.4,0,0.7,0.3,0.7,0.8S7.9,3,7.5,3S6.7,2.7,6.7,2.2
+	C6.7,1.8,7.1,1.5,7.5,1.5z M13,7H2v4l-1,1.5V14h13v-1.5L13,11V7z M5,12.5H4V8h1V12.5z M8,12.5H7V8h1V12.5z M11,12.5h-1V8h1V12.5z"
+            />
+          </svg>
+          City or Town
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="castle"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              d="M11,4H4C3.4477,4,3,3.5523,3,3V0.5C3,0.2239,3.2239,0,3.5,0S4,0.2239,4,0.5V2h1V1c0-0.5523,0.4477-1,1-1s1,0.4477,1,1v1h1V1
+	c0-0.5523,0.4477-1,1-1s1,0.4477,1,1v1h1V0.5C11,0.2239,11.2239,0,11.5,0S12,0.2239,12,0.5V3C12,3.5523,11.5523,4,11,4z M14,14.5
+	c0,0.2761-0.2239,0.5-0.5,0.5h-12C1.2239,15,1,14.7761,1,14.5S1.2239,14,1.5,14H2c0.5523,0,1-0.4477,1-1c0,0,1-6,1-7
+	c0-0.5523,0.4477-1,1-1h5c0.5523,0,1,0.4477,1,1c0,1,1,7,1,7c0,0.5523,0.4477,1,1,1h0.5c0.2723-0.0001,0.4946,0.2178,0.5,0.49V14.5z
+	 M9,10.5C9,9.6716,8.3284,9,7.5,9S6,9.6716,6,10.5V14h3V10.5z"
+            />
+          </svg>
+          Castle or Palace
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="religious-christian"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              id="rect3338"
+              d="M6,0.9552V4H3v3h3v8h3V7h3V4H9V1
+	c0-1-0.9776-1-0.9776-1H6.9887C6.9887,0,6,0,6,0.9552z"
+            />
+          </svg>
+          Church or Monastery
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="monument"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              id="path11719-7"
+              d="M7.5,0L6,2.5v7h3v-7L7.5,0z M3,11.5
+	L3,15h9v-3.5L10.5,10h-6L3,11.5z"
+            />
+          </svg>
+          Monument
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="museum"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              id="path7509"
+              d="M7.5,0L1,3.5V4h13V3.5L7.5,0z M2,5v5l-1,1.6V13h13v-1.4L13,10V5H2z M4,6h1v5.5H4V6z M7,6h1v5.5H7V6z M10,6h1
+	v5.5h-1V6z"
+            />
+          </svg>
+          Open-Air Museum
+        </div>
+        <div>
+          <svg
+            version="1.1"
+            id="industry"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              d="M14,1v12H1V8.72c0.0016-0.1419,0.0634-0.2764,0.17-0.37l3-3.22c0.2074-0.1823,0.5234-0.1618,0.7056,0.0456
+	C4.9568,5.268,5.0011,5.387,5,5.51v3l3.16-3.37c0.2025-0.1878,0.5188-0.1759,0.7066,0.0266C8.9532,5.2599,9.0009,5.3827,9,5.51V11h3
+	V1H14z"
+            />
+          </svg>
+          Industrial Museum
+        </div>
+        <div>
+          <svg
+            id="viewpoint"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+          >
+            <path
+              id="cf3b542b-d2af-4732-9b92-9e3dc05e460f"
+              d="M6.02,8.425a2.3859,2.3859,0,0,0-.46.44l-4.55-3.5a7.9976,7.9976,0,0,1,1.51-1.51Zm6.46-4.56-3.5,4.55a2.3971,2.3971,0,0,1,.45.45l4.56-3.5A7.945,7.945,0,0,0,12.48,3.865ZM7.3042,10.0129a1.5,1.5,0,1,0,1.6829,1.2914h0A1.5,1.5,0,0,0,7.3042,10.0129ZM6.43,2.235a7.9329,7.9329,0,0,0-2.06.55l2.2,5.32a2.0438,2.0438,0,0,1,.61-.17Zm2.14.01-.75,5.69a2.49,2.49,0,0,1,.61.16l2.2-5.3A7.2129,7.2129,0,0,0,8.57,2.245Z"
+            />
+          </svg>
+          Viewpoint
+        </div>
+        <br />
+        <div>
+          <span style="background-color: #285c3a"></span>National Parks
+        </div>
+        <div>
+          <span style="background-color: #7e09a5"></span>Vineyards
+        </div>
+        <div>
+          <span style="background-color: #a87348"></span>Railroads
+        </div>
+      `;
+  }
+
+  var currentLocation = window.location.href;
+
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw";
+
+  if (window.innerWidth <= 991) {
+    var mobileMapLayer = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
+    const map = new mapboxgl.Map({
+      container: "map", // HTML container ID
+      style: mobileMapLayer, // style URL
+      center: [8.8, 52.6], // starting position as [lng, lat]
+      zoom: 4,
+    });
+
+    map.on("load", () => {
+      map.addSource("places", {
+        type: "vector",
+        url: "mapbox://jcbunch3.cljsskgg000482imi30q72l8m-6cuyf",
+      });
+
+      const overlay = document.getElementById("legendMobile");
+      overlay.style.display = "inline-block";
+      overlay.innerHTML = getLegend();
+
+      map.addLayer({
+        id: "points",
+        type: "circle",
+        source: "places",
+        "source-layer": "PlacesToVisit4",
+        paint: {
+          "circle-radius": 10,
+          "circle-opacity": 0,
+        },
+      });
+
+      map.on("click", "points", (e) => {
+        window.open(e.features[0].properties.Wikipedia);
+      });
+
+      // Change the cursor to a pointer when the mouse is over the places layer.
+      map.on("mouseenter", "points", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on("mouseleave", "points", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+      map.addControl(new mapboxgl.FullscreenControl(), "top-right");
+    });
+
+    if (currentLocation.includes("interactive-map")) {
+      map.setCenter([8.7, 50.1]);
+      map.setZoom(4.25);
+    }
+
+    if (currentLocation.includes("shopluk")) {
+      map.setCenter([22.8, 41.9]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.includes("pirin")) {
+      map.setCenter([23.4, 41.5]);
+      map.setZoom(8);
+    }
+
+    if (currentLocation.includes("dobruja/")) {
+      map.setCenter([28, 43.5]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.includes("northern-bulgaria")) {
+      map.setCenter([25, 41]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.includes("thracian-valley")) {
+      map.setCenter([25.5, 41.4]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.includes("strandzha")) {
+      map.setCenter([27.3, 42]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("rhodope-mountains")) {
+      map.setCenter([24.7, 41.2]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("western-thrace")) {
+      map.setCenter([25.4, 40.8]);
+      map.setZoom(8);
+    }
+
+    if (currentLocation.includes("holstein")) {
+      map.setCenter([10, 53.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("mecklenburg")) {
+      map.setCenter([12.3, 53.5]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("schleswig")) {
+      map.setCenter([9.2], 54.6);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("slesvig")) {
+      map.setCenter([9.2], 54.6);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("vorpommern")) {
+      map.setCenter([13.6, 53.6]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("scania")) {
+      map.setCenter([14, 55.8]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("sjaelland")) {
+      map.setCenter([11.9, 55.2]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("fyn")) {
+      map.setCenter([10.3, 55]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("jylland")) {
+      map.setCenter([9.5, 56.5]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("uckermark")) {
+      map.setCenter([13.8, 53.1]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("mittelmark")) {
+      map.setCenter([13.2, 52.3]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("altmark")) {
+      map.setCenter([11.7, 52.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("lower-saxony")) {
+      map.setCenter([10.3, 52.6]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("anhalt")) {
+      map.setCenter([12.1, 51.75]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("eastphalia")) {
+      map.setCenter([11.1, 51.6]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("thuringia")) {
+      map.setCenter([10.9, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("electoral-saxony")) {
+      map.setCenter([13.2, 51]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("lusatia")) {
+      map.setCenter([14.5, 51.3]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("hessen")) {
+      map.setCenter([9.3, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("wetterau")) {
+      map.setCenter([9, 50]);
+      map.setZoom(9);
+    }
+	if (currentLocation.includes("explore-frankfurt")) {
+      map.setCenter([9, 50]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("westerwald")) {
+      map.setCenter([8, 50.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("main-franconia")) {
+      map.setCenter([10.1, 50.05]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("upper-franconia")) {
+      map.setCenter([11.1, 50.05]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("middle-franconia")) {
+      map.setCenter([10.8, 49.1]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("odenwald")) {
+      map.setCenter([9.2, 49.67]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("vogtland")) {
+      map.setCenter([12.1, 50.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("hohenlohe")) {
+      map.setCenter([9.8, 49.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("upper-bavaria")) {
+      map.setCenter([11.7, 48.1]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lower-bavaria")) {
+      map.setCenter([12.7, 48.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("upper-palatinate")) {
+      map.setCenter([12.15, 49.4]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("allgau")) {
+      map.setCenter([10.3, 47.6]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("oberschwaben")) {
+      map.setCenter([9.9, 48.2]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("wurttemberg")) {
+      map.setCenter([9, 48.4]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lake-constance-bodensee")) {
+      map.setCenter([9.2, 47.6]);
+      map.setZoom(10);
+    }
+    if (currentLocation.includes("ducal-bar")) {
+      map.setCenter([5.5, 49]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("lorraine")) {
+      map.setCenter([6.4, 48.6]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("luxembourg")) {
+      map.setCenter([5.65, 49.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("saarland")) {
+      map.setCenter([7, 49.2]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("middle-rhine-valley")) {
+      map.setCenter([7.6, 50.25]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("mosel-valley")) {
+      map.setCenter([6.9, 50]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("electoral-palatinate")) {
+      map.setCenter([8.15, 49.4]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("alsace")) {
+      map.setCenter([7.5, 48.5]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("baden")) {
+      map.setCenter([8.2, 48.5]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("basel")) {
+      map.setCenter([6.9, 50]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("maas-valley")) {
+      map.setCenter([5.5, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lower-rhine-valley")) {
+      map.setCenter([6.5, 51.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("bergisches-land")) {
+      map.setCenter([7.3, 50.9]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("weser-engern")) {
+      map.setCenter([8.9, 52.78]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("sauerland")) {
+      map.setCenter([8, 51.1]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("westphalia")) {
+      map.setCenter([7.7, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("ruhr")) {
+      map.setCenter([7.7, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("emsland")) {
+      map.setCenter([7.7, 52.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("west-frisia")) {
+      map.setCenter([6.1, 53.1]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("east-frisia")) {
+      map.setCenter([7.5, 53.5]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("oldenburger-land")) {
+      map.setCenter([8.2, 53.3]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("oversticht")) {
+      map.setCenter([6.4, 52.6]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("holland")) {
+      map.setCenter([4.4, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("brabant")) {
+      map.setCenter([5.05, 51.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("flanders")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("artois")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("picardy")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("hainaut")) {
+      map.setCenter([4, 50.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("gelderland")) {
+      map.setCenter([5.6, 52.1]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("florence")) {
+      map.setCenter([11.3, 43.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("pisa")) {
+      map.setCenter([10.4, 43.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("lucca")) {
+      map.setCenter([10.4, 44]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("carrara")) {
+      map.setCenter([10.1, 44.1]);
+      map.setZoom(10);
+    }
+    if (currentLocation.includes("siena")) {
+      map.setCenter([11.3, 43]);
+      map.setZoom(9);
+      $(".map").css("height", "700px");
+    }
+  } else {
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+    var desktopMapLayer = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
+    const map = new mapboxgl.Map({
+      container: "map", // HTML container ID
+      style: desktopMapLayer, // style URL
+      center: [8.8, 52.4], // starting position as [lng, lat]
+      zoom: 5.1,
+    });
+
+    map.on("load", () => {
+      map.addSource("places", {
+        type: "vector",
+        url: "mapbox://jcbunch3.cljsskgg000482imi30q72l8m-6cuyf",
+      });
+
+      const overlay = document.getElementById("legend");
+      overlay.style.display = "block";
+      overlay.innerHTML = getLegend();
+
+      map.addLayer({
+        id: "points",
+        type: "circle",
+        source: "places",
+        "source-layer": "PlacesToVisit4",
+        paint: {
+          "circle-radius": 10,
+          "circle-opacity": 0,
+        },
+      });
+
+      map.on("click", "points", (e) => {
+        window.open(e.features[0].properties.Wikipedia);
+      });
+
+      // Change the cursor to a pointer when the mouse is over the places layer.
+      map.on("mouseenter", "points", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on("mouseleave", "points", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+      map.addControl(new mapboxgl.FullscreenControl(), "top-right");
+    });
+
+    if (currentLocation.includes("interactive-map")) {
+      map.setCenter([8.7, 50.1]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.includes("shopluk")) {
+      map.setCenter([22.8, 42.1]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("pirin")) {
+      map.setCenter([23.4, 41.5]);
+      map.setZoom(8);
+    }
+
+    if (currentLocation.includes("dobruja")) {
+      map.setCenter([28, 43.5]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.includes("northern-bulgaria")) {
+      map.setCenter([25, 42.9]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.includes("thracian-valley")) {
+      map.setCenter([25.5, 41.9]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("strandzha")) {
+      map.setCenter([27.3, 42]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("rhodope-mountains")) {
+      map.setCenter([24.7, 41.2]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.includes("western-thrace")) {
+      map.setCenter([25.4, 40.8]);
+      map.setZoom(8);
+    }
+
+    if (currentLocation.includes("holstein")) {
+      map.setCenter([10, 53.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("mecklenburg")) {
+      map.setCenter([12.3, 53.5]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("schleswig")) {
+      map.setCenter([9.2, 54.6]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("slesvig")) {
+      map.setCenter([9.2], 54.6);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("vorpommern")) {
+      map.setCenter([13.6, 53.6]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("scania")) {
+      map.setCenter([14, 55.8]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("sjaelland")) {
+      map.setCenter([11.9, 55.2]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("fyn")) {
+      map.setCenter([10.3, 55]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("jylland")) {
+      map.setCenter([9.5, 56.5]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("uckermark")) {
+      map.setCenter([13.8, 53.1]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("mittelmark")) {
+      map.setCenter([13.2, 52.3]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("altmark")) {
+      map.setCenter([11.7, 52.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("lower-saxony")) {
+      map.setCenter([10.3, 52.6]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("anhalt")) {
+      map.setCenter([12.1, 51.75]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("eastphalia")) {
+      map.setCenter([11.1, 51.6]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("thuringia")) {
+      map.setCenter([10.9, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("electoral-saxony")) {
+      map.setCenter([13.2, 51]);
+      map.setZoom(8);
+    }
+    if (currentLocation.includes("lusatia")) {
+      map.setCenter([14.5, 51.3]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("hessen")) {
+      map.setCenter([9.3, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("wetterau")) {
+      map.setCenter([9, 50]);
+      map.setZoom(9);
+    }
+	if (currentLocation.includes("explore-frankfurt")) {
+      map.setCenter([9, 50]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("westerwald")) {
+      map.setCenter([8, 50.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("main-franconia")) {
+      map.setCenter([10.1, 50.05]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("upper-franconia")) {
+      map.setCenter([11.1, 50.05]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("middle-franconia")) {
+      map.setCenter([10.8, 49.1]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("odenwald")) {
+      map.setCenter([9.2, 49.67]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("vogtland")) {
+      map.setCenter([12.1, 50.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("hohenlohe")) {
+      map.setCenter([9.8, 49.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("upper-bavaria")) {
+      map.setCenter([11.7, 48.1]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lower-bavaria")) {
+      map.setCenter([12.7, 48.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("upper-palatinate")) {
+      map.setCenter([12.15, 49.4]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("allgau")) {
+      map.setCenter([10.3, 47.6]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("oberschwaben")) {
+      map.setCenter([9.9, 48.2]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("wurttemberg")) {
+      map.setCenter([9, 48.4]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lake-constance-bodensee")) {
+      map.setCenter([9.2, 47.6]);
+      map.setZoom(10);
+    }
+    if (currentLocation.includes("ducal-bar")) {
+      map.setCenter([5.5, 49]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("lorraine")) {
+      map.setCenter([6.4, 48.6]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("luxembourg")) {
+      map.setCenter([5.65, 49.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("saarland")) {
+      map.setCenter([7, 49.2]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("middle-rhine-valley")) {
+      map.setCenter([7.6, 50.25]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("mosel-valley")) {
+      map.setCenter([6.9, 50]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("electoral-palatinate")) {
+      map.setCenter([8.15, 49.4]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("basel")) {
+      map.setCenter([8.2, 48.5]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("alsace")) {
+      map.setCenter([7.5, 48.5]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("baden")) {
+      map.setCenter([8.2, 48.5]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("maas-valley")) {
+      map.setCenter([5.5, 50.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("lower-rhine-valley")) {
+      map.setCenter([6.5, 51.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("bergisches-land")) {
+      map.setCenter([7.3, 50.9]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("weser-engern")) {
+      map.setCenter([8.9, 52.78]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("sauerland")) {
+      map.setCenter([8, 51.1]);
+      map.setZoom(9.5);
+    }
+    if (currentLocation.includes("westphalia")) {
+      map.setCenter([7.7, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("ruhr")) {
+      map.setCenter([7.7, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("emsland")) {
+      map.setCenter([7.7, 52.7]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("west-frisia")) {
+      map.setCenter([6.1, 53.1]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("east-frisia")) {
+      map.setCenter([7.5, 53.5]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("oldenburger-land")) {
+      map.setCenter([8.2, 53.3]);
+      map.setZoom(8.5);
+    }
+    if (currentLocation.includes("oversticht")) {
+      map.setCenter([6.4, 52.6]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("holland")) {
+      map.setCenter([4.4, 52.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("brabant")) {
+      map.setCenter([5.05, 51.2]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("flanders")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("artois")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("picardy")) {
+      map.setCenter([3.3, 50.9]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("hainaut")) {
+      map.setCenter([4, 50.3]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("gelderland")) {
+      map.setCenter([5.6, 52.1]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("republic-of-florence/")) {
+      map.setCenter([11.3, 43.7]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("republic-of-pisa/")) {
+      map.setCenter([10.4, 43.1]);
+      map.setZoom(9);
+    }
+    if (currentLocation.includes("republic-of-lucca/")) {
+      map.setCenter([10.4, 44]);
+      map.setZoom(10);
+    }
+    if (currentLocation.includes("duchy-of-massa-and-carrara/")) {
+      map.setCenter([10.1, 44]);
+      map.setZoom(11);
+    }
+    if (currentLocation.includes("republic-of-siena/")) {
+      map.setCenter([11.3, 42.8]);
+      map.setZoom(9);
+    }
+  }
+</script>
