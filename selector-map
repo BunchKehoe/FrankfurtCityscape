@@ -1,0 +1,1501 @@
+<!-- <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+
+<style>
+  .map {
+    min-height: 400px;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .map-container {
+    overflow: visible;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    width: 35%;
+    top: 20px;
+    left: 20px;
+    padding: 15px;
+    display: none;
+    max-width: 400px;
+  }
+
+	.popupgl {
+    width: 300px;
+    height: auto;
+    border: 2px solid rgb(10, 147, 150);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    transition: opacity 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 1000;
+  }
+
+  .popupgl .mapboxgl-popup-content {
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .popupgl .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .popupgl .text {
+    flex: 1;
+  }
+
+  .popupgl h2, .popupgl h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    line-height: 1.3;
+    color: #333;
+  }
+
+  .popupgl p {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #666;
+  }
+  .popUpImg {
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  
+  .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .map {
+      height: 400px;
+      position: relative;
+      width: 100%;
+    	margin: 0 auto;
+    }
+    
+    .map-overlay.visible {
+      display: block !important;
+    }
+
+    .map-overlay {
+    	position: static !important;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      background-color: #fff;
+      border-radius: 3px;
+      width: 100% !important;
+      padding: 15px;
+      top: auto;
+      left: auto;
+      z-index: 9999 !important;
+      max-width: none !important;
+      margin: 20px auto !important;
+    }
+    
+    .mapboxgl-popup-tip {
+    	display: none;
+  	}
+
+   .map-container {
+      overflow: visible;
+      position: relative;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .popupgl {
+      width: auto;
+    }
+
+    .popUpImg {
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    .popupgl h2, .popupgl h3 {
+      font-size: 1em;
+    }
+
+    .popupgl p {
+      font-size: 0.9em;
+    }
+
+    .popUpImg {
+      width: auto;
+      height: auto;
+      margin: 0px;
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  .infoImg {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    vertical-align: top;
+  }
+
+  .text {
+    vertical-align: top;
+    word-wrap: break-word;
+    display: inline-block;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  div.h2 {
+    font-size: 150%;
+  }
+
+  /* CSS */
+  .button-59 {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -0.8px;
+    line-height: 24px;
+    min-width: 100px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .button-59:focus {
+    color: rgb(53, 88, 139);
+  }
+
+  .button-59:hover {
+    background-color: rgb(167, 167, 167);
+    border-color: rgb(53, 88, 139);
+    color: rgb(53, 88, 139);
+    fill: rgb(53, 88, 139);
+  }
+
+  .button-59:active {
+    background-color: rgb(53, 88, 139);
+    border-color: rgb(53, 88, 139);
+    color: rgb(53, 88, 139);
+    fill: rgb(53, 88, 139);
+  }
+
+  @media (min-width: 768px) {
+    .button-59 {
+      min-width: 100px;
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  .left {
+    margin: 0;
+    float: left;
+    padding-left: 15px;
+    vertical-align: top;
+  }
+
+  h2.left {
+    float: left;
+    padding-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h2.regionleft {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p.regionleft {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  h3.regioncenter {
+    float: center;
+  }
+
+  .row {
+    display: flex;
+    vertical-align: middle;
+  }
+
+  html {
+    --lh: 1.4rem;
+    line-height: var(--lh);
+  }
+
+  .column {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<div class="map-container">
+  <div id="map" class="map"></div>
+  <div id="map-overlay" class="map-overlay"></div>
+</div>
+
+<script>
+  var regionStyle = {
+    fillColor: '#3388ff',
+    weight: 0,
+    color: '#3388ff',
+    fillOpacity: 0
+  };
+
+  var SelectStyle = {
+    fillColor: '#6c757d',
+    weight: 2,
+    color: '#6c757d',
+    fillOpacity: 0.7
+  };
+
+  var popupOptionsMobile = {
+    autoPan: false,
+    className: 'another-popup'
+  };
+
+  var popupOptions = {
+    maxWidth: 300,
+    autoPan: false,
+    className: 'another-popup'
+  };
+
+  // adding the province name to the visible div
+  function addTextToDiv(text) {
+    const markerPlace = document.querySelector('.marker-position');
+    markerPlace.textContent = text;
+  }
+
+  function removeFilters(map) {
+    if (map.getLayer('regions-highlighted')) {
+      map.setFilter('regions-highlighted', ['in', 'region', '']);
+    }
+    if (map.getLayer('subregions-highlighted')) {
+      map.setFilter('subregions-highlighted', ['in', 'name', '']);
+    }
+    if (map.getLayer('empires-highlighted')) {
+      map.setFilter('empires-highlighted', ['in', 'empire', '']);
+    }
+  }
+
+  function getMobileCountryPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var popUp =
+        '<a href="' +
+        feature.properties.url +
+        '"><img class="popUpImg" src="' +
+        feature.properties.icourl +
+        '"/></a><p class = "regionleft">' +
+        'Click to Learn More' +
+        '</p></div></div>';
+      return popUp;
+    }
+  }
+
+  function getMobileEmpirePopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<a href="' +
+        feature.properties.empireUrl +
+        '"><img class="popUpImg" src="' +
+        feature.properties.empireIcoUrl +
+        '"/></a>';
+      return popUp;
+    }
+  }
+
+  function getMobileRegionPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<a href="' +
+        feature.properties.regionUrl +
+        '"><img class="popUpImg" src="' +
+        feature.properties.regionIcoUrl +
+        '"/>';
+      return popUp;
+    }
+  }
+
+  function getMobileSubRegionPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<a href="' +
+        feature.properties.url +
+        '"><img class="popUpImg" src="' +
+        feature.properties.icoUrl +
+        '"/>';
+      return popUp;
+    }
+  }
+
+  function getMobileCountrySidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.icourl +
+        '"/></div><div class="container"><h2 class = "regionleft">' +
+        feature.properties.name +
+        '</h2></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.desc +
+        '</p>' +
+        '<div class="center"><a href="' +
+        feature.properties.url +
+        '" id="discButton' +
+        feature.id +
+        '" class="button-59" role="button">Discover More</button></div>';
+      return sideBar;
+    }
+  }
+
+  function getMobileEmpireSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.empireIcoUrl +
+        '"/></div><div class="container"><h2 class = "regionleft">' +
+        feature.properties.empire +
+        '</h2></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.empireDesc +
+        '</p>' +
+        '<div class="center"><a href="' +
+        feature.properties.empireUrl +
+        '" id="discButton' +
+        feature.id +
+        '" class="button-59" role="button">Discover More</button></div>';
+      return sideBar;
+    }
+  }
+
+  function getMobileRegionSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.regionIcoUrl +
+        '"/></div><div class="container"><h2 class = "regionleft">' +
+        feature.properties.region +
+        '</h2></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.regionDesc +
+        '</p>' +
+        '<div class="center"><a href="' +
+        feature.properties.regionUrl +
+        '" id="discButton' +
+        feature.id +
+        '" class="button-59" role="button">Discover More</a></div>';
+      return sideBar;
+    }
+  }
+
+  function getMobileSubRegionSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.icoUrl +
+        '"/></div><div class="container"><h2 class = "regionleft">' +
+        feature.properties.name +
+        '</h2></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.desc +
+        '</p>' +
+        '<div class="center"><a href="' +
+        feature.properties.url +
+        '" id="discButton' +
+        feature.id +
+        '" class="button-59" role="button">Discover More</a></div>';
+      return sideBar;
+    }
+  }
+
+  function getCountryPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var popUp =
+        '<div class="container">' +
+        '<img class="popUpImg" src="' +
+        feature.properties.icourl +
+        '"/><div class = "text"><h2 class = "regionleft">' +
+        feature.properties.name +
+        '</h2><p class = "regionleft">' +
+        'Click on the Map to Learn More' +
+        '</p></div></div>';
+      return popUp;
+    }
+  }
+
+  function getEmpirePopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<div class="container">' +
+        '<img class="popUpImg" src="' +
+        feature.properties.empireIcoUrl +
+        '"/><div class = "text"><h2 class = "regionleft">' +
+        feature.properties.empire +
+        '</h2><p class = "regionleft">' +
+        feature.properties.region +
+        '</p></div></div>';
+      return popUp;
+    }
+  }
+
+  function getRegionPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<div class="container">' +
+        '<img class="popUpImg" src="' +
+        feature.properties.regionIcoUrl +
+        '"/><div class = "text"><h3 class = "regionleft">' +
+        feature.properties.region +
+        '</h3><p class = "regionleft">' +
+        feature.properties.subtitle +
+        '</p></div></div>';
+      return popUp;
+    }
+  }
+
+  function getSubRegionPopupHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var popUp =
+        '<div class="container">' +
+        '<img class="popUpImg" src="' +
+        feature.properties.icoUrl +
+        '"/><div class = "text"><p class = "regionleft">' +
+        feature.properties.region +
+        '</p><h3 class = "regionleft">' +
+        feature.properties.name +
+        '</h3><p class = "regionleft">' +
+        feature.properties.subtitle +
+        '</p></div></div>';
+      return popUp;
+    }
+  }
+
+  function getCountrySidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.icourl +
+        '"/></div><div class="container"><h3 class = "regionleft">' +
+        feature.properties.name +
+        '</h3></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.desc +
+        '</p>';
+      return sideBar;
+    }
+  }
+
+  function getEmpireSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.empireIcoUrl +
+        '"/></div><div class="container"><h3 class = "regionleft">' +
+        feature.properties.empire +
+        '</h3></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.empireDesc +
+        '</p>';
+      return sideBar;
+    }
+  }
+
+  function getRegionSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.regionIcoUrl +
+        '"/></div><div class="container"><h3 class = "regionleft">' +
+        feature.properties.region +
+        '</h3></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.regionDesc +
+        '</p>';
+      return sideBar;
+    }
+  }
+
+  function getSubRegionSidebarHtml(feature) {
+    if (feature.properties && feature.properties.name) {
+      var regionColor = setRegionColor(feature);
+      var sideBar =
+        '<div class="row">' +
+        '<div class="container">' +
+        '<img class="infoImg" src="' +
+        feature.properties.icoUrl +
+        '"/></div><div class="container"><h3 class = "regionleft">' +
+        feature.properties.name +
+        '</h3></div></div>' +
+        '<p id=' +
+        feature.id +
+        '>' +
+        feature.properties.desc +
+        '</p>';
+      return sideBar;
+    }
+  }
+
+  function getCountryMask(name) {
+    return {
+      id: 'countries-highlighted',
+      type: 'fill',
+      source: 'countries',
+      'source-layer': 'country_boundaries',
+      paint: {
+        'fill-outline-color': '#6c757d',
+        'fill-color': '#6c757d',
+        'fill-opacity': 0.6
+      },
+      filter: ['!=', 'name_en', name]
+    };
+  }
+
+  function setRegionColor(feature) {
+    switch (feature.properties.region) {
+      case 'baltic':
+        borderColor = 'rgb(10, 147, 150)';
+      case 'denmark':
+        borderColor = 'rgb(155, 34, 38)';
+      case 'brandenburg':
+        borderColor = 'rgb(202, 103, 2)';
+      case 'saxony':
+        borderColor = 'rgb(0, 95, 115)';
+      case 'hessen-nassau':
+        borderColor = 'rgb(0, 18, 25)';
+      case 'franconia':
+        borderColor = 'rgb(174, 32, 18)';
+      case 'bavaria':
+        borderColor = 'rgb(0, 18, 26)';
+      case 'swabia':
+        borderColor = 'rgb(233, 216, 166)';
+      case 'lorraine':
+        borderColor = 'rgb(240, 156, 0)';
+      case 'rhine-maas':
+        borderColor = 'rgb(85, 23, 17)';
+      case 'upper-rhine':
+        borderColor = 'rgb(148, 210, 189)';
+      case 'westphalia':
+        borderColor = 'rgb(187, 62, 3)';
+      case 'the-lowlands':
+        borderColor = 'rgb(41, 82, 117)';
+      default:
+        borderColor = 'rgb(255, 255, 255)';
+    }
+    return borderColor;
+  }
+
+  function goToEmpire(feature, layer) {
+    if (feature.properties && feature.properties.name) {
+      window.open(feature.properties.empireUrl);
+    }
+  }
+
+  function goToRegion(feature, layer) {
+    if (feature.properties && feature.properties.name) {
+      window.open(feature.properties.regionUrl);
+    }
+  }
+
+  function goTo(feature, layer) {
+    if (feature.properties && feature.properties.name) {
+      window.open(feature.properties.url);
+    }
+  }
+
+  // Mobile View
+  if (window.innerWidth <= 991) {
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw';
+
+    var currentLocation = window.location.href;
+    var mobileMapLayer = 'mapbox://styles/jcbunch3/clkch6f0s001901ny45c487ne';
+
+    var countryMap =
+      currentLocation.includes('exploring-europe-by-country') &&
+      !currentLocation.includes('germany') &&
+      !currentLocation.includes('denmark') &&
+      !currentLocation.includes('north-macedonia') &&
+      !currentLocation.includes('bulgaria');
+
+    if (countryMap) {
+      var mobileMapLayer = 'mapbox://styles/jcbunch3/cljq7s8l500yu01p54jix6dqz';
+    }
+
+    const map = new mapboxgl.Map({
+      container: 'map', // HTML container ID
+      style: mobileMapLayer, // style URL
+      center: [8.8, 52.6], // starting position as [lng, lat]
+      zoom: 4
+    });
+
+    map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
+    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    
+   if (currentLocation.includes('germany')) {
+      map.setCenter([10.1, 51.1]);
+      map.setZoom(4.25);
+    }
+
+    if (currentLocation.includes('bulgaria')) {
+      map.setCenter([25.5, 42.6]);
+      map.setZoom(5.5);
+    }
+
+    if (currentLocation.includes('north-macedonia')) {
+      map.setCenter([21, 40.8]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.indexOf('baltic') > -1) {
+      map.setCenter([11.2, 54.5]);
+      map.setZoom(5);
+    }
+    if (currentLocation.indexOf('denmark') > -1) {
+      map.setCenter([11.5, 56]);
+      map.setZoom(5);
+    }
+    if (currentLocation.indexOf('brandenburg') > -1) {
+      map.setCenter([12.7, 52.7]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('saxony') > -1) {
+      map.setCenter([12.3, 52]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.indexOf('hessen-nassau') > -1) {
+      map.setCenter([8.7, 50.8]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('franconia') > -1) {
+      map.setCenter([10.6, 49.9]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('bavaria') > -1) {
+      map.setCenter([12, 48.7]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('swabia') > -1) {
+      map.setCenter([9.5, 48.3]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('lorraine') > -1) {
+      map.setCenter([6.2, 49.1]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('upper-rhine') > -1) {
+      map.setCenter([7.8, 49.1]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('rhine-maas') > -1) {
+      map.setCenter([6, 50.9]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('westphalia') > -1) {
+      map.setCenter([8.2, 52.4]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('the-lowlands') > -1) {
+      map.setCenter([5.3, 52]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.includes('exploring-europe/frisia/')) {
+      map.setCenter([7.2, 52.7]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('the-royal-lowlands') > -1) {
+      map.setCenter([2.7, 50.3]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('tuscany') > -1) {
+      map.setCenter([11.4, 43.4]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('ile-de-france') > -1) {
+      map.setCenter([2.7, 49]);
+      map.setZoom(8);
+    }
+
+    if (currentLocation.indexOf('thracia-region') > -1) {
+      map.setCenter([25.5, 41.6]);
+      map.setZoom(6);
+    }
+
+    if (currentLocation.indexOf('shopluk-region') > -1) {
+      map.setCenter([23.1, 42.3]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.indexOf('macedonia-region') > -1) {
+      map.setCenter([22, 41]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.indexOf('danube-region') > -1) {
+      map.setCenter([26.3, 44]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.indexOf('kalmar-union') > -1) {
+      map.setCenter([18, 62.4]);
+      map.setZoom(4);
+    }
+
+    if (currentLocation.indexOf('holy-roman-empire') > -1) {
+      map.setCenter([11.3, 50]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.indexOf('kingdom-of-france') > -1) {
+      map.setCenter([2.5, 48]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.indexOf('ottoman-empire') > -1) {
+      map.setCenter([29, 41]);
+      map.setZoom(5);
+    }
+
+    const overlay = document.getElementById('map-overlay');
+
+    const popup = new mapboxgl.Popup({
+      closeButton: false,
+      className: 'popupgl',
+      closeOnClick: true
+    });
+
+    if (!countryMap) {
+      map.on('load', () => {
+        const canvas = map.getCanvasContainer();
+
+        map.addSource('regions', {
+          type: 'vector',
+          url: 'mapbox://jcbunch3.ckz73840i06b520t0qegud162-2862c'
+        });
+
+        map.addSource('countries', {
+          type: 'vector',
+          url: 'mapbox://mapbox.country-boundaries-v1'
+        });
+
+        if (currentLocation.includes('exploring-europe-by-country/germany')) {
+          map.addLayer(getCountryMask('Germany'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/bulgaria')) {
+          map.addLayer(getCountryMask('Bulgaria'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/north-macedonia')) {
+          map.addLayer(getCountryMask('North Macedonia'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/denmark')) {
+          map.addLayer(getCountryMask('Denmark'));
+        }
+
+        map.addLayer({
+          id: 'regions',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': 'rgba(0,0,0,0)',
+            'fill-color': 'rgba(0,0,0,0)'
+          }
+        });
+
+        map.addLayer({
+          id: 'empires-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'empire', '']
+        });
+
+        map.addLayer({
+          id: 'regions-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'region', '']
+        });
+
+        map.addLayer({
+          id: 'subregions-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'name', '']
+        });
+
+        function openRegionURL(e, feature) {
+          window.open(feature.properties.regionUrl);
+        }
+        function openSubRegionURL(e, feature) {
+          window.open(feature.properties.url);
+        }
+        function openEmpireURL(e, feature) {
+          window.open(feature.properties.empireUrl);
+        }
+
+        function mousePos(e) {
+          const rect = canvas.getBoundingClientRect();
+          return new mapboxgl.Point(
+            e.clientX - rect.left - canvas.clientLeft,
+            e.clientY - rect.top - canvas.clientTop
+          );
+        }
+
+        let start = mapboxgl.Point;
+
+        map.on('click', 'regions', (e) => {
+          if (start != mousePos(e)) {
+            // Use the first found feature.
+            const feature = e.features[0];
+            let popupContent = '';
+            let sideBarContent = '';
+            if (map.getZoom() < 4) {
+              map.setFilter('empires-highlighted', ['in', 'empire', feature.properties.empire]);
+              popupContent = getMobileEmpirePopupHtml(feature);
+              sideBarContent = getMobileEmpireSidebarHtml(feature);
+            } else if (map.getZoom() <= 5 && map.getZoom() >= 4) {
+              map.setFilter('regions-highlighted', ['in', 'region', feature.properties.region]);
+              popupContent = getMobileRegionPopupHtml(feature);
+              sideBarContent = getMobileRegionSidebarHtml(feature);
+            } else {
+              map.setFilter('subregions-highlighted', ['in', 'name', feature.properties.name]);
+              popupContent = getMobileSubRegionPopupHtml(feature);
+              sideBarContent = getMobileSubRegionSidebarHtml(feature);
+            }
+
+            // Render found features in an overlay.
+            overlay.innerHTML = sideBarContent;
+            // overlay.style.display = 'block';
+						overlay.classList.add('visible');
+            // Display a popup with the name of the county.
+            popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+            start = mousePos(e);
+          }
+        });
+
+        map.on('zoomstart', function () {
+          removeFilters(map);
+          popup.remove();
+        });
+
+        map.on('mousedown', function () {
+          removeFilters(map);
+          popup.remove();
+        });
+      });
+    } else {
+      map.on('load', () => {
+        const canvas = map.getCanvasContainer();
+
+        map.addSource('countries', {
+          type: 'vector',
+          url: 'mapbox://jcbunch3.cljq7ftq50rga2pt6ivoiq1ha-791oe'
+        });
+
+        map.addLayer({
+          id: 'countries',
+          type: 'fill',
+          source: 'countries',
+          'source-layer': 'Countries',
+          paint: {
+            'fill-outline-color': 'rgba(0,0,0,0)',
+            'fill-color': 'rgba(0,0,0,0)'
+          }
+        });
+
+        map.addLayer({
+          id: 'countries-highlighted',
+          type: 'fill',
+          source: 'countries',
+          'source-layer': 'Countries',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'name', '']
+        });
+
+        function openCountryURL(e, feature) {
+          window.open(feature.properties.url);
+        }
+
+        function mousePos(e) {
+          const rect = canvas.getBoundingClientRect();
+          return new mapboxgl.Point(
+            e.clientX - rect.left - canvas.clientLeft,
+            e.clientY - rect.top - canvas.clientTop
+          );
+        }
+
+        let start = mapboxgl.Point;
+
+        map.on('click', 'countries', (e) => {
+          // Change the cursor style as a UI indicator.
+          if (start != mousePos(e)) {
+            // Use the first found feature.
+            const feature = e.features[0];
+            let popupContent = '';
+            let sideBarContent = '';
+            map.setFilter('countries-highlighted', ['in', 'name', feature.properties.name]);
+            popupContent = getMobileCountryPopupHtml(feature);
+            sideBarContent = getMobileCountrySidebarHtml(feature);
+
+            // Render found features in an overlay.
+            overlay.innerHTML = sideBarContent;
+            overlay.style.display = 'block';
+
+            // Display a popup with the name of the county.
+            popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+            start = mousePos(e);
+          }
+        });
+
+        map.on('zoomstart', function () {
+          removeFilters(map);
+          popup.remove();
+        });
+
+        map.on('mousedown', function () {
+          removeFilters(map);
+          popup.remove();
+        });
+      });
+    }
+
+    // Normal View
+  } else {
+    var currentLocation = window.location.href;
+
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw';
+
+    var desktopMapLayer = 'mapbox://styles/jcbunch3/clkcgdemj001701pg5l2t71bo';
+
+    var countryMap =
+      currentLocation.includes('exploring-europe-by-country') &&
+      !currentLocation.includes('germany') &&
+      !currentLocation.includes('denmark') &&
+      !currentLocation.includes('north-macedonia') &&
+      !currentLocation.includes('bulgaria');
+
+    if (countryMap) {
+      var desktopMapLayer = 'mapbox://styles/jcbunch3/cljq7s8l500yu01p54jix6dqz';
+    }
+
+    const map = new mapboxgl.Map({
+      container: 'map', // HTML container ID
+      style: desktopMapLayer, // style URL
+      center: [8.8, 52.4], // starting position as [lng, lat]
+      zoom: 5.1
+    });
+
+    map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
+    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+    
+   if (currentLocation.indexOf('germany') > -1) {
+      map.setCenter([9.3, 50.6]);
+      map.setZoom(5.2);
+    }
+
+    if (currentLocation.indexOf('bulgaria') > -1) {
+      map.setCenter([25, 42.6]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.includes('north-macedonia')) {
+      map.setCenter([21.2, 41.3]);
+      map.setZoom(7.5);
+    }
+
+    if (currentLocation.indexOf('baltic') > -1) {
+      map.setCenter([11.2, 53.3]);
+      map.setZoom(6.2);
+    }
+
+    if (currentLocation.indexOf('denmark') > -1) {
+      map.setCenter([10.5, 55.5]);
+      map.setZoom(6.2);
+    }
+
+    if (currentLocation.indexOf('brandenburg') > -1) {
+      map.setCenter([12.7, 52.3]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('saxony') > -1) {
+      map.setCenter([12.3, 52]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.indexOf('hessen-nassau') > -1) {
+      map.setCenter([8.7, 50.3]);
+      map.setZoom(7.2);
+    }
+
+    if (currentLocation.indexOf('franconia') > -1) {
+      map.setCenter([10.6, 49.6]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('bavaria') > -1) {
+      map.setCenter([12, 48.7]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('swabia') > -1) {
+      map.setCenter([9.5, 48]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('lorraine') > -1) {
+      map.setCenter([6.5, 49.1]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('upper-rhine') > -1) {
+      map.setCenter([7.8, 49.1]);
+      map.setZoom(6.6);
+    }
+
+    if (currentLocation.indexOf('rhine-maas') > -1) {
+      map.setCenter([6, 50.7]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('westphalia') > -1) {
+      map.setCenter([8.2, 52.4]);
+      map.setZoom(6.7);
+    }
+
+    if (currentLocation.indexOf('the-lowlands') > -1) {
+      map.setCenter([5.3, 51.5]);
+      map.setZoom(6.2);
+    }
+
+    if (currentLocation.includes('exploring-europe/frisia/')) {
+      map.setCenter([7.2, 52.7]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('the-royal-lowlands') > -1) {
+      map.setCenter([2.7, 50.3]);
+      map.setZoom(7.2);
+    }
+
+    if (currentLocation.indexOf('tuscany') > -1) {
+      map.setCenter([11.1, 43.1]);
+      map.setZoom(7.4);
+    }
+
+    if (currentLocation.indexOf('ile-de-france') > -1) {
+      map.setCenter([2.7, 48.7]);
+      map.setZoom(7.4);
+    }
+
+    if (currentLocation.indexOf('thracia-region') > -1) {
+      map.setCenter([25.5, 41.6]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('shopluk-region') > -1) {
+      map.setCenter([23.1, 42.3]);
+      map.setZoom(7);
+      $('.map').css('height', '700px');
+    }
+
+    if (currentLocation.indexOf('macedonia-region') > -1) {
+      map.setCenter([22, 41]);
+      map.setZoom(7);
+    }
+
+    if (currentLocation.indexOf('danube-region') > -1) {
+      map.setCenter([26.3, 44]);
+      map.setZoom(6.5);
+    }
+
+    if (currentLocation.indexOf('kalmar-union') > -1) {
+      map.setCenter([18, 62.4]);
+      map.setZoom(5);
+    }
+
+    if (currentLocation.indexOf('holy-roman-empire') > -1) {
+      map.setCenter([11.3, 50]);
+      map.setZoom(5.5);
+    }
+
+    if (currentLocation.indexOf('kingdom-of-france') > -1) {
+      map.setCenter([2.5, 48]);
+      map.setZoom(5.5);
+    }
+
+    if (currentLocation.indexOf('ottoman-empire') > -1) {
+      map.setCenter([29, 41]);
+      map.setZoom(5, 5);
+    }
+
+    const overlay = document.getElementById('map-overlay');
+
+    const popup = new mapboxgl.Popup({
+         closeButton: false,
+         className: 'popupgl',
+         anchor: 'bottom',
+         offset: [0, -15],
+         closeOnClick: false,
+         maxWidth: '300px'
+     });
+
+    if (!countryMap) {
+      map.on('load', () => {
+        map.addSource('regions', {
+          type: 'vector',
+          url: 'mapbox://jcbunch3.ckz73840i06b520t0qegud162-2862c'
+        });
+
+        map.addSource('countries', {
+          type: 'vector',
+          url: 'mapbox://mapbox.country-boundaries-v1'
+        });
+
+        if (currentLocation.includes('exploring-europe-by-country/germany')) {
+          map.addLayer(getCountryMask('Germany'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/bulgaria')) {
+          map.addLayer(getCountryMask('Bulgaria'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/north-macedonia')) {
+          map.addLayer(getCountryMask('North Macedonia'));
+        }
+        if (currentLocation.includes('exploring-europe-by-country/denmark')) {
+          map.addLayer(getCountryMask('Denmark'));
+        }
+
+        map.addLayer({
+          id: 'regions',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': 'rgba(0,0,0,0)',
+            'fill-color': 'rgba(0,0,0,0)'
+          }
+        });
+
+        map.addLayer({
+          id: 'empires-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'empire', '']
+        });
+
+        map.addLayer({
+          id: 'regions-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'region', '']
+        });
+
+        map.addLayer({
+          id: 'subregions-highlighted',
+          type: 'fill',
+          source: 'regions',
+          'source-layer': 'HistoricalRegions',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'name', '']
+        });
+
+        function openRegionURL(e, feature) {
+          window.open(feature.properties.regionUrl);
+        }
+        function openSubRegionURL(e, feature) {
+          window.open(feature.properties.url);
+        }
+        function openEmpireURL(e, feature) {
+          window.open(feature.properties.empireUrl);
+        }
+
+        map.on('mousemove', 'regions', (e) => {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = 'pointer';
+
+          // Use the first found feature.
+          const feature = e.features[0];
+          let popupContent = '';
+          let sideBarContent = '';
+
+          if (map.getZoom() <= 5) {
+            map.setFilter('empires-highlighted', ['in', 'empire', feature.properties.empire]);
+            popupContent = getEmpirePopupHtml(feature);
+            sideBarContent = getEmpireSidebarHtml(feature);
+          } else if (map.getZoom() <= 6 && map.getZoom() > 5) {
+            map.setFilter('regions-highlighted', ['in', 'region', feature.properties.region]);
+            popupContent = getRegionPopupHtml(feature);
+            sideBarContent = getRegionSidebarHtml(feature);
+          } else {
+            map.setFilter('subregions-highlighted', ['in', 'name', feature.properties.name]);
+            popupContent = getSubRegionPopupHtml(feature);
+            sideBarContent = getSubRegionSidebarHtml(feature);
+          }
+
+          // Render found features in an overlay.
+          overlay.innerHTML = sideBarContent;
+          overlay.style.display = 'block';
+
+          // Display a popup with the name of the county.
+          popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+        });
+
+        map.on('click', 'regions', (e) => {
+          const feature = e.features[0];
+          if (map.getZoom() <= 5) {
+            map.setFilter('empires-highlighted', ['in', 'empire', feature.properties.empire]);
+            map.on('click', 'empires-highlighted', openEmpireURL(e, feature));
+          } else if (map.getZoom() <= 6 && map.getZoom() > 5) {
+            map.setFilter('regions-highlighted', ['in', 'region', feature.properties.region]);
+            map.on('click', 'regions-highlighted', openRegionURL(e, feature));
+          } else {
+            map.setFilter('subregions-highlighted', ['in', 'name', feature.properties.name]);
+            map.on('click', 'subregions-highlighted', openSubRegionURL(e, feature));
+          }
+        });
+
+        map.on('mouseleave', 'regions', () => {
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+
+        map.on('zoomstart', function () {
+          map.getCanvas().style.cursor = '';
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+
+        map.on('movestart', function () {
+          map.getCanvas().style.cursor = '';
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+      });
+    } else {
+      map.on('load', () => {
+        map.addSource('countries', {
+          type: 'vector',
+          url: 'mapbox://jcbunch3.cljq7ftq50rga2pt6ivoiq1ha-791oe'
+        });
+
+        map.addLayer({
+          id: 'countries',
+          type: 'fill',
+          source: 'countries',
+          'source-layer': 'Countries',
+          paint: {
+            'fill-outline-color': 'rgba(0,0,0,0)',
+            'fill-color': 'rgba(0,0,0,0)'
+          }
+        });
+
+        map.addLayer({
+          id: 'countries-highlighted',
+          type: 'fill',
+          source: 'countries',
+          'source-layer': 'Countries',
+          paint: {
+            'fill-outline-color': '#6c757d',
+            'fill-color': '#6c757d',
+            'fill-opacity': 0.7
+          },
+          filter: ['in', 'name', '']
+        });
+
+        function openCountryURL(e, feature) {
+          window.open(feature.properties.url);
+        }
+
+        map.on('mousemove', 'countries', (e) => {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = 'pointer';
+
+          // Use the first found feature.
+          const feature = e.features[0];
+          let popupContent = '';
+          let sideBarContent = '';
+
+          map.setFilter('countries-highlighted', ['in', 'name', feature.properties.name]);
+          popupContent = getCountryPopupHtml(feature);
+          sideBarContent = getCountrySidebarHtml(feature);
+
+          // Render found features in an overlay.
+          overlay.innerHTML = sideBarContent;
+          overlay.style.display = 'block';
+
+          // Display a popup with the name of the county.
+          popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+        });
+
+        map.on('click', 'countries', (e) => {
+          const feature = e.features[0];
+          map.setFilter('countries-highlighted', ['in', 'name', feature.properties.name]);
+          map.on('click', 'countries', openCountryURL(e, feature));
+        });
+
+        map.on('mouseleave', 'countries', () => {
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+
+        map.on('zoomstart', function () {
+          map.getCanvas().style.cursor = '';
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+
+        map.on('movestart', function () {
+          map.getCanvas().style.cursor = '';
+          removeFilters(map);
+          popup.remove();
+          overlay.style.display = 'none';
+        });
+      });
+    }
+  }
+</script>
