@@ -1,0 +1,17 @@
+# Backup files
+*_backup.*
+*_original_backup.*
+
+# Cleanup reports
+cleanup_summary.txt
+unicode_errors_review.txt
+potential_duplicates.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+/tmp/
