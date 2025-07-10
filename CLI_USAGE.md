@@ -42,9 +42,12 @@ python3 geojson_cleanup_cli.py /path/to/input/places.geojson --output-dir /path/
 
 4. **Wikipedia Enhancement**:
    - Adds Wikipedia field to entries that don't already have one
-   - Searches for articles in English and German (with language context detection)
-   - Prefers longer articles, with preference: English > German > others
-   - Handles entries without Wikipedia articles
+   - **Enhanced Language Detection**: Automatically detects appropriate languages based on location context (supports English, German, French, Spanish, Italian, Dutch, Danish, Czech)
+   - **Intelligent Translation**: Translates common place-related terms (church, castle, museum, etc.) to target languages before searching
+   - **Fuzzy Search**: Uses Wikipedia's search API to find related articles even when exact title matches aren't found
+   - **Multi-language Search**: Searches across multiple relevant languages for each location
+   - **Quality Preference**: Prefers longer articles with language priority: English > German > others
+   - Handles entries without Wikipedia articles gracefully
 
 ## Output Files
 
@@ -72,5 +75,6 @@ The tool generates several files:
 
 - The tool respects existing Wikipedia fields and won't overwrite them
 - Wikipedia API calls include small delays to be respectful to the service
-- Language detection tries to determine appropriate Wikipedia language based on location context
+- Language detection tries to determine appropriate Wikipedia languages based on location context (supports 8 languages)
+- Fuzzy search and translation help find Wikipedia articles even when exact matches aren't available
 - All reports are saved to the repository for version control and review

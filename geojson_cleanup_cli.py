@@ -132,25 +132,257 @@ def detect_language_context(title):
     """
     title_lower = title.lower()
     
-    # German-speaking regions/countries indicators
-    german_indicators = [
-        'deutschland', 'germany', 'österreich', 'austria', 'schweiz', 'switzerland',
-        'deutschland', 'wien', 'vienna', 'berlin', 'münchen', 'munich', 'zürich',
-        'salzburg', 'innsbruck', 'graz', 'linz', 'bern', 'geneva', 'basel'
-    ]
+    # Language context indicators
+    language_indicators = {
+        'de': [
+            'deutschland', 'germany', 'österreich', 'austria', 'schweiz', 'switzerland',
+            'wien', 'vienna', 'berlin', 'münchen', 'munich', 'zürich', 'salzburg', 
+            'innsbruck', 'graz', 'linz', 'bern', 'geneva', 'basel', 'hamburg', 'köln',
+            'cologne', 'frankfurt', 'stuttgart', 'düsseldorf', 'dortmund', 'essen',
+            'bremen', 'dresden', 'hannover', 'nürnberg', 'nuremberg'
+        ],
+        'fr': [
+            'france', 'paris', 'lyon', 'marseille', 'toulouse', 'nice', 'nantes',
+            'strasbourg', 'montpellier', 'bordeaux', 'lille', 'rennes', 'reims',
+            'le havre', 'saint-étienne', 'toulon', 'grenoble', 'dijon', 'angers',
+            'nîmes', 'villeurbanne', 'saint-denis', 'argenteuil', 'rouen', 'mulhouse',
+            'caen', 'nancy', 'metz', 'versailles', 'tours', 'amiens', 'limoges',
+            'aix-en-provence', 'brest', 'nanterre', 'créteil', 'avignon', 'poitiers'
+        ],
+        'nl': [
+            'netherlands', 'holland', 'amsterdam', 'rotterdam', 'the hague', 'utrecht',
+            'eindhoven', 'tilburg', 'groningen', 'almere', 'breda', 'nijmegen',
+            'enschede', 'haarlem', 'arnhem', 'zaanstad', 'amersfoort', 'apeldoorn',
+            's-hertogenbosch', 'hoofddorp', 'maastricht', 'leiden', 'dordrecht',
+            'zoetermeer', 'zwolle', 'deventer', 'delft', 'alkmaar', 'leeuwarden'
+        ],
+        'da': [
+            'denmark', 'copenhagen', 'aarhus', 'odense', 'aalborg', 'esbjerg',
+            'randers', 'kolding', 'horsens', 'vejle', 'roskilde', 'herning',
+            'silkeborg', 'næstved', 'fredericia', 'viborg', 'køge', 'holstebro',
+            'taastrup', 'slagelse', 'hillerød', 'sønderborg', 'svendborg', 'hjørring'
+        ],
+        'cs': [
+            'czech republic', 'czechia', 'prague', 'brno', 'ostrava', 'plzen',
+            'liberec', 'olomouc', 'české budějovice', 'hradec králové', 'ústí nad labem',
+            'pardubice', 'zlín', 'kladno', 'most', 'opava', 'frýdek-místek',
+            'karviná', 'jihlava', 'teplice', 'děčín', 'karlovy vary', 'jablonec nad nisou'
+        ],
+        'it': [
+            'italy', 'rome', 'milan', 'naples', 'turin', 'palermo', 'genoa',
+            'bologna', 'florence', 'bari', 'catania', 'venice', 'verona',
+            'messina', 'padua', 'trieste', 'brescia', 'prato', 'taranto',
+            'modena', 'reggio calabria', 'reggio emilia', 'perugia', 'livorno',
+            'ravenna', 'cagliari', 'foggia', 'rimini', 'salerno', 'ferrara'
+        ],
+        'es': [
+            'spain', 'madrid', 'barcelona', 'valencia', 'seville', 'zaragoza',
+            'málaga', 'murcia', 'palma', 'las palmas', 'bilbao', 'alicante',
+            'córdoba', 'valladolid', 'vigo', 'gijón', 'hospitalet', 'vitoria',
+            'coruña', 'granada', 'elche', 'oviedo', 'badalona', 'cartagena',
+            'terrassa', 'jerez', 'sabadell', 'santa cruz', 'pamplona', 'almería'
+        ]
+    }
     
-    # Check for German context
-    for indicator in german_indicators:
-        if indicator in title_lower:
-            return ['de', 'en']
+    # Check for specific language contexts
+    detected_languages = set()
+    
+    for lang, indicators in language_indicators.items():
+        for indicator in indicators:
+            if indicator in title_lower:
+                detected_languages.add(lang)
+                break
+    
+    # Build language preference list
+    if detected_languages:
+        # If we detected specific languages, prioritize them
+        languages = list(detected_languages)
+        # Always include English and German as fallbacks
+        if 'en' not in languages:
+            languages.append('en')
+        if 'de' not in languages:
+            languages.append('de')
+        return languages
     
     # Default to English first, then German
     return ['en', 'de']
 
 
+def translate_basic_terms(title, target_language):
+    """
+    Perform basic translation of common travel/place-related terms.
+    This is a simple approach for common words that appear in place names.
+    """
+    # Common travel/place terms translations
+    translations = {
+        'en': {
+            'church': 'church', 'cathedral': 'cathedral', 'museum': 'museum', 
+            'castle': 'castle', 'palace': 'palace', 'bridge': 'bridge',
+            'tower': 'tower', 'square': 'square', 'park': 'park', 
+            'garden': 'garden', 'station': 'station', 'airport': 'airport',
+            'university': 'university', 'library': 'library', 'theater': 'theater',
+            'opera': 'opera', 'restaurant': 'restaurant', 'hotel': 'hotel',
+            'market': 'market', 'street': 'street', 'avenue': 'avenue',
+            'old town': 'old town', 'city center': 'city center'
+        },
+        'de': {
+            'church': 'kirche', 'cathedral': 'dom', 'museum': 'museum',
+            'castle': 'schloss', 'palace': 'palast', 'bridge': 'brücke',
+            'tower': 'turm', 'square': 'platz', 'park': 'park',
+            'garden': 'garten', 'station': 'bahnhof', 'airport': 'flughafen',
+            'university': 'universität', 'library': 'bibliothek', 'theater': 'theater',
+            'opera': 'oper', 'restaurant': 'restaurant', 'hotel': 'hotel',
+            'market': 'markt', 'street': 'straße', 'avenue': 'allee',
+            'old town': 'altstadt', 'city center': 'stadtzentrum'
+        },
+        'fr': {
+            'church': 'église', 'cathedral': 'cathédrale', 'museum': 'musée',
+            'castle': 'château', 'palace': 'palais', 'bridge': 'pont',
+            'tower': 'tour', 'square': 'place', 'park': 'parc',
+            'garden': 'jardin', 'station': 'gare', 'airport': 'aéroport',
+            'university': 'université', 'library': 'bibliothèque', 'theater': 'théâtre',
+            'opera': 'opéra', 'restaurant': 'restaurant', 'hotel': 'hôtel',
+            'market': 'marché', 'street': 'rue', 'avenue': 'avenue',
+            'old town': 'vieille ville', 'city center': 'centre-ville'
+        },
+        'es': {
+            'church': 'iglesia', 'cathedral': 'catedral', 'museum': 'museo',
+            'castle': 'castillo', 'palace': 'palacio', 'bridge': 'puente',
+            'tower': 'torre', 'square': 'plaza', 'park': 'parque',
+            'garden': 'jardín', 'station': 'estación', 'airport': 'aeropuerto',
+            'university': 'universidad', 'library': 'biblioteca', 'theater': 'teatro',
+            'opera': 'ópera', 'restaurant': 'restaurante', 'hotel': 'hotel',
+            'market': 'mercado', 'street': 'calle', 'avenue': 'avenida',
+            'old town': 'casco antiguo', 'city center': 'centro de la ciudad'
+        },
+        'it': {
+            'church': 'chiesa', 'cathedral': 'cattedrale', 'museum': 'museo',
+            'castle': 'castello', 'palace': 'palazzo', 'bridge': 'ponte',
+            'tower': 'torre', 'square': 'piazza', 'park': 'parco',
+            'garden': 'giardino', 'station': 'stazione', 'airport': 'aeroporto',
+            'university': 'università', 'library': 'biblioteca', 'theater': 'teatro',
+            'opera': 'opera', 'restaurant': 'ristorante', 'hotel': 'hotel',
+            'market': 'mercato', 'street': 'via', 'avenue': 'viale',
+            'old town': 'centro storico', 'city center': 'centro città'
+        },
+        'nl': {
+            'church': 'kerk', 'cathedral': 'kathedraal', 'museum': 'museum',
+            'castle': 'kasteel', 'palace': 'paleis', 'bridge': 'brug',
+            'tower': 'toren', 'square': 'plein', 'park': 'park',
+            'garden': 'tuin', 'station': 'station', 'airport': 'luchthaven',
+            'university': 'universiteit', 'library': 'bibliotheek', 'theater': 'theater',
+            'opera': 'opera', 'restaurant': 'restaurant', 'hotel': 'hotel',
+            'market': 'markt', 'street': 'straat', 'avenue': 'laan',
+            'old town': 'oude stad', 'city center': 'stadscentrum'
+        },
+        'da': {
+            'church': 'kirke', 'cathedral': 'domkirke', 'museum': 'museum',
+            'castle': 'slot', 'palace': 'palads', 'bridge': 'bro',
+            'tower': 'tårn', 'square': 'plads', 'park': 'park',
+            'garden': 'have', 'station': 'station', 'airport': 'lufthavn',
+            'university': 'universitet', 'library': 'bibliotek', 'theater': 'teater',
+            'opera': 'opera', 'restaurant': 'restaurant', 'hotel': 'hotel',
+            'market': 'marked', 'street': 'gade', 'avenue': 'boulevard',
+            'old town': 'gamle by', 'city center': 'bymidte'
+        },
+        'cs': {
+            'church': 'kostel', 'cathedral': 'katedrála', 'museum': 'muzeum',
+            'castle': 'hrad', 'palace': 'palác', 'bridge': 'most',
+            'tower': 'věž', 'square': 'náměstí', 'park': 'park',
+            'garden': 'zahrada', 'station': 'nádraží', 'airport': 'letiště',
+            'university': 'univerzita', 'library': 'knihovna', 'theater': 'divadlo',
+            'opera': 'opera', 'restaurant': 'restaurace', 'hotel': 'hotel',
+            'market': 'trh', 'street': 'ulice', 'avenue': 'třída',
+            'old town': 'staré město', 'city center': 'centrum města'
+        }
+    }
+    
+    # Get translations for target language
+    target_translations = translations.get(target_language, {})
+    if not target_translations:
+        return title
+    
+    # Convert title to lowercase for matching
+    title_lower = title.lower()
+    translated_title = title
+    
+    # Replace English terms with target language terms
+    for english_term, translated_term in target_translations.items():
+        if english_term in title_lower:
+            # Case-preserving replacement
+            translated_title = re.sub(
+                re.escape(english_term), 
+                translated_term, 
+                translated_title, 
+                flags=re.IGNORECASE
+            )
+    
+    return translated_title
+
+
+def fuzzy_search_wikipedia(title, language, max_results=5):
+    """
+    Perform fuzzy search on Wikipedia using opensearch API.
+    Returns list of (page_title, page_url, summary_length) tuples.
+    """
+    try:
+        # Use opensearch API for fuzzy search
+        search_url = f"https://{language}.wikipedia.org/w/api.php"
+        params = {
+            'action': 'opensearch',
+            'search': title,
+            'limit': max_results,
+            'namespace': 0,
+            'format': 'json'
+        }
+        
+        response = requests.get(search_url, params=params, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            # opensearch returns [query, [titles], [descriptions], [urls]]
+            if len(data) >= 4:
+                titles = data[1]
+                descriptions = data[2]
+                urls = data[3]
+                
+                results = []
+                for i, (page_title, url) in enumerate(zip(titles, urls)):
+                    # Try to get page summary to estimate length
+                    try:
+                        summary_url = f"https://{language}.wikipedia.org/api/rest_v1/page/summary/{quote(page_title)}"
+                        summary_response = requests.get(summary_url, timeout=5)
+                        
+                        summary_length = 0
+                        if summary_response.status_code == 200:
+                            summary_data = summary_response.json()
+                            if summary_data.get('type') == 'standard':
+                                # Estimate length from extract
+                                extract = summary_data.get('extract', '')
+                                summary_length = len(extract) * 10  # Rough estimate
+                        
+                        results.append((page_title, url, summary_length))
+                        
+                        # Small delay to be respectful
+                        time.sleep(0.1)
+                        
+                    except Exception as e:
+                        # If we can't get summary, still include the result
+                        results.append((page_title, url, 0))
+                
+                return results
+        
+        return []
+        
+    except Exception as e:
+        print(f"  Warning: Error in fuzzy search for '{title}' in {language}: {e}")
+        return []
+
+
 def search_wikipedia_article(title, languages=['en', 'de']):
     """
-    Search for a Wikipedia article about the given title.
+    Search for a Wikipedia article about the given title using translation and fuzzy search.
     Returns (url, language, length) of the best article found, or (None, None, 0) if not found.
     """
     best_article = None
@@ -160,34 +392,49 @@ def search_wikipedia_article(title, languages=['en', 'de']):
     
     for lang in languages:
         try:
-            # Search for the article
+            # First try direct lookup with original title
             search_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{quote(title)}"
-            
             response = requests.get(search_url, timeout=10)
             
+            direct_results = []
             if response.status_code == 200:
                 data = response.json()
-                
-                # Check if it's a valid article (not disambiguation, etc.)
                 if data.get('type') == 'standard':
-                    # Get full article to check length
-                    content_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/html/{quote(title)}"
-                    content_response = requests.get(content_url, timeout=10)
-                    
-                    if content_response.status_code == 200:
-                        content_length = len(content_response.text)
-                        article_url = data.get('content_urls', {}).get('desktop', {}).get('page', '')
-                        
-                        # Prefer longer articles, but with language preference
-                        if (content_length > best_length or 
-                            (content_length == best_length and lang == 'en' and best_lang != 'en') or
-                            (content_length == best_length and lang == 'de' and best_lang not in ['en'])):
-                            best_length = content_length
-                            best_lang = lang
-                            best_url = article_url
+                    article_url = data.get('content_urls', {}).get('desktop', {}).get('page', '')
+                    extract_length = len(data.get('extract', '')) * 10  # Rough estimate
+                    direct_results.append((title, article_url, extract_length))
             
-            # Add small delay to be respectful to Wikipedia API
-            time.sleep(0.1)
+            # Translate title for this language
+            translated_title = translate_basic_terms(title, lang)
+            
+            # Perform fuzzy search with original title
+            fuzzy_results = fuzzy_search_wikipedia(title, lang, max_results=3)
+            
+            # If we translated the title, also search with translated terms
+            if translated_title != title:
+                translated_fuzzy_results = fuzzy_search_wikipedia(translated_title, lang, max_results=3)
+                fuzzy_results.extend(translated_fuzzy_results)
+            
+            # Combine all results
+            all_results = direct_results + fuzzy_results
+            
+            # Find best result for this language
+            for page_title, url, length in all_results:
+                if length > 0:  # Only consider articles with content
+                    # Language preference: en > de > others, but longer articles can override
+                    is_better = (
+                        length > best_length or
+                        (length >= best_length * 0.8 and lang == 'en' and best_lang != 'en') or
+                        (length >= best_length * 0.9 and lang == 'de' and best_lang not in ['en'])
+                    )
+                    
+                    if is_better:
+                        best_length = length
+                        best_lang = lang
+                        best_url = url
+            
+            # Add delay between languages
+            time.sleep(0.2)
             
         except (requests.RequestException, KeyError, ValueError) as e:
             print(f"  Warning: Error searching Wikipedia ({lang}) for '{title}': {e}")
@@ -278,8 +525,9 @@ def clean_geojson(input_file, output_dir=None):
                 
                 # Detect preferred languages for this title
                 preferred_languages = detect_language_context(properties['title'])
+                print(f"    Languages to search: {', '.join(preferred_languages)}")
                 
-                # Search for Wikipedia article
+                # Search for Wikipedia article with enhanced fuzzy search and translation
                 wiki_url, wiki_lang, wiki_length = search_wikipedia_article(
                     properties['title'], preferred_languages
                 )
@@ -287,10 +535,10 @@ def clean_geojson(input_file, output_dir=None):
                 if wiki_url:
                     properties['Wikipedia'] = wiki_url
                     wikipedia_added += 1
-                    print(f"    Found: {wiki_url} ({wiki_lang}, {wiki_length} chars)")
+                    print(f"    Found: {wiki_url} ({wiki_lang}, ~{wiki_length} chars)")
                 else:
                     wikipedia_not_found.append(properties['title'])
-                    print(f"    Not found")
+                    print(f"    Not found in any language")
             else:
                 wikipedia_skipped += 1
         
