@@ -21,14 +21,27 @@ import requests
 
 
 def similarity(a, b):
-    """Calculate similarity between two strings."""
+    """
+    Calculate similarity between two strings using SequenceMatcher.
+    Args:
+        a (str): First string.
+        b (str): Second string.
+    Returns:
+        float: Similarity ratio between 0 and 1.
+    """
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
 def fix_unicode_errors(text):
     """
-    Fix common unicode encoding errors for German characters.
-    Returns (fixed_text, was_fixed, error_description)
+    Fix common unicode encoding errors for German and other European characters.
+    Args:
+        text (str): Input string to fix.
+    Returns:
+        tuple: (fixed_text, was_fixed, error_description)
+            fixed_text (str): The corrected string.
+            was_fixed (bool): True if any replacements were made.
+            error_description (str|None): Description of suspicious characters, if any.
     """
     original = text
     
@@ -92,7 +105,10 @@ def fix_unicode_errors(text):
 def find_potential_duplicates(titles):
     """
     Find potential duplicates based on title similarity.
-    Returns list of groups of similar titles.
+    Args:
+        titles (list of str): List of titles to check.
+    Returns:
+        list: Groups (lists) of similar titles.
     """
     duplicates = []
     processed = set()
@@ -128,7 +144,10 @@ def find_potential_duplicates(titles):
 def detect_language_context(title):
     """
     Try to detect if a title suggests a specific language context.
-    Returns suggested languages in order of preference.
+    Args:
+        title (str): The place title to analyze.
+    Returns:
+        list: Suggested language codes in order of preference.
     """
     title_lower = title.lower()
     
@@ -212,6 +231,11 @@ def translate_basic_terms(title, target_language):
     """
     Perform basic translation of common travel/place-related terms.
     This is a simple approach for common words that appear in place names.
+    Args:
+        title (str): The place title to translate.
+        target_language (str): Target language code (e.g., 'de', 'fr').
+    Returns:
+        str: Title with common terms translated if possible.
     """
     # Common travel/place terms translations
     translations = {
@@ -322,8 +346,13 @@ def translate_basic_terms(title, target_language):
 
 def fuzzy_search_wikipedia(title, language, max_results=5):
     """
-    Perform fuzzy search on Wikipedia using opensearch API.
-    Returns list of (page_title, page_url, summary_length) tuples.
+    Perform fuzzy search on Wikipedia using the opensearch API.
+    Args:
+        title (str): The search query.
+        language (str): Wikipedia language code.
+        max_results (int): Maximum number of results to return.
+    Returns:
+        list: Tuples of (page_title, page_url, summary_length).
     """
     try:
         # Use opensearch API for fuzzy search
@@ -383,7 +412,11 @@ def fuzzy_search_wikipedia(title, language, max_results=5):
 def search_wikipedia_article(title, languages=['en', 'de']):
     """
     Search for a Wikipedia article about the given title using translation and fuzzy search.
-    Returns (url, language, length) of the best article found, or (None, None, 0) if not found.
+    Args:
+        title (str): The place title to search for.
+        languages (list): List of language codes to try, in order.
+    Returns:
+        tuple: (url, language, length) of the best article found, or (None, None, 0) if not found.
     """
     best_article = None
     best_length = 0
@@ -444,7 +477,14 @@ def search_wikipedia_article(title, languages=['en', 'de']):
 
 
 def clean_geojson(input_file, output_dir=None):
-    """Main function to clean the GeoJSON file."""
+    """
+    Main function to clean the GeoJSON file.
+    Args:
+        input_file (str): Path to the input GeoJSON file.
+        output_dir (str|None): Output directory for cleaned file and reports.
+    Returns:
+        bool: True if cleaning succeeded, False otherwise.
+    """
     
     # Set up output directory
     if output_dir is None:
@@ -642,7 +682,10 @@ def clean_geojson(input_file, output_dir=None):
 
 
 def main():
-    """Main CLI entry point."""
+    """
+    Main CLI entry point for geojson_cleanup_cli.py.
+    Parses arguments and runs the cleaning process.
+    """
     parser = argparse.ArgumentParser(
         description='Clean up GeoJSON files with unicode fixes, duplicate detection, field removal, and Wikipedia enhancement.',
         formatter_class=argparse.RawDescriptionHelpFormatter,
