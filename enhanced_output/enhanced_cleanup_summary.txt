@@ -1,0 +1,21 @@
+PlacesToVisit4_cleaned.geojson Enhanced Cleanup Summary
+==================================================
+
+Total features processed: 2696
+
+Changes made:
+- Duplicate groups found: 87
+- Altitude coordinates removed: 1897
+- Missing Wikipedia entries: 1020
+- Color standardizations: 9
+
+Color changes:
+- #000000 -> #333333: 654 occurrences
+- #005943 -> #005741: 110 occurrences
+- #1e523d -> #005741: 13 occurrences
+- #1d6b53 -> #005741: 10 occurrences
+- #aa3524 -> #a10001: 1 occurrences
+- #8f1b11 -> #a10001: 4 occurrences
+- #7c0000 -> #333333: 1 occurrences
+- #9b0101 -> #a10001: 1 occurrences
+- #a43b2d -> #a10001: 1 occurrences

@@ -1,0 +1,770 @@
+Duplicate Entries with Coordinates
+==================================================
+
+Found 87 groups of duplicates:
+
+Group 1:
+  - Title: Lahn Valley
+    Coordinates: [7.83582, 50.338354]
+    Feature Index: 2
+  - Title: Lahn Valley
+    Coordinates: [8.208384, 50.447867]
+    Feature Index: 263
+
+Group 2:
+  - Title: Freudenberg
+    Coordinates: [7.878078, 50.904109, 0]
+    Feature Index: 5
+  - Title: Freudenberg
+    Coordinates: [9.32288, 49.741457, 0]
+    Feature Index: 878
+
+Group 3:
+  - Title: Bilstein
+    Coordinates: [8.019359, 51.094714, 305.490324]
+    Feature Index: 7
+  - Title: Beilstein
+    Coordinates: [7.239303, 50.111001]
+    Feature Index: 168
+  - Title: Beilstein
+    Coordinates: [9.312953, 49.041716, 0]
+    Feature Index: 1341
+
+Group 4:
+  - Title: Lorraine Highlands
+    Coordinates: [5.766753, 48.974043]
+    Feature Index: 16
+  - Title: Lorraine Highlands
+    Coordinates: [5.957407, 48.806581]
+    Feature Index: 1775
+
+Group 5:
+  - Title: Liebenstein Castle
+    Coordinates: [12.230843, 50.128174, 0]
+    Feature Index: 53
+  - Title: Liebenstein Castle
+    Coordinates: [10.85251, 50.769649, 0]
+    Feature Index: 1546
+  - Title: Liebenstein Castle
+    Coordinates: [10.361879, 50.817727, 0]
+    Feature Index: 1976
+  - Title: Liebenstein Castle
+    Coordinates: [7.637386, 50.212174]
+    Feature Index: 2314
+  - Title:  Liebenstein Castle
+    Coordinates: [12.335241, 49.833068, 0]
+    Feature Index: 2385
+
+Group 6:
+  - Title: Lepenitsa Cave
+    Coordinates: [24.010641, 41.954459, 0]
+    Feature Index: 54
+  - Title: Lepenitsa Cave
+    Coordinates: [22.734577, 43.579486]
+    Feature Index: 908
+
+Group 7:
+  - Title: Schönau  Monastery
+    Coordinates: [9.720976, 50.076563, 0]
+    Feature Index: 67
+  - Title: Schönau Monastery
+    Coordinates: [7.8667, 50.25]
+    Feature Index: 1600
+
+Group 8:
+  - Title: Elbe Landscape
+    Coordinates: [11.977941, 52.467366]
+    Feature Index: 73
+  - Title: Elbe Landscape
+    Coordinates: [12.042647, 52.746794]
+    Feature Index: 617
+  - Title: Elbe Landscape
+    Coordinates: [12.020855, 51.8748]
+    Feature Index: 989
+  - Title: Elbe Landscape
+    Coordinates: [11.904833, 51.969307, 61.38941]
+    Feature Index: 2488
+
+Group 9:
+  - Title: Altendorf Castle
+    Coordinates: [7.123885, 51.417138, 0]
+    Feature Index: 102
+  - Title: Altdorf Castle
+    Coordinates: [11.327087, 49.371277, 0]
+    Feature Index: 2621
+
+Group 10:
+  - Title: St. George
+    Coordinates: [21.085131, 40.986017, 0]
+    Feature Index: 153
+  - Title: St. George
+    Coordinates: [22.676948, 42.270822]
+    Feature Index: 568
+
+Group 11:
+  - Title: Teutoburg Forest
+    Coordinates: [7.693718, 52.2976]
+    Feature Index: 158
+  - Title: Teutoburg Forest
+    Coordinates: [8.531792, 51.986834, 244.73852]
+    Feature Index: 2441
+
+Group 12:
+  - Title: Neuenburg Palace
+    Coordinates: [7.948985, 53.389365, 0]
+    Feature Index: 181
+  - Title: Evenburg Palace
+    Coordinates: [7.494644, 53.23119]
+    Feature Index: 462
+
+Group 13:
+  - Title: Henneberg Castle
+    Coordinates: [10.361101, 50.491159, 0]
+    Feature Index: 188
+  - Title: Henneburg Castle
+    Coordinates: [9.411423, 49.784105, 0]
+    Feature Index: 1502
+
+Group 14:
+  - Title: Saale Valley
+    Coordinates: [10.139873, 50.451777]
+    Feature Index: 199
+  - Title: Saale Valley
+    Coordinates: [11.723902, 50.526369]
+    Feature Index: 1580
+
+Group 15:
+  - Title: Franconian Switzerland
+    Coordinates: [11.611883, 49.658604, 449.852232]
+    Feature Index: 200
+  - Title: Franconian Switzerland
+    Coordinates: [11.277625, 49.867512]
+    Feature Index: 1884
+
+Group 16:
+  - Title: Lorsch Monastery
+    Coordinates: [8.567507, 49.653925, 0]
+    Feature Index: 209
+  - Title: Lorch Monastery
+    Coordinates: [9.702547, 48.798742, 0]
+    Feature Index: 678
+
+Group 17:
+  - Title: Forests of the Garfagnana
+    Coordinates: [10.46823, 44.180453]
+    Feature Index: 221
+  - Title: Forests of the Garfagnana
+    Coordinates: [10.519861, 44.10498]
+    Feature Index: 1258
+
+Group 18:
+  - Title: East Frisian Islands
+    Coordinates: [7.263777, 53.728857]
+    Feature Index: 224
+  - Title: West Frisian Islands
+    Coordinates: [5.420341, 53.420039, -22.160343]
+    Feature Index: 303
+
+Group 19:
+  - Title: Frankenstein Castle
+    Coordinates: [7.974786, 49.438817]
+    Feature Index: 234
+  - Title: Frankenstein Castle
+    Coordinates: [8.668085, 49.793716, 0]
+    Feature Index: 546
+  - Title: Falkenstein Castle
+    Coordinates: [12.484456, 49.099354, 0]
+    Feature Index: 806
+  - Title: Falkenstein Castle
+    Coordinates: [14.405368, 50.854848, 0]
+    Feature Index: 831
+
+Group 20:
+  - Title: Ronneburg Castle
+    Coordinates: [9.063219, 50.232562]
+    Feature Index: 243
+  - Title: Ronneburg Castle
+    Coordinates: [12.181159, 50.862773, 291.096195]
+    Feature Index: 1747
+
+Group 21:
+  - Title: Hohenstein Castle
+    Coordinates: [11.422778, 49.586667, 0]
+    Feature Index: 249
+  - Title: Hohenstein Castle
+    Coordinates: [8.057003, 50.194207, 0]
+    Feature Index: 464
+
+Group 22:
+  - Title: Vosges Mountains
+    Coordinates: [7.006156, 48.505094]
+    Feature Index: 255
+  - Title: Vosges Mountains
+    Coordinates: [7.057075, 47.956831]
+    Feature Index: 410
+  - Title: Vosges Mountains
+    Coordinates: [6.850786, 48.034546]
+    Feature Index: 1042
+  - Title: Vosges Mountains
+    Coordinates: [7.197767, 48.510836, 659.601758]
+    Feature Index: 1717
+
+Group 23:
+  - Title: Aladzha Monastery
+    Coordinates: [28.020356, 43.28736]
+    Feature Index: 273
+  - Title: Aladzha Monastery
+    Coordinates: [28.015814, 43.277258]
+    Feature Index: 2446
+
+Group 24:
+  - Title: Jagst Valley
+    Coordinates: [9.340721, 49.304649]
+    Feature Index: 274
+  - Title: Jagst Valley
+    Coordinates: [10.051105, 49.172129]
+    Feature Index: 804
+  - Title: Jagst Valley
+    Coordinates: [9.834997, 49.290104, 291.595772]
+    Feature Index: 2382
+
+Group 25:
+  - Title: Coastal Towers of Siena
+    Coordinates: [11.089595, 42.614071]
+    Feature Index: 285
+  - Title: Coastal Towers of Siena
+    Coordinates: [10.812922, 42.776508]
+    Feature Index: 1877
+
+Group 26:
+  - Title: Tauber Valley
+    Coordinates: [9.631642, 49.666695]
+    Feature Index: 286
+  - Title: Tauber Valley
+    Coordinates: [10.141667, 49.42064]
+    Feature Index: 1357
+
+Group 27:
+  - Title: Bamberg
+    Coordinates: [10.902763, 49.898813, 0]
+    Feature Index: 293
+  - Title: Amberg
+    Coordinates: [11.856755, 49.44502, 0]
+    Feature Index: 1993
+
+Group 28:
+  - Title: Elster Valley
+    Coordinates: [12.155933, 50.526369]
+    Feature Index: 321
+  - Title: Elster Valley
+    Coordinates: [12.134718, 50.707487]
+    Feature Index: 562
+
+Group 29:
+  - Title: Bocage Landscape
+    Coordinates: [1.838503, 50.763256]
+    Feature Index: 330
+  - Title: Bocage Landscape
+    Coordinates: [2.130888, 50.553615]
+    Feature Index: 1211
+
+Group 30:
+  - Title: Velburg
+    Coordinates: [11.670922, 49.230551, 0]
+    Feature Index: 347
+  - Title: Elburg
+    Coordinates: [5.834519, 52.449263, 0]
+    Feature Index: 1004
+
+Group 31:
+  - Title: Nestos Valley
+    Coordinates: [24.726165, 41.114607, 0]
+    Feature Index: 354
+  - Title: Nestos Valley
+    Coordinates: [24.538506, 41.2608, 0]
+    Feature Index: 573
+  - Title: Nestos Valley
+    Coordinates: [24.167715, 41.344595, 0]
+    Feature Index: 2522
+
+Group 32:
+  - Title: Trajan's Wall
+    Coordinates: [28.010785, 44.275466]
+    Feature Index: 365
+  - Title: Trajan's Wall
+    Coordinates: [28.508474, 44.176018]
+    Feature Index: 1572
+
+Group 33:
+  - Title: Semois Valley
+    Coordinates: [4.921996, 49.866893]
+    Feature Index: 380
+  - Title: Semois Valley
+    Coordinates: [5.164817, 49.805569]
+    Feature Index: 1974
+
+Group 34:
+  - Title: Lozen Monastery
+    Coordinates: [23.527581, 42.575003]
+    Feature Index: 424
+  - Title: Glozhene Monastery
+    Coordinates: [24.169376, 42.97559]
+    Feature Index: 1396
+  - Title: Rozhen Monastery
+    Coordinates: [23.426513, 41.53051, 0]
+    Feature Index: 2384
+
+Group 35:
+  - Title: St. Nicola Monastery
+    Coordinates: [21.615361, 41.504777, 0]
+    Feature Index: 428
+  - Title: St. Nikola Monastery
+    Coordinates: [21.29392, 41.954536, 0]
+    Feature Index: 2556
+
+Group 36:
+  - Title: Pisan Highlands
+    Coordinates: [10.478732, 43.573341]
+    Feature Index: 441
+  - Title: Pisan Highlands
+    Coordinates: [10.830544, 43.609347]
+    Feature Index: 2124
+
+Group 37:
+  - Title: Schwarzenberg Palace
+    Coordinates: [10.473492, 49.671806, 0]
+    Feature Index: 442
+  - Title: Schwanberg Palace
+    Coordinates: [10.271823, 49.726231, 0]
+    Feature Index: 724
+
+Group 38:
+  - Title: Rhön Mountains
+    Coordinates: [10.045155, 50.469232]
+    Feature Index: 449
+  - Title: Rhön Mountains
+    Coordinates: [9.778449, 50.208328]
+    Feature Index: 2311
+
+Group 39:
+  - Title: Neufchâteau
+    Coordinates: [5.694857, 48.355301]
+    Feature Index: 454
+  - Title: Neufchâteau
+    Coordinates: [5.434177, 49.841753, 0]
+    Feature Index: 1079
+
+Group 40:
+  - Title: Castles of the Vosges
+    Coordinates: [7.633528, 48.998182]
+    Feature Index: 490
+  - Title: Castles of the Vosges
+    Coordinates: [7.299097, 48.697025]
+    Feature Index: 936
+  - Title: Castles of the Vosges
+    Coordinates: [7.351902, 48.507882]
+    Feature Index: 1575
+  - Title: Castles of the Vosges
+    Coordinates: [7.255093, 48.036336]
+    Feature Index: 2580
+
+Group 41:
+  - Title: Central Balkan National Park
+    Coordinates: [24.458348, 42.760365]
+    Feature Index: 500
+  - Title: Central Balkan National Park
+    Coordinates: [24.761217, 42.711214, 0]
+    Feature Index: 2281
+
+Group 42:
+  - Title: Saalburg
+    Coordinates: [11.729968, 50.50088, 422.499956]
+    Feature Index: 512
+  - Title: Saalburg
+    Coordinates: [8.566571, 50.271747, 0]
+    Feature Index: 1825
+
+Group 43:
+  - Title: Palatine Forest
+    Coordinates: [7.81443, 49.137085]
+    Feature Index: 538
+  - Title: Palatine Forest
+    Coordinates: [7.957505, 49.318727]
+    Feature Index: 1620
+  - Title: Palatine Forest
+    Coordinates: [7.656777, 49.236063]
+    Feature Index: 2146
+
+Group 44:
+  - Title: Reichenbach Monastery
+    Coordinates: [8.400749, 48.527525, 0]
+    Feature Index: 565
+  - Title: Reichenbach Monastery
+    Coordinates: [12.348316, 49.182606, 0]
+    Feature Index: 1174
+
+Group 45:
+  - Title: Rodenstein Castle
+    Coordinates: [8.813252, 49.731331, 0]
+    Feature Index: 576
+  - Title: Hardenstein Castle
+    Coordinates: [7.299466, 51.419967, 0]
+    Feature Index: 2342
+
+Group 46:
+  - Title: Rheinsteig
+    Coordinates: [7.667035, 50.254879]
+    Feature Index: 608
+  - Title: Rheinsteig
+    Coordinates: [7.763549, 50.1399]
+    Feature Index: 1090
+
+Group 47:
+  - Title: Transfiguration Monastery
+    Coordinates: [25.606732, 43.117026, 0]
+    Feature Index: 633
+  - Title: Holy Transfiguration Monastery
+    Coordinates: [21.341694, 41.521577, 0]
+    Feature Index: 2215
+
+Group 48:
+  - Title: Wilhelmsthal Palace
+    Coordinates: [9.415742, 51.393071, 256.348909]
+    Feature Index: 665
+  - Title: Wilhelmstal Palace
+    Coordinates: [10.304006, 50.918507]
+    Feature Index: 1260
+
+Group 49:
+  - Title: Ehrenburg Castle 
+    Coordinates: [7.45517, 50.210764, 0]
+    Feature Index: 684
+  - Title: Hardenburg Castle
+    Coordinates: [8.121829, 49.462192, 0]
+    Feature Index: 911
+
+Group 50:
+  - Title: Altmühl Valley
+    Coordinates: [11.566266, 49.015248]
+    Feature Index: 739
+  - Title: Altmühl Valley
+    Coordinates: [10.842177, 49.112464]
+    Feature Index: 2563
+
+Group 51:
+  - Title: Wattenmeer National Park
+    Coordinates: [6.870759, 53.53318]
+    Feature Index: 740
+  - Title: Wattenmeer National Park
+    Coordinates: [8.62483, 54.477789]
+    Feature Index: 785
+  - Title: Wattenmeer National Park
+    Coordinates: [8.686993, 54.064406]
+    Feature Index: 858
+  - Title: Wattenmeer National Park
+    Coordinates: [8.274886, 53.639976, 5.925101]
+    Feature Index: 1046
+  - Title: Wattenmeer National Park
+    Coordinates: [7.834766, 53.781468]
+    Feature Index: 1084
+  - Title: Wattenmeer National Park
+    Coordinates: [8.526285, 55.222652]
+    Feature Index: 2136
+
+Group 52:
+  - Title: Srebarna Nature Reserve
+    Coordinates: [27.074817, 44.112421, 0]
+    Feature Index: 746
+  - Title: Srebarna Nature Reserve
+    Coordinates: [27.058476, 44.093588]
+    Feature Index: 2217
+
+Group 53:
+  - Title: Greifenstein Castle
+    Coordinates: [11.172532, 49.874193, 0]
+    Feature Index: 763
+  - Title: Greifenstein Castle
+    Coordinates: [11.262862, 50.690618, 0]
+    Feature Index: 1399
+  - Title: Greifenstein Castle
+    Coordinates: [8.292585, 50.622912]
+    Feature Index: 1554
+
+Group 54:
+  - Title: Falkenberg Castle
+    Coordinates: [12.225144, 49.859159, 0]
+    Feature Index: 814
+  - Title: Frankenberg Castle
+    Coordinates: [10.26653, 49.608686, 0]
+    Feature Index: 2527
+
+Group 55:
+  - Title: Ammerland Cultural  Landscape
+    Coordinates: [7.943701, 53.208102]
+    Feature Index: 829
+  - Title: Artland Cultural Landscape
+    Coordinates: [7.905684, 52.659624]
+    Feature Index: 2459
+
+Group 56:
+  - Title: Hasiatejn Castle Ruins
+    Coordinates: [13.257102, 50.445211, 0]
+    Feature Index: 830
+  - Title: Himlatejn Castle Ruins
+    Coordinates: [13.045218, 50.348035, 0]
+    Feature Index: 1781
+
+Group 57:
+  - Title: Altenstein Palace
+    Coordinates: [10.352292, 50.834963, 0]
+    Feature Index: 837
+  - Title: Bartenstein Palace
+    Coordinates: [9.878398, 49.355807, 0]
+    Feature Index: 2644
+
+Group 58:
+  - Title: Rhodopes Narrow Gauge Railway Line
+    Coordinates: [24.099344, 42.159713]
+    Feature Index: 854
+  - Title: Rhodopes Narrow Gauge Railway Line
+    Coordinates: [24.132253, 42.204538, 0]
+    Feature Index: 915
+  - Title: Rhodopes Narrow Gauge Railway Line
+    Coordinates: [23.559285, 41.820194, 0]
+    Feature Index: 1638
+
+Group 59:
+  - Title: Oldenburg
+    Coordinates: [8.214552, 53.14345, 0]
+    Feature Index: 873
+  - Title: Oldenburg
+    Coordinates: [10.889922, 54.290469, 0]
+    Feature Index: 2461
+
+Group 60:
+  - Title: Villages of the Saulx
+    Coordinates: [5.268574, 48.583823]
+    Feature Index: 923
+  - Title: Villages of The Saulx
+    Coordinates: [5.04925, 48.749366]
+    Feature Index: 2264
+
+Group 61:
+  - Title: Mountain Villages of Southern Bulgaria
+    Coordinates: [23.882893, 41.672031]
+    Feature Index: 966
+  - Title: Mountain Villages of Southern Bulgaria
+    Coordinates: [23.717838, 41.451494]
+    Feature Index: 1124
+
+Group 62:
+  - Title: Middle Oure Valley
+    Coordinates: [6.126306, 50.094378]
+    Feature Index: 974
+  - Title: Middle Oure Valley
+    Coordinates: [6.139387, 50.068412]
+    Feature Index: 1164
+
+Group 63:
+  - Title: Slangenburg Castle
+    Coordinates: [6.360792, 51.960423, 0]
+    Feature Index: 1028
+  - Title: Langenburg Castle
+    Coordinates: [9.843873, 49.253023, 0]
+    Feature Index: 2532
+
+Group 64:
+  - Title: Hoher Vogelsberg Park
+    Coordinates: [9.224765, 50.53856]
+    Feature Index: 1047
+  - Title: Hoher Vogelsberg Park
+    Coordinates: [8.889482, 50.407165]
+    Feature Index: 2594
+
+Group 65:
+  - Title: Lichtenegg Castle
+    Coordinates: [12.877683, 49.237408, 0]
+    Feature Index: 1122
+  - Title: Lichtenberg Castle
+    Coordinates: [9.326582, 49.013797, 370.33871]
+    Feature Index: 1387
+  - Title: Lichtenberg Castle
+    Coordinates: [8.809755, 49.772485, 0]
+    Feature Index: 1921
+
+Group 66:
+  - Title: Hunsrück-Hochwald National Park
+    Coordinates: [6.997835, 49.681671]
+    Feature Index: 1254
+  - Title: Hunsrück-Hochwald National Park
+    Coordinates: [6.997832, 49.616924]
+    Feature Index: 1952
+
+Group 67:
+  - Title: Prignitz-Stepenitz Cultural Landscape
+    Coordinates: [12.03473, 53.275173, 0]
+    Feature Index: 1287
+  - Title: Prignitz-Stepenitz Cultural Landscape
+    Coordinates: [11.613667, 53.187019]
+    Feature Index: 2154
+
+Group 68:
+  - Title: Burgk Castle
+    Coordinates: [11.715978, 50.554131, 388.553705]
+    Feature Index: 1359
+  - Title: Burg Castle
+    Coordinates: [7.152597, 51.137703, 194.667906]
+    Feature Index: 2681
+
+Group 69:
+  - Title: Hollenfels Castle
+    Coordinates: [6.051675, 49.71206, 0]
+    Feature Index: 1363
+  - Title: Hohlenfels Castle
+    Coordinates: [8.030925, 50.290503, 0]
+    Feature Index: 1602
+
+Group 70:
+  - Title: Lauffen
+    Coordinates: [9.152845, 49.076134, 173.274951]
+    Feature Index: 1414
+  - Title: Laufen
+    Coordinates: [7.500487, 47.420421, 0]
+    Feature Index: 1451
+
+Group 71:
+  - Title: Ruins of Durostorum Silistria
+    Coordinates: [27.256455, 44.118572, 0]
+    Feature Index: 1427
+  - Title: Ruis of Durostorum - Silistria
+    Coordinates: [27.259009, 44.121129, 0]
+    Feature Index: 2003
+
+Group 72:
+  - Title: Klosterburg Castle
+    Coordinates: [11.68427, 49.36921, 0]
+    Feature Index: 1500
+  - Title: Osterburg Castle
+    Coordinates: [7.068912, 53.43541]
+    Feature Index: 2581
+
+Group 73:
+  - Title: Gemünden
+    Coordinates: [8.962329, 50.968108]
+    Feature Index: 1545
+  - Title: Gemünden
+    Coordinates: [9.689333, 50.056473, 0]
+    Feature Index: 1733
+
+Group 74:
+  - Title: Eifel National Park
+    Coordinates: [6.453069, 50.568171]
+    Feature Index: 1574
+  - Title: Eifel National Park
+    Coordinates: [6.171798, 50.606644]
+    Feature Index: 1999
+
+Group 75:
+  - Title: Varel
+    Coordinates: [8.136824, 53.396195, 0]
+    Feature Index: 1619
+  - Title: Varel
+    Coordinates: [8.136824, 53.396195, 0]
+    Feature Index: 2410
+
+Group 76:
+  - Title: Oldenburger Moor Landscapes
+    Coordinates: [8.320028, 52.987047, 14.474313]
+    Feature Index: 1654
+  - Title: Oldenburger Moor Landscapes
+    Coordinates: [7.961302, 53.332074]
+    Feature Index: 2643
+
+Group 77:
+  - Title: Schaumburg Castle
+    Coordinates: [10.989467, 50.393784, 0]
+    Feature Index: 1663
+  - Title: Camburg Castle
+    Coordinates: [11.711525, 51.052101, 0]
+    Feature Index: 2285
+
+Group 78:
+  - Title: Thuringian Forest
+    Coordinates: [10.512494, 50.787974]
+    Feature Index: 1816
+  - Title: Thuringian Forest
+    Coordinates: [10.764647, 50.565291]
+    Feature Index: 1964
+
+Group 79:
+  - Title: Thracian Meteora
+    Coordinates: [25.123145, 41.218164, 0]
+    Feature Index: 1842
+  - Title: Thracian Meteora
+    Coordinates: [25.123145, 41.218164, 0]
+    Feature Index: 1862
+
+Group 80:
+  - Title: Neustadt
+    Coordinates: [10.813991, 54.10769, 12.587499]
+    Feature Index: 1860
+  - Title: Neustadt
+    Coordinates: [8.148688, 49.350186, 0]
+    Feature Index: 2043
+
+Group 81:
+  - Title: Tannenberg Castle
+    Coordinates: [8.657011, 49.75665]
+    Feature Index: 1898
+  - Title: Tannenberg Castle
+    Coordinates: [9.9496, 51.00841, 354.648154]
+    Feature Index: 2121
+
+Group 82:
+  - Title: Hasselt
+    Coordinates: [6.090477, 52.591497, 0]
+    Feature Index: 1899
+  - Title: Hasselt
+    Coordinates: [5.335166, 50.930646, 41.322698]
+    Feature Index: 2078
+
+Group 83:
+  - Title: Rheinburgenweg
+    Coordinates: [7.616018, 50.182006]
+    Feature Index: 1922
+  - Title: Rheinburgenweg
+    Coordinates: [7.79507, 50.019003]
+    Feature Index: 2047
+
+Group 84:
+  - Title: Altenberg Monastery
+    Coordinates: [8.445293, 50.558563, 0]
+    Feature Index: 1937
+  - Title: Altenberg Monastery
+    Coordinates: [7.132243, 51.054579, 95.286966]
+    Feature Index: 2101
+
+Group 85:
+  - Title: Ebrach Monastery
+    Coordinates: [10.508765, 49.846115]
+    Feature Index: 1956
+  - Title: Eberbach Monastery
+    Coordinates: [8.048484, 50.040864]
+    Feature Index: 2087
+
+Group 86:
+  - Title: St. Atanasij Monastery 
+    Coordinates: [21.027858, 42.066773, 0]
+    Feature Index: 2176
+  - Title: St. Athanasius Monastery
+    Coordinates: [20.840339, 41.11598, 0]
+    Feature Index: 2435
+
+Group 87:
+  - Title: Simmern
+    Coordinates: [7.516667, 49.983332, 0]
+    Feature Index: 2452
+  - Title: Simmern
+    Coordinates: [5.963467, 49.700821, 0]
+    Feature Index: 2528
+

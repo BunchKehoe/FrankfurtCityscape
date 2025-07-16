@@ -1,0 +1,3065 @@
+Missing Wikipedia Entries with Coordinates
+==================================================
+
+Found 1020 entries without Wikipedia links:
+
+Title: Underground Factory Rabatejn Janska
+Coordinates: [14.36899, 50.801957]
+
+Title: The Devil's River Canyon
+Coordinates: [25.644486, 41.613995]
+
+Title: Sandanski Archaeological Museum
+Coordinates: [23.28073, 41.566319]
+
+Title: Lorraine Highlands
+Coordinates: [5.766753, 48.974043]
+
+Title: Dambeck Monastery
+Coordinates: [11.165004, 52.789008]
+
+Title: Dilsberg /  Hinterburg
+Coordinates: [8.836441, 49.399021]
+
+Title: National Archeological Reserve 'Yailata'
+Coordinates: [28.546758, 43.436964]
+
+Title: St. Bogoroditsa Ruins
+Coordinates: [21.89179, 41.415333]
+
+Title: Montreuil
+Coordinates: [1.768269, 50.46816]
+
+Title: Forte bastione
+Coordinates: [10.045714, 44.116329]
+
+Title: Castello Sonnino
+Coordinates: [10.355691, 43.46198]
+
+Title: Cappenberg Palace
+Coordinates: [7.538173, 51.652635]
+
+Title: d'Orval Monastery
+Coordinates: [5.347251, 49.634507]
+
+Title: Bad Brückenau Spa
+Coordinates: [9.736075, 50.294394]
+
+Title: Emen Canyon
+Coordinates: [25.36871, 43.141411]
+
+Title: The Singing Rocks
+Coordinates: [25.061493, 42.728725]
+
+Title: Poggio alla Nebbia
+Coordinates: [10.612574, 43.458256]
+
+Title: Saint-Hubert Monastery
+Coordinates: [5.372727, 50.026006]
+
+Title: Lower Mulde Landscape
+Coordinates: [12.287918, 51.778933]
+
+Title: Thy-le-Château Palace
+Coordinates: [4.43265, 50.28077]
+
+Title: Boveglio
+Coordinates: [10.643633, 43.967695]
+
+Title: Albegna Valley
+Coordinates: [11.42979, 42.615278]
+
+Title: Battlefields of WWI
+Coordinates: [2.766623, 50.206127]
+
+Title: Beauvoorde Palace
+Coordinates: [2.655854, 51.016336]
+
+Title: Poggio L'Omo Park
+Coordinates: [10.671453, 44.066752]
+
+Title: Thüringer Kloßmuseum Heichelheim
+Coordinates: [11.310644, 51.04172]
+
+Title: Grube Marie Siliver Mine
+Coordinates: [8.680488, 49.515611]
+
+Title: Benabbio
+Coordinates: [10.604172, 43.999183]
+
+Title: Schönau  Monastery
+Coordinates: [9.720976, 50.076563]
+
+Title: Malovishte
+Coordinates: [21.129872, 41.033369]
+
+Title: Schellbruch Park
+Coordinates: [10.770828, 53.910252]
+
+Title: Cloth Factory Müller (LVR)
+Coordinates: [6.824385, 50.649018]
+
+Title: Elbe Landscape
+Coordinates: [11.977941, 52.467366]
+
+Title: Fortresses of the Waterline
+Coordinates: [5.016485, 52.275707]
+
+Title: Golem Grad Island Archaeological Park
+Coordinates: [21.002105, 40.875392]
+
+Title: Runding Castle
+Coordinates: [12.762279, 49.217746]
+
+Title: Castello di Sassoforte
+Coordinates: [11.100511, 43.033203]
+
+Title: Danube Landscape
+Coordinates: [12.409279, 48.981332]
+
+Title: Eisenberg Gold Mine
+Coordinates: [8.822684, 51.241737]
+
+Title: Cape Akra Fortress
+Coordinates: [27.627876, 42.457045]
+
+Title: Altendorf Castle
+Coordinates: [7.123885, 51.417138]
+
+Title: Kaliakra Fortress
+Coordinates: [28.465905, 43.365054]
+
+Title: Kovarska Lime Kilns
+Coordinates: [13.024687, 50.425323]
+
+Title: Norderburg Palace
+Coordinates: [7.429941, 53.648947]
+
+Title: Outer Fortifications of Metz
+Coordinates: [6.089472, 49.138043]
+
+Title: Industrial Peat Small Gauge Railway Museum
+Coordinates: [6.950339, 52.678022]
+
+Title: Neufchef Iron Mines
+Coordinates: [6.028273, 49.325303]
+
+Title: Grafenbusch Settlement
+Coordinates: [6.864889, 51.49206]
+
+Title: Vici Jama Gorge
+Coordinates: [12.778959, 50.398776]
+
+Title: Mantaritsa Nature Reserve
+Coordinates: [24.129259, 41.932185]
+
+Title: Börstel Monastery
+Coordinates: [7.69361, 52.650098]
+
+Title: St. George
+Coordinates: [21.085131, 40.986017]
+
+Title: Аrcheological & Nature Reserve "Durankulak Lake"
+Coordinates: [28.536769, 43.669951]
+
+Title: Drei Gleichen Castles
+Coordinates: [10.873317, 50.879853]
+
+Title: Maginot Line Fortresses 
+Coordinates: [5.76362, 49.440753]
+
+Title: Mausegatt Settlement
+Coordinates: [6.927823, 51.430098]
+
+Title: Fantaisie Palace
+Coordinates: [11.509305, 49.933817]
+
+Title: Otterberg Monastery
+Coordinates: [7.77111, 49.504444]
+
+Title: Open-Air Museum Grassemann
+Coordinates: [11.78921, 50.01903]
+
+Title: Jasen National Forest Reserve
+Coordinates: [21.243465, 41.610479]
+
+Title: Henneberg Castle
+Coordinates: [10.361101, 50.491159]
+
+Title: Verwolde Palace
+Coordinates: [6.391937, 52.20051]
+
+Title: Berkovitsa Ethnographic Museum
+Coordinates: [23.127271, 43.239024]
+
+Title: Plötzkau Palace
+Coordinates: [11.688978, 51.744133]
+
+Title: Saale Valley
+Coordinates: [10.139873, 50.451777]
+
+Title: Grube Velsen Coal Mine
+Coordinates: [6.833326, 49.216794]
+
+Title: Abbazia di San Bruzio
+Coordinates: [11.301584, 42.587879]
+
+Title: Odenwald Museum Village
+Coordinates: [9.311759, 49.637576]
+
+Title: Düppenweiler Copper Mine
+Coordinates: [6.713781, 49.394812]
+
+Title: Lauda/Gerlachsheim
+Coordinates: [9.704767, 49.567991]
+
+Title: Tumulo Etrusco di Mucellena
+Coordinates: [11.187522, 43.334167]
+
+Title: Falsini Castle
+Coordinates: [11.079576, 43.245672]
+
+Title: Argamum Roman Fortress
+Coordinates: [28.910454, 44.776982]
+
+Title: Forests of the Garfagnana
+Coordinates: [10.46823, 44.180453]
+
+Title: Brauneck Castle
+Coordinates: [10.05332, 49.507956]
+
+Title: Castle Doubravka
+Coordinates: [13.860303, 50.638614]
+
+Title: Tyulenovo cliffs
+Coordinates: [28.583375, 43.488651]
+
+Title: Arda Valley
+Coordinates: [25.871411, 41.654197]
+
+Title: Eisenheim Settlement
+Coordinates: [6.864308, 51.500858]
+
+Title: Gnadenberg Monastery
+Coordinates: [11.410778, 49.368623]
+
+Title: Plön Palace
+Coordinates: [10.413735, 54.156659]
+
+Title: Wülfing-Fabric Mill
+Coordinates: [7.288154, 51.218606]
+
+Title: Schwarzburg Palace
+Coordinates: [11.193833, 50.638762]
+
+Title: Fortress Shtip
+Coordinates: [22.186427, 41.738589]
+
+Title: Peratejn Siege Walls
+Coordinates: [13.10783, 50.39169]
+
+Title: Aiola
+Coordinates: [10.139341, 44.163321]
+
+Title: Lippe Valley
+Coordinates: [8.16221, 51.656013]
+
+Title: Westwall Bunker Museum
+Coordinates: [6.706579, 49.351003]
+
+Title: Hartenberg Castle Ruin
+Coordinates: [12.575498, 50.221578]
+
+Title: Equi Terme Caves
+Coordinates: [10.152878, 44.166672]
+
+Title: Alaunwerk Mine
+Coordinates: [12.292136, 50.600892]
+
+Title: Nestos Delta
+Coordinates: [24.804057, 40.847058]
+
+Title: Hohensyburg Castle
+Coordinates: [7.471771, 51.418477]
+
+Title: Open Air Museum Lütjenburg
+Coordinates: [10.56653, 54.309468]
+
+Title: Coastal Towers of Siena
+Coordinates: [11.089595, 42.614071]
+
+Title: Rothenfels Castle
+Coordinates: [9.591961, 49.891254]
+
+Title: Shumen Rock Monasteries
+Coordinates: [26.842985, 43.234441]
+
+Title: Tholey Monastery
+Coordinates: [7.032108, 49.482178]
+
+Title: Breuberg Castle
+Coordinates: [9.03984, 49.820274]
+
+Title: Museumshof Lensahn
+Coordinates: [10.889813, 54.218358]
+
+Title: Tangerhütte Palace
+Coordinates: [11.823504, 52.426653]
+
+Title: Konjuh Archaeological Site & Fortress
+Coordinates: [21.960532, 42.103458]
+
+Title: Eggolstein
+Coordinates: [11.258276, 49.701396]
+
+Title: Skalen Monastery
+Coordinates: [27.286638, 43.257279]
+
+Title: Historical Laboratory Lauresham
+Coordinates: [8.575486, 49.68083]
+
+Title: Tsarska Bistritsa Palace
+Coordinates: [23.595487, 42.258994]
+
+Title: Siciliaschacht Museum
+Coordinates: [8.068223, 51.122894]
+
+Title: Belvedere Palace
+Coordinates: [11.349076, 50.948281]
+
+Title: Teufelsburg Castle
+Coordinates: [6.694177, 49.302126]
+
+Title: Mildenfurt Monastery
+Coordinates: [12.080875, 50.790066]
+
+Title: Windmills of  Oldenburg
+Coordinates: [7.974991, 53.135423]
+
+Title: Stemmersberg Settlement
+Coordinates: [6.867413, 51.513053]
+
+Title: Elster Valley
+Coordinates: [12.155933, 50.526369]
+
+Title: Petkanovi Waterfalls
+Coordinates: [25.007687, 42.704187]
+
+Title: Bocage Landscape
+Coordinates: [1.838503, 50.763256]
+
+Title: Sveshtari Thracian Tomb
+Coordinates: [26.799687, 43.750953]
+
+Title: Anholt Palace
+Coordinates: [6.42754, 51.844637]
+
+Title: Riserva Naturale di Caselli
+Coordinates: [10.697366, 43.228886]
+
+Title: Mainberg Palace
+Coordinates: [10.289589, 50.056926]
+
+Title: Mushroom Rocks
+Coordinates: [25.432307, 41.785883]
+
+Title: Il Castellaccio
+Coordinates: [10.135549, 44.158931]
+
+Title: Nestos Valley
+Coordinates: [24.726165, 41.114607]
+
+Title: Saarland Mine Museum
+Coordinates: [7.247377, 49.357967]
+
+Title: Zeche Ewald Mine
+Coordinates: [7.14663, 51.571551]
+
+Title: Pisan (Calci) Charterhouse
+Coordinates: [10.523489, 43.721904]
+
+Title: Peratejn Castle Ruins
+Coordinates: [13.107782, 50.386243]
+
+Title: Kochberg Palace
+Coordinates: [11.357665, 50.776487]
+
+Title: Somme Battlefield
+Coordinates: [2.833429, 49.992596]
+
+Title: Panagia
+Coordinates: [24.727079, 40.730084]
+
+Title: Mala Bogorodica Monastery
+Coordinates: [21.674987, 41.823396]
+
+Title: Maas Dunes National Park
+Coordinates: [6.178703, 51.500732]
+
+Title: Semois Valley
+Coordinates: [4.921996, 49.866893]
+
+Title: Ethno Museum Podmochani
+Coordinates: [21.050479, 41.02397]
+
+Title: Oberrosphe Museum Village
+Coordinates: [8.776975, 50.912167]
+
+Title: Kireka
+Coordinates: [27.143383, 43.291569]
+
+Title: Kozjak Lake
+Coordinates: [21.154696, 41.85878]
+
+Title: Schmittenstollen Mine
+Coordinates: [7.781675, 49.802401]
+
+Title: Agush Agha's Konaks Palace
+Coordinates: [24.635912, 41.495806]
+
+Title: Ancient stone bridge - in Mega Rema
+Coordinates: [24.41582, 41.434951]
+
+Title: Grube Messel Dinosaur Pit
+Coordinates: [8.572575, 49.883426]
+
+Title: Banz Monastery
+Coordinates: [11.001235, 50.132387]
+
+Title: Westerwald Ceramic Museum
+Coordinates: [7.656955, 50.442721]
+
+Title: Cultural Landscapes of the Upper Meuse
+Coordinates: [5.516097, 48.604545]
+
+Title: Rambures Castle
+Coordinates: [1.707532, 49.944419]
+
+Title: Eifgenbach Valley
+Coordinates: [7.189616, 51.083398]
+
+Title: Mining Museum Park
+Coordinates: [11.66488, 42.883028]
+
+Title: Theuern Palace
+Coordinates: [11.9108, 49.3867]
+
+Title: St. Nicola Monastery
+Coordinates: [21.615361, 41.504777]
+
+Title: Roye
+Coordinates: [2.788831, 49.697796]
+
+Title: Callenberg Palace
+Coordinates: [10.922992, 50.277916]
+
+Title: Pisan Highlands
+Coordinates: [10.478732, 43.573341]
+
+Title: Ruins of Civitas Tropaensium
+Coordinates: [27.943915, 44.091893]
+
+Title: Rue
+Coordinates: [1.667315, 50.272479]
+
+Title: The Seven Lakes
+Coordinates: [23.490658, 42.122011]
+
+Title: Brazda Iron Age Settlement
+Coordinates: [21.400108, 42.075778]
+
+Title: Lucciola Bella
+Coordinates: [11.78041, 42.974371]
+
+Title: Balduinseck Castle 
+Coordinates: [7.36315, 50.076249]
+
+Title: Cerveny Hradek Palace
+Coordinates: [13.444639, 50.512552]
+
+Title: Coswig
+Coordinates: [12.457443, 51.88565]
+
+Title: Palatine Vinyards
+Coordinates: [8.103073, 49.67372]
+
+Title: Evenburg Palace
+Coordinates: [7.494644, 53.23119]
+
+Title: Theologos
+Coordinates: [24.692775, 40.658895]
+
+Title: Roman City Ruins of Luni
+Coordinates: [10.014618, 44.064918]
+
+Title: Vratsata Pass
+Coordinates: [23.53111, 43.191112]
+
+Title: Molsdorf Palace
+Coordinates: [10.961249, 50.900732]
+
+Title: Tailings of the Calais Coalfields
+Coordinates: [2.569664, 50.472335]
+
+Title: Krepcha Rock Monastery
+Coordinates: [26.118499, 43.46844]
+
+Title: Borbeck Palace
+Coordinates: [6.942025, 51.468421]
+
+Title: Montecastello
+Coordinates: [10.694641, 43.634526]
+
+Title: Antona
+Coordinates: [10.183498, 44.058295]
+
+Title: Castles of the Vosges
+Coordinates: [7.633528, 48.998182]
+
+Title: Smolyan Museum
+Coordinates: [24.71483, 41.576269]
+
+Title: European Cultural Park Bliesbrück
+Coordinates: [7.17988, 49.129535]
+
+Title: Hermitage di Calomini
+Coordinates: [10.4075, 44.054864]
+
+Title: Casabasciana
+Coordinates: [10.652388, 44.016744]
+
+Title: The Devil's Bridge
+Coordinates: [24.322911, 41.650889]
+
+Title: San Galgano Monastery
+Coordinates: [11.154168, 43.152452]
+
+Title: Roman Aquaduct
+Coordinates: [6.0784, 49.0616]
+
+Title: Ropotamo Nature Reserve
+Coordinates: [27.729036, 42.300347]
+
+Title: Roman Fortress in Markeli
+Coordinates: [26.896626, 42.63748]
+
+Title: Crete Senesi Viewpoint
+Coordinates: [11.484235, 43.275856]
+
+Title: Celtic Village Museum
+Coordinates: [10.023823, 50.793224]
+
+Title: Arnsberger Forest
+Coordinates: [8.167415, 51.427843]
+
+Title: Springiersbach Monastery
+Coordinates: [7.074409, 50.024777]
+
+Title: Hochlarmark Settlement
+Coordinates: [7.180129, 51.565833]
+
+Title: Ancient settlement "Gradishteto"
+Coordinates: [22.611048, 43.566739]
+
+Title: Regen Valley
+Coordinates: [12.16385, 49.194369]
+
+Title: Sillerup Windmill
+Coordinates: [9.57626, 55.310569]
+
+Title: Tatul Thracian Sanctuary
+Coordinates: [25.545553, 41.541687]
+
+Title: Lichtenfels Castle
+Coordinates: [8.801432, 51.148054]
+
+Title: Solunska Glava
+Coordinates: [21.373558, 41.692759]
+
+Title: Egerberk Castle Ruins
+Coordinates: [13.184498, 50.367242]
+
+Title: Münchenlohra Monastery
+Coordinates: [10.667618, 51.42198]
+
+Title: Winkel
+Coordinates: [8.017787, 50.003325]
+
+Title: Chianciano
+Coordinates: [11.830945, 43.059439]
+
+Title: Cote Ciombella Archaeological Park
+Coordinates: [10.905281, 42.35241]
+
+Title: Warstein-Belecke
+Coordinates: [8.338449, 51.48429]
+
+Title: Løgumkloster Monastery
+Coordinates: [8.953505, 55.059079]
+
+Title: Elster Valley
+Coordinates: [12.134718, 50.707487]
+
+Title: Trenches of WWI
+Coordinates: [5.59756, 49.076769]
+
+Title: Necropolis of Vetulonia
+Coordinates: [10.973265, 42.861387]
+
+Title: Velke Brezno Palace
+Coordinates: [14.138522, 50.662429]
+
+Title: Nestos Valley
+Coordinates: [24.538506, 41.2608]
+
+Title: Rodenstein Castle
+Coordinates: [8.813252, 49.731331]
+
+Title: Museum of Monastery Culture (LWL)
+Coordinates: [8.840911, 51.566564]
+
+Title: Hemer Felsenmeer
+Coordinates: [7.769324, 51.379148]
+
+Title: Dybbøl Battlefield
+Coordinates: [9.757955, 54.90693]
+
+Title: Bertsch Copper Mine
+Coordinates: [9.09144, 51.04521]
+
+Title: Cromford Textile Mill (LVR)
+Coordinates: [6.855, 51.314941]
+
+Title: Grube Ludwig Mine
+Coordinates: [8.822915, 49.573415]
+
+Title: Molfsee Ethnology Museum
+Coordinates: [10.079553, 54.289452]
+
+Title: Monospitovo Marshes
+Coordinates: [22.779496, 41.39845]
+
+Title: Svornost Urainium Mine
+Coordinates: [12.911359, 50.372601]
+
+Title: Elbe Landscape
+Coordinates: [12.042647, 52.746794]
+
+Title: Satzvey Castle
+Coordinates: [6.706659, 50.619927]
+
+Title: Waldmannshofen Castle
+Coordinates: [10.067794, 49.532865]
+
+Title: Ruins of Nikopolis ad Nestum
+Coordinates: [23.81667, 41.6]
+
+Title: Devil's Path Ecotrail
+Coordinates: [24.306033, 41.653576]
+
+Title: Augustusburg Palace Brühl
+Coordinates: [6.898786, 50.826755]
+
+Title: Jesuit Monastery Büren
+Coordinates: [8.558845, 51.555262]
+
+Title: Fortresses of WWI
+Coordinates: [5.68529, 48.788602]
+
+Title: Warfusée Palace
+Coordinates: [5.36809, 50.586262]
+
+Title: Lorch
+Coordinates: [7.802867, 50.044573]
+
+Title: Bigorski Monastery St John the Baptist
+Coordinates: [20.609424, 41.621182]
+
+Title: Silberhardt Silver Mine
+Coordinates: [7.64249, 50.823144]
+
+Title: Alden Biesen Palace
+Coordinates: [5.520651, 50.84176]
+
+Title: Forts of the Maginot Line
+Coordinates: [7.831547, 48.963525]
+
+Title: Arda River Valley
+Coordinates: [25.136603, 41.665157]
+
+Title: Rhein-Westerwald Park
+Coordinates: [7.619421, 50.523099]
+
+Title: The Stone Dolls
+Coordinates: [22.055461, 42.105566]
+
+Title: Wilhelmsthal Palace
+Coordinates: [9.415742, 51.393071]
+
+Title: Schönberg Palace
+Coordinates: [12.203912, 49.081329]
+
+Title: Hilpoltstein Castles
+Coordinates: [11.188575, 49.189124]
+
+Title: Haut-KSnigsbourg Castle
+Coordinates: [7.344483, 48.249485]
+
+Title: Strünkede Palace
+Coordinates: [7.211278, 51.551379]
+
+Title: Stefling Castle
+Coordinates: [12.205005, 49.212838]
+
+Title: Neu Glück Lead Mine
+Coordinates: [7.874562, 51.213679]
+
+Title: Henrichshütte Ironworks (LWL)
+Coordinates: [7.19859, 51.4096]
+
+Title: Neunhof Palace
+Coordinates: [11.03348, 49.530817]
+
+Title: Villages of Alsace
+Coordinates: [7.404707, 48.21844]
+
+Title: The Deaf Stones
+Coordinates: [25.955627, 41.727532]
+
+Title: Rhododendron Park - Gristede
+Coordinates: [8.080916, 53.225974]
+
+Title: Glatt Castle
+Coordinates: [8.620257, 48.381291]
+
+Title: Crottorf Castle
+Coordinates: [7.788241, 50.905652]
+
+Title: Alilica Cave 
+Coordinates: [20.753229, 41.566613]
+
+Title: Rischbachstollen Coal Mine
+Coordinates: [7.090548, 49.289298]
+
+Title: Thracian Cult Temple Starosel
+Coordinates: [24.547058, 42.511896]
+
+Title: Bergstraße  Cultural Landscape
+Coordinates: [8.710292, 49.634087]
+
+Title: Oberwerries Palace
+Coordinates: [7.888292, 51.703577]
+
+Title: Schwanberg Palace
+Coordinates: [10.271823, 49.726231]
+
+Title: Roselle Roman Museum
+Coordinates: [11.00162, 42.713542]
+
+Title: Dourges Mine Fosse nr 9 - 9
+Coordinates: [2.99387, 50.4643]
+
+Title: Schwansbell Palace
+Coordinates: [7.551553, 51.606895]
+
+Title: Hallenburg Castle
+Coordinates: [10.572622, 50.706448]
+
+Title: Pohl Roman Castel
+Coordinates: [7.865681, 50.251934]
+
+Title: Kasselburg Castle
+Coordinates: [6.661388, 50.223889]
+
+Title: Veitshöchheim Palace
+Coordinates: [9.871848, 49.832932]
+
+Title: Vardarski Rid Archaeological Site 
+Coordinates: [22.521156, 41.148874]
+
+Title: Wetter
+Coordinates: [8.722522, 50.902534]
+
+Title: Mosigkau Palace
+Coordinates: [12.150856, 51.80593]
+
+Title: Gut Lohhof Historical Farm
+Coordinates: [7.988982, 51.631415]
+
+Title: Saint-Cyriaque Monastery
+Coordinates: [7.532319, 48.510797]
+
+Title: Montefegatesi
+Coordinates: [10.594221, 44.063889]
+
+Title: Preslav Fortress
+Coordinates: [26.813154, 43.145816]
+
+Title: Waldeck Castle
+Coordinates: [11.947884, 49.85828]
+
+Title: Ombrone Valley
+Coordinates: [11.279791, 42.832909]
+
+Title: San Silvestro Castle
+Coordinates: [10.58963, 43.055827]
+
+Title: Loppem Palace
+Coordinates: [3.203374, 51.15683]
+
+Title: Cathedral Panorama
+Coordinates: [5.897571, 48.67627]
+
+Title: Fläming Cultural Landscape
+Coordinates: [12.31842, 52.01429]
+
+Title: Katinskite Cliffs
+Coordinates: [23.337834, 42.861027]
+
+Title: Rögland
+Coordinates: [10.594407, 49.401026]
+
+Title: Archaeological Site of Deultum
+Coordinates: [27.283979, 42.387222]
+
+Title: Grube Tannenberg Mine
+Coordinates: [12.444963, 50.413597]
+
+Title: Nikopol Fortress
+Coordinates: [24.893147, 43.703366]
+
+Title: Colognora di Pescaglia
+Coordinates: [10.464854, 43.983672]
+
+Title: Werdringen Castle
+Coordinates: [7.414943, 51.387896]
+
+Title: Fallais Palace
+Coordinates: [5.170924, 50.608341]
+
+Title: Vicopisano Fortress
+Coordinates: [10.585594, 43.727633]
+
+Title: Boitine Biosphere Reserve
+Coordinates: [24.267639, 42.796932]
+
+Title: Falkenstein Castle
+Coordinates: [12.484456, 49.099354]
+
+Title: Rozhen Sandstone Pyramids
+Coordinates: [23.419531, 41.526056]
+
+Title: Grube Georg Iron Mine
+Coordinates: [7.522076, 50.567366]
+
+Title: Utroba (Womb) Cave & Thracian Sanctuary
+Coordinates: [25.248073, 41.704742]
+
+Title: Kalaja e Sellces
+Coordinates: [20.946312, 42.030322]
+
+Title: Lenzen
+Coordinates: [11.473385, 53.090673]
+
+Title: Ammerland Cultural  Landscape
+Coordinates: [7.943701, 53.208102]
+
+Title: Hasiatejn Castle Ruins
+Coordinates: [13.257102, 50.445211]
+
+Title: Falkenstein Castle
+Coordinates: [14.405368, 50.854848]
+
+Title: Veßra Monastery
+Coordinates: [10.641253, 50.699707]
+
+Title: Enisala Castle
+Coordinates: [28.818863, 44.87857]
+
+Title: Giechburg Castle
+Coordinates: [11.049417, 49.954971]
+
+Title: Aggitis Cave
+Coordinates: [23.894534, 41.219734]
+
+Title: Taunus Highlands
+Coordinates: [8.666376, 50.333299]
+
+Title: Baltic Cliffs
+Coordinates: [28.5659, 43.509893]
+
+Title: Strupetski Monastery
+Coordinates: [23.849727, 43.130018]
+
+Title: Zinc Factory Altenberg (LVR)
+Coordinates: [6.848595, 51.47495]
+
+Title: Rhodopes Narrow Gauge Railway Line
+Coordinates: [24.099344, 42.159713]
+
+Title: San Silvestro Mining Museum
+Coordinates: [10.606838, 43.078176]
+
+Title: Wattenmeer National Park
+Coordinates: [8.686993, 54.064406]
+
+Title: Bansko Roman Baths 
+Coordinates: [22.754301, 41.382575]
+
+Title: Liesborn Monastery
+Coordinates: [8.259337, 51.712614]
+
+Title: Vihren Mountain
+Coordinates: [23.398888, 41.767222]
+
+Title: Cava Corchia Quarry
+Coordinates: [10.288481, 44.036972]
+
+Title: Romitorio di Cetinale
+Coordinates: [11.19842, 43.305341]
+
+Title: Monaise Palace
+Coordinates: [6.599707, 49.718341]
+
+Title: Ahrensburg Palace
+Coordinates: [10.240594, 53.680029]
+
+Title: Textile and Historical Museum in Sliven
+Coordinates: [26.314513, 42.685384]
+
+Title: Freudenberg
+Coordinates: [9.32288, 49.741457]
+
+Title: Rock-Hewn Church Saints Constantine and Helena
+Coordinates: [28.538495, 43.433596]
+
+Title: Fort de Fermont
+Coordinates: [5.667977, 49.44912]
+
+Title: Maria Laach Monastery
+Coordinates: [7.252214, 50.402307]
+
+Title: Gemünden Castle 
+Coordinates: [7.47681, 49.895689]
+
+Title: Spakenburg
+Coordinates: [5.382466, 52.255063]
+
+Title: Madara Horseman & Archaeological Park
+Coordinates: [27.11892, 43.277395]
+
+Title: Main Gorge
+Coordinates: [10.177261, 49.870544]
+
+Title: Bay of Bones Museum
+Coordinates: [20.798095, 40.994367]
+
+Title: Roman town of Cosa
+Coordinates: [11.287856, 42.412869]
+
+Title: Ruins of Kabile Archaeological Park
+Coordinates: [26.479524, 42.530317]
+
+Title: Reichenbach
+Coordinates: [12.303188, 50.620766]
+
+Title: Megalithic Sites of Ismara
+Coordinates: [25.559454, 40.869072]
+
+Title: Hardenburg Castle
+Coordinates: [8.121829, 49.462192]
+
+Title: Nuttlar Mine
+Coordinates: [8.424557, 51.370363]
+
+Title: Rhodopes Narrow Gauge Railway Line
+Coordinates: [24.132253, 42.204538]
+
+Title: Dahn Standstone Cliff Region
+Coordinates: [7.712045, 49.083972]
+
+Title: Schillingsfürst Palace
+Coordinates: [10.25698, 49.290112]
+
+Title: Modave Palace
+Coordinates: [5.287851, 50.441183]
+
+Title: Gustav Copper Mine
+Coordinates: [9.910951, 51.198005]
+
+Title: Vulkaneifel Landscape
+Coordinates: [6.827896, 50.212757]
+
+Title: Christina Slate Mine
+Coordinates: [8.609738, 51.295361]
+
+Title: Vratsa Historical Museum
+Coordinates: [23.574656, 43.221024]
+
+Title: Castles of the Vosges
+Coordinates: [7.299097, 48.697025]
+
+Title: St. Petka
+Coordinates: [20.839987, 41.129152]
+
+Title: Bargala Archaeological Site
+Coordinates: [22.290658, 41.798398]
+
+Title: National Nature Reserve of the Somme
+Coordinates: [1.791587, 50.130264]
+
+Title: Hünnefeld Palace
+Coordinates: [8.334476, 52.333929]
+
+Title: Parangalitsa Primeval Forests
+Coordinates: [23.409807, 42.067039]
+
+Title: Kr�sn� L�pa
+Coordinates: [14.510001, 50.913036]
+
+Title: Hirschberg
+Coordinates: [11.820339, 50.403655]
+
+Title: Upper Kyll Valley
+Coordinates: [6.595682, 50.133275]
+
+Title: Chervenata Stena Mountian
+Coordinates: [24.898251, 41.905163]
+
+Title: Fotinovo Turtles
+Coordinates: [25.33722, 41.367941]
+
+Title: Mühltroff Palace
+Coordinates: [11.929782, 50.540543]
+
+Title: Castello di Celsa
+Coordinates: [11.19406, 43.317869]
+
+Title: Stone Bridge of Kompsatos
+Coordinates: [25.210553, 41.14113]
+
+Title: Wiesmoor Moor Landscape
+Coordinates: [7.719139, 53.436638]
+
+Title: Struma River Gorge
+Coordinates: [23.152542, 41.769343]
+
+Title: Mountain Villages of Southern Bulgaria
+Coordinates: [23.882893, 41.672031]
+
+Title: Lakatnik Rocks
+Coordinates: [23.382375, 43.088714]
+
+Title: Geltinger Birk Park
+Coordinates: [9.917686, 54.786277]
+
+Title: Middle Oure Valley
+Coordinates: [6.126306, 50.094378]
+
+Title: Bärnau-Tachov Slavic Village Museum
+Coordinates: [12.437758, 49.809672]
+
+Title: Euxinograd Palace
+Coordinates: [28.006, 43.224625]
+
+Title: Primeval Forests of Parangalitsa
+Coordinates: [23.38436, 42.048343]
+
+Title: Iron Gate Canyon
+Coordinates: [22.260445, 41.405015]
+
+Title: Archaeological Site &  Museum Stara Zagora
+Coordinates: [25.626348, 42.427078]
+
+Title: Traces of the Gothic Line
+Coordinates: [10.525597, 43.968198]
+
+Title: Sporkenburg Castle
+Coordinates: [7.728496, 50.366622]
+
+Title: Elbe Landscape
+Coordinates: [12.020855, 51.8748]
+
+Title: Castles of the Haßberg
+Coordinates: [10.740584, 50.141281]
+
+Title: Bursch
+Coordinates: [7.440303, 48.477739]
+
+Title: Bours Castle
+Coordinates: [2.410562, 50.453961]
+
+Title: Sûre Valley
+Coordinates: [5.998721, 49.920858]
+
+Title: Moerkerke Castle 
+Coordinates: [3.340352, 51.244738]
+
+Title: Etruscan Necropolis Sovana
+Coordinates: [11.624787, 42.680096]
+
+Title: Boisseilles Palace
+Coordinates: [4.989462, 50.236955]
+
+Title: Blockhaus d perlecques V2 Rocket Site
+Coordinates: [2.183679, 50.828584]
+
+Title: Miniera del Siele - Cinnabar Mine
+Coordinates: [11.662334, 42.788975]
+
+Title: Ellert en Brammert Open Air Museum
+Coordinates: [6.750843, 52.852449]
+
+Title: Viking Museum Haithabu
+Coordinates: [9.567859, 54.482169]
+
+Title: Museum of Industry Osnabrück
+Coordinates: [8.008943, 52.315083]
+
+Title: Hahnheide Forest
+Coordinates: [10.453642, 53.619554]
+
+Title: Ems-Marsh Landscape
+Coordinates: [7.289893, 52.934596]
+
+Title: Bindweide Iron Mine
+Coordinates: [7.87238, 50.787996]
+
+Title: Etar Museum Village
+Coordinates: [25.349194, 42.80348]
+
+Title: Museum De Proefkolonie
+Coordinates: [6.189191, 52.844796]
+
+Title: Hoher Vogelsberg Park
+Coordinates: [9.224765, 50.53856]
+
+Title: The Garfagnana
+Coordinates: [10.367838, 44.155077]
+
+Title: Traben-Trarbach / Midde-Mosel Museum
+Coordinates: [7.116846, 49.951366]
+
+Title: Wülzburg Fortress
+Coordinates: [11.006902, 49.023986]
+
+Title: Middle-Main Valley
+Coordinates: [9.301027, 49.785248]
+
+Title: Marble Mines of Carrara
+Coordinates: [10.131712, 44.099898]
+
+Title: Caps et marais d'Opale
+Coordinates: [1.662566, 50.633243]
+
+Title: Effeltrich Fortified Church
+Coordinates: [11.092719, 49.659531]
+
+Title: Rose Museum
+Coordinates: [25.388376, 42.623181]
+
+Title: Großkühnau Palace
+Coordinates: [12.179956, 51.853997]
+
+Title: Museum House Saargau
+Coordinates: [6.655085, 49.332458]
+
+Title: Marble Museum
+Coordinates: [10.0734, 44.065785]
+
+Title: LWL Museum of Archeology
+Coordinates: [7.225586, 51.536151]
+
+Title: Berlepsch Castle
+Coordinates: [9.832313, 51.395818]
+
+Title: Stolzenfels Palace
+Coordinates: [7.592132, 50.302882]
+
+Title: Steam Train Fränkische Schweiz
+Coordinates: [11.261031, 49.749714]
+
+Title: Tangerquellen Forest
+Coordinates: [11.614328, 52.572189]
+
+Title: Rolduc Monastery
+Coordinates: [6.08267, 50.868188]
+
+Title: Landsberg Palace
+Coordinates: [6.920064, 51.35778]
+
+Title: Archeominerario Montieri Park
+Coordinates: [11.042798, 43.108241]
+
+Title: Krautheim Castle 
+Coordinates: [9.635098, 49.386473]
+
+Title: Manastir
+Coordinates: [21.727929, 41.167604]
+
+Title: Braunshardt Palace
+Coordinates: [8.567297, 49.916207]
+
+Title: Brehain Fortress
+Coordinates: [5.897904, 49.442993]
+
+Title: Favorite Palace
+Coordinates: [8.239789, 48.822115]
+
+Title: Bourtanger Moor International Park
+Coordinates: [7.048708, 52.661841]
+
+Title: Dolen
+Coordinates: [23.931445, 41.623681]
+
+Title: Hülshoff Castle
+Coordinates: [7.503955, 51.971657]
+
+Title: Castle of Fleckenstein
+Coordinates: [7.771953, 49.044848]
+
+Title: German Inland Waterways Museum (LVR)
+Coordinates: [6.72993, 51.459678]
+
+Title: Lichtenegg Castle
+Coordinates: [12.877683, 49.237408]
+
+Title: Ellingen Palace
+Coordinates: [10.965667, 49.060909]
+
+Title: Mountain Villages of Southern Bulgaria
+Coordinates: [23.717838, 41.451494]
+
+Title: Schaagbachtal Marshes
+Coordinates: [6.096913, 51.115921]
+
+Title: Cadolzburg Castle
+Coordinates: [10.84463, 49.459325]
+
+Title: Sarafska House & Bayraklı Museums
+Coordinates: [23.559458, 42.342136]
+
+Title: Kozhuf Mountains
+Coordinates: [22.359543, 41.195538]
+
+Title: Tipetsa Cave
+Coordinates: [24.61334, 41.477552]
+
+Title: Alte Dombach Papermill (LVR)
+Coordinates: [7.153809, 50.994881]
+
+Title: Waldsassen Monastery
+Coordinates: [12.305573, 50.002841]
+
+Title: Schiffenberg Monastery
+Coordinates: [8.722628, 50.555837]
+
+Title: Archaeological Site Tauresium
+Coordinates: [21.613464, 41.900135]
+
+Title: Harkotten Palace
+Coordinates: [8.032446, 52.061292]
+
+Title: Bebenhausen Monastery
+Coordinates: [9.058548, 48.56055]
+
+Title: North Duisberg Landscape Park
+Coordinates: [6.804179, 51.483815]
+
+Title: Latiremont Fortress
+Coordinates: [5.741428, 49.454702]
+
+Title: Lindau Castle
+Coordinates: [12.098695, 52.037747]
+
+Title: Marciana
+Coordinates: [10.167375, 42.790928]
+
+Title: Lillachtal Waterfall
+Coordinates: [11.274481, 49.627315]
+
+Title: Heilsbronn Monastery
+Coordinates: [10.758542, 49.335664]
+
+Title: Middle Oure Valley
+Coordinates: [6.139387, 50.068412]
+
+Title: Flossenburg Concentration Camp Memorial
+Coordinates: [12.354586, 49.736892]
+
+Title: Kališta Monastery 
+Coordinates: [20.650352, 41.144501]
+
+Title: Gorni Voden Monastery
+Coordinates: [24.844043, 42.001274]
+
+Title: Kapellendorf Castle
+Coordinates: [11.466779, 50.975123]
+
+Title: Traditional Fishing Village
+Coordinates: [28.833886, 45.159565]
+
+Title: Mordovis Basillica
+Coordinates: [22.418139, 41.848449]
+
+Title: Burgas Salt Plains
+Coordinates: [27.490853, 42.532512]
+
+Title: Battle of the Teutoburg Forest Museum
+Coordinates: [8.129604, 52.406226]
+
+Title: North German School Museum
+Coordinates: [7.920427, 53.412946]
+
+Title: Yorkshire Trench and Dug Out
+Coordinates: [2.873917, 50.888309]
+
+Title: Gragnana
+Coordinates: [10.085627, 44.100054]
+
+Title: Haßberg Highlands
+Coordinates: [10.645866, 50.09813]
+
+Title: Eijsden Palace
+Coordinates: [5.707533, 50.778268]
+
+Title: Bibra Castle
+Coordinates: [10.439574, 50.470595]
+
+Title: Apuane Foothills
+Coordinates: [10.504563, 43.768993]
+
+Title: Archaeological Site of Poroi
+Coordinates: [25.128823, 41.007358]
+
+Title: Zgorigrad
+Coordinates: [23.517919, 43.181182]
+
+Title: Chier Valley
+Coordinates: [5.541163, 49.457048]
+
+Title: Bocage Landscape
+Coordinates: [2.130888, 50.553615]
+
+Title: Weissensee
+Coordinates: [11.06812, 51.19551]
+
+Title: Weser Marsh "Reihendorf" Villages
+Coordinates: [8.375329, 53.229283]
+
+Title: Galičica National Park
+Coordinates: [20.840077, 40.96727]
+
+Title: Lower Kyll Valley
+Coordinates: [6.610307, 49.894468]
+
+Title: Saale Landscape
+Coordinates: [11.715166, 51.756565]
+
+Title: Malbrouck Castle
+Coordinates: [6.432988, 49.457228]
+
+Title: Fort D'Ambleteuse
+Coordinates: [1.600508, 50.805371]
+
+Title: Fortress City of Porto Ercole
+Coordinates: [11.204056, 42.394077]
+
+Title: Vrabinec Ruins
+Coordinates: [14.21176, 50.710066]
+
+Title: Arnstein Monastery
+Coordinates: [7.851066, 50.309574]
+
+Title: Eremo di Motrano
+Coordinates: [11.154587, 43.298245]
+
+Title: Mauritius Tin Mine
+Coordinates: [12.83106, 50.387077]
+
+Title: Villa Torrigiani Stephen
+Coordinates: [10.608868, 43.887199]
+
+Title: Düben Heath Forest
+Coordinates: [12.585162, 51.690369]
+
+Title: Hunebedcentrum Prehistoric Tombs
+Coordinates: [6.798674, 52.930676]
+
+Title: Deulin Palace
+Coordinates: [5.400885, 50.303116]
+
+Title: Serchio Valley
+Coordinates: [10.473011, 44.042471]
+
+Title: Forests of the Garfagnana
+Coordinates: [10.519861, 44.10498]
+
+Title: Wilhelmstal Palace
+Coordinates: [10.304006, 50.918507]
+
+Title: Colle Fobia Park
+Coordinates: [10.516992, 44.131749]
+
+Title: Kilifarevo Monastery
+Coordinates: [25.622555, 42.956046]
+
+Title: Balzetti Castle
+Coordinates: [11.203816, 43.200955]
+
+Title: Mespelbrunn Palace
+Coordinates: [9.307047, 49.905276]
+
+Title: Outer Fortifications of Verdun
+Coordinates: [5.472672, 49.174245]
+
+Title: Roman Archaeological Museum (RAM)
+Coordinates: [3.006192, 51.18552]
+
+Title: Trimburg Castle
+Coordinates: [9.98155, 50.135651]
+
+Title: Pasquini Palace
+Coordinates: [10.412566, 43.405369]
+
+Title: Prignitz-Stepenitz Cultural Landscape
+Coordinates: [12.03473, 53.275173]
+
+Title: Wodan-Stollen Iron Mine
+Coordinates: [8.017384, 50.796645]
+
+Title: Tumba Madžari Neolithic Village
+Coordinates: [21.505076, 42.001489]
+
+Title: Pleven Historical Museum  & Museum of Liberation
+Coordinates: [24.618107, 43.404544]
+
+Title: Fosso Lanzo Valley
+Coordinates: [11.237235, 43.078693]
+
+Title: Danube Delta  National Parks 
+Coordinates: [28.96788, 44.712403]
+
+Title: Moneta Ruderi Castle
+Coordinates: [10.077881, 44.079378]
+
+Title: Roman Museum (LWL)
+Coordinates: [7.159843, 51.735655]
+
+Title: Jehay Palace
+Coordinates: [5.323704, 50.577303]
+
+Title: Gradishte Archaeological Park
+Coordinates: [23.914415, 41.598578]
+
+Title: Kornelimünster Monastery
+Coordinates: [6.178036, 50.728837]
+
+Title: Boerderijmuseum  Farm Museum
+Coordinates: [5.913332, 52.442718]
+
+Title: Holy Mother of God Eleusa
+Coordinates: [22.564814, 41.475084]
+
+Title: Foce di Pianza
+Coordinates: [10.14102, 44.114859]
+
+Title: German Mining Museum (LWL)
+Coordinates: [7.217126, 51.488913]
+
+Title: Raesfeld Palace
+Coordinates: [6.827128, 51.763651]
+
+Title: Radicofani Fortress
+Coordinates: [11.768806, 42.898526]
+
+Title: Schaumburg Palace
+Coordinates: [7.977425, 50.339128]
+
+Title: Zemen Monastery "St. John the Apostle"
+Coordinates: [22.738084, 42.467632]
+
+Title: Fiume Renara Gorge
+Coordinates: [10.206089, 44.072279]
+
+Title: Raisko Praskalo Waterfall
+Coordinates: [24.925437, 42.701172]
+
+Title: Notre-Dame de Wisques Monastery
+Coordinates: [2.189975, 50.722765]
+
+Title: Archaeological Site of Philippi
+Coordinates: [24.284805, 41.011844]
+
+Title: Klepa Mountains
+Coordinates: [21.911149, 41.318754]
+
+Title: Anhäuser Wall
+Coordinates: [10.042651, 49.201195]
+
+Title: Ancient Roads & Volcanic Landscapes
+Coordinates: [22.284411, 42.108312]
+
+Title: Poggio Tondo Archaeological Site
+Coordinates: [10.84719, 42.859253]
+
+Title: Museum of the Royal Mint
+Coordinates: [12.913332, 50.371349]
+
+Title: Albola Castle
+Coordinates: [11.402886, 43.519294]
+
+Title: Osogovski Mountains
+Coordinates: [22.389044, 42.269412]
+
+Title: Buchenwald KZ Memorial
+Coordinates: [11.249238, 51.021507]
+
+Title: Bentlage Monastery
+Coordinates: [7.428868, 52.301995]
+
+Title: Wildes Moor Marsh
+Coordinates: [9.251492, 54.414408]
+
+Title: Archaeological Site of Aliki
+Coordinates: [24.742609, 40.604868]
+
+Title: Powerplant Engelskirchen (LVR)
+Coordinates: [7.409685, 50.983674]
+
+Title: Brandenburg Castle
+Coordinates: [10.173153, 50.9937]
+
+Title: Kukulje Nov Istevnik Cliffs
+Coordinates: [22.825895, 41.849897]
+
+Title: Mishkova Niva Thracian Sanctuary
+Coordinates: [27.500643, 41.957836]
+
+Title: Lichtenberg Castle
+Coordinates: [9.326582, 49.013797]
+
+Title: The Wild Moor
+Coordinates: [7.438137, 53.023383]
+
+Title: Bislicher Meadows
+Coordinates: [6.503324, 51.650476]
+
+Title: Nahodishte na chinar-Kuchkarnika
+Coordinates: [23.076145, 41.737417]
+
+Title: Aschhausen Castle
+Coordinates: [9.54354, 49.36911]
+
+Title: Bayuvi Dupki–Dzhindzhiritsa Nature Reserve
+Coordinates: [23.364492, 41.826981]
+
+Title: Allerheiligen Monastery
+Coordinates: [8.194269, 48.537125]
+
+Title: Ippenburg Palace
+Coordinates: [8.36112, 52.340419]
+
+Title: Museum Village Kommern (LVR)
+Coordinates: [6.627189, 50.616325]
+
+Title: Villa San Martino (Napoleon's Residence)
+Coordinates: [10.280332, 42.785522]
+
+Title: Bergiola
+Coordinates: [10.124116, 44.066611]
+
+Title: Brincke Palace
+Coordinates: [8.344403, 52.110798]
+
+Title: Ruins of Durostorum Silistria
+Coordinates: [27.256455, 44.118572]
+
+Title: Neuenstein Palace
+Coordinates: [9.578936, 49.204312]
+
+Title: Drachenfels Palace
+Coordinates: [7.210121, 50.669075]
+
+Title: Byzantine Archaeological Sites of Didymoteichon
+Coordinates: [26.492741, 41.349787]
+
+Title: Orelyak Nature Reserve
+Coordinates: [23.638318, 41.598089]
+
+Title: Kraichgau Highlands
+Coordinates: [8.696335, 49.166311]
+
+Title: Fiore Valley
+Coordinates: [11.568538, 42.613898]
+
+Title: Westerwinkel Palace
+Coordinates: [7.642515, 51.739487]
+
+Title: Wolfshagen Palace
+Coordinates: [12.007666, 53.148967]
+
+Title: Wald
+Coordinates: [7.041945, 51.183905]
+
+Title: Burgwindheim Palace
+Coordinates: [10.596738, 49.827267]
+
+Title: Hürtgenwald Battlefield
+Coordinates: [6.267343, 50.69291]
+
+Title: Monte Oliveto Maggiore Monastery
+Coordinates: [11.544765, 43.17577]
+
+Title: Karlovsko Praskalo Waterfall
+Coordinates: [24.853608, 42.700731]
+
+Title: Herdinger Palace
+Coordinates: [7.969805, 51.420832]
+
+Title: St. Constantine and Helena Monastery
+Coordinates: [28.029927, 43.252515]
+
+Title: Batoshevski Monastery
+Coordinates: [25.082973, 42.846936]
+
+Title: Kajmakčalan Peak
+Coordinates: [21.786944, 40.930833]
+
+Title: Strmna
+Coordinates: [20.83036, 41.036244]
+
+Title: Forts of the Atlantic Wall
+Coordinates: [1.747602, 50.952058]
+
+Title: De Rijd Mud Plains
+Coordinates: [5.780004, 53.349839]
+
+Title: Roman Fortress in Cheresha
+Coordinates: [27.123056, 42.786667]
+
+Title: Dannewerk Fortress
+Coordinates: [9.451124, 54.507822]
+
+Title: Ustra Castle 
+Coordinates: [25.225778, 41.470205]
+
+Title: Oberndorf Factory
+Coordinates: [8.57658, 48.294615]
+
+Title: Somme Historical Railway
+Coordinates: [1.662566, 50.24104]
+
+Title: Saint-Benedictus
+Coordinates: [5.488057, 51.299006]
+
+Title: County Bentheim Cultural Landscape
+Coordinates: [7.083612, 52.503072]
+
+Title: Maria Bildhausen Monastery
+Coordinates: [10.285963, 50.276513]
+
+Title: Klosterburg Castle
+Coordinates: [11.68427, 49.36921]
+
+Title: Ancient Mines of Pehchevo
+Coordinates: [22.921562, 41.760812]
+
+Title: Henneburg Castle
+Coordinates: [9.411423, 49.784105]
+
+Title: Kupferhammer Palace
+Coordinates: [8.35215, 51.450549]
+
+Title: Jerma River Gorge
+Coordinates: [22.63119, 42.947296]
+
+Title: Dragalevski Monastery
+Coordinates: [23.305119, 42.613536]
+
+Title: Walderbach Monastery
+Coordinates: [12.378537, 49.184163]
+
+Title: Rangau Hills
+Coordinates: [10.586356, 49.355919]
+
+Title: Peat Bogs and Marshes of Weerribben-Wieden
+Coordinates: [6.07353, 52.674562]
+
+Title: Rambower Peat Bog
+Coordinates: [11.592098, 53.138167]
+
+Title: Tsolias Mountain
+Coordinates: [23.62064, 41.377039]
+
+Title: Siegburg Monastery
+Coordinates: [7.205589, 50.796694]
+
+Title: Gerleve Monastery
+Coordinates: [7.236824, 51.946093]
+
+Title: Libouchec Palace
+Coordinates: [14.038116, 50.759559]
+
+Title: Brasnarskiyat Stol National Park
+Coordinates: [26.335584, 42.000529]
+
+Title: Passo del Vestito
+Coordinates: [10.225222, 44.065869]
+
+Title: Therouanne Archaelogical Site
+Coordinates: [2.256871, 50.638284]
+
+Title: Zebrnjak War Memorial
+Coordinates: [21.785411, 42.149189]
+
+Title: Veenpark Peat Colony Museum
+Coordinates: [7.026333, 52.755681]
+
+Title: Steneto Reserve
+Coordinates: [24.699837, 42.745786]
+
+Title: Jegunovce Fortress
+Coordinates: [21.141667, 42.099167]
+
+Title: Gemünden
+Coordinates: [8.962329, 50.968108]
+
+Title: Kostomlaty pod Mileaovkou Castle Ruins
+Coordinates: [13.879624, 50.55427]
+
+Title: Moyenmoutier  Monastery
+Coordinates: [6.912482, 48.379408]
+
+Title: Calcione Castle
+Coordinates: [11.685511, 43.293487]
+
+Title: Leubnitz Palace
+Coordinates: [12.022989, 50.515663]
+
+Title: Canale di Regelo Valley
+Coordinates: [10.178308, 44.100872]
+
+Title: Westphalian School Museum
+Coordinates: [7.383464, 51.510481]
+
+Title: Flossenburg Castle
+Coordinates: [12.345473, 49.73495]
+
+Title: Wildenberg Castle
+Coordinates: [9.195522, 49.596341]
+
+Title: Museum Mine Graf Wittekind
+Coordinates: [7.503046, 51.419681]
+
+Title: Melnik Sandstone Clffs
+Coordinates: [23.41636, 41.508276]
+
+Title: Castles of the Vosges
+Coordinates: [7.351902, 48.507882]
+
+Title: Virnsberg Castle
+Coordinates: [10.508596, 49.425603]
+
+Title: Pomorie Salt Museum
+Coordinates: [27.631745, 42.565513]
+
+Title: Saale Valley
+Coordinates: [11.723902, 50.526369]
+
+Title: Maremma Landscape
+Coordinates: [11.021045, 42.815031]
+
+Title: Posterstein Castle
+Coordinates: [12.25297, 50.86308]
+
+Title: Ramsbeck Mine
+Coordinates: [8.388201, 51.343249]
+
+Title: Strekov Castle Ruins
+Coordinates: [14.05068, 50.639018]
+
+Title: Santa Luce Lake
+Coordinates: [10.508616, 43.442423]
+
+Title: Goze Deltschew History Museum
+Coordinates: [23.72689, 41.572965]
+
+Title: Schönau Monastery
+Coordinates: [7.8667, 50.25]
+
+Title: Kemnade Castle
+Coordinates: [7.250564, 51.407842]
+
+Title: Wäscherschloss Castle
+Coordinates: [9.705875, 48.767232]
+
+Title: Buynovo River Gorge
+Coordinates: [24.336497, 41.635322]
+
+Title: Oranienstein Palace
+Coordinates: [8.010945, 50.384007]
+
+Title: Lautenbach
+Coordinates: [8.115041, 48.520627]
+
+Title: Seven Thrones Monastery
+Coordinates: [23.536656, 42.967429]
+
+Title: Zeche Hannover (LWL)
+Coordinates: [7.164829, 51.504563]
+
+Title: Styberra Archaeological Site
+Coordinates: [21.397592, 41.243554]
+
+Title: Ruins of Ibdia
+Coordinates: [28.605567, 44.850294]
+
+Title: Rhodopes Narrow Gauge Railway Line
+Coordinates: [23.559285, 41.820194]
+
+Title: Oberzell Monastery
+Coordinates: [9.878639, 49.800803]
+
+Title: Schauenforst Castle
+Coordinates: [11.442755, 50.78542]
+
+Title: Steigerwald Forest
+Coordinates: [10.533656, 49.899589]
+
+Title: Insediamento rupestre Vitozza
+Coordinates: [11.752608, 42.682014]
+
+Title: Limburg
+Coordinates: [8.066428, 50.388695]
+
+Title: Gräfenrath
+Coordinates: [7.071752, 51.208915]
+
+Title: Oldenburger Moor Landscapes
+Coordinates: [8.320028, 52.987047]
+
+Title: Gorna Banya Monastery
+Coordinates: [23.185509, 42.649958]
+
+Title: Stru~n� Palace
+Coordinates: [13.003893, 50.183593]
+
+Title: Kozia Stena Reserve
+Coordinates: [24.514581, 42.797479]
+
+Title: Sommersdorf Castle
+Coordinates: [10.584083, 49.198431]
+
+Title: Botev Peak
+Coordinates: [24.916666, 42.7175]
+
+Title: Strandzha National Park
+Coordinates: [27.61246, 42.103257]
+
+Title: Volterraio Castle
+Coordinates: [10.383732, 42.80286]
+
+Title: Ulmetum Roman Fortress
+Coordinates: [28.325972, 44.54629]
+
+Title: Clemenswerth Palace  & Gardens
+Coordinates: [7.519561, 52.841809]
+
+Title: Villa Grabau
+Coordinates: [10.553296, 43.902842]
+
+Title: Forno
+Coordinates: [10.177417, 44.082262]
+
+Title: Hasbruch Primeval Forest
+Coordinates: [8.487316, 53.07019]
+
+Title: Chateau de Bernicourt
+Coordinates: [3.103893, 50.422886]
+
+Title: Amorbach Monastery
+Coordinates: [9.219108, 49.644291]
+
+Title: Streekhuis Palace
+Coordinates: [3.197746, 51.176629]
+
+Title: Pernik Museum of Mining
+Coordinates: [23.029384, 42.609442]
+
+Title: Pietraporciana
+Coordinates: [11.819785, 43.031961]
+
+Title: Ripafratta Castle
+Coordinates: [10.416215, 43.818523]
+
+Title: Bojentsi Architecture Reserve
+Coordinates: [25.424607, 42.872654]
+
+Title: Hedgerow Landscapes
+Coordinates: [8.04735, 53.023821]
+
+Title: Gemünden
+Coordinates: [9.689333, 50.056473]
+
+Title: Roman Copper Mine Emilianus-Stollen
+Coordinates: [6.718365, 49.327704]
+
+Title: Himmerod Monastery
+Coordinates: [6.75683, 50.028067]
+
+Title: Raeren Castle
+Coordinates: [6.12062, 50.678728]
+
+Title: Mont'Alfonso Fortress
+Coordinates: [10.401555, 44.108563]
+
+Title: Kastel Hermitage
+Coordinates: [6.566549, 49.566382]
+
+Title: Nozzano Castle
+Coordinates: [10.418402, 43.835075]
+
+Title: Ustina Waterfall
+Coordinates: [24.528937, 42.026812]
+
+Title: Doullens Fortress
+Coordinates: [2.334938, 50.151771]
+
+Title: Eremo Di Lecceto
+Coordinates: [11.265968, 43.30773]
+
+Title: Hirschwald Forest
+Coordinates: [11.881559, 49.367052]
+
+Title: Hermitage of S.Leonardo Al Lago
+Coordinates: [11.249052, 43.320392]
+
+Title: Fortuna Iron Mine
+Coordinates: [8.375537, 50.598141]
+
+Title: Pletvar Pass
+Coordinates: [21.652477, 41.365657]
+
+Title: Cocev Kamen Neolithic Cult Site
+Coordinates: [22.019419, 42.084037]
+
+Title: Rocroi Fortress
+Coordinates: [4.520451, 49.925032]
+
+Title: Himlatejn Castle Ruins
+Coordinates: [13.045218, 50.348035]
+
+Title: Spabrücken Monastery
+Coordinates: [7.708979, 49.902681]
+
+Title: Weißenstein Castle
+Coordinates: [12.083279, 49.913772]
+
+Title: Lahn-Dill Highlands
+Coordinates: [8.261926, 50.709949]
+
+Title: Fanari
+Coordinates: [25.132005, 40.960413]
+
+Title: Stahlberg Iron Mine
+Coordinates: [8.107365, 50.993586]
+
+Title: Momchils Fortress
+Coordinates: [24.83152, 41.580609]
+
+Title: Soonwald-Nahe Forest
+Coordinates: [7.848343, 49.766181]
+
+Title: Thracian Tumulus at Mezek
+Coordinates: [26.101782, 41.73519]
+
+Title: Maas Ardennes
+Coordinates: [4.642345, 49.918049]
+
+Title: Andlsk� Hora Castle Ruin
+Coordinates: [12.963716, 50.205742]
+
+Title: Engers Palace
+Coordinates: [7.545268, 50.422969]
+
+Title: Breitungen Monastery
+Coordinates: [10.339024, 50.759124]
+
+Title: Danube Delta Biosphere Reserve
+Coordinates: [29.231081, 45.058243]
+
+Title: Kreuzberg Monastery
+Coordinates: [9.975816, 50.370862]
+
+Title: Justinianic Fortress of Konjuh
+Coordinates: [21.951423, 42.081607]
+
+Title: WWI Trenches of Dorjan 
+Coordinates: [22.691624, 41.193538]
+
+Title: Livaditis Waterfall
+Coordinates: [24.671773, 41.327116]
+
+Title: Troesmis Roman Fortress
+Coordinates: [28.190835, 45.116097]
+
+Title: Pietracassia Castle
+Coordinates: [10.660374, 43.431881]
+
+Title: Pont d'Oye Palace
+Coordinates: [5.671498, 49.734673]
+
+Title: Werneck Palace
+Coordinates: [10.101586, 49.980705]
+
+Title: Thracian Meteora
+Coordinates: [25.123145, 41.218164]
+
+Title: Geislingen
+Coordinates: [9.829448, 48.621516]
+
+Title: Fanaserie Palace
+Coordinates: [9.70927, 50.508319]
+
+Title: Ancient Macedonian City of Heraclea Lyncestis
+Coordinates: [21.343422, 41.007987]
+
+Title: Waterfall Kostenets
+Coordinates: [23.805297, 42.248928]
+
+Title: Kranichstein Palace
+Coordinates: [8.697577, 49.900197]
+
+Title: Bochum Railway Museum
+Coordinates: [7.126404, 51.432922]
+
+Title: Weilerbach Palace
+Coordinates: [6.382335, 49.839184]
+
+Title: Museum of Ceramics
+Coordinates: [1.841916, 50.666706]
+
+Title: Ryzmburk Castle Ruins
+Coordinates: [13.664668, 50.633774]
+
+Title: Avouerie Palace
+Coordinates: [5.523438, 50.479723]
+
+Title: Neustadt
+Coordinates: [10.813991, 54.10769]
+
+Title: Thracian Meteora
+Coordinates: [25.123145, 41.218164]
+
+Title: VF Museum Landwüst
+Coordinates: [12.331111, 50.26991]
+
+Title: Castle Ranchicourt
+Coordinates: [2.552867, 50.439559]
+
+Title: Hohe Mark Landscape
+Coordinates: [6.805748, 51.720546]
+
+Title: Lichtenberg
+Coordinates: [11.677641, 50.384083]
+
+Title: La Rocca di Staggia
+Coordinates: [11.18278, 43.424935]
+
+Title: Coastal Towers of Siena
+Coordinates: [10.812922, 42.776508]
+
+Title: Sant'Antimo Monastery
+Coordinates: [11.515724, 42.999622]
+
+Title: Sachsenburg Castle
+Coordinates: [11.164531, 51.294817]
+
+Title: Vittinghoff Settlement
+Coordinates: [7.079869, 51.516253]
+
+Title: Bergedorf Palace
+Coordinates: [10.21287, 53.488694]
+
+Title: Maienfels Castle
+Coordinates: [9.512573, 49.119934]
+
+Title: King Marko's Monastery
+Coordinates: [21.401933, 41.885138]
+
+Title: Ancient Macedonian City of Stobi
+Coordinates: [21.975351, 41.552274]
+
+Title: Saint-Quentin
+Coordinates: [3.2874, 49.847065]
+
+Title: Maas Cliffs
+Coordinates: [4.904734, 50.402431]
+
+Title: Promontorio di Piombino
+Coordinates: [10.497853, 42.960751]
+
+Title: Drenthe Peat Colonies
+Coordinates: [6.163301, 52.860252]
+
+Title: Monastery of Padri Passionisti
+Coordinates: [11.160924, 42.413696]
+
+Title: Westerholt Church
+Coordinates: [7.452648, 53.591654]
+
+Title: Paulinzella Monastery
+Coordinates: [11.105582, 50.702924]
+
+Title: Kobern-Gondorf Crusader Chapel
+Coordinates: [7.45779, 50.30375]
+
+Title: Dinogetia Roman Fortress
+Coordinates: [28.156974, 45.351062]
+
+Title: Wiesentfels Castle
+Coordinates: [11.218553, 49.956143]
+
+Title: Blue Palace of Obernzenn
+Coordinates: [10.464486, 49.450582]
+
+Title: Vise
+Coordinates: [5.699039, 50.737158]
+
+Title: Prüm Monastery
+Coordinates: [6.4197, 50.208237]
+
+Title: Lichtenberg Castle
+Coordinates: [8.809755, 49.772485]
+
+Title: Spielberg Castle
+Coordinates: [10.698839, 49.053754]
+
+Title: Rochefort
+Coordinates: [5.222166, 50.159603]
+
+Title: Malberg Palace
+Coordinates: [6.579745, 50.046046]
+
+Title: Apuane Alps National Park
+Coordinates: [10.26649, 44.070642]
+
+Title: Skumsale Thracian Megalith Site
+Coordinates: [24.333836, 42.556727]
+
+Title: Fürstenau
+Coordinates: [7.674958, 52.516787]
+
+Title: Altenberg Monastery
+Coordinates: [8.445293, 50.558563]
+
+Title: Mullerthal Gorge
+Coordinates: [6.378845, 49.788789]
+
+Title: Goat Stone Neolithic Rock Sanctuary
+Coordinates: [23.89414, 41.731388]
+
+Title: Bismarck-Museum
+Coordinates: [12.036063, 52.582987]
+
+Title: Satvorenieto Waterfall
+Coordinates: [25.639312, 41.564437]
+
+Title: Ancient Roman Bridges
+Coordinates: [24.466849, 41.417398]
+
+Title: Katzenelnbogen Castle
+Coordinates: [7.975808, 50.268723]
+
+Title: Kadan
+Coordinates: [13.271322, 50.375991]
+
+Title: Clermont Palace
+Coordinates: [2.301542, 49.972512]
+
+Title: Ebrach Monastery
+Coordinates: [10.508765, 49.846115]
+
+Title: Lucchio
+Coordinates: [10.717615, 44.036607]
+
+Title: Crasciana
+Coordinates: [10.662949, 44.005741]
+
+Title: Heldburg Castle
+Coordinates: [10.728713, 50.288952]
+
+Title: Belcaro Castle
+Coordinates: [11.290855, 43.307085]
+
+Title: Dichter-Viertel Settlement
+Coordinates: [6.778529, 51.496569]
+
+Title: Colonie Museum Leverkusen
+Coordinates: [6.988119, 51.032474]
+
+Title: Καταρράκτης Λεπίδα
+Coordinates: [24.619996, 41.38745]
+
+Title: Semois Valley
+Coordinates: [5.164817, 49.805569]
+
+Title: Erve Kots Open-Air Museum
+Coordinates: [6.590949, 52.020953]
+
+Title: Liebenstein Castle
+Coordinates: [10.361879, 50.817727]
+
+Title: Schwalmstadt Fortress
+Coordinates: [9.235143, 50.910541]
+
+Title: Remains of Via Egnatia
+Coordinates: [20.63241, 41.100504]
+
+Title: Earl Christian Basilica
+Coordinates: [21.013707, 41.876163]
+
+Title: Kärnburg Castle
+Coordinates: [12.54528, 49.273776]
+
+Title: Ehrenstein Castle
+Coordinates: [11.177119, 50.75472]
+
+Title: Podkruanohorska Technical Museum
+Coordinates: [13.622201, 50.554536]
+
+Title: Göllingen Monastery
+Coordinates: [11.014694, 51.345384]
+
+Title: Elbvorland Landscape
+Coordinates: [9.599522, 53.630529]
+
+Title: Kirchberg
+Coordinates: [12.526993, 50.621029]
+
+Title: Dabo
+Coordinates: [7.236179, 48.653645]
+
+Title: Heroldsberg Castle
+Coordinates: [11.15795, 49.53604]
+
+Title: Ruis of Durostorum - Silistria
+Coordinates: [27.259009, 44.121129]
+
+Title: Sainte Odile Monastery 
+Coordinates: [7.404108, 48.437057]
+
+Title: Great Nisovo Rock Monastery
+Coordinates: [26.065805, 43.624813]
+
+Title: St. George  Staro Nagorichane
+Coordinates: [21.828036, 42.198252]
+
+Title: Schlei Fjord
+Coordinates: [9.776089, 54.571883]
+
+Title: Löcknitz Elbe Landscape
+Coordinates: [11.501452, 53.071905]
+
+Title: Hude Monastery
+Coordinates: [8.448769, 53.11721]
+
+Title: Ruins of Traianopolis
+Coordinates: [26.033991, 40.86508]
+
+Title: Tosholter Kirchweg
+Coordinates: [7.924335, 53.222478]
+
+Title: Sauerburg Castle
+Coordinates: [7.817401, 50.082751]
+
+Title: St. Atanasius Cave Church
+Coordinates: [20.647891, 41.140016]
+
+Title: Fort d'Alprech
+Coordinates: [1.563683, 50.698891]
+
+Title: Immaculate Holy  Mother of God Monastery
+Coordinates: [20.935745, 41.459469]
+
+Title: Monuments of the Great War
+Coordinates: [2.876352, 49.853014]
+
+Title: Polog Monastery
+Coordinates: [21.966329, 41.311596]
+
+Title: Ravengiersburg Castle
+Coordinates: [7.478109, 49.935894]
+
+Title: Castris Rubris Roman Fort
+Coordinates: [26.0922, 41.93225]
+
+Title: Bayraklı
+Coordinates: [23.557991, 42.338689]
+
+Title: Chateau de Preisch
+Coordinates: [6.214977, 49.498081]
+
+Title: Antro del Corchia Caves
+Coordinates: [10.302823, 44.020474]
+
+Title: Kraftshof Fortified Church
+Coordinates: [11.049894, 49.512065]
+
+Title: Tauber Bocage Landscape
+Coordinates: [9.874934, 49.457656]
+
+Title: Kamenice Ruins
+Coordinates: [14.433416, 50.791362]
+
+Title: Jezeri Palace
+Coordinates: [13.504856, 50.553938]
+
+Title: Pania di Corfino
+Coordinates: [10.391213, 44.184785]
+
+Title: Capoliveri Mines
+Coordinates: [10.394877, 42.716802]
+
+Title: Haina Monastery
+Coordinates: [8.972661, 51.027509]
+
+Title: Eider Valley
+Coordinates: [9.204546, 54.299535]
+
+Title: La Petite-Pierre Castle
+Coordinates: [7.320551, 48.857926]
+
+Title: Grafschaft Monastery
+Coordinates: [8.324949, 51.144183]
+
+Title: Dornburger Palaces
+Coordinates: [11.667805, 51.005836]
+
+Title: Ancient Sanctuary of Perperikon
+Coordinates: [25.465929, 41.714979]
+
+Title: Zahumska Monastery
+Coordinates: [20.774653, 40.948897]
+
+Title: Ruins of Dimum
+Coordinates: [25.130194, 43.652336]
+
+Title: Roman Necropolis
+Coordinates: [11.5872, 42.58861]
+
+Title: Altenberg Monastery
+Coordinates: [7.132243, 51.054579]
+
+Title: Krasne Brezno Castle
+Coordinates: [14.082413, 50.666342]
+
+Title: Hamm Castle
+Coordinates: [6.419407, 50.016759]
+
+Title: Kilianstollen Copper Mine
+Coordinates: [8.891148, 51.450477]
+
+Title: Plačkovica Mountains
+Coordinates: [22.372468, 41.815098]
+
+Title: Erzschacht Mine
+Coordinates: [7.113946, 51.65549]
+
+Title: Windeck Museum Village
+Coordinates: [7.574604, 50.79771]
+
+Title: Tannenberg Castle
+Coordinates: [9.9496, 51.00841]
+
+Title: Hankrumovski Rock Monastery
+Coordinates: [26.889558, 43.227066]
+
+Title: Pisan Highlands
+Coordinates: [10.830544, 43.609347]
+
+Title: Saint-Sixte Castle
+Coordinates: [6.488945, 49.274366]
+
+Title: Historic Village Lindlar (LVR)
+Coordinates: [7.353743, 51.011434]
+
+Title: Peter-Behrens-Building (LVR)
+Coordinates: [6.870582, 51.488225]
+
+Title: Hansa Coking plant
+Coordinates: [7.412472, 51.540666]
+
+Title: Creminil Castle 
+Coordinates: [2.328473, 50.592128]
+
+Title: Wattenmeer National Park
+Coordinates: [8.526285, 55.222652]
+
+Title: Kühkopf-Knoblochsaue Old-Rhine
+Coordinates: [8.438157, 49.813934]
+
+Title: Leofels Castle
+Coordinates: [9.916061, 49.208343]
+
+Title: Waltern Castle
+Coordinates: [11.936414, 51.964276]
+
+Title: Evros Delta National Park
+Coordinates: [26.029567, 40.808517]
+
+Title: Aumetz Iron Mines
+Coordinates: [5.949639, 49.405418]
+
+Title: Prignitz-Stepenitz Cultural Landscape
+Coordinates: [11.613667, 53.187019]
+
+Title: Veldenstein Castle
+Coordinates: [11.548719, 49.628919]
+
+Title: Knechtsteden Monastery
+Coordinates: [6.752792, 51.077489]
+
+Title: Mosel Vineyards
+Coordinates: [6.962341, 49.908078]
+
+Title: Scupi Archaeological Site
+Coordinates: [21.393656, 42.017021]
+
+Title: Monzone
+Coordinates: [10.129404, 44.158788]
+
+Title: St. Petka in Staničenje
+Coordinates: [22.514256, 43.206993]
+
+Title: Medieval bridge
+Coordinates: [25.219526, 41.733301]
+
+Title: St. Petka Vlach Church
+Coordinates: [20.55664, 41.224783]
+
+Title: Huis Bergh Castle
+Coordinates: [6.241427, 51.874118]
+
+Title: St. Atanasij Monastery 
+Coordinates: [21.027858, 42.066773]
+
+Title: Vratsa Balkans
+Coordinates: [23.476313, 43.096767]
+
+Title: Ancient Mine of Borgognoni
+Coordinates: [10.715328, 44.04443]
+
+Title: Nachtigall Mine Museum (LWL)
+Coordinates: [7.31253, 51.429022]
+
+Title: Hermitage Old Palace
+Coordinates: [11.62487, 49.94914]
+
+Title: Flöz Sonnenschein
+Coordinates: [7.115922, 51.499455]
+
+Title: Ruins of Anastasiopolis
+Coordinates: [25.090878, 41.103413]
+
+Title: St. Theodore Tyron & Theodore Stratilat
+Coordinates: [23.47703, 41.970068]
+
+Title: Brauweiler Monastery
+Coordinates: [6.787844, 50.958902]
+
+Title: Reichenfels Castle
+Coordinates: [12.039473, 50.707918]
+
+Title: Mariahilf Church
+Coordinates: [11.482594, 49.272851]
+
+Title: Sokolov City Museum
+Coordinates: [12.641613, 50.179142]
+
+Title: Miniera del Morone
+Coordinates: [11.632287, 42.746224]
+
+Title: Kirchberg Castle
+Coordinates: [9.982039, 49.205808]
+
+Title: Main Vineyards
+Coordinates: [10.070081, 49.693505]
+
+Title: Museum of the Atlantic Wall
+Coordinates: [1.599825, 50.844074]
+
+Title: Alexandroupolis Archaeological Museum
+Coordinates: [25.856818, 40.847316]
+
+Title: Gamburg Castle
+Coordinates: [9.602838, 49.696113]
+
+Title: Grube Anna-Elisabeth Silver Mine
+Coordinates: [8.674209, 49.487282]
+
+Title: Reichenberg Castle
+Coordinates: [9.460411, 48.991607]
+
+Title: The Red Tower of Death
+Coordinates: [12.953445, 50.328892]
+
+Title: Holy Transfiguration Monastery
+Coordinates: [21.341694, 41.521577]
+
+Title: Thierstein Castle
+Coordinates: [12.101225, 50.107239]
+
+Title: Orlovi Skali Thracian Cult Site
+Coordinates: [25.145126, 41.567904]
+
+Title: Benesov nad Plounici Palace
+Coordinates: [14.311427, 50.742308]
+
+Title: Rail Viaducts
+Coordinates: [8.926155, 51.763014]
+
+Title: Reinhardswald Forest
+Coordinates: [9.417378, 51.542208]
+
+Title: Alto Merse
+Coordinates: [11.219792, 43.189373]
+
+Title: Burg in Dithmarschen
+Coordinates: [9.254425, 53.996657]
+
+Title: Bocholt Textile Mill (LWL)
+Coordinates: [6.628269, 51.835549]
+
+Title: Monte Sagro
+Coordinates: [10.158911, 44.115559]
+
+Title: Klever Reichswald Forest
+Coordinates: [6.051028, 51.819622]
+
+Title: Siershahn Clay Mining Museum
+Coordinates: [7.765511, 50.485328]
+
+Title: Feres Monastery of the Virgin Mary Kosmosoteira 
+Coordinates: [26.176254, 40.902862]
+
+Title: Prince Marko's Towers
+Coordinates: [21.538745, 41.36191]
+
+Title: Hüttenau Garden City
+Coordinates: [7.211194, 51.412672]
+
+Title: Ruins of Histria Archaeological Park
+Coordinates: [28.762104, 44.531881]
+
+Title: Bredelar Monastery
+Coordinates: [8.77285, 51.417872]
+
+Title: Leuchtenburg Castle
+Coordinates: [11.611848, 50.804097]
+
+Title: La Coupole V2 Rocket Site
+Coordinates: [2.241591, 50.705703]
+
+Title: Louppy-sur-Loison Palace
+Coordinates: [5.349163, 49.445223]
+
+Title: Historical and Archaeological Sites of Shumen
+Coordinates: [26.89441, 43.262619]
+
+Title: Děčín Castle
+Coordinates: [14.209191, 50.779041]
+
+Title: Villa Puccini Museum
+Coordinates: [10.306067, 43.832551]
+
+Title: Poggio
+Coordinates: [10.184891, 42.7858]
+
+Title: Unsleben Castle
+Coordinates: [10.258089, 50.377455]
+
+Title: Camburg Castle
+Coordinates: [11.711525, 51.052101]
+
+Title: Lohberg Settlement
+Coordinates: [6.757852, 51.585841]
+
+Title: Towers of Monte Argentario
+Coordinates: [11.122911, 42.384447]
+
+Title: Early Byzantine Castle at Yailata
+Coordinates: [28.545265, 43.437964]
+
+Title: Sieg Valley
+Coordinates: [7.306629, 50.796223]
+
+Title: Prignitzer Narrow Gauge Railway
+Coordinates: [12.127963, 53.033396]
+
+Title: Struga Basilica 
+Coordinates: [20.626631, 41.163065]
+
+Title: Kampen
+Coordinates: [5.917268, 52.558192]
+
+Title: Burgschwalbach Castle
+Coordinates: [8.080612, 50.284787]
+
+Title: Odilienberg Monastery
+Coordinates: [5.99817, 51.148495]
+
+Title: Archaeological Site of Byzantine Maronia
+Coordinates: [25.512678, 40.87404]
+
+Title: Wilhelmshöhe Palace/Garden
+Coordinates: [9.403286, 51.311075]
+
+Title: Lavaux-Sainte-Anne Palace
+Coordinates: [5.09357, 50.114819]
+
+Title: National Fortress Museum
+Coordinates: [5.16027, 52.292953]
+
+Title: Oreshe Waterfall
+Coordinates: [21.384627, 41.639995]
+
+Title: Della Verruca Fortress
+Coordinates: [10.533866, 43.707159]
+
+Title: Stalbitsata Cave
+Coordinates: [24.991595, 43.227629]
+
+Title: Gleiberg Castle
+Coordinates: [8.634644, 50.614913]
+
+Title: Siebengebirge  National Park
+Coordinates: [7.236627, 50.679877]
+
+Title: Waterfall St. Barbara
+Coordinates: [24.590728, 41.343736]
+
+Title: Franc-Waret Palace
+Coordinates: [4.974465, 50.519778]
+
+Title: Burgthann Castle
+Coordinates: [11.316196, 49.355199]
+
+Title: Comburg Monastery
+Coordinates: [9.75027, 49.100238]
+
+Title: Gari
+Coordinates: [20.683192, 41.501728]
+
+Title: White Sand Beaches of Dobruja
+Coordinates: [28.656824, 44.319992]
+
+Title: Lembeck Palace
+Coordinates: [6.999495, 51.743296]
+
+Title: Aldobrandesca Fortress
+Coordinates: [11.536235, 42.872085]
+
+Title: St. Antony Ironworks (LVR)
+Coordinates: [6.872253, 51.523602]
+
+Title: VF Museum Eubabrunn
+Coordinates: [12.37968, 50.306098]
+
+Title: Old Tileworks Museum Westerholt 
+Coordinates: [8.152629, 53.073198]
+
+Title: Hüttenheim Settlement
+Coordinates: [6.72268, 51.365552]
+
+Title: Blansko Castle Ruins 
+Coordinates: [14.099129, 50.697662]
+
+Title: Еleshnitsa Monastery
+Coordinates: [23.650958, 42.771999]
+
+Title: Bettembourg Palace
+Coordinates: [6.096566, 49.51737]
+
+Title: Marmoutier Monastery
+Coordinates: [7.381985, 48.690439]
+
+Title: Lake Poda Wildlife Reserve
+Coordinates: [27.466695, 42.444007]
+
+Title: l'Ortenbourg Castle
+Coordinates: [7.392078, 48.2958]
+
+Title: Canyon dell' Orrido di Botri
+Coordinates: [10.602086, 44.083693]
+
+Title: Rohmbachtal und Rossenbecktal
+Coordinates: [6.922003, 51.392979]
+
+Title: Roscheider Hof
+Coordinates: [6.572304, 49.683113]
+
+Title: Bronnbach Monastery
+Coordinates: [9.54758, 49.712195]
+
+Title: Rock Monastery "Momina Skala"
+Coordinates: [26.866471, 43.234916]
+
+Title: Ostry Ruins
+Coordinates: [14.323166, 50.724586]
+
+Title: Eisenberg
+Coordinates: [11.892646, 50.968606]
+
+Title: Tollenstein Ruins
+Coordinates: [14.581939, 50.857099]
+
+Title: Waleffe Palace
+Coordinates: [5.229194, 50.636733]
+
+Title: Etruscan Necropolis of Populonia
+Coordinates: [10.513149, 42.973343]
+
+Title: Ferropolis  Iron Mine
+Coordinates: [12.446952, 51.758571]
+
+Title: Georgenthal Monastery
+Coordinates: [10.660694, 50.828965]
+
+Title: Saint-Jean-Baptiste Monastery
+Coordinates: [7.363302, 48.771763]
+
+Title: Kapinovo Monastery
+Coordinates: [25.745859, 42.978926]
+
+Title: Şerif Halil Paşa Camii
+Coordinates: [26.909902, 43.269614]
+
+Title: Saint-Ulrich Castle
+Coordinates: [7.305259, 48.203016]
+
+Title: Antiche Miniere di Calcaferro
+Coordinates: [10.304735, 43.983335]
+
+Title: Fort Longon
+Coordinates: [10.402663, 42.765137]
+
+Title: Tabahon
+Coordinates: [21.087912, 41.898577]
+
+Title: Zeche Gneiseneau Mine
+Coordinates: [7.517679, 51.566369]
+
+Title: Dzhendema Cliffs Reserve
+Coordinates: [24.931517, 42.695578]
+
+Title: Marienfließ Monastery
+Coordinates: [12.143821, 53.319089]
+
+Title: Kokino Megalithic Observatory
+Coordinates: [21.953719, 42.263034]
+
+Title: Cyriaksburg Citadel
+Coordinates: [11.006978, 50.967233]
+
+Title: Mariovo Valley
+Coordinates: [21.713995, 41.217383]
+
+Title: Thüngen Castle
+Coordinates: [9.859941, 49.942372]
+
+Title: Havel Landscape
+Coordinates: [12.155631, 52.806049]
+
+Title: Ems Floodplains
+Coordinates: [7.404671, 53.214656]
+
+Title: Oberschwappach Palace
+Coordinates: [10.477017, 49.968213]
+
+Title: Wendener Ironworks
+Coordinates: [7.828456, 50.971224]
+
+Title: Koshnitsa Kaleto Fortress
+Coordinates: [24.687512, 41.508953]
+
+Title: Nicola
+Coordinates: [10.039812, 44.077928]
+
+Title: Bad Ems Mining District
+Coordinates: [7.734264, 50.354027]
+
+Title: Erlebnisbauernhof Stierhof
+Coordinates: [10.328205, 49.652322]
+
+Title: Artland Cultural Landscape
+Coordinates: [7.905684, 52.659624]
+
+Title: Apuane Marble Quarries
+Coordinates: [10.294218, 44.006721]
+
+Title: Le Bois du Cazier Mine
+Coordinates: [4.438648, 50.376016]
+
+Title: Stöffel Basalt Mine
+Coordinates: [7.884616, 50.616945]
+
+Title: Reinbeck Palace
+Coordinates: [10.254205, 53.507291]
+
+Title: Cornia Valley
+Coordinates: [10.562861, 43.018094]
+
+Title: Pravicke Archway
+Coordinates: [14.281509, 50.88392]
+
+Title: Rheinpreußen Settlement
+Coordinates: [6.694443, 51.447756]
+
+Title: Sumburk Castle Ruins
+Coordinates: [13.146939, 50.372756]
+
+Title: Border Museum Schifflersgrund
+Coordinates: [9.99532, 51.284695]
+
+Title: Monte Tondo
+Coordinates: [10.25488, 44.254565]
+
+Title: Corroy-le-Chateau Palace
+Coordinates: [4.66279, 50.53877]
+
+Title: Roman Frontier (Limes)
+Coordinates: [8.903757, 50.25458]
+
+Title: Asar Kaya Thracian Site
+Coordinates: [25.181179, 41.762721]
+
+Title: Ruins of Maximianopolis
+Coordinates: [25.318098, 41.147888]
+
+Title: Elbe Landscape
+Coordinates: [11.904833, 51.969307]
+
+Title: Macedonian Tomb of Stavroupoli
+Coordinates: [24.721758, 41.18401]
+
+Title: Aschach Castle
+Coordinates: [10.059286, 50.258575]
+
+Title: St. Erasmus Basilica
+Coordinates: [20.762894, 41.140596]
+
+Title: Friedewald Castle
+Coordinates: [9.855952, 50.882468]
+
+Title: Ivanovo Cliff Churches
+Coordinates: [25.985473, 43.670837]
+
+Title: Kamchia River Delta
+Coordinates: [27.867221, 43.018542]
+
+Title: Orvelte Village Museum
+Coordinates: [6.659862, 52.843868]
+
+Title: Battlefield of Ypres
+Coordinates: [2.903363, 50.902794]
+
+Title: Lokorsko Falls
+Coordinates: [23.449009, 42.801016]
+
+Title: Miner's Home Museum
+Coordinates: [7.447529, 51.59584]
+
+Title: Nestos Valley
+Coordinates: [24.167715, 41.344595]
+
+Title: Muiderslot Castle
+Coordinates: [5.071214, 52.3344]
+
+Title: San Gervasio
+Coordinates: [10.713001, 43.628185]
+
+Title: Frankenberg Castle
+Coordinates: [10.26653, 49.608686]
+
+Title: Simmern
+Coordinates: [5.963467, 49.700821]
+
+Title: Isar Marvinci Archaeological Site 
+Coordinates: [22.493836, 41.277631]
+
+Title: Langenburg Castle
+Coordinates: [9.843873, 49.253023]
+
+Title: Glücksburg Palace
+Coordinates: [9.551908, 54.834996]
+
+Title: Bramsche Textile Mill
+Coordinates: [7.978212, 52.405294]
+
+Title: Mönchsondheim Fortified Church
+Coordinates: [10.278752, 49.66746]
+
+Title: Cleff House Museum
+Coordinates: [7.165718, 51.197288]
+
+Title: St. Nikola Monastery
+Coordinates: [21.29392, 41.954536]
+
+Title: Waldenburg Palace
+Coordinates: [9.642972, 49.190694]
+
+Title: St. Archangel Michael
+Coordinates: [20.632552, 41.107149]
+
+Title: Hirsau Monastery
+Coordinates: [8.735826, 48.735299]
+
+Title: Pigelleto
+Coordinates: [11.647287, 42.815031]
+
+Title: Pobitite Kamani Rocks (Stone Forest)
+Coordinates: [27.706478, 43.225911]
+
+Title: Hohenlohe Open-Air Museum
+Coordinates: [9.690214, 49.153934]
+
+Title: Kromsdorf Palace
+Coordinates: [11.36899, 51.004324]
+
+Title: La Grange Palace
+Coordinates: [6.16698, 49.376574]
+
+Title: Castles of the Vosges
+Coordinates: [7.255093, 48.036336]
+
+Title: Plankstetten Monastery
+Coordinates: [11.454346, 49.068893]
+
+Title: Pisan Towers of Ripafratta
+Coordinates: [10.420199, 43.816199]
+
+Title: Kappl Trinity Church
+Coordinates: [12.276325, 50.028797]
+
+Title: Bliesgau Nature Preserve
+Coordinates: [7.234504, 49.194269]
+
+Title: Fortress Ruins of Engelana
+Coordinates: [20.766669, 41.145158]
+
+Title: Van Laarne Castle
+Coordinates: [3.838719, 51.027964]
+
+Title: Lower Saar Valley 
+Coordinates: [6.562707, 49.525552]
+
+Title: Trebeništa Archaeological Site
+Coordinates: [20.754986, 41.206382]
+
+Title: Striževac Fortress
+Coordinates: [22.405891, 43.096009]
+
+Title: Aghinolfi Castle
+Coordinates: [10.167179, 44.008743]
+
+Title: Reinhold-Forster-Erbstolln Iron Mine
+Coordinates: [7.992737, 50.834907]
+
+Title: Dalheim Monastery
+Coordinates: [8.9256, 51.6119]
+
+Title: Braunfels Palace
+Coordinates: [8.387618, 50.513821]
+
+Title: Maffei Shafts Mining Museum
+Coordinates: [11.657977, 49.674249]
+
+Title: Trigrad
+Coordinates: [24.380153, 41.59888]
+
+Title: Altdorf Castle
+Coordinates: [11.327087, 49.371277]
+
+Title: Basarbovo Rock Monastery
+Coordinates: [25.947106, 43.778661]
+
+Title: Van Poeke Castle
+Coordinates: [3.450045, 51.041235]
+
+Title: Kompsatos Medieval Bridge
+Coordinates: [25.210553, 41.14113]
+
+Title: Assumstadt Palace
+Coordinates: [9.334752, 49.288103]
+
+Title: d'Osthoffen Palace
+Coordinates: [7.553702, 48.584537]
+
+Title: Museum Village Sarakatsanaioi
+Coordinates: [25.174974, 41.003544]
+
+Title: Bouzonville Monastery
+Coordinates: [6.51674, 49.297882]
+
+Title: Oldenburger Moor Landscapes
+Coordinates: [7.961302, 53.332074]
+
+Title: Bartenstein Palace
+Coordinates: [9.878398, 49.355807]
+
+Title: Holy Virgin Mary Monastery
+Coordinates: [21.001821, 41.110365]
+
+Title: Saint Maurice Monastery
+Coordinates: [7.526685, 48.310973]
+
+Title: Archaelogical Park Nicopolis ad Istrum
+Coordinates: [25.612683, 43.218463]
+
+Title: Urphar St. Jakob
+Coordinates: [9.569213, 49.748966]
+
+Title: Burning Mountain
+Coordinates: [7.052353, 49.288326]
+
+Title: Uckange Steel Works
+Coordinates: [6.157513, 49.306745]
+
+Title: The Maginot Line - Large Artillery Fortress Galgenberg
+Coordinates: [6.252951, 49.424979]
+
+Title: North Vosges Mountains
+Coordinates: [7.367391, 48.952186]
+
+Title: Annevoie Palace
+Coordinates: [4.84882, 50.34738]
+
+Title: Landscapes of Mount Amiata
+Coordinates: [11.735411, 42.755861]
+
+Title: Wilhelmine Copper Mine
+Coordinates: [9.271658, 50.069103]
+
+Title: Eastern Rhodopes &  the Arda Valley
+Coordinates: [25.78677, 41.632223]
+
+Title: Silkosiya Primeval Forest
+Coordinates: [27.757496, 42.073619]
+
+Title: Ems-Moor Landscape
+Coordinates: [7.813038, 52.90767]
+
+Title: Limburg Ruins
+Coordinates: [8.145695, 49.457017]
+
+Title: Faber-Castell Palace
+Coordinates: [11.021035, 49.417449]
+
+Title: Museum of Agricultural Life in the Oise
+Coordinates: [2.034967, 49.637137]
+
+Title: Herbeumont Castle
+Coordinates: [5.234042, 49.778654]
+
