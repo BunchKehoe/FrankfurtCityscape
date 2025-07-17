@@ -1,34 +1,10 @@
-<!-- <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-/>
-<link
-  href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
+  href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css"
   rel="stylesheet"
 />
 
-<link
-  href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css"
-  rel="stylesheet"
-/>
-
-<script
-  src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-  crossorigin=""
-></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"
-  crossorigin="anonymous"
-></script>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"
-></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
 
 <style>
   .map {
@@ -663,7 +639,7 @@
     if (currentLocation.includes("siena")) {
       map.setCenter([11.3, 43]);
       map.setZoom(9);
-      $(".map").css("height", "700px");
+      document.querySelector(".map").style.height = "700px";
     }
   } else {
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
