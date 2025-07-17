@@ -292,6 +292,115 @@
 
   var currentLocation = window.location.href;
 
+  // Location configurations for easier management and appending
+  var locationConfigs = {
+    "interactive-map": { mobile: { center: [8.7, 50.1], zoom: 4.25 }, desktop: { center: [8.7, 50.1], zoom: 7 } },
+    "shopluk": { mobile: { center: [22.8, 41.9], zoom: 7 }, desktop: { center: [22.8, 42.1], zoom: 7.5 } },
+    "pirin": { mobile: { center: [23.4, 41.5], zoom: 8 }, desktop: { center: [23.4, 41.5], zoom: 8 } },
+    "dobruja/": { mobile: { center: [28, 43.5], zoom: 6.5 }, desktop: { center: [28, 43.5], zoom: 6.5 } },
+    "dobruja": { mobile: { center: [28, 43.5], zoom: 6.5 }, desktop: { center: [28, 43.5], zoom: 6.5 } },
+    "northern-bulgaria": { mobile: { center: [25, 41], zoom: 6 }, desktop: { center: [25, 42.9], zoom: 7 } },
+    "thracian-valley": { mobile: { center: [25.5, 41.4], zoom: 6.5 }, desktop: { center: [25.5, 41.9], zoom: 7.5 } },
+    "strandzha": { mobile: { center: [27.3, 42], zoom: 7.5 }, desktop: { center: [27.3, 42], zoom: 7.5 } },
+    "rhodope-mountains": { mobile: { center: [24.7, 41.2], zoom: 7.5 }, desktop: { center: [24.7, 41.2], zoom: 7.5 } },
+    "western-thrace": { mobile: { center: [25.4, 40.8], zoom: 8 }, desktop: { center: [25.4, 40.8], zoom: 8 } },
+    "holstein": { mobile: { center: [10, 53.7], zoom: 8.5 }, desktop: { center: [10, 53.7], zoom: 8.5 } },
+    "mecklenburg": { mobile: { center: [12.3, 53.5], zoom: 8.5 }, desktop: { center: [12.3, 53.5], zoom: 8.5 } },
+    "schleswig": { mobile: { center: [9.2, 54.6], zoom: 8.5 }, desktop: { center: [9.2, 54.6], zoom: 8.5 } },
+    "slesvig": { mobile: { center: [9.2, 54.6], zoom: 8.5 }, desktop: { center: [9.2, 54.6], zoom: 8.5 } },
+    "vorpommern": { mobile: { center: [13.6, 53.6], zoom: 8.5 }, desktop: { center: [13.6, 53.6], zoom: 8.5 } },
+    "scania": { mobile: { center: [14, 55.8], zoom: 8 }, desktop: { center: [14, 55.8], zoom: 8 } },
+    "sjaelland": { mobile: { center: [11.9, 55.2], zoom: 8 }, desktop: { center: [11.9, 55.2], zoom: 8 } },
+    "fyn": { mobile: { center: [10.3, 55], zoom: 8.5 }, desktop: { center: [10.3, 55], zoom: 8.5 } },
+    "jylland": { mobile: { center: [9.5, 56.5], zoom: 8 }, desktop: { center: [9.5, 56.5], zoom: 8 } },
+    "uckermark": { mobile: { center: [13.8, 53.1], zoom: 9.5 }, desktop: { center: [13.8, 53.1], zoom: 9.5 } },
+    "mittelmark": { mobile: { center: [13.2, 52.3], zoom: 8 }, desktop: { center: [13.2, 52.3], zoom: 8 } },
+    "altmark": { mobile: { center: [11.7, 52.7], zoom: 9 }, desktop: { center: [11.7, 52.7], zoom: 9 } },
+    "lower-saxony": { mobile: { center: [10.3, 52.6], zoom: 8 }, desktop: { center: [10.3, 52.6], zoom: 8 } },
+    "anhalt": { mobile: { center: [12.1, 51.75], zoom: 9.5 }, desktop: { center: [12.1, 51.75], zoom: 9.5 } },
+    "eastphalia": { mobile: { center: [11.1, 51.6], zoom: 8 }, desktop: { center: [11.1, 51.6], zoom: 8 } },
+    "thuringia": { mobile: { center: [10.9, 50.7], zoom: 8.5 }, desktop: { center: [10.9, 50.7], zoom: 8.5 } },
+    "electoral-saxony": { mobile: { center: [13.2, 51], zoom: 8 }, desktop: { center: [13.2, 51], zoom: 8 } },
+    "lusatia": { mobile: { center: [14.5, 51.3], zoom: 8.5 }, desktop: { center: [14.5, 51.3], zoom: 8.5 } },
+    "hessen": { mobile: { center: [9.3, 50.7], zoom: 8.5 }, desktop: { center: [9.3, 50.7], zoom: 8.5 } },
+    "wetterau": { mobile: { center: [9, 50], zoom: 9 }, desktop: { center: [9, 50], zoom: 9 } },
+    "explore-frankfurt": { mobile: { center: [9, 50], zoom: 9 }, desktop: { center: [9, 50], zoom: 9 } },
+    "westerwald": { mobile: { center: [8, 50.2], zoom: 9 }, desktop: { center: [8, 50.2], zoom: 9 } },
+    "main-franconia": { mobile: { center: [10.1, 50.05], zoom: 9.5 }, desktop: { center: [10.1, 50.05], zoom: 9.5 } },
+    "upper-franconia": { mobile: { center: [11.1, 50.05], zoom: 9.5 }, desktop: { center: [11.1, 50.05], zoom: 9.5 } },
+    "middle-franconia": { mobile: { center: [10.8, 49.1], zoom: 9 }, desktop: { center: [10.8, 49.1], zoom: 9 } },
+    "odenwald": { mobile: { center: [9.2, 49.67], zoom: 9 }, desktop: { center: [9.2, 49.67], zoom: 9 } },
+    "vogtland": { mobile: { center: [12.1, 50.3], zoom: 9 }, desktop: { center: [12.1, 50.3], zoom: 9 } },
+    "hohenlohe": { mobile: { center: [9.8, 49.3], zoom: 9 }, desktop: { center: [9.8, 49.3], zoom: 9 } },
+    "upper-bavaria": { mobile: { center: [11.7, 48.1], zoom: 8.5 }, desktop: { center: [11.7, 48.1], zoom: 8.5 } },
+    "lower-bavaria": { mobile: { center: [12.7, 48.7], zoom: 9 }, desktop: { center: [12.7, 48.7], zoom: 9 } },
+    "upper-palatinate": { mobile: { center: [12.15, 49.4], zoom: 9 }, desktop: { center: [12.15, 49.4], zoom: 9 } },
+    "allgau": { mobile: { center: [10.3, 47.6], zoom: 9 }, desktop: { center: [10.3, 47.6], zoom: 9 } },
+    "oberschwaben": { mobile: { center: [9.9, 48.2], zoom: 8.5 }, desktop: { center: [9.9, 48.2], zoom: 8.5 } },
+    "wurttemberg": { mobile: { center: [9, 48.4], zoom: 8.5 }, desktop: { center: [9, 48.4], zoom: 8.5 } },
+    "lake-constance-bodensee": { mobile: { center: [9.2, 47.6], zoom: 10 }, desktop: { center: [9.2, 47.6], zoom: 10 } },
+    "ducal-bar": { mobile: { center: [5.5, 49], zoom: 9 }, desktop: { center: [5.5, 49], zoom: 9 } },
+    "lorraine": { mobile: { center: [6.4, 48.6], zoom: 8.5 }, desktop: { center: [6.4, 48.6], zoom: 8.5 } },
+    "luxembourg": { mobile: { center: [5.65, 49.7], zoom: 9 }, desktop: { center: [5.65, 49.7], zoom: 9 } },
+    "saarland": { mobile: { center: [7, 49.2], zoom: 9.5 }, desktop: { center: [7, 49.2], zoom: 9.5 } },
+    "middle-rhine-valley": { mobile: { center: [7.6, 50.25], zoom: 9.5 }, desktop: { center: [7.6, 50.25], zoom: 9.5 } },
+    "mosel-valley": { mobile: { center: [6.9, 50], zoom: 9 }, desktop: { center: [6.9, 50], zoom: 9 } },
+    "electoral-palatinate": { mobile: { center: [8.15, 49.4], zoom: 9 }, desktop: { center: [8.15, 49.4], zoom: 9 } },
+    "alsace": { mobile: { center: [7.5, 48.5], zoom: 9 }, desktop: { center: [7.5, 48.5], zoom: 9 } },
+    "baden": { mobile: { center: [8.2, 48.5], zoom: 9 }, desktop: { center: [8.2, 48.5], zoom: 9 } },
+    "basel": { mobile: { center: [6.9, 50], zoom: 9 }, desktop: { center: [8.2, 48.5], zoom: 9 } },
+    "maas-valley": { mobile: { center: [5.5, 50.7], zoom: 8.5 }, desktop: { center: [5.5, 50.7], zoom: 8.5 } },
+    "lower-rhine-valley": { mobile: { center: [6.5, 51.2], zoom: 9 }, desktop: { center: [6.5, 51.2], zoom: 9 } },
+    "bergisches-land": { mobile: { center: [7.3, 50.9], zoom: 9.5 }, desktop: { center: [7.3, 50.9], zoom: 9.5 } },
+    "weser-engern": { mobile: { center: [8.9, 52.78], zoom: 8.5 }, desktop: { center: [8.9, 52.78], zoom: 8.5 } },
+    "sauerland": { mobile: { center: [8, 51.1], zoom: 9.5 }, desktop: { center: [8, 51.1], zoom: 9.5 } },
+    "westphalia": { mobile: { center: [7.7, 52.3], zoom: 9 }, desktop: { center: [7.7, 52.3], zoom: 9 } },
+    "ruhr": { mobile: { center: [7.7, 52.3], zoom: 9 }, desktop: { center: [7.7, 52.3], zoom: 9 } },
+    "emsland": { mobile: { center: [7.7, 52.7], zoom: 8.5 }, desktop: { center: [7.7, 52.7], zoom: 8.5 } },
+    "west-frisia": { mobile: { center: [6.1, 53.1], zoom: 8.5 }, desktop: { center: [6.1, 53.1], zoom: 8.5 } },
+    "east-frisia": { mobile: { center: [7.5, 53.5], zoom: 8.5 }, desktop: { center: [7.5, 53.5], zoom: 8.5 } },
+    "oldenburger-land": { mobile: { center: [8.2, 53.3], zoom: 8.5 }, desktop: { center: [8.2, 53.3], zoom: 8.5 } },
+    "oversticht": { mobile: { center: [6.4, 52.6], zoom: 9 }, desktop: { center: [6.4, 52.6], zoom: 9 } },
+    "holland": { mobile: { center: [4.4, 52.3], zoom: 9 }, desktop: { center: [4.4, 52.3], zoom: 9 } },
+    "brabant": { mobile: { center: [5.05, 51.2], zoom: 9 }, desktop: { center: [5.05, 51.2], zoom: 9 } },
+    "flanders": { mobile: { center: [3.3, 50.9], zoom: 9 }, desktop: { center: [3.3, 50.9], zoom: 9 } },
+    "artois": { mobile: { center: [3.3, 50.9], zoom: 9 }, desktop: { center: [3.3, 50.9], zoom: 9 } },
+    "picardy": { mobile: { center: [3.3, 50.9], zoom: 9 }, desktop: { center: [3.3, 50.9], zoom: 9 } },
+    "hainaut": { mobile: { center: [4, 50.3], zoom: 9 }, desktop: { center: [4, 50.3], zoom: 9 } },
+    "gelderland": { mobile: { center: [5.6, 52.1], zoom: 9 }, desktop: { center: [5.6, 52.1], zoom: 9 } },
+    "florence": { mobile: { center: [11.3, 43.7], zoom: 9 }, desktop: { center: [11.3, 43.7], zoom: 9 } },
+    "republic-of-florence/": { mobile: { center: [11.3, 43.7], zoom: 9 }, desktop: { center: [11.3, 43.7], zoom: 9 } },
+    "pisa": { mobile: { center: [10.4, 43.3], zoom: 9 }, desktop: { center: [10.4, 43.1], zoom: 9 } },
+    "republic-of-pisa/": { mobile: { center: [10.4, 43.3], zoom: 9 }, desktop: { center: [10.4, 43.1], zoom: 9 } },
+    "lucca": { mobile: { center: [10.4, 44], zoom: 9 }, desktop: { center: [10.4, 44], zoom: 10 } },
+    "republic-of-lucca/": { mobile: { center: [10.4, 44], zoom: 9 }, desktop: { center: [10.4, 44], zoom: 10 } },
+    "carrara": { mobile: { center: [10.1, 44.1], zoom: 10 }, desktop: { center: [10.1, 44], zoom: 11 } },
+    "duchy-of-massa-and-carrara/": { mobile: { center: [10.1, 44.1], zoom: 10 }, desktop: { center: [10.1, 44], zoom: 11 } },
+    "siena": { mobile: { center: [11.3, 43], zoom: 9 }, desktop: { center: [11.3, 42.8], zoom: 9 } },
+    "republic-of-siena/": { mobile: { center: [11.3, 43], zoom: 9 }, desktop: { center: [11.3, 42.8], zoom: 9 } }
+  };
+
+  // Function to apply location-based map settings
+  function applyLocationSettings(map, isMobile) {
+    var platform = isMobile ? 'mobile' : 'desktop';
+    
+    for (var location in locationConfigs) {
+      if (currentLocation.includes(location)) {
+        var config = locationConfigs[location][platform];
+        if (config) {
+          map.setCenter(config.center);
+          map.setZoom(config.zoom);
+          
+          // Special handling for siena mobile
+          if (location === "siena" && isMobile) {
+            $(".map").css("height", "700px");
+          }
+          break;
+        }
+      }
+    }
+  }
+
   mapboxgl.accessToken =
     "pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw";
 
@@ -343,328 +452,8 @@
       map.addControl(new mapboxgl.FullscreenControl(), "top-right");
     });
 
-    if (currentLocation.includes("interactive-map")) {
-      map.setCenter([8.7, 50.1]);
-      map.setZoom(4.25);
-    }
-
-    if (currentLocation.includes("shopluk")) {
-      map.setCenter([22.8, 41.9]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.includes("pirin")) {
-      map.setCenter([23.4, 41.5]);
-      map.setZoom(8);
-    }
-
-    if (currentLocation.includes("dobruja/")) {
-      map.setCenter([28, 43.5]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.includes("northern-bulgaria")) {
-      map.setCenter([25, 41]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.includes("thracian-valley")) {
-      map.setCenter([25.5, 41.4]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.includes("strandzha")) {
-      map.setCenter([27.3, 42]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("rhodope-mountains")) {
-      map.setCenter([24.7, 41.2]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("western-thrace")) {
-      map.setCenter([25.4, 40.8]);
-      map.setZoom(8);
-    }
-
-    if (currentLocation.includes("holstein")) {
-      map.setCenter([10, 53.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("mecklenburg")) {
-      map.setCenter([12.3, 53.5]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("schleswig")) {
-      map.setCenter([9.2], 54.6);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("slesvig")) {
-      map.setCenter([9.2], 54.6);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("vorpommern")) {
-      map.setCenter([13.6, 53.6]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("scania")) {
-      map.setCenter([14, 55.8]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("sjaelland")) {
-      map.setCenter([11.9, 55.2]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("fyn")) {
-      map.setCenter([10.3, 55]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("jylland")) {
-      map.setCenter([9.5, 56.5]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("uckermark")) {
-      map.setCenter([13.8, 53.1]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("mittelmark")) {
-      map.setCenter([13.2, 52.3]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("altmark")) {
-      map.setCenter([11.7, 52.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("lower-saxony")) {
-      map.setCenter([10.3, 52.6]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("anhalt")) {
-      map.setCenter([12.1, 51.75]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("eastphalia")) {
-      map.setCenter([11.1, 51.6]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("thuringia")) {
-      map.setCenter([10.9, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("electoral-saxony")) {
-      map.setCenter([13.2, 51]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("lusatia")) {
-      map.setCenter([14.5, 51.3]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("hessen")) {
-      map.setCenter([9.3, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("wetterau")) {
-      map.setCenter([9, 50]);
-      map.setZoom(9);
-    }
-	if (currentLocation.includes("explore-frankfurt")) {
-      map.setCenter([9, 50]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("westerwald")) {
-      map.setCenter([8, 50.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("main-franconia")) {
-      map.setCenter([10.1, 50.05]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("upper-franconia")) {
-      map.setCenter([11.1, 50.05]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("middle-franconia")) {
-      map.setCenter([10.8, 49.1]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("odenwald")) {
-      map.setCenter([9.2, 49.67]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("vogtland")) {
-      map.setCenter([12.1, 50.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("hohenlohe")) {
-      map.setCenter([9.8, 49.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("upper-bavaria")) {
-      map.setCenter([11.7, 48.1]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lower-bavaria")) {
-      map.setCenter([12.7, 48.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("upper-palatinate")) {
-      map.setCenter([12.15, 49.4]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("allgau")) {
-      map.setCenter([10.3, 47.6]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("oberschwaben")) {
-      map.setCenter([9.9, 48.2]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("wurttemberg")) {
-      map.setCenter([9, 48.4]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lake-constance-bodensee")) {
-      map.setCenter([9.2, 47.6]);
-      map.setZoom(10);
-    }
-    if (currentLocation.includes("ducal-bar")) {
-      map.setCenter([5.5, 49]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("lorraine")) {
-      map.setCenter([6.4, 48.6]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("luxembourg")) {
-      map.setCenter([5.65, 49.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("saarland")) {
-      map.setCenter([7, 49.2]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("middle-rhine-valley")) {
-      map.setCenter([7.6, 50.25]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("mosel-valley")) {
-      map.setCenter([6.9, 50]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("electoral-palatinate")) {
-      map.setCenter([8.15, 49.4]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("alsace")) {
-      map.setCenter([7.5, 48.5]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("baden")) {
-      map.setCenter([8.2, 48.5]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("basel")) {
-      map.setCenter([6.9, 50]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("maas-valley")) {
-      map.setCenter([5.5, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lower-rhine-valley")) {
-      map.setCenter([6.5, 51.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("bergisches-land")) {
-      map.setCenter([7.3, 50.9]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("weser-engern")) {
-      map.setCenter([8.9, 52.78]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("sauerland")) {
-      map.setCenter([8, 51.1]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("westphalia")) {
-      map.setCenter([7.7, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("ruhr")) {
-      map.setCenter([7.7, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("emsland")) {
-      map.setCenter([7.7, 52.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("west-frisia")) {
-      map.setCenter([6.1, 53.1]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("east-frisia")) {
-      map.setCenter([7.5, 53.5]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("oldenburger-land")) {
-      map.setCenter([8.2, 53.3]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("oversticht")) {
-      map.setCenter([6.4, 52.6]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("holland")) {
-      map.setCenter([4.4, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("brabant")) {
-      map.setCenter([5.05, 51.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("flanders")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("artois")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("picardy")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("hainaut")) {
-      map.setCenter([4, 50.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("gelderland")) {
-      map.setCenter([5.6, 52.1]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("florence")) {
-      map.setCenter([11.3, 43.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("pisa")) {
-      map.setCenter([10.4, 43.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("lucca")) {
-      map.setCenter([10.4, 44]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("carrara")) {
-      map.setCenter([10.1, 44.1]);
-      map.setZoom(10);
-    }
-    if (currentLocation.includes("siena")) {
-      map.setCenter([11.3, 43]);
-      map.setZoom(9);
-      $(".map").css("height", "700px");
-    }
+    // Apply location-based map settings for mobile
+    applyLocationSettings(map, true);
   } else {
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
     // ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -717,326 +506,7 @@
       map.addControl(new mapboxgl.FullscreenControl(), "top-right");
     });
 
-    if (currentLocation.includes("interactive-map")) {
-      map.setCenter([8.7, 50.1]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.includes("shopluk")) {
-      map.setCenter([22.8, 42.1]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("pirin")) {
-      map.setCenter([23.4, 41.5]);
-      map.setZoom(8);
-    }
-
-    if (currentLocation.includes("dobruja")) {
-      map.setCenter([28, 43.5]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.includes("northern-bulgaria")) {
-      map.setCenter([25, 42.9]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.includes("thracian-valley")) {
-      map.setCenter([25.5, 41.9]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("strandzha")) {
-      map.setCenter([27.3, 42]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("rhodope-mountains")) {
-      map.setCenter([24.7, 41.2]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.includes("western-thrace")) {
-      map.setCenter([25.4, 40.8]);
-      map.setZoom(8);
-    }
-
-    if (currentLocation.includes("holstein")) {
-      map.setCenter([10, 53.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("mecklenburg")) {
-      map.setCenter([12.3, 53.5]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("schleswig")) {
-      map.setCenter([9.2, 54.6]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("slesvig")) {
-      map.setCenter([9.2], 54.6);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("vorpommern")) {
-      map.setCenter([13.6, 53.6]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("scania")) {
-      map.setCenter([14, 55.8]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("sjaelland")) {
-      map.setCenter([11.9, 55.2]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("fyn")) {
-      map.setCenter([10.3, 55]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("jylland")) {
-      map.setCenter([9.5, 56.5]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("uckermark")) {
-      map.setCenter([13.8, 53.1]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("mittelmark")) {
-      map.setCenter([13.2, 52.3]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("altmark")) {
-      map.setCenter([11.7, 52.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("lower-saxony")) {
-      map.setCenter([10.3, 52.6]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("anhalt")) {
-      map.setCenter([12.1, 51.75]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("eastphalia")) {
-      map.setCenter([11.1, 51.6]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("thuringia")) {
-      map.setCenter([10.9, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("electoral-saxony")) {
-      map.setCenter([13.2, 51]);
-      map.setZoom(8);
-    }
-    if (currentLocation.includes("lusatia")) {
-      map.setCenter([14.5, 51.3]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("hessen")) {
-      map.setCenter([9.3, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("wetterau")) {
-      map.setCenter([9, 50]);
-      map.setZoom(9);
-    }
-	if (currentLocation.includes("explore-frankfurt")) {
-      map.setCenter([9, 50]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("westerwald")) {
-      map.setCenter([8, 50.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("main-franconia")) {
-      map.setCenter([10.1, 50.05]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("upper-franconia")) {
-      map.setCenter([11.1, 50.05]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("middle-franconia")) {
-      map.setCenter([10.8, 49.1]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("odenwald")) {
-      map.setCenter([9.2, 49.67]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("vogtland")) {
-      map.setCenter([12.1, 50.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("hohenlohe")) {
-      map.setCenter([9.8, 49.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("upper-bavaria")) {
-      map.setCenter([11.7, 48.1]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lower-bavaria")) {
-      map.setCenter([12.7, 48.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("upper-palatinate")) {
-      map.setCenter([12.15, 49.4]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("allgau")) {
-      map.setCenter([10.3, 47.6]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("oberschwaben")) {
-      map.setCenter([9.9, 48.2]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("wurttemberg")) {
-      map.setCenter([9, 48.4]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lake-constance-bodensee")) {
-      map.setCenter([9.2, 47.6]);
-      map.setZoom(10);
-    }
-    if (currentLocation.includes("ducal-bar")) {
-      map.setCenter([5.5, 49]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("lorraine")) {
-      map.setCenter([6.4, 48.6]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("luxembourg")) {
-      map.setCenter([5.65, 49.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("saarland")) {
-      map.setCenter([7, 49.2]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("middle-rhine-valley")) {
-      map.setCenter([7.6, 50.25]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("mosel-valley")) {
-      map.setCenter([6.9, 50]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("electoral-palatinate")) {
-      map.setCenter([8.15, 49.4]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("basel")) {
-      map.setCenter([8.2, 48.5]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("alsace")) {
-      map.setCenter([7.5, 48.5]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("baden")) {
-      map.setCenter([8.2, 48.5]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("maas-valley")) {
-      map.setCenter([5.5, 50.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("lower-rhine-valley")) {
-      map.setCenter([6.5, 51.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("bergisches-land")) {
-      map.setCenter([7.3, 50.9]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("weser-engern")) {
-      map.setCenter([8.9, 52.78]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("sauerland")) {
-      map.setCenter([8, 51.1]);
-      map.setZoom(9.5);
-    }
-    if (currentLocation.includes("westphalia")) {
-      map.setCenter([7.7, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("ruhr")) {
-      map.setCenter([7.7, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("emsland")) {
-      map.setCenter([7.7, 52.7]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("west-frisia")) {
-      map.setCenter([6.1, 53.1]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("east-frisia")) {
-      map.setCenter([7.5, 53.5]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("oldenburger-land")) {
-      map.setCenter([8.2, 53.3]);
-      map.setZoom(8.5);
-    }
-    if (currentLocation.includes("oversticht")) {
-      map.setCenter([6.4, 52.6]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("holland")) {
-      map.setCenter([4.4, 52.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("brabant")) {
-      map.setCenter([5.05, 51.2]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("flanders")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("artois")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("picardy")) {
-      map.setCenter([3.3, 50.9]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("hainaut")) {
-      map.setCenter([4, 50.3]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("gelderland")) {
-      map.setCenter([5.6, 52.1]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("republic-of-florence/")) {
-      map.setCenter([11.3, 43.7]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("republic-of-pisa/")) {
-      map.setCenter([10.4, 43.1]);
-      map.setZoom(9);
-    }
-    if (currentLocation.includes("republic-of-lucca/")) {
-      map.setCenter([10.4, 44]);
-      map.setZoom(10);
-    }
-    if (currentLocation.includes("duchy-of-massa-and-carrara/")) {
-      map.setCenter([10.1, 44]);
-      map.setZoom(11);
-    }
-    if (currentLocation.includes("republic-of-siena/")) {
-      map.setCenter([11.3, 42.8]);
-      map.setZoom(9);
-    }
+    // Apply location-based map settings for desktop
+    applyLocationSettings(map, false);
   }
 </script>
