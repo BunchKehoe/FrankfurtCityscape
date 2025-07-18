@@ -1,280 +1,338 @@
-<!-- <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
 
 <style>
-  .map {
-    min-height: 400px;
-    height: 100vh;
-    position: relative;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+  }
+
   .map-container {
-    overflow: visible;
-    position: relative;
-    justify-content: center;
     width: 100%;
+    height: 600px;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* If the parent container has a defined height, use that instead */
+  .map-container-responsive {
+    height: 100% !important;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
   }
 
   .map-overlay {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
-    width: 35%;
+    width: 350px;
     top: 20px;
     left: 20px;
-    padding: 15px;
+    padding: 20px;
     display: none;
-    max-width: 400px;
+    z-index: 1000;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
   }
 
-	.popupgl {
-    width: 300px;
-    height: auto;
-    border: 2px solid rgb(10, 147, 150);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  .popupgl {
+    max-width: 380px;
+    min-width: 320px;
+    border: 2px solid #0a9396;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    transition: opacity 0.2s ease-in-out;
     background: rgba(255, 255, 255, 0.98);
-    z-index: 1000;
+    backdrop-filter: blur(10px);
+    z-index: 1001;
+  }
+
+  .popupgl.region-colored {
+    border-width: 3px;
   }
 
   .popupgl .mapboxgl-popup-content {
-    padding: 15px;
+    padding: 12px;
     border-radius: 6px;
+    background: transparent;
   }
 
-  .popupgl .container {
+  .popupgl .popup-layout {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .popupgl .popup-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
+  }
+
+  .popupgl .popup-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .popupgl .popup-region-label {
+    margin: 0 0 4px 0;
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .popupgl .popup-title {
+    margin: 0 0 4px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #333;
+  }
+
+  .popupgl .popup-subtitle {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .popupgl .popup-description {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .popupgl .popup-click-hint {
+    margin: 0;
+    font-size: 0.85em;
+    color: #0a9396;
+    font-style: italic;
+  }
+
+  .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+  .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 768px) {
+    .map-container {
+      height: 100%;
+      min-height: 400px;
+    }
+
+    .map {
+      height: 100%;
+    }
+    
+    .map-overlay.visible {
+      display: block !important;
+      transform: translateY(0);
+    }
+
+    .map-overlay {
+      position: fixed !important;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      width: 100% !important;
+      height: auto;
+      max-height: 50vh;
+      border-radius: 12px 12px 0 0;
+      z-index: 9999 !important;
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      overflow-y: auto;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .popupgl {
+      max-width: 60px;
+      min-width: 60px;
+    }
+
+    .popupgl .mapboxgl-popup-content {
+      padding: 0;
+    }
+
+    .popupgl .popup-layout {
+      display: block;
+    }
+
+    .popupgl .popup-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .popupgl .popup-content {
+      display: none;
+    }
+  }
+
+  /* Overlay Content Styles */
+  .overlay-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .overlay-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
+  }
+
+  .overlay-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .overlay-text h2,
+  .overlay-text h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .overlay-text .region-label {
+    margin: 0 0 4px 0;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .overlay-text .main-title {
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .overlay-text p {
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .overlay-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a9396;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .overlay-button:hover {
+    background-color: #087f83;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(10, 147, 150, 0.3);
+  }
+
+  .overlay-button:active {
+    transform: translateY(0);
+  }
+
+  /* Remove old button styles */
+  .button-59 {
+    display: none;
+  }
+
+  /* Utility classes */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    margin: 0;
+    text-align: left;
+  }
+
+  .regionleft {
+    margin: 0;
+    text-align: left;
+  }
+
+  .row {
     display: flex;
     align-items: flex-start;
     gap: 15px;
   }
 
-  .popupgl .text {
-    flex: 1;
-  }
-
-  .popupgl h2, .popupgl h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
-    line-height: 1.3;
-    color: #333;
-  }
-
-  .popupgl p {
-    margin: 0;
-    font-size: 0.95em;
-    line-height: 1.4;
-    color: #666;
-  }
-  .popUpImg {
-    width: auto;
-    height: auto;
-    max-width: 80px;
-    max-height: 80px;
-    object-fit: contain;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-  
-  .mapboxgl-popup-tip {
-    display: none;
-  }
-
-  @media only screen and (max-width: 700px) {
-    .map {
-      height: 400px;
-      position: relative;
-      width: 100%;
-    	margin: 0 auto;
-    }
-    
-    .map-overlay.visible {
-      display: block !important;
-    }
-
-    .map-overlay {
-    	position: static !important;
-      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      background-color: #fff;
-      border-radius: 3px;
-      width: 100% !important;
-      padding: 15px;
-      top: auto;
-      left: auto;
-      z-index: 9999 !important;
-      max-width: none !important;
-      margin: 20px auto !important;
-    }
-    
-    .mapboxgl-popup-tip {
-    	display: none;
-  	}
-
-   .map-container {
-      overflow: visible;
-      position: relative;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .popupgl {
-      width: auto;
-    }
-
-    .popUpImg {
-      max-width: 60px;
-      max-height: 60px;
-    }
-
-    .popupgl h2, .popupgl h3 {
-      font-size: 1em;
-    }
-
-    .popupgl p {
-      font-size: 0.9em;
-    }
-
-    .popUpImg {
-      width: auto;
-      height: auto;
-      margin: 0px;
-      max-width: 50px;
-      max-height: 50px;
-    }
-  }
-
-  .infoImg {
-    width: auto;
-    height: auto;
-    max-width: 100px;
-    max-height: 100px;
-    margin-right: 10px;
-  }
-
   .container {
     display: flex;
-    align-items: center;
-    justify-content: left;
-    vertical-align: top;
+    align-items: flex-start;
+    gap: 15px;
   }
 
   .text {
-    vertical-align: top;
-    word-wrap: break-word;
-    display: inline-block;
+    flex: 1;
   }
 
-  body {
-    margin: 0;
-  }
-
-  div.h2 {
-    font-size: 150%;
-  }
-
-  /* CSS */
-  .button-59 {
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid #000;
-    box-sizing: border-box;
-    color: #000;
-    cursor: pointer;
-    display: inline-flex;
-    fill: #000;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    height: 48px;
-    justify-content: center;
-    letter-spacing: -0.8px;
-    line-height: 24px;
-    min-width: 100px;
-    outline: 0;
-    padding: 0 17px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  .button-59:focus {
-    color: rgb(53, 88, 139);
-  }
-
-  .button-59:hover {
-    background-color: rgb(167, 167, 167);
-    border-color: rgb(53, 88, 139);
-    color: rgb(53, 88, 139);
-    fill: rgb(53, 88, 139);
-  }
-
-  .button-59:active {
-    background-color: rgb(53, 88, 139);
-    border-color: rgb(53, 88, 139);
-    color: rgb(53, 88, 139);
-    fill: rgb(53, 88, 139);
-  }
-
-  @media (min-width: 768px) {
-    .button-59 {
-      min-width: 100px;
-    }
-  }
-
-  .center {
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-  }
-
-  .left {
-    margin: 0;
-    float: left;
-    padding-left: 15px;
-    vertical-align: top;
-  }
-
-  h2.left {
-    float: left;
-    padding-left: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  h2.regionleft {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  p.regionleft {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  h3.regioncenter {
-    float: center;
-  }
-
-  .row {
-    display: flex;
-    vertical-align: middle;
-  }
-
-  html {
-    --lh: 1.4rem;
-    line-height: var(--lh);
-  }
-
-  .column {
-    margin: 0;
-    padding: 0;
+  .infoImg {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
   }
 </style>
 
@@ -330,52 +388,55 @@
   function getMobileCountryPopupHtml(feature) {
     if (feature.properties && feature.properties.name) {
       var popUp =
+        '<div class="popup-layout">' +
         '<a href="' +
         feature.properties.url +
-        '"><img class="popUpImg" src="' +
+        '"><img class="popup-image" src="' +
         feature.properties.icourl +
-        '"/></a><p class = "regionleft">' +
-        'Click to Learn More' +
-        '</p></div></div>';
+        '"/></a>' +
+        '</div>';
       return popUp;
     }
   }
 
   function getMobileEmpirePopupHtml(feature) {
     if (feature.properties && feature.properties.name) {
-      var regionColor = setRegionColor(feature);
       var popUp =
+        '<div class="popup-layout">' +
         '<a href="' +
         feature.properties.empireUrl +
-        '"><img class="popUpImg" src="' +
+        '"><img class="popup-image" src="' +
         feature.properties.empireIcoUrl +
-        '"/></a>';
+        '"/></a>' +
+        '</div>';
       return popUp;
     }
   }
 
   function getMobileRegionPopupHtml(feature) {
     if (feature.properties && feature.properties.name) {
-      var regionColor = setRegionColor(feature);
       var popUp =
+        '<div class="popup-layout">' +
         '<a href="' +
         feature.properties.regionUrl +
-        '"><img class="popUpImg" src="' +
+        '"><img class="popup-image" src="' +
         feature.properties.regionIcoUrl +
-        '"/>';
+        '"/></a>' +
+        '</div>';
       return popUp;
     }
   }
 
   function getMobileSubRegionPopupHtml(feature) {
     if (feature.properties && feature.properties.name) {
-      var regionColor = setRegionColor(feature);
       var popUp =
+        '<div class="popup-layout">' +
         '<a href="' +
         feature.properties.url +
-        '"><img class="popUpImg" src="' +
+        '"><img class="popup-image" src="' +
         feature.properties.icoUrl +
-        '"/>';
+        '"/></a>' +
+        '</div>';
       return popUp;
     }
   }
@@ -383,23 +444,22 @@
   function getMobileCountrySidebarHtml(feature) {
     if (feature.properties && feature.properties.name) {
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.icourl +
-        '"/></div><div class="container"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h2>' +
         feature.properties.name +
-        '</h2></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h2>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.desc +
         '</p>' +
         '<div class="center"><a href="' +
         feature.properties.url +
-        '" id="discButton' +
-        feature.id +
-        '" class="button-59" role="button">Discover More</button></div>';
+        '" class="overlay-button">Discover More</a></div>';
       return sideBar;
     }
   }
@@ -408,23 +468,22 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.empireIcoUrl +
-        '"/></div><div class="container"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h2 class="main-title">' +
         feature.properties.empire +
-        '</h2></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h2>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.empireDesc +
         '</p>' +
         '<div class="center"><a href="' +
         feature.properties.empireUrl +
-        '" id="discButton' +
-        feature.id +
-        '" class="button-59" role="button">Discover More</button></div>';
+        '" class="overlay-button">Discover More</a></div>';
       return sideBar;
     }
   }
@@ -433,23 +492,22 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.regionIcoUrl +
-        '"/></div><div class="container"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h2 class="main-title">' +
         feature.properties.region +
-        '</h2></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h2>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.regionDesc +
         '</p>' +
         '<div class="center"><a href="' +
         feature.properties.regionUrl +
-        '" id="discButton' +
-        feature.id +
-        '" class="button-59" role="button">Discover More</a></div>';
+        '" class="overlay-button">Discover More</a></div>';
       return sideBar;
     }
   }
@@ -458,23 +516,25 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.icoUrl +
-        '"/></div><div class="container"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<div class="region-label">' +
+        feature.properties.region +
+        '</div>' +
+        '<h2 class="main-title">' +
         feature.properties.name +
-        '</h2></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h2>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.desc +
         '</p>' +
         '<div class="center"><a href="' +
         feature.properties.url +
-        '" id="discButton' +
-        feature.id +
-        '" class="button-59" role="button">Discover More</a></div>';
+        '" class="overlay-button">Discover More</a></div>';
       return sideBar;
     }
   }
@@ -482,15 +542,18 @@
   function getCountryPopupHtml(feature) {
     if (feature.properties && feature.properties.name) {
       var popUp =
-        '<div class="container">' +
-        '<img class="popUpImg" src="' +
+        '<div class="popup-layout">' +
+        '<img class="popup-image" src="' +
         feature.properties.icourl +
-        '"/><div class = "text"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="popup-content">' +
+        '<h2 class="popup-title">' +
         feature.properties.name +
-        '</h2><p class = "regionleft">' +
-        'Click on the Map to Learn More' +
-        '</p></div></div>';
-      return popUp;
+        '</h2>' +
+        '<p class="popup-click-hint">Click on the Map to Learn More</p>' +
+        '</div>' +
+        '</div>';
+      return { html: popUp, borderColor: null };
     }
   }
 
@@ -498,15 +561,20 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var popUp =
-        '<div class="container">' +
-        '<img class="popUpImg" src="' +
+        '<div class="popup-layout">' +
+        '<img class="popup-image" src="' +
         feature.properties.empireIcoUrl +
-        '"/><div class = "text"><h2 class = "regionleft">' +
+        '"/>' +
+        '<div class="popup-content">' +
+        '<h2 class="popup-title">' +
         feature.properties.empire +
-        '</h2><p class = "regionleft">' +
+        '</h2>' +
+        '<p class="popup-subtitle">' +
         feature.properties.region +
-        '</p></div></div>';
-      return popUp;
+        '</p>' +
+        '</div>' +
+        '</div>';
+      return { html: popUp, borderColor: regionColor };
     }
   }
 
@@ -514,15 +582,20 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var popUp =
-        '<div class="container">' +
-        '<img class="popUpImg" src="' +
+        '<div class="popup-layout">' +
+        '<img class="popup-image" src="' +
         feature.properties.regionIcoUrl +
-        '"/><div class = "text"><h3 class = "regionleft">' +
+        '"/>' +
+        '<div class="popup-content">' +
+        '<h3 class="popup-title">' +
         feature.properties.region +
-        '</h3><p class = "regionleft">' +
+        '</h3>' +
+        '<p class="popup-subtitle">' +
         feature.properties.subtitle +
-        '</p></div></div>';
-      return popUp;
+        '</p>' +
+        '</div>' +
+        '</div>';
+      return { html: popUp, borderColor: regionColor };
     }
   }
 
@@ -530,33 +603,40 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var popUp =
-        '<div class="container">' +
-        '<img class="popUpImg" src="' +
+        '<div class="popup-layout">' +
+        '<img class="popup-image" src="' +
         feature.properties.icoUrl +
-        '"/><div class = "text"><p class = "regionleft">' +
+        '"/>' +
+        '<div class="popup-content">' +
+        '<div class="popup-region-label">' +
         feature.properties.region +
-        '</p><h3 class = "regionleft">' +
+        '</div>' +
+        '<h3 class="popup-title">' +
         feature.properties.name +
-        '</h3><p class = "regionleft">' +
+        '</h3>' +
+        '<p class="popup-description">' +
         feature.properties.subtitle +
-        '</p></div></div>';
-      return popUp;
+        '</p>' +
+        '</div>' +
+        '</div>';
+      return { html: popUp, borderColor: regionColor };
     }
   }
 
   function getCountrySidebarHtml(feature) {
     if (feature.properties && feature.properties.name) {
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.icourl +
-        '"/></div><div class="container"><h3 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h3>' +
         feature.properties.name +
-        '</h3></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h3>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.desc +
         '</p>';
       return sideBar;
@@ -567,16 +647,17 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.empireIcoUrl +
-        '"/></div><div class="container"><h3 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h3 class="main-title">' +
         feature.properties.empire +
-        '</h3></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h3>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.empireDesc +
         '</p>';
       return sideBar;
@@ -587,16 +668,17 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.regionIcoUrl +
-        '"/></div><div class="container"><h3 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<h3 class="main-title">' +
         feature.properties.region +
-        '</h3></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h3>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.regionDesc +
         '</p>';
       return sideBar;
@@ -607,16 +689,20 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
-        '<div class="row">' +
-        '<div class="container">' +
-        '<img class="infoImg" src="' +
+        '<div class="overlay-content">' +
+        '<img class="overlay-image" src="' +
         feature.properties.icoUrl +
-        '"/></div><div class="container"><h3 class = "regionleft">' +
+        '"/>' +
+        '<div class="overlay-text">' +
+        '<div class="region-label">' +
+        feature.properties.region +
+        '</div>' +
+        '<h3 class="main-title">' +
         feature.properties.name +
-        '</h3></div></div>' +
-        '<p id=' +
-        feature.id +
-        '>' +
+        '</h3>' +
+        '</div>' +
+        '</div>' +
+        '<p class="overlay-text">' +
         feature.properties.desc +
         '</p>';
       return sideBar;
@@ -639,37 +725,68 @@
   }
 
   function setRegionColor(feature) {
-    switch (feature.properties.region) {
+    let borderColor;
+    const region = feature.properties.region;
+    switch (region) {
       case 'baltic':
         borderColor = 'rgb(10, 147, 150)';
+        break;
       case 'denmark':
         borderColor = 'rgb(155, 34, 38)';
+        break;
       case 'brandenburg':
         borderColor = 'rgb(202, 103, 2)';
+        break;
       case 'saxony':
         borderColor = 'rgb(0, 95, 115)';
+        break;
       case 'hessen-nassau':
         borderColor = 'rgb(0, 18, 25)';
+        break;
       case 'franconia':
         borderColor = 'rgb(174, 32, 18)';
+        break;
       case 'bavaria':
         borderColor = 'rgb(0, 18, 26)';
+        break;
       case 'swabia':
         borderColor = 'rgb(233, 216, 166)';
+        break;
       case 'lorraine':
         borderColor = 'rgb(240, 156, 0)';
+        break;
       case 'rhine-maas':
         borderColor = 'rgb(85, 23, 17)';
+        break;
       case 'upper-rhine':
         borderColor = 'rgb(148, 210, 189)';
+        break;
       case 'westphalia':
         borderColor = 'rgb(187, 62, 3)';
+        break;
       case 'the-lowlands':
         borderColor = 'rgb(41, 82, 117)';
+        break;
       default:
-        borderColor = 'rgb(255, 255, 255)';
+        borderColor = 'rgb(10, 147, 150)'; // default green instead of white
     }
     return borderColor;
+  }
+
+  // Helper function to apply region color to popup
+  function applyRegionColorToPopup(popup, borderColor) {
+    if (borderColor) {
+      setTimeout(() => {
+        const popupElement = popup.getElement();
+        if (popupElement) {
+          const popupContent = popupElement.querySelector('.popupgl');
+          if (popupContent) {
+            popupContent.style.borderColor = borderColor;
+            popupContent.classList.add('region-colored');
+          }
+        }
+      }, 10);
+    }
   }
 
   function goToEmpire(feature, layer) {
@@ -687,6 +804,145 @@
   function goTo(feature, layer) {
     if (feature.properties && feature.properties.name) {
       window.open(feature.properties.url);
+    }
+  }
+
+  // Location configuration object
+  const locationConfig = {
+    // Countries
+    'germany': {
+      mobile: { center: [10.1, 51.1], zoom: 4.25 },
+      desktop: { center: [9.3, 50.6], zoom: 5.2 }
+    },
+    'bulgaria': {
+      mobile: { center: [25.5, 42.6], zoom: 5.5 },
+      desktop: { center: [25, 42.6], zoom: 6.5 }
+    },
+    'north-macedonia': {
+      mobile: { center: [21, 40.8], zoom: 6.5 },
+      desktop: { center: [21.2, 41.3], zoom: 7.5 }
+    },
+    'denmark': {
+      mobile: { center: [11.5, 56], zoom: 5 },
+      desktop: { center: [10.5, 55.5], zoom: 6.2 }
+    },
+    
+    // Historical Regions
+    'baltic': {
+      mobile: { center: [11.2, 54.5], zoom: 5 },
+      desktop: { center: [11.2, 53.3], zoom: 6.2 }
+    },
+    'brandenburg': {
+      mobile: { center: [12.7, 52.7], zoom: 6 },
+      desktop: { center: [12.7, 52.3], zoom: 7 }
+    },
+    'saxony': {
+      mobile: { center: [12.3, 52], zoom: 5 },
+      desktop: { center: [12.3, 52], zoom: 6.5 }
+    },
+    'hessen-nassau': {
+      mobile: { center: [8.7, 50.8], zoom: 6 },
+      desktop: { center: [8.7, 50.3], zoom: 7.2 }
+    },
+    'franconia': {
+      mobile: { center: [10.6, 49.9], zoom: 6 },
+      desktop: { center: [10.6, 49.6], zoom: 7 }
+    },
+    'bavaria': {
+      mobile: { center: [12, 48.7], zoom: 6 },
+      desktop: { center: [12, 48.7], zoom: 7 }
+    },
+    'swabia': {
+      mobile: { center: [9.5, 48.3], zoom: 6 },
+      desktop: { center: [9.5, 48], zoom: 7 }
+    },
+    'lorraine': {
+      mobile: { center: [6.2, 49.1], zoom: 6 },
+      desktop: { center: [6.5, 49.1], zoom: 7 }
+    },
+    'upper-rhine': {
+      mobile: { center: [7.8, 49.1], zoom: 6 },
+      desktop: { center: [7.8, 49.1], zoom: 6.6 }
+    },
+    'rhine-maas': {
+      mobile: { center: [6, 50.9], zoom: 6 },
+      desktop: { center: [6, 50.7], zoom: 7 }
+    },
+    'westphalia': {
+      mobile: { center: [8.2, 52.4], zoom: 6 },
+      desktop: { center: [8.2, 52.4], zoom: 6.7 }
+    },
+    'the-lowlands': {
+      mobile: { center: [5.3, 52], zoom: 5 },
+      desktop: { center: [5.3, 51.5], zoom: 6.2 }
+    },
+    'exploring-europe/frisia/': {
+      mobile: { center: [7.2, 52.7], zoom: 6 },
+      desktop: { center: [7.2, 52.7], zoom: 7 }
+    },
+    'the-royal-lowlands': {
+      mobile: { center: [2.7, 50.3], zoom: 6 },
+      desktop: { center: [2.7, 50.3], zoom: 7.2 }
+    },
+    'tuscany': {
+      mobile: { center: [11.4, 43.4], zoom: 6 },
+      desktop: { center: [11.1, 43.1], zoom: 7.4 }
+    },
+    'ile-de-france': {
+      mobile: { center: [2.7, 49], zoom: 8 },
+      desktop: { center: [2.7, 48.7], zoom: 7.4 }
+    },
+    'thracia-region': {
+      mobile: { center: [25.5, 41.6], zoom: 6 },
+      desktop: { center: [25.5, 41.6], zoom: 7 }
+    },
+    'shopluk-region': {
+      mobile: { center: [23.1, 42.3], zoom: 6.5 },
+      desktop: { center: [23.1, 42.3], zoom: 7 }
+    },
+    'macedonia-region': {
+      mobile: { center: [22, 41], zoom: 6.5 },
+      desktop: { center: [22, 41], zoom: 7 }
+    },
+    'danube-region': {
+      mobile: { center: [26.3, 44], zoom: 5 },
+      desktop: { center: [26.3, 44], zoom: 6.5 }
+    },
+    
+    // Empires
+    'kalmar-union': {
+      mobile: { center: [18, 62.4], zoom: 4 },
+      desktop: { center: [18, 62.4], zoom: 5 }
+    },
+    'holy-roman-empire': {
+      mobile: { center: [11.3, 50], zoom: 5 },
+      desktop: { center: [11.3, 50], zoom: 5.5 }
+    },
+    'kingdom-of-france': {
+      mobile: { center: [2.5, 48], zoom: 5 },
+      desktop: { center: [2.5, 48], zoom: 5.5 }
+    },
+    'ottoman-empire': {
+      mobile: { center: [29, 41], zoom: 5 },
+      desktop: { center: [29, 41], zoom: 5.5 }
+    }
+  };
+
+  // Function to apply location configuration
+  function applyLocationConfig(map, currentLocation, isMobile) {
+    const viewType = isMobile ? 'mobile' : 'desktop';
+    
+    // Find matching location configuration
+    for (const [locationKey, config] of Object.entries(locationConfig)) {
+      if (currentLocation.includes(locationKey)) {
+        const viewConfig = config[viewType];
+        if (viewConfig) {
+          map.setCenter(viewConfig.center);
+          map.setZoom(viewConfig.zoom);
+          
+          return; // Exit after first match
+        }
+      }
     }
   }
 
@@ -719,143 +975,8 @@
     map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
     
-   if (currentLocation.includes('germany')) {
-      map.setCenter([10.1, 51.1]);
-      map.setZoom(4.25);
-    }
-
-    if (currentLocation.includes('bulgaria')) {
-      map.setCenter([25.5, 42.6]);
-      map.setZoom(5.5);
-    }
-
-    if (currentLocation.includes('north-macedonia')) {
-      map.setCenter([21, 40.8]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.indexOf('baltic') > -1) {
-      map.setCenter([11.2, 54.5]);
-      map.setZoom(5);
-    }
-    if (currentLocation.indexOf('denmark') > -1) {
-      map.setCenter([11.5, 56]);
-      map.setZoom(5);
-    }
-    if (currentLocation.indexOf('brandenburg') > -1) {
-      map.setCenter([12.7, 52.7]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('saxony') > -1) {
-      map.setCenter([12.3, 52]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.indexOf('hessen-nassau') > -1) {
-      map.setCenter([8.7, 50.8]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('franconia') > -1) {
-      map.setCenter([10.6, 49.9]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('bavaria') > -1) {
-      map.setCenter([12, 48.7]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('swabia') > -1) {
-      map.setCenter([9.5, 48.3]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('lorraine') > -1) {
-      map.setCenter([6.2, 49.1]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('upper-rhine') > -1) {
-      map.setCenter([7.8, 49.1]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('rhine-maas') > -1) {
-      map.setCenter([6, 50.9]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('westphalia') > -1) {
-      map.setCenter([8.2, 52.4]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('the-lowlands') > -1) {
-      map.setCenter([5.3, 52]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.includes('exploring-europe/frisia/')) {
-      map.setCenter([7.2, 52.7]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('the-royal-lowlands') > -1) {
-      map.setCenter([2.7, 50.3]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('tuscany') > -1) {
-      map.setCenter([11.4, 43.4]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('ile-de-france') > -1) {
-      map.setCenter([2.7, 49]);
-      map.setZoom(8);
-    }
-
-    if (currentLocation.indexOf('thracia-region') > -1) {
-      map.setCenter([25.5, 41.6]);
-      map.setZoom(6);
-    }
-
-    if (currentLocation.indexOf('shopluk-region') > -1) {
-      map.setCenter([23.1, 42.3]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.indexOf('macedonia-region') > -1) {
-      map.setCenter([22, 41]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.indexOf('danube-region') > -1) {
-      map.setCenter([26.3, 44]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.indexOf('kalmar-union') > -1) {
-      map.setCenter([18, 62.4]);
-      map.setZoom(4);
-    }
-
-    if (currentLocation.indexOf('holy-roman-empire') > -1) {
-      map.setCenter([11.3, 50]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.indexOf('kingdom-of-france') > -1) {
-      map.setCenter([2.5, 48]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.indexOf('ottoman-empire') > -1) {
-      map.setCenter([29, 41]);
-      map.setZoom(5);
-    }
+    // Apply location-specific configuration
+    applyLocationConfig(map, currentLocation, true);
 
     const overlay = document.getElementById('map-overlay');
 
@@ -1112,146 +1233,8 @@
     map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
     map.addControl(new mapboxgl.NavigationControl(), 'top-right');
     
-   if (currentLocation.indexOf('germany') > -1) {
-      map.setCenter([9.3, 50.6]);
-      map.setZoom(5.2);
-    }
-
-    if (currentLocation.indexOf('bulgaria') > -1) {
-      map.setCenter([25, 42.6]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.includes('north-macedonia')) {
-      map.setCenter([21.2, 41.3]);
-      map.setZoom(7.5);
-    }
-
-    if (currentLocation.indexOf('baltic') > -1) {
-      map.setCenter([11.2, 53.3]);
-      map.setZoom(6.2);
-    }
-
-    if (currentLocation.indexOf('denmark') > -1) {
-      map.setCenter([10.5, 55.5]);
-      map.setZoom(6.2);
-    }
-
-    if (currentLocation.indexOf('brandenburg') > -1) {
-      map.setCenter([12.7, 52.3]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('saxony') > -1) {
-      map.setCenter([12.3, 52]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.indexOf('hessen-nassau') > -1) {
-      map.setCenter([8.7, 50.3]);
-      map.setZoom(7.2);
-    }
-
-    if (currentLocation.indexOf('franconia') > -1) {
-      map.setCenter([10.6, 49.6]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('bavaria') > -1) {
-      map.setCenter([12, 48.7]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('swabia') > -1) {
-      map.setCenter([9.5, 48]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('lorraine') > -1) {
-      map.setCenter([6.5, 49.1]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('upper-rhine') > -1) {
-      map.setCenter([7.8, 49.1]);
-      map.setZoom(6.6);
-    }
-
-    if (currentLocation.indexOf('rhine-maas') > -1) {
-      map.setCenter([6, 50.7]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('westphalia') > -1) {
-      map.setCenter([8.2, 52.4]);
-      map.setZoom(6.7);
-    }
-
-    if (currentLocation.indexOf('the-lowlands') > -1) {
-      map.setCenter([5.3, 51.5]);
-      map.setZoom(6.2);
-    }
-
-    if (currentLocation.includes('exploring-europe/frisia/')) {
-      map.setCenter([7.2, 52.7]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('the-royal-lowlands') > -1) {
-      map.setCenter([2.7, 50.3]);
-      map.setZoom(7.2);
-    }
-
-    if (currentLocation.indexOf('tuscany') > -1) {
-      map.setCenter([11.1, 43.1]);
-      map.setZoom(7.4);
-    }
-
-    if (currentLocation.indexOf('ile-de-france') > -1) {
-      map.setCenter([2.7, 48.7]);
-      map.setZoom(7.4);
-    }
-
-    if (currentLocation.indexOf('thracia-region') > -1) {
-      map.setCenter([25.5, 41.6]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('shopluk-region') > -1) {
-      map.setCenter([23.1, 42.3]);
-      map.setZoom(7);
-      $('.map').css('height', '700px');
-    }
-
-    if (currentLocation.indexOf('macedonia-region') > -1) {
-      map.setCenter([22, 41]);
-      map.setZoom(7);
-    }
-
-    if (currentLocation.indexOf('danube-region') > -1) {
-      map.setCenter([26.3, 44]);
-      map.setZoom(6.5);
-    }
-
-    if (currentLocation.indexOf('kalmar-union') > -1) {
-      map.setCenter([18, 62.4]);
-      map.setZoom(5);
-    }
-
-    if (currentLocation.indexOf('holy-roman-empire') > -1) {
-      map.setCenter([11.3, 50]);
-      map.setZoom(5.5);
-    }
-
-    if (currentLocation.indexOf('kingdom-of-france') > -1) {
-      map.setCenter([2.5, 48]);
-      map.setZoom(5.5);
-    }
-
-    if (currentLocation.indexOf('ottoman-empire') > -1) {
-      map.setCenter([29, 41]);
-      map.setZoom(5, 5);
-    }
+    // Apply location-specific configuration
+    applyLocationConfig(map, currentLocation, false);
 
     const overlay = document.getElementById('map-overlay');
 
@@ -1355,20 +1338,20 @@
 
           // Use the first found feature.
           const feature = e.features[0];
-          let popupContent = '';
+          let popupResult = null;
           let sideBarContent = '';
 
           if (map.getZoom() <= 5) {
             map.setFilter('empires-highlighted', ['in', 'empire', feature.properties.empire]);
-            popupContent = getEmpirePopupHtml(feature);
+            popupResult = getEmpirePopupHtml(feature);
             sideBarContent = getEmpireSidebarHtml(feature);
           } else if (map.getZoom() <= 6 && map.getZoom() > 5) {
             map.setFilter('regions-highlighted', ['in', 'region', feature.properties.region]);
-            popupContent = getRegionPopupHtml(feature);
+            popupResult = getRegionPopupHtml(feature);
             sideBarContent = getRegionSidebarHtml(feature);
           } else {
             map.setFilter('subregions-highlighted', ['in', 'name', feature.properties.name]);
-            popupContent = getSubRegionPopupHtml(feature);
+            popupResult = getSubRegionPopupHtml(feature);
             sideBarContent = getSubRegionSidebarHtml(feature);
           }
 
@@ -1377,7 +1360,10 @@
           overlay.style.display = 'block';
 
           // Display a popup with the name of the county.
-          popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+          if (popupResult) {
+            popup.setLngLat(e.lngLat).setHTML(popupResult.html).setMaxWidth('none').addTo(map);
+            applyRegionColorToPopup(popup, popupResult.borderColor);
+          }
         });
 
         map.on('click', 'regions', (e) => {
@@ -1455,11 +1441,11 @@
 
           // Use the first found feature.
           const feature = e.features[0];
-          let popupContent = '';
+          let popupResult = null;
           let sideBarContent = '';
 
           map.setFilter('countries-highlighted', ['in', 'name', feature.properties.name]);
-          popupContent = getCountryPopupHtml(feature);
+          popupResult = getCountryPopupHtml(feature);
           sideBarContent = getCountrySidebarHtml(feature);
 
           // Render found features in an overlay.
@@ -1467,7 +1453,12 @@
           overlay.style.display = 'block';
 
           // Display a popup with the name of the county.
-          popup.setLngLat(e.lngLat).setHTML(popupContent).setMaxWidth('none').addTo(map);
+          if (popupResult) {
+            popup.setLngLat(e.lngLat).setHTML(popupResult.html).setMaxWidth('none').addTo(map);
+            if (popupResult.borderColor) {
+              applyRegionColorToPopup(popup, popupResult.borderColor);
+            }
+          }
         });
 
         map.on('click', 'countries', (e) => {
