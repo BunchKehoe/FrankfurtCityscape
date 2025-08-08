@@ -18,10 +18,8 @@
 
   .map-container {
     width: 100%;
-    height: 600px;
-    min-height: 400px;
-    position: relative;
-    overflow: hidden;
+    height: 70vh;
+    min-height: 600px;
   }
 
   /* If the parent container has a defined height, use that instead */
@@ -30,7 +28,6 @@
   }
 
   .map {
-    width: 100%;
     height: 100%;
   }
 
@@ -148,7 +145,7 @@
   /* Mobile Styles */
   @media only screen and (max-width: 768px) {
     .map-container {
-      height: 100%;
+      height: 60vh;
       min-height: 400px;
     }
 
@@ -179,6 +176,36 @@
       transform: translateY(100%);
       transition: transform 0.3s ease-in-out;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-overlay .close-button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #666;
+      transition: all 0.2s ease;
+      z-index: 10000;
+    }
+
+    .map-overlay .close-button:hover {
+      background: rgba(0, 0, 0, 0.2);
+      color: #333;
+    }
+
+    .map-overlay .close-button::before {
+      content: '×';
+      font-weight: bold;
+      line-height: 1;
     }
 
     .popupgl {
@@ -444,6 +471,7 @@
   function getMobileCountrySidebarHtml(feature) {
     if (feature.properties && feature.properties.name) {
       var sideBar =
+        '<button class="close-button" onclick="closeMobileSidebar()"></button>' +
         '<div class="overlay-content">' +
         '<img class="overlay-image" src="' +
         feature.properties.icourl +
@@ -468,6 +496,7 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
+        '<button class="close-button" onclick="closeMobileSidebar()"></button>' +
         '<div class="overlay-content">' +
         '<img class="overlay-image" src="' +
         feature.properties.empireIcoUrl +
@@ -492,6 +521,7 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
+        '<button class="close-button" onclick="closeMobileSidebar()"></button>' +
         '<div class="overlay-content">' +
         '<img class="overlay-image" src="' +
         feature.properties.regionIcoUrl +
@@ -516,6 +546,7 @@
     if (feature.properties && feature.properties.name) {
       var regionColor = setRegionColor(feature);
       var sideBar =
+        '<button class="close-button" onclick="closeMobileSidebar()"></button>' +
         '<div class="overlay-content">' +
         '<img class="overlay-image" src="' +
         feature.properties.icoUrl +
@@ -771,6 +802,14 @@
         borderColor = 'rgb(10, 147, 150)'; // default green instead of white
     }
     return borderColor;
+  }
+
+  // Mobile sidebar close functionality
+  function closeMobileSidebar() {
+    const overlay = document.getElementById('map-overlay');
+    if (overlay) {
+      overlay.classList.remove('visible');
+    }
   }
 
   // Helper function to apply region color to popup
@@ -1116,11 +1155,13 @@
         map.on('zoomstart', function () {
           removeFilters(map);
           popup.remove();
+          closeMobileSidebar();
         });
 
         map.on('mousedown', function () {
           removeFilters(map);
           popup.remove();
+          closeMobileSidebar();
         });
       });
     } else {
@@ -1194,11 +1235,13 @@
         map.on('zoomstart', function () {
           removeFilters(map);
           popup.remove();
+          closeMobileSidebar();
         });
 
         map.on('mousedown', function () {
           removeFilters(map);
           popup.remove();
+          closeMobileSidebar();
         });
       });
     }
