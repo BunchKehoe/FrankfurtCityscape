@@ -1,0 +1,3295 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 4,
+        "offsetY": -4,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-left",
+        "title": "Burg Theater",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.361444,
+          48.210052
+        ],
+        "type": "Point"
+      },
+      "id": "00de4da811b3730a985dc34e21dc583b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "University Observatory",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.334185,
+          48.231975,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "00f800e4e0826a5df77cce49a636666f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Vienna City Hall",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.358082,
+          48.210821,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "010427bdf3e7de4be8c28dc0be125226"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -10,
+        "offsetY": 7,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-right",
+        "title": "Minorite Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.363562,
+          48.20962,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "06f44e6f98154777caeb2f250ea9ed95"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -4,
+        "offsetY": 4,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#990201",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Peregrini Chapel",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.363518,
+          48.220838,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "0860a555812e036333bca2c65f0d68d7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Secession Building",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.365967,
+          48.200377,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "08a730c2d66598b88ca73fc3556ade9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Palais Schwarzenberg",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.376987,
+          48.196949,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "09018d31ecfc9ff4491eddf49284b1e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Museum of Military History",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.388935,
+          48.184271,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "0a17b45a430ba08ad877bcb212639f94"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Lower Belvedere Palace",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.379872,
+          48.196576,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "0af9ea7ca69043697645342ef2ded337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -26,
+        "offsetY": -7,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Globe\nMuseum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.36561,
+          48.209356,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "0bd2dd1b496d4ee265f63bf0560c8ea5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "size": 4600.03,
+        "fill-opacity": 0.05,
+        "tooltip": {
+          "text": "",
+          "enabled": false
+        },
+        "fill": "#000",
+        "pattern-line-width": 2,
+        "pattern": "solid",
+        "stroke-width": 3,
+        "stroke-dasharray": "100000",
+        "highlight": false,
+        "stroke-opacity": 1,
+        "stroke": "#888",
+        "title": "area marker 1",
+        "pattern-line-gap": 2
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              14.952539,
+              48.219429
+            ],
+            [
+              14.952602,
+              48.219547
+            ],
+            [
+              14.952721,
+              48.219614
+            ],
+            [
+              14.952729,
+              48.219618
+            ],
+            [
+              14.95276,
+              48.21963
+            ],
+            [
+              14.952792,
+              48.219642
+            ],
+            [
+              14.952866,
+              48.219673
+            ],
+            [
+              14.952925,
+              48.219713
+            ],
+            [
+              14.95301,
+              48.219842
+            ],
+            [
+              14.953068,
+              48.219936
+            ],
+            [
+              14.953648,
+              48.220136
+            ],
+            [
+              14.953107,
+              48.219764
+            ],
+            [
+              14.952484,
+              48.21937
+            ],
+            [
+              14.952539,
+              48.219429
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "144784490ac09f87a567cb20d9c655cd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 3,
+        "offsetY": -6,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Teutonic Church",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.373272,
+          48.207597,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "1de3f3bf74a8085a45e8bacf0827972b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#9b0101",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Belvedere Palace",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.380932,
+          48.191475,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "23d877de1cc29b3f28aefc010e0c770f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 3,
+        "offsetY": 1,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Hofburg Palace",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.365938,
+          48.207697,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "23f6bd1de55345448342f51310562efd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Franciscan Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.3744,
+          48.206382,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "29e7be9ed16f9dea994b421ff4dc6f8b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 9,
+        "offsetY": 12,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-left",
+        "title": "St. Salvator",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.371556,
+          48.211876,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "2ef05c9d86254de7d19dc89ea2df69ec"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "city",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 17,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "St. Stephen",
+        "icon": {
+          "id": "city",
+          "height": 700,
+          "width": 1000,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.37347,
+          48.208411,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "3191937ae0649ccb549cfc6434a28425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -2,
+        "offsetY": -1,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Carmelite Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.380308,
+          48.216023,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "32e0d7dda7e58a8a2599696155ad494c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Votive Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.359082,
+          48.215401,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "36eb3546fe75be7742480ad909398864"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 42,
+        "offsetY": -6,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Albertina",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.368182,
+          48.204699,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "44473c8a1fc42cd3f908d8e88c399a2d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "size": 6907.1,
+        "fill-opacity": 0.05,
+        "tooltip": {
+          "text": "",
+          "enabled": false
+        },
+        "fill": "#000",
+        "pattern-line-width": 2,
+        "pattern": "solid",
+        "stroke-width": 3,
+        "stroke-dasharray": "100000",
+        "highlight": false,
+        "stroke-opacity": 1,
+        "stroke": "#888",
+        "title": "area marker 1",
+        "pattern-line-gap": 2
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              15.064051,
+              48.152787
+            ],
+            [
+              15.061544,
+              48.152998
+            ],
+            [
+              15.061544,
+              48.152998
+            ],
+            [
+              15.064051,
+              48.152787
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4781a3f777e6ec0ea0e6ca2487fefe97"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Otto Wagner Pavilion Hietzing",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.305958,
+          48.187523,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "47de7a2fbee2117d2e8b5c447cc5c9d6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -2,
+        "offsetY": 4,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#c71e1d",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Vienna State Opera",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.369203,
+          48.20343,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "4fbd017082dd48c708324aa84091270b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "St. Ursula",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.373073,
+          48.20467,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "4ff3b8ab8e5f51741ec43d368bc0bf68"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Invalidenhaus Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.296996,
+          48.172946,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "58d72e4dac516ef98ec3a5d60c93952b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Otto-Wagner Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.278765,
+          48.210649,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "5b786985ced7db74ee8c50431b29e015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 4,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Imperial\nFurniture Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.347079,
+          48.198796,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "5ba5e339c4556ec3d8784f847e80be4a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "St. Elisabeth",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.386233,
+          48.205438,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "61f316882fa68c6c7a25533d691cf870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Wien Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.37296,
+          48.199437,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "622debdbf30f77fd78bfe8a80e0c6255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 1,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "St. Charles",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.371699,
+          48.198562,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "62afec56b35414607be5668e1f7fbba4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "size": 4600.03,
+        "fill-opacity": 0.05,
+        "tooltip": {
+          "text": "",
+          "enabled": false
+        },
+        "fill": "#000",
+        "pattern-line-width": 2,
+        "pattern": "solid",
+        "stroke-width": 3,
+        "stroke-dasharray": "100000",
+        "highlight": false,
+        "stroke-opacity": 1,
+        "stroke": "#888",
+        "title": "area marker 1",
+        "pattern-line-gap": 2
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              14.953723,
+              48.220421
+            ],
+            [
+              14.954019,
+              48.220724
+            ],
+            [
+              14.95402,
+              48.220905
+            ],
+            [
+              14.95409,
+              48.221067
+            ],
+            [
+              14.954027,
+              48.221267
+            ],
+            [
+              14.953877,
+              48.22157
+            ],
+            [
+              14.953875,
+              48.221574
+            ],
+            [
+              14.95358,
+              48.221828
+            ],
+            [
+              14.953652,
+              48.22196
+            ],
+            [
+              14.953845,
+              48.222095
+            ],
+            [
+              14.953994,
+              48.222218
+            ],
+            [
+              14.953869,
+              48.221936
+            ],
+            [
+              14.953749,
+              48.221707
+            ],
+            [
+              14.95412,
+              48.221426
+            ],
+            [
+              14.95427,
+              48.220873
+            ],
+            [
+              14.954067,
+              48.22054
+            ],
+            [
+              14.953788,
+              48.220242
+            ],
+            [
+              14.953723,
+              48.220421
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "62bd3b3e5404a28d55c9447c8d6c09cb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Cathedral Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.374088,
+          48.208692,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "62db089d6339fc3cdeaae81abff3e86d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -1,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Mariahilf Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.353006,
+          48.199092,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "657c0596c1c6959d52ca9b199040b5ad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 65,
+        "offsetY": -22,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Theater Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.368543,
+          48.205587,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "6b0d365d5dc70e4567aae3dfe3681563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-center",
+        "title": "St. Maria am Gestade",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.370176,
+          48.212983,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "6b24c96cc7df3f46cbac7a302adbeb4c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Geym�llerschl�ssel",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.307319,
+          48.243711,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "6b4a3274279058b9be9243a762c79125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Hofmannsthal-Schl�ssl Palace",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.255602,
+          48.13365,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "754b1aef07c0f2c874de260c05f78cca"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -3,
+        "offsetY": -5,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-right",
+        "title": "Mozart Apartment",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.374963,
+          48.208164,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "79e37c726d49bd436afda69d4e84873b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 42,
+        "offsetY": -18,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Reformed\nChurch",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.368792,
+          48.206846,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "7a225cd79885a0dd866f21628520d477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Austrian Parliament",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.359204,
+          48.208036,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "87822fadee0762fd4c9e344ddde9377c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#9b0101",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Schottenkirche",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.364628,
+          48.212057,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "87ed4ddb5fcdb5408b1324bc1a5883ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Roman Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.372709,
+          48.210722,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "8b5bdb60467e1854df2812040de9120a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-center",
+        "title": "Augarten Porcellan Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.378762,
+          48.223345,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "8c942d392aed273ee34bb320a4f8e272"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -256,
+        "offsetY": -5,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Imperial Library",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.366682,
+          48.20624,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "93707edd4b13b50c66c9de8a78ef584d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 117,
+        "offsetY": 45,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Maltese Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.371183,
+          48.205035,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "95f88d5bf43f4e01759f1bc7513ac347"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "city",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 18,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#980201",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Sch�nbrunn Palace",
+        "icon": {
+          "id": "city",
+          "height": 700,
+          "width": 1000,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.312764,
+          48.185812,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "9702bb7e3e49f56e8de027159513fc96"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -4,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "restaurant",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#fa8c00",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Demel Cafe",
+        "icon": {
+          "id": "restaurant",
+          "height": 700,
+          "width": 550,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.367218,
+          48.208596,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "9a409b3263f5131c7bdfcf25e92e7b17"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Kirche am Hof",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.368798,
+          48.210875,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "9b8d8cc58d6c3526d411b7e6c3cad58c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-jewish",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Stadttempel Synagogue",
+        "icon": {
+          "id": "religious-jewish",
+          "height": 700,
+          "width": 800,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.374722,
+          48.211666,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "a5554c9ad8613429c86c5d60b8966eff"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -81,
+        "offsetY": 21,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Augustine\nChurch",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.367648,
+          48.205892,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "a8f408bacc16f3c0974fb6c12ceab524"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Ephesos Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.364979,
+          48.205379,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "ab68b82b7357a29e2a510944606da0e2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Gloriette Sch�nbrunn",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.308742,
+          48.178268,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "ad90ec8a238c7bbd1fc460d6c4bf26bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#a10001",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Dominican Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.378989,
+          48.208833,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "aee8d428e6f396f832564777ce20b3e2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-center",
+        "title": "St. Rupert",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.374406,
+          48.212019,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "af05754e147632114c879da1368c1c87"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Hofburg Chapel",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.366476,
+          48.207098,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "b22b76885f040cd39fefb97d2b3fd99b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Vienna Historical Art Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.361787,
+          48.203801,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "b5767cf5b32367631041793db78e28d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "size": 6907.1,
+        "fill-opacity": 0.05,
+        "tooltip": {
+          "text": "",
+          "enabled": false
+        },
+        "fill": "#000",
+        "pattern-line-width": 2,
+        "pattern": "solid",
+        "stroke-width": 3,
+        "stroke-dasharray": "100000",
+        "highlight": false,
+        "stroke-opacity": 1,
+        "stroke": "#888",
+        "title": "area marker 1",
+        "pattern-line-gap": 2
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              15.061261,
+              48.153022
+            ],
+            [
+              15.061261,
+              48.153022
+            ],
+            [
+              15.06051,
+              48.153085
+            ],
+            [
+              15.061261,
+              48.153022
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "b80d92039c11abc6e97fe47a3325402f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 1,
+        "offsetY": 8,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Beethoven Pasqualati House",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.362292,
+          48.212446,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "b81522982f70c68cf4e0338396e7af22"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 9,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Old City Hall",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.3714,
+          48.211647,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "d43b22660d562f286e71333cd6530e1e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#9b0101",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Garden Palace\nLiechtenstein",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.359598,
+          48.222528,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "d667ecb2ee6e87ecf44f4540fa714141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -7,
+        "offsetY": 5,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "St. Michael",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.367059,
+          48.208088,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "dc999b58ce93772ed67dd624ffea8bfc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -25,
+        "offsetY": -2,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Spanish Riding School",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.366398,
+          48.207458,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "dcc2909134bacd109f9a807ec65306f5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "top-center",
+        "title": "Jesuit Church",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.377583,
+          48.209008,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "e2911d64907766629c992854d7537ea9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Leopold Museum",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.359142,
+          48.202649,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "e9ccdeee579d364a6ec74926d71eefe9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "St. Mary",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.363758,
+          48.220694,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "ed3c1a37851c072786e78809a6c3c156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#980201",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Hermesvilla Palace",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.245979,
+          48.170672,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "eec3f76748688ce3e94e449083cbc543"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 3,
+        "offsetY": 8,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#9b0101",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "Imperial Treasury",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.365668,
+          48.206725,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "f4e880fe0c88ce2d91c928bc456960e8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "museum",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-right",
+        "title": "Albertina Modern",
+        "icon": {
+          "id": "museum",
+          "height": 700,
+          "width": 850,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.371598,
+          48.200521,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "f515f5b8ccbd2b9eed399a1e41558555"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 0,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "monument",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "University of Vienna",
+        "icon": {
+          "id": "monument",
+          "height": 700,
+          "width": 750,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.36005,
+          48.213185,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "f76b754f9e607ed6fe5be89b97221a9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": 4,
+        "offsetY": 0,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": true,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#9b0101",
+        "marker-size": 1,
+        "anchor": "middle-left",
+        "title": "St. Peter",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.369773,
+          48.209352,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "fc019904526237f36cea513211f9e019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tooltip": {
+          "enabled": false,
+          "text": ""
+        },
+        "offsetX": -41,
+        "offsetY": 65,
+        "locked": false,
+        "marker-symbol": "religious-christian",
+        "text": {
+          "bold": false,
+          "italic": false,
+          "uppercase": false,
+          "space": false,
+          "color": "#333333",
+          "fontSize": 15,
+          "halo": "#f2f3f0"
+        },
+        "marker-color": "#000000",
+        "marker-size": 1,
+        "anchor": "bottom-center",
+        "title": "Lutheran\nChurch",
+        "icon": {
+          "id": "religious-christian",
+          "height": 700,
+          "width": 650,
+          "scale": 1
+        },
+        "rotate": 0,
+        "markerTextColor": "#333333",
+        "description": "",
+        "labelStyle": "plain"
+      },
+      "geometry": {
+        "coordinates": [
+          16.368497,
+          48.206491,
+          0
+        ],
+        "type": "Point"
+      },
+      "id": "fcf9814d695419da8e3a7d6ace1c2059"
+    }
+  ],
+  "type": "FeatureCollection"
+}

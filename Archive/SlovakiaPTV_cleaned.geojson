@@ -1,0 +1,4674 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          21.2610746,
+          48.7163857,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Košice",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ko%C5%A1ice"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.563649,
+          48.9452771,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Spišská Nová Ves",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Spi%C5%A1sk%C3%A1_Nov%C3%A1_Ves"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.7675004,
+          48.9994068,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Spiš Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Spi%C5%A1_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.3034215048503,
+          49.0542991712738
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Poprad",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Poprad"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4306967,
+          49.1332664,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Kežmarok",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ke%C5%BEmarok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.5346508,
+          49.2573416,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Podolínec",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Podol%C3%ADnec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.2647226,
+          49.2707727,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Ždiarsky House Museum",
+        "Wikipedia": "https://www.tatry.sk/en/folk-museum-zdiarsky-dom/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.588586,
+          49.0246321,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Levoča",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Levo%C4%8Da"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.6898463,
+          49.3010575,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Stará Ľubovňa Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Star%C3%A1_%C4%BDubov%C5%88a"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.2393119,
+          49.0018324,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Prešov",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pre%C5%A1ov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.5579271,
+          49.304249,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Svidník Architecture Museum",
+        "Wikipedia": "https://www.snm.sk/muzea-snm/muzeum-ukrajinskej-kultury/muzeum-ukrajinskej-kultury/navstivte/kontakt"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.2754012,
+          49.2945857,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Bardejov",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bardejov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.2753218,
+          49.2911855,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Šariš Region Museum",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0ari%C5%A1_Museum_in_Bardejov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.6957008,
+          49.3173546,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Ľubovniansky Skanzen Museum",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/%C4%BDubovniansky_skanzen"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.9089193,
+          48.9401189,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Vihorlat Village Museum Humenne",
+        "Wikipedia": "https://www.guidetoslovakia.com/open-air-museum-in-humenne-vihorlat-museum/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.531052,
+          48.6587194,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Rožňava",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ro%C5%BE%C5%88ava"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.6005323,
+          48.6583636,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Krásna Hôrka Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kr%C3%A1sna_H%C3%B4rka_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.5105467,
+          48.7061887,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Betliar Palace",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Betliar"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.624756,
+          48.9173129,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Dardanely Summer Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Marku%C5%A1ovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.3852179,
+          48.9197981,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Slovak Paradise National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Slovak_Paradise_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.4098853,
+          49.0544125,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Poloniny National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Poloniny_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.2192617,
+          49.2403734,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Belianske Tatra",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Belianske_Tatras"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.088064,
+          49.179548,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Rysy",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Rysy"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.933708,
+          49.2065459,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "The Silent Valley",
+        "Wikipedia": "https://www.severovychod.sk/en/trip/quiet-valley/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.1335983,
+          49.1643776,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Gerlachovský štít",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Gerlachovsk%C3%BD_%C5%A1t%C3%ADt"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.0630115,
+          49.1193882,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Štrbské Pleso",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0trbsk%C3%A9_Pleso"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.9958593,
+          49.1861617,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Koprovatal",
+        "Wikipedia": "https://de.wikipedia.org/wiki/K%C3%B4prov%C3%A1_dolina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.3154389947217,
+          49.0657761691347,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Spišská Sobota",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Spi%C5%A1sk%C3%A1_Sobota"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.0896225,
+          48.9675582,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Liptovsk Teplička",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Liptovsk%C3%A1_Tepli%C4%8Dka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.6997007,
+          49.3150272,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Ľubovňa Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Star%C3%A1_%C4%BDubov%C5%88a"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.64794,
+          49.3483355,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Jarabinsk Prielom",
+        "Wikipedia": "https://www.severovychod.sk/vylet/jarabinsky-prielom/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.7316332,
+          49.2959462,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Chmeľnica",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Chme%C4%BEnica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.847475,
+          49.2551507,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Plavec Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Plave%C4%8D_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.5061033,
+          49.3872818,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Pieniny National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pieniny_National_Park_(Slovakia)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4165109,
+          49.3990621,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Red Monastery",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cerven%C3%BD_Kl%C3%A1%C5%A1tor_(monastery)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.2416561,
+          49.3363024,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Osturňa",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ostur%C5%88a"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4540111,
+          49.1720713,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Strážky Palace",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Str%C3%A1%C5%BEky"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.7516711,
+          49.0000945,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Spišské Podhradie",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Spi%C5%A1sk%C3%A9_Podhradie"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.741359,
+          49.0005631,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Diocese of Spiš",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Diocese_of_Spi%C5%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.624076,
+          48.9155943,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Markušovce Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Marku%C5%A1ovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4627781,
+          49.002463,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "St. Ladislaus Spišský Štvrtok",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Kirche_des_heiligen_Ladislaus_(Spi%C5%A1sk%C3%BD_%C5%A0tvrtok)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4857958,
+          49.0195067,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Sv. Alžbety Uhorskej",
+        "Wikipedia": "https://www.severovychod.sk/vylet/kostol-sv-alzbety-dravce/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.6408854,
+          49.0008896,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Sv. Šimona a Júdu",
+        "Wikipedia": "https://www.spisskyhrhov.sk/obec/farnost-spissky-hrhov/katolicky-kostol-sv-simona-a-judu-59sk.html"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.3430377,
+          48.7102702,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Evangelic Church Kocel'ovce",
+        "Wikipedia": "https://www.regiongemer.sk/en/explore/evangelical-church-in-kocelovce/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.7255551,
+          48.6394568,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Hussite Church Lúčka",
+        "Wikipedia": "https://www.hladamchatu.sk/en-sk/hussite-church-in-lucka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.466531,
+          48.562756,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Gombasek Cave",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Gombasek_Cave"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.9672303,
+          48.6823228,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Jasov Monastery",
+        "Wikipedia": "https://slovakia.travel/en/monastery-jasov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.976247,
+          48.676863,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Jasovsk Cave",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Jasov_Cave"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.885953,
+          48.7046042,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Medzev Hammer Mill",
+        "Wikipedia": "https://loststory.net/guide/slovakia/medzev-hammer-mill"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.3649607,
+          48.6580589,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Lutheran Church Štítnik",
+        "Wikipedia": "https://gotickacesta.sk/en/stitnik/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.4693527,
+          48.4777266,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Domica Cave",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Domica_Cave"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.3067651,
+          48.7956303,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Budimír Palace",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Budim%C3%ADrsky_ka%C5%A1tie%C4%BE"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.4708527,
+          48.6370936,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Slanec Castle",
+        "Wikipedia": "https://www.hradslanec.sk/slanec-castle/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.274716,
+          48.979319,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Solivar Technical Museum",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Slowakisches_Technisches_Museum"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.1754823,
+          49.0527976,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Šariš Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0ari%C5%A1_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.1004163,
+          49.1018447,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Sabinov",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Sabinov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.0391215,
+          49.1900131,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hanigovce Castle",
+        "Wikipedia": "https://www.hrady-zamky.sk/en/hanigovsky-hrad/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.2984581,
+          49.3534841,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Zborov Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Zborov_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.2665653,
+          49.3305427,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Šariš Village Museum",
+        "Wikipedia": "https://www.kamnavylet.sk/en/attraction/saris-village-museum"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.5927379,
+          49.3270074,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "monument",
+        "markerTextColor": "#333333",
+        "title": "Battle of Dukla Pass Monument",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Battle_of_the_Dukla_Pass"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.0878966,
+          49.4016852,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Frička (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Fri%C4%8Dka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.0748156,
+          49.2917476,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Lukov (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Lukov_(Bardejov_District)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.1501145,
+          49.2925573,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Sv. Lukas (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kriv%C3%A9"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.204149,
+          49.2466654,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Hervartov (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Church_of_Saint-Francis_of_Assisi"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.3202841,
+          49.0550054,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Kapušany Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Kapu%C5%A1any"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.3211382,
+          49.1817076,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Tročany (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Wooden_churches_of_the_Slovak_Carpathians"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.3727952,
+          49.3982941,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Jedlinka (CWC)",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Jedlinka_(Bardejov)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.4884065,
+          49.2167741,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Kožany (CWC)",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Ko%C5%BEany"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6198968,
+          49.3295678,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Ladomirová (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ladomirov%C3%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6207293,
+          49.3652893,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Dobroslava (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dobroslava"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.644857,
+          49.3776219,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Korejovce (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Korejovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7042614,
+          49.3969752,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "monument",
+        "markerTextColor": "#333333",
+        "title": "Veliteľstvo Bunker",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7039204,
+          49.401971,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Vyan Komrnik (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Vy%C5%A1n%C3%BD_Kom%C3%A1rnik"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7078317,
+          49.3524787,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Bodružal (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bodru%C5%BEal"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6982541,
+          49.3750784,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Nižný Komárnik (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ni%C5%BEn%C3%BD_Kom%C3%A1rnik"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7386531,
+          49.3624098,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Príkra (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pr%C3%ADkra"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7353685,
+          49.3249635,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Miroľa (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Miro%C4%BEa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6640073,
+          49.3503062,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Krajné Čierno (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Krajn%C3%A9_%C4%8Cierno"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6632543,
+          49.3123563,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Šemetkovce (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0emetkovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6276893,
+          49.2584696,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Potoky (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Potoky"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.9379992,
+          49.3265183,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "East Carpathians",
+        "Wikipedia": "https://en.wikipedia.org/wiki/East_Carpathians_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.1678086,
+          48.9088901,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Vihorlat Protected Landscape Area",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Vihorlat_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.3565766,
+          49.0446277,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Topoľa (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Topo%C4%BEa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.4107573,
+          49.0290672,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Ruský Potok (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Rusk%C3%BD_Potok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.437858,
+          48.9910802,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Uličské Krivé (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Uli%C4%8Dsk%C3%A9_Kriv%C3%A9"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.3262554,
+          48.967318,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Kalná Roztoka (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kaln%C3%A1_Roztoka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.2992485,
+          48.8789582,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Hrabová Roztoka (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Hrabov%C3%A1_Roztoka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.2965992,
+          48.8567926,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Ruská Bystrá (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Rusk%C3%A1_Bystr%C3%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          22.3575734,
+          48.8235911,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Inovce (CWC)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Inovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7386956,
+          48.914414,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Čičva Castle",
+        "Wikipedia": "https://www.hrady-zamky.sk/en/cicva/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.6802236,
+          48.8921888,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Basilica Narodenia Panny Mrie",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Basilika_Mari%C3%A4_Geburt_(Vranov_nad_Top%C4%BEou)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.9183858,
+          48.7556769,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Michalovce",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Michalovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.7209723,
+          48.6197099,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Zemplína Museum",
+        "Wikipedia": "https://archiv.zemplinskemuzeum.sk/en/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.1077478,
+          48.1485965,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Bratislava",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bratislava"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          16.9793537,
+          48.1732968,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Devín Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dev%C3%ADn_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.0884602025546,
+          48.3144655470428,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Nitra",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Nitra"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.2119074,
+          48.2543374,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Svätý Jur",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Sv%C3%A4t%C3%BD_Jur"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.1964547,
+          48.2612007,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Biely Kameň Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Biely_Kame%C5%88"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.5876634541458,
+          48.3775768085886,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Trnava",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Trnava"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1294132,
+          47.7625785,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Komárno",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kom%C3%A1rno"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.1079659407139,
+          48.6025063785838
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Záhorie Protected Landscape",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Z%C3%A1horie_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.5881086,
+          48.629654,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Little Carpathians",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Little_Carpathians"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.0327846,
+          48.2740288,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Pálffy Palace (Stupava)",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Stampfen"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.0643714,
+          48.2480922,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Marianka Basilica",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Basilika_Mari%C3%A4_Geburt_(Marianka)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.0830113,
+          48.2755149,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Pajštún Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Paj%C5%A1t%C3%BAn_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.0308651,
+          48.4397654,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Pálffy Palace (Malacky)",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Malatzka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.1430355,
+          48.6391982,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Šaštín Basilica",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Basilika_von_den_Sieben_Schmerzen_Mariens_(%C5%A0a%C5%A1t%C3%ADn)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.2250302,
+          48.8448118,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Skalica",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Skalica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.1565273,
+          48.8086088,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Holíč Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Hol%C3%AD%C4%8D_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.4672123,
+          48.7333035,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Branč Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Bran%C4%8D"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3858348,
+          48.5751866,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Korlátka Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Korl%C3%A1tka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.2666557,
+          48.2891353,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Pezinok",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pezinok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3072873,
+          48.3344706,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Modra",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Modra"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3355219,
+          48.391572,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Červený Kameň Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cerven%C3%BD_Kame%C5%88_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3961937,
+          48.3631435,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Budmerice Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Budmerice_Mansion"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.4318504,
+          48.5133649,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Smolenice Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Smolenice_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.5289172,
+          48.6097067,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Dobrá Voda Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dobr%C3%A1_Voda_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.2686205,
+          48.4937559,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Plavecký Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Plaveck%C3%BD_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3237226,
+          48.534465,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Plavecký Peter",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Plaveck%C3%BD_Peter"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.3710296,
+          48.5218405,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Ostrý Kameň Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ostr%C3%BD_Kame%C5%88_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.4964552,
+          47.89214,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Dunajsk Luhy Protected Landscape",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dunajsk%C3%A9_luhy_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1342455,
+          47.7543951,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Komárno Fortress",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Fortress_of_Kom%C3%A1rno"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1292201,
+          47.7771422,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Roman Lapidary",
+        "Wikipedia": "https://www.visitdanube.eu/en/details/roman-lapidarium"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1982611,
+          47.744887,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Celemantia Castellum",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Celemantia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.0017514,
+          47.9205008,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Watermill Kolárovo",
+        "Wikipedia": "https://danubeislands.sk/en/attractions/water-mills/water-mill-kolarovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1911458,
+          47.8735113,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hurbanovo Observatory",
+        "Wikipedia": "https://slovakia.travel/en/observatory-at-hurbanovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1636219980361,
+          47.9861863381886,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Nové Zámky",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Nov%C3%A9_Z%C3%A1mky"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.3701616,
+          48.0771785,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Mariánska čeľaď Ruins",
+        "Wikipedia": "https://www.hrady-zamky.sk/en/marianska-celad/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.714975,
+          47.7992613,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Štúrovo",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0t%C3%BArovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.642617,
+          47.9210027,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Dvanástich Apoštolov Rotunda",
+        "Wikipedia": "https://en.wander-book.com/trip/733-rotunda-of-the-twelve-apostles-in-bina.htm"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.6013933,
+          48.221891,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Levice Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Lewenz"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.6593065,
+          48.2000218,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Kalinčiakovo Church",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Romanesque_church_in_Kalin%C4%8Diakovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5989604,
+          48.2905634,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Čajkov",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cajkov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.7391032,
+          48.2152468,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Brhlovce",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Brhlovce"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.4259099,
+          48.4786382,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hrušov Castle",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Hru%C5%A1ov_(hrad)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.2225397,
+          48.411428,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Gymes Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_G%C3%BDme%C5%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1562627,
+          48.4483488,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Oponice Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Oponice"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.4128221,
+          48.4212153,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Topoľčianky Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Topo%C4%BE%C4%8Dianky"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.3639922,
+          48.3190278,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Mlyňany Arboretum",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Arbor%C3%A9tum_Mly%C5%88any"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1140969,
+          48.3030686,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Slovak Agricultural Museum",
+        "Wikipedia": "https://agrokomplex.sk/en/slovak-agricultural-museum/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.0915652,
+          48.3447783,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Zobor Monastery",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Zobor_Abbey"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.5464654,
+          48.4842735,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Dolná Krupá Palace",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Doln%C3%A1_Krup%C3%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.7880118,
+          48.4193461,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hlohovec Palace",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Ka%C5%A1tie%C4%BE_v_Hlohovci"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.8350445157168,
+          48.5899489113573,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Piešťany",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pie%C5%A1%C5%A5any"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.8727992,
+          48.6224362,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Kostolec Great Moravian Court",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ducov%C3%A9"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.8617016,
+          48.604033,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Moravany Palace",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Ka%C5%A1tie%C4%BE_v_Moravanoch_nad_V%C3%A1hom"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1700065,
+          48.5589454,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Topoľčany",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Topo%C4%BE%C4%8Dany"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.8907942,
+          49.1780334
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Old Castle (Starhrad)",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Stre%C4%8Dno_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.0420481484363,
+          48.8951736243961,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Trenčín",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Tren%C4%8D%C3%ADn"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5775439,
+          48.7802456,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Bojnice Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bojnice_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.7408001,
+          49.2194498,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Žilina",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%BDilina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5170281,
+          48.9566824,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Radenov House Museum",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.7728346,
+          48.9683752,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Zniev Castle",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Zniev_(hrad)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.8846942938957,
+          49.0853546011933,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Museum of the Slovak Village",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Museum_of_the_Slovak_Village"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0191296,
+          49.0547919,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Sklabiňa Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Sklabi%C5%88a_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0959531,
+          49.3823532,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Kysuce Village Museum",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Museum_des_Kysuce-Dorfes"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.3120994,
+          49.1051233,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Castle Likava",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Likava"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.2968746,
+          49.212679,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Dolný Kubín",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Doln%C3%BD_Kub%C3%ADn"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.2785396,
+          49.039543,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Vlkolínec Museum",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Vlkol%C3%ADnec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.3588191,
+          49.261646,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Orava Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Orava_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6629652,
+          49.2601277,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Orava Village Museum",
+        "Wikipedia": "https://slovakia.travel/en/museum-of-the-orava-village"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.804685,
+          49.1066614,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Liptov Village Museum Pribylina",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Museum_des_Liptauer_Dorfes_Pribylina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1461917,
+          48.736277,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Banská Bystrica",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bansk%C3%A1_Bystrica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1371155,
+          48.5761806,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Zvolen",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Zvolen"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.06638,
+          48.3558566,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Krupina",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Krupina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0898059,
+          48.3153072,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Bzovík Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bzov%C3%ADk"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.8960347226628,
+          48.4584035127446,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Banská Štiavnica",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Bansk%C3%A1_%C5%A0tiavnica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9428719,
+          48.4212563,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Svätý Anton Palace",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Sv%C3%A4t%C3%BD_Anton_manor_house"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9147914,
+          48.2816337,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Stara Hora Village Museum",
+        "Wikipedia": "https://stara-hora.sk/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9523678,
+          48.2746827,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Sebechleby",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Sebechleby"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.867081,
+          48.2378158,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Drieňovské Cave Homes",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5580245,
+          48.3447544,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Hronský Beňadik Monastery",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Kloster_Hronsk%C3%BD_Be%C5%88adik"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.7609348,
+          48.7251091,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Čachtice Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cachtice_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.898352,
+          48.790926,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Beckov Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Beckov_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.8310657146957,
+          48.7577277466261,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Nové Mesto nad Váhom",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Nov%C3%A9_Mesto_nad_V%C3%A1hom"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          17.6765872,
+          48.8577634,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Velká Javořina",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Velk%C3%A1_Javo%C5%99ina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.4637519,
+          48.9546261,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Strážov Mountains Protected Landscape",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Str%C3%A1%C5%BEov_Mountains_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.0736623,
+          48.9144394,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Skalka Pilgrimage Site",
+        "Wikipedia": "https://www.hrady-zamky.sk/en/skalka/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1675364,
+          48.9094889,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Trenčianske Teplice",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Tren%C4%8Dianske_Teplice"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1688856,
+          48.9631025,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Dubnica Palace",
+        "Wikipedia": "http://www.kastiel.dubnica.eu/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.3913344,
+          48.7541837,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Uhrovec Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Uhrovec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.1507873,
+          49.0662467,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Vrsatec Cliffs",
+        "Wikipedia": "https://www.kamnavylet.sk/en/attraction/vrsatske-parallel-bars"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.2113288,
+          49.1102669,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Castle Lednica",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Lednica_(hrad)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5831844706438,
+          49.1739662299553
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Castle Súľov",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_S%C3%BA%C4%BEov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5737043,
+          49.1704033,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Súľovský Hrádok",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/S%C3%BA%C4%BEovsk%C3%BD_hr%C3%A1dok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.6845348,
+          49.1606364,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Lietava Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Lietava_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.6199495,
+          49.211495,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hričov Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Hri%C4%8Dov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5592828,
+          49.2203091,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Bytča Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Schloss_Byt%C4%8Da"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.4579057,
+          49.145595,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Povaňsk Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pova%C5%BEsk%C3%BD_hrad"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.7342616,
+          49.2366206,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Budatín Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Budat%C3%ADn_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.787685,
+          49.193644,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Svätého Juraja (Trnové)",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Kostol_sv%C3%A4t%C3%A9ho_Juraja_(Trnov%C3%A9)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.6371974,
+          49.0888968,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Rajec",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Rajec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.2273317736704,
+          49.4002986676706
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Tatra National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Tatra_National_Park,_Slovakia"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9503383,
+          49.4044845,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Veľk Rača Protected Area",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kysuce_Protected_Landscape_Area"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.5741395,
+          48.633553,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Veľká Rača",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9176298,
+          48.7029706,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "city",
+        "markerTextColor": "#333333",
+        "title": "Kremnica",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kremnica"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0512596,
+          48.6842901,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Badínsky Prales",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Bad%C3%ADnsky_prales"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9084952,
+          48.7119678,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Stôlňa Andrej Mine Museum",
+        "Wikipedia": "https://www.muzeum.sk/banske-muzeum-stolna-andrej-kremnica.html"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9965313,
+          48.7454988,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Kremnická skala",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Kremnick%C3%A1_skala"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9002012,
+          48.5789624,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Šášovský Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Sachsenstein_(Slowakei)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.8885729,
+          48.4512622,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Slovak Mining Museum",
+        "Wikipedia": "https://www.muzeumbs.sk/en/mine-museum-in-nature"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.902374,
+          48.4200667,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Sv. Egidia",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6232617,
+          48.9223964,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Low Tatras National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Low_Tatras_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0872957,
+          48.9400485,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Veľká Fatra National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ve%C4%BEk%C3%A1_Fatra_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1097348,
+          48.5569383,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Pustý Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Pust%C3%BD_hrad"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1574959036332,
+          48.6480177309084,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hronsek Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Hronsek"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1549406,
+          48.648977,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Hronsek Articulated Church",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Wooden_articular_church_of_Hronsek"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1036797,
+          48.5031067,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Dobrá Niva Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dobr%C3%A1_Niva"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.2809539,
+          48.7725257,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Ľupča Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%BDup%C4%8Da_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0496182,
+          48.8092916,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Dolný Harmanec",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Doln%C3%BD_Harmanec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.040009,
+          48.814002,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Harmanecká Cave",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Harmaneck%C3%A1_Cave"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1340359,
+          48.8074378,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Špania Dolina",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C5%A0pania_Dolina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.0211046,
+          48.7722487,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Muránska Planina National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Mur%C3%A1nska_planina_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6442479,
+          48.8063034,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Brezno",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Brezno"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6573245,
+          48.7462472,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Čierny Hron Railway",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cierny_Hron_Railway"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.06096,
+          48.7598985,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Muráň Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Mur%C3%A1%C5%88_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.1112652,
+          48.6855691,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Museum of Slovakian Schools",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.5337227,
+          48.4483735,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Divín Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Div%C3%ADn"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.1061796,
+          48.2441678,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Čabraď Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/%C4%8Cabra%C4%8F_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6690601,
+          48.3286673,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Lučenec",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Lu%C4%8Denec"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.0178182,
+          48.3828341,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Rimavská Sobota",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Rimavsk%C3%A1_Sobota"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.9888746,
+          48.4987242,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Kraskovo Church",
+        "Wikipedia": "https://slovakia.travel/en/evangelical-church-kraskovo"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.9394023,
+          48.5104969,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Rimavská Baňa Church",
+        "Wikipedia": "https://gotickacesta.sk/rimavska-bana/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.9605458,
+          48.539982,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Rimavská Brezová Church",
+        "Wikipedia": "https://gotickacesta.sk/en/rimavske-brezovo-en/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.8571935,
+          48.1715826,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Šomoška Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_%C5%A0omo%C5%A1ka"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.9554526,
+          48.2183466,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Hajnáčka Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Hajn%C3%A1%C4%8Dka_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.7119444,
+          49.1983333,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Baníkov",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Ban%C3%ADkov"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.0611785,
+          49.2512161,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Malá Fatra National Park",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Mal%C3%A1_Fatra_National_Park"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9929634,
+          49.1811213,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Malý Kriváň",
+        "Wikipedia": "https://sk.wikipedia.org/wiki/Mal%C3%BD_Kriv%C3%A1%C5%88_(vrch_v_Malej_Fatre)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.8621635,
+          49.1745071,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Strečno Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Stre%C4%8Dno_Castle"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.9284471,
+          49.0638821,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Slovak National Ethnographic Museum",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Slovak_National_Museum_in_Martin"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          18.96649,
+          48.9189567,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Ostrá",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Ostr%C3%A1_(Ve%C4%BEk%C3%A1_Fatra)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.3416666,
+          49.1513888,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Veľký Choč",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Ve%C4%BEk%C3%BD_Cho%C4%8D"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.4299959,
+          49.1476798,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Liptovsk Castle",
+        "Wikipedia": "https://de.wikipedia.org/wiki/Burg_Liptau"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.481891,
+          49.1048792,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "museum",
+        "markerTextColor": "#333333",
+        "title": "Archaeological Museum Havránok",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Havr%C3%A1nok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6192067,
+          49.0811487,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Liptovský Mikuláš",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Liptovsk%C3%BD_Mikul%C3%A1%C5%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.5369655,
+          49.0339172,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#a10001",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Svaty Kriz Articular Church",
+        "Wikipedia": "https://www.slovakia.com/sightseeings-museums/wooden-articular-church-in-svaty-kriz/"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.6506719,
+          49.0725826,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Sv. Petra z Alkantary",
+        "Wikipedia": "https://cs.wikipedia.org/wiki/Kostel_svat%C3%A9ho_Petra_z_Alkantary_(Karvin%C3%A1)"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.7323202,
+          49.0461138,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "square-sm",
+        "markerTextColor": "#333333",
+        "title": "Liptovský Hrádok Castle",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Liptovsk%C3%BD_Hr%C3%A1dok"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.8892274,
+          49.0588239,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Východná",
+        "Wikipedia": "https://en.wikipedia.org/wiki/V%C3%BDchodn%C3%A1"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.5851059,
+          48.9983123,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Cave of Liberty",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_Cave_of_Liberty"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.5945849,
+          48.9771489,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "circle-sm",
+        "markerTextColor": "#333333",
+        "title": "Demänovská Dolina",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_Dolina"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.5829541,
+          49.0161421,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Demänovská Ice Cave",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Dem%C3%A4novsk%C3%A1_Ice_Cave"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.1392057,
+          48.8826993,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#005741",
+        "marker-symbol": "mountain",
+        "markerTextColor": "#333333",
+        "title": "Kráľova Hoľa",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Kr%C3%A1%C4%BEova_ho%C4%BEa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.203901,
+          48.8551004,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "crosshammer",
+        "markerTextColor": "#333333",
+        "title": "Chmárošský Viaduct",
+        "Wikipedia": ""
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.2000605,
+          48.6641478,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "",
+        "marker-color": "#000000",
+        "marker-symbol": "religious-christian",
+        "markerTextColor": "#333333",
+        "title": "Church Zvestovania Panne Márii",
+        "Wikipedia": "https://gotickacesta.sk/chyzne/"
+      },
+      "type": "Feature"
+    }
+  ]
+}

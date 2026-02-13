@@ -1,0 +1,15 @@
+"properties": {
+    "empireDesc",
+    "regionDesc",
+    "name",
+    "empireIcoUrl",
+    "regionIcoUrl",
+    "url",
+    "desc",
+    "empire",
+    "region",
+    "subtitle",
+    "icoUrl",
+    "regionUrl",
+    "empireUrl"
+  },

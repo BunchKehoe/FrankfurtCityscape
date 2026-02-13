@@ -1,0 +1,1479 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css"
+  rel="stylesheet"
+/>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+
+<style>
+  :root {
+    --primary-red: #cc0000;
+    --primary-green: #285c3a;
+    --background-white: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --font-family-primary: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --line-height-normal: 1.5;
+    --transition-fast: 0.2s ease;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+  .map {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    overflow: visible;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: visible;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+  }
+
+  .mapboxgl-popup {
+    max-width: 400px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+  }
+
+  .mapboxgl-popup-content {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+  }
+
+  .popup-content {
+    text-align: center;
+  }
+
+  .popup-title {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: #333;
+  }
+
+  .popup-button {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+
+  .popup-button:hover {
+    background: #aa0000;
+  }
+
+  .popup-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .popup-button:disabled:hover {
+    background: #ccc;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+  }
+
+  .popup-close:hover {
+    background: #f0f0f0;
+    color: #666;
+  }
+
+  .legend {
+    max-width: 280px;
+    width: 45%;
+    max-height: 90%;
+    overflow-y: auto;
+    display: none;
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    box-shadow: 0 4px 12px var(--shadow-medium);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    padding: var(--spacing-lg);
+    position: absolute;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .legend-mobile {
+    background-color: var(--background-white);
+    display: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-light);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    padding: var(--spacing-lg);
+    position: absolute;
+    width: 85%;
+    max-height: 70vh;
+    overflow-y: auto;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    max-width: 280px;
+  }
+
+  .legend-toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9000;
+    background-color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px var(--shadow-light);
+    padding: 8px 12px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+  }
+
+  .legend-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .legend h4,
+  .legend-mobile h4 {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: var(--spacing-xs);
+  }
+
+  .legend-section {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legend-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .legend-section h5 {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    padding: 2px 0;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border-radius: var(--spacing-xs);
+  }
+
+  .legend-item:hover {
+    background-color: #f8f9fa;
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+  }
+
+  .legend-item.active {
+    background-color: #e3f2fd;
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+  }
+
+  .legend-item.inactive {
+    opacity: 0.4;
+    background-color: #f5f5f5;
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
+  }
+
+  .legend-item.inactive svg {
+    opacity: 0.5;
+  }
+
+  .legend-item.inactive .color-indicator {
+    opacity: 0.5;
+  }
+
+  .legend-item svg {
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+  }
+
+  .legend-item span.color-indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: var(--spacing-sm);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .destination-type {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .destination-type.top {
+    color: var(--primary-red);
+  }
+
+  .destination-type.worth {
+    color: var(--primary-red);
+    font-weight: 400;
+  }
+
+  .destination-type.special {
+    color: #666;
+    font-weight: 300;
+  }
+
+  .destination-type.natural {
+    color: var(--primary-green);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  @media (max-width: 991px) {
+    .map-container {
+      height: 600px;
+    }
+    
+    .legend {
+      max-width: 220px;
+      width: 40%;
+      padding: var(--spacing-md);
+    }
+    
+    .map-container {
+      border-radius: var(--spacing-xs);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .legend {
+      display: none !important;
+    }
+    
+    .legend-mobile {
+      display: none;
+    }
+    
+    .legend-toggle-btn {
+      display: block;
+    }
+    
+    .legend h4 {
+      font-size: var(--font-size-md);
+    }
+  }
+</style>
+
+<div class="map-container">
+  <div id="map" class="map"></div>
+  <div id="legend" class="legend"></div>
+  <button id="legend-toggle" class="legend-toggle-btn">Show Legend</button>
+  <div id="legend-mobile" class="legend-mobile">
+    <button id="legend-close" class="legend-close-btn">×</button>
+  </div>
+</div>
+
+<script>
+  const MAPBOX_TOKEN = "pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw";
+  const MOBILE_STYLE = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
+  const DESKTOP_STYLE = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
+  
+  const SOURCES = {
+    places: "mapbox://jcbunch3.cmd6clxb92tlo1ns8ro5qgig8-6jlvw",
+    "cultural-landscapes": "mapbox://jcbunch3.9b7pcnhy",
+    "national-parks": "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
+    railroads: "mapbox://jcbunch3.8o05xvpq",
+    vineyards: "mapbox://jcbunch3.86vjg7du",
+    "mapbox-dem": "mapbox://mapbox.mapbox-terrain-dem-v1"
+  };
+
+  function getLegend() {
+    return `
+      <h4>Map Legend</h4>
+      
+      <div class="legend-section">
+        <h5>Places by Importance</h5>
+        <div class="legend-item">
+          <div class="destination-type top">Top Destinations</div>
+        </div>
+        <div class="legend-item">
+          <div class="destination-type worth">Worth a Visit</div>
+        </div>
+        <div class="legend-item">
+          <div class="destination-type special">Special Interest</div>
+        </div>
+        <div class="legend-item">
+          <div class="destination-type natural">Beautiful Landscape</div>
+        </div>
+      </div>
+
+      <div class="legend-section">
+        <h5>Location Types</h5>
+        <div class="legend-item active" data-filter="city">
+          <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 12.3C4.84898 12.3 2.7 10.151 2.7 7.5C2.7 4.84898 4.84898 2.7 7.5 2.7C10.151 2.7 12.3 4.84898 12.3 7.5C12.3 10.151 10.151 12.3 7.5 12.3ZM7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.9101 11.0899 1 7.5 1C3.9101 1 1 3.9101 1 7.5C1 11.0899 3.9101 14 7.5 14Z" fill="#333"/>
+          </svg>
+          <span>Top Destination</span>
+        </div>
+        <div class="legend-item active" data-filter="circle-sm">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M13,4H9l0-3L7.5,0L6,1v3H2L1,5v1h13V5L13,4z M7.5,1.5c0.4,0,0.7,0.3,0.7,0.8S7.9,3,7.5,3S6.7,2.7,6.7,2.2C6.7,1.8,7.1,1.5,7.5,1.5z M13,7H2v4l-1,1.5V14h13v-1.5L13,11V7z M5,12.5H4V8h1V12.5z M8,12.5H7V8h1V12.5z M11,12.5h-1V8h1V12.5z" fill="#333"/>
+          </svg>
+          <span>City or Town</span>
+        </div>
+        <div class="legend-item active" data-filter="square-sm">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M11,4H4C3.4477,4,3,3.5523,3,3V0.5C3,0.2239,3.2239,0,3.5,0S4,0.2239,4,0.5V2h1V1c0-0.5523,0.4477-1,1-1s1,0.4477,1,1v1h1V1c0-0.5523,0.4477-1,1-1s1,0.4477,1,1v1h1V0.5C11,0.2239,11.2239,0,11.5,0S12,0.2239,12,0.5V3C12,3.5523,11.5523,4,11,4z M14,14.5c0,0.2761-0.2239,0.5-0.5,0.5h-12C1.2239,15,1,14.7761,1,14.5S1.2239,14,1.5,14H2c0.5523,0,1-0.4477,1-1c0,0,1-6,1-7c0-0.5523,0.4477-1,1-1h5c0.5523,0,1,0.4477,1,1c0,1,1,7,1,7c0,0.5523,0.4477,1,1,1h0.5c0.2723-0.0001,0.4946,0.2178,0.5,0.49V14.5z M9,10.5C9,9.6716,8.3284,9,7.5,9S6,9.6716,6,10.5V14h3V10.5z" fill="#333"/>
+          </svg>
+          <span>Castle or Palace</span>
+        </div>
+        <div class="legend-item active" data-filter="museum">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M7.5,0L1,3.5V4h13V3.5L7.5,0z M2,5v5l-1,1.6V13h13v-1.4L13,10V5H2z M4,6h1v5.5H4V6z M7,6h1v5.5H7V6z M10,6h1v5.5h-1V6z" fill="#333"/>
+          </svg>
+          <span>Open-Air Museum</span>
+        </div>
+        <div class="legend-item active" data-filter="crosshammer">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M14,1v12H1V8.72c0.0016-0.1419,0.0634-0.2764,0.17-0.37l3-3.22c0.2074-0.1823,0.5234-0.1618,0.7056,0.0456C4.9568,5.268,5.0011,5.387,5,5.51v3l3.16-3.37c0.2025-0.1878,0.5188-0.1759,0.7066,0.0266C8.9532,5.2599,9.0009,5.3827,9,5.51V11h3V1H14z" fill="#333"/>
+          </svg>
+          <span>Industrial Museum</span>
+        </div>
+        <div class="legend-item active" data-filter="lookout-360">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M6.02,8.425a2.3859,2.3859,0,0,0-.46.44l-4.55-3.5a7.9976,7.9976,0,0,1,1.51-1.51Zm6.46-4.56-3.5,4.55a2.3971,2.3971,0,0,1,.45.45l4.56-3.5A7.945,7.945,0,0,0,12.48,3.865ZM7.3042,10.0129a1.5,1.5,0,1,0,1.6829,1.2914h0A1.5,1.5,0,0,0,7.3042,10.0129ZM6.43,2.235a7.9329,7.9329,0,0,0-2.06.55l2.2,5.32a2.0438,2.0438,0,0,1,.61-.17Zm2.14.01-.75,5.69a2.49,2.49,0,0,1,.61.16l2.2-5.3A7.2129,7.2129,0,0,0,8.57,2.245Z" fill="#333"/>
+          </svg>
+          <span>Viewpoint</span>
+        </div>
+        <div class="legend-item active" data-filter="religious-christian">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M6.5,0V1h-3v2h3v11h2V3h3V1h-3V0H6.5z" fill="#333"/>
+          </svg>
+          <span>Church</span>
+        </div>
+        <div class="legend-item active" data-filter="religious-jewish">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M7.5,0l-2,2h-4v2l2,2l-2,2v2h4l2,2l2-2h4v-2l-2-2l2-2v-2h-4L7.5,0z M7.5,3l1,1h2l-1,1l1,1l-1,1l1,1h-2l-1,1l-1-1h-2l1-1l-1-1l1-1l-1-1h2L7.5,3z" fill="#333"/>
+          </svg>
+          <span>Synagogue</span>
+        </div>
+        <div class="legend-item active" data-filter="monument">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path d="M7.5,0L6,2.5v7h3v-7L7.5,0z M3,11.5L3,15h9v-3.5L10.5,10h-6L3,11.5z" fill="#333"/>
+          </svg>
+          <span>Other Destinations</span>
+        </div>
+      </div>
+
+      <div class="legend-section">
+        <h5>Areas & Routes</h5>
+        <div class="legend-item active" data-filter="national-parks">
+          <span class="color-indicator" style="background-color: #285c3a"></span>
+          <span>National Parks</span>
+        </div>
+        <div class="legend-item active" data-filter="railroads">
+          <span class="color-indicator" style="background-color: #a87348"></span>
+          <span>Railroads</span>
+        </div>
+        <div class="legend-item active" data-filter="vineyards">
+          <span class="color-indicator" style="background-color: #7e09a5"></span>
+          <span>Vineyards</span>
+        </div>
+        <div class="legend-item inactive" data-filter="cultural-landscapes">
+          <span class="color-indicator" style="background-color: #376da1"></span>
+          <span>Cultural Landscapes</span>
+        </div>
+      </div>
+    `;
+  }
+
+  const currentLocation = window.location.href;
+
+  function createLayerToggle(map, filter, overlay) {
+    const toggles = {
+      'cultural-landscapes': () => toggleLayerPair(map, 'cultural-landscapes-fill', 'cultural-landscapes-label'),
+      'national-parks': () => toggleLayerPair(map, 'national-parks-fill', 'national-parks-label'),
+      'railroads': () => toggleSingleLayer(map, 'railroads'),
+      'vineyards': () => toggleSingleLayer(map, 'vineyards')
+    };
+    return toggles[filter] || null;
+  }
+  
+  function toggleLayerPair(map, fillId, labelId) {
+    const currentVisibility = map.getLayoutProperty(fillId, 'visibility');
+    const newVisibility = currentVisibility === 'visible' ? 'none' : 'visible';
+    map.setLayoutProperty(fillId, 'visibility', newVisibility);
+    map.setLayoutProperty(labelId, 'visibility', newVisibility);
+    return newVisibility;
+  }
+  
+  function toggleSingleLayer(map, layerId) {
+    const currentVisibility = map.getLayoutProperty(layerId, 'visibility');
+    const newVisibility = currentVisibility === 'visible' ? 'none' : 'visible';
+    map.setLayoutProperty(layerId, 'visibility', newVisibility);
+    return newVisibility;
+  }
+  
+  function addSources(map) {
+    Object.entries(SOURCES).forEach(([name, url]) => {
+      if (name === 'mapbox-dem') {
+        map.addSource(name, {
+          type: 'raster-dem',
+          url: url,
+          tileSize: 512,
+          maxzoom: 14
+        });
+      } else {
+        map.addSource(name, {
+          type: "vector",
+          url: url
+        });
+      }
+    });
+  }
+
+  mapboxgl.accessToken = MAPBOX_TOKEN;
+
+  const locationConfig = {
+    "interactive-map": { center: [8.7, 50.1], zoom: { mobile: 4.25, desktop: 7 } },
+    "shopluk": { center: [22.8, 41.9], zoom: { mobile: 7, desktop: 7.5 } },
+    "pirin": { center: [23.4, 41.5], zoom: 8 },
+    "dobruja": { center: [28, 43.5], zoom: 6.5 },
+    "northern-bulgaria": { center: [25, 41], zoom: { mobile: 6, desktop: 7 } },
+    "thracian-valley": { center: [25.5, 41.4], zoom: { mobile: 6.5, desktop: 7.5 } },
+    "strandzha": { center: [27.3, 42], zoom: 7.5 },
+    "rhodope-mountains": { center: [24.7, 41.2], zoom: 7.5 },
+    "western-thrace": { center: [25.4, 40.8], zoom: 8 },
+    "holstein": { center: [10, 53.7], zoom: 8.5 },
+    "mecklenburg": { center: [12.3, 53.5], zoom: 8.5 },
+    "schleswig": { center: [9.2, 54.6], zoom: 8.5 },
+    "slesvig": { center: [9.2, 54.6], zoom: 8.5 },
+    "vorpommern": { center: [13.6, 53.6], zoom: 8.5 },
+    "scania": { center: [14, 55.8], zoom: 8 },
+    "sjaelland": { center: [11.9, 55.2], zoom: 8 },
+    "fyn": { center: [10.3, 55], zoom: 8.5 },
+    "jylland": { center: [9.5, 56.5], zoom: 8 },
+    
+    "uckermark": { center: [13.8, 53.1], zoom: 9.5 },
+    "mittelmark": { center: [13.2, 52.3], zoom: 8 },
+    "berlin": { center: [13.4, 52.5], zoom: 10 },
+    "altmark": { center: [11.7, 52.7], zoom: 9 },
+    "lower-saxony": { center: [10.3, 52.6], zoom: 8 },
+    "anhalt": { center: [12.1, 51.75], zoom: 9.5 },
+    "eastphalia": { center: [11.1, 51.6], zoom: 8 },
+    "thuringia": { center: [10.9, 50.7], zoom: 8.5 },
+    "electoral-saxony": { center: [13.2, 51], zoom: 8 },
+    "lusatia": { center: [14.5, 51.3], zoom: 8.5 },
+    "hessen": { center: [9.3, 50.7], zoom: 8.5 },
+    "wetterau": { center: [9, 50], zoom: 9 },
+    "explore-frankfurt": { center: [9, 50], zoom: 9 },
+    "westerwald": { center: [8, 50.2], zoom: 9 },
+    "the-ore-mountains": { center: [13.54, 50.6], zoom: 9 },
+    "main-franconia": { center: [10.1, 50.05], zoom: 9.5 },
+    "upper-franconia": { center: [11.1, 50.05], zoom: 9.5 },
+    "middle-franconia": { center: [10.8, 49.1], zoom: 9 },
+    "odenwald": { center: [9.2, 49.67], zoom: 9 },
+    "vogtland": { center: [12.1, 50.3], zoom: 9 },
+    "hohenlohe": { center: [9.8, 49.3], zoom: 9 },
+    "upper-bavaria": { center: [11.7, 48.1], zoom: 8.5 },
+    "lower-bavaria": { center: [12.7, 48.7], zoom: 9 },
+    "upper-palatinate": { center: [12.15, 49.4], zoom: 9 },
+    "allgau": { center: [10.3, 47.6], zoom: 9 },
+    "oberschwaben": { center: [9.9, 48.2], zoom: 8.5 },
+    "wurttemberg": { center: [9, 48.4], zoom: 8.5 },
+    "lake-constance-bodensee": { center: [9.2, 47.6], zoom: 10 },
+    "ducal-bar": { center: [5.5, 49], zoom: 9 },
+    "lorraine": { center: [6.4, 48.6], zoom: 8.5 },
+    "luxembourg": { center: [5.65, 49.7], zoom: 9 },
+    "saarland": { center: [7, 49.2], zoom: 9.5 },
+    "middle-rhine-valley": { center: [7.6, 50.25], zoom: 9.5 },
+    "mosel-valley": { center: [6.9, 50], zoom: 9 },
+    "electoral-palatinate": { center: [8.15, 49.4], zoom: 9 },
+    "alsace": { center: [7.5, 48.5], zoom: 9 },
+    "baden": { center: [8.2, 48.5], zoom: 9 },
+    "basel": { center: [6.9, 50], zoom: 9 },
+    "maas-valley": { center: [5.5, 50.7], zoom: 8.5 },
+    "lower-rhine-valley": { center: [6.5, 51.2], zoom: 9 },
+    "bergisches-land": { center: [7.3, 50.9], zoom: 9.5 },
+    "weser-engern": { center: [8.9, 52.78], zoom: 8.5 },
+    "sauerland": { center: [8, 51.1], zoom: 9.5 },
+    "westphalia": { center: [7.7, 52.3], zoom: 9 },
+    "ruhr": { center: [7.7, 52.3], zoom: 9 },
+    "emsland": { center: [7.7, 52.7], zoom: 8.5 },
+    "west-frisia": { center: [6.1, 53.1], zoom: 8.5 },
+    "east-frisia": { center: [7.5, 53.5], zoom: 8.5 },
+    "oldenburger-land": { center: [8.2, 53.3], zoom: 8.5 },
+    "oversticht": { center: [6.4, 52.6], zoom: 9 },
+    "holland": { center: [4.4, 52.3], zoom: 9 },
+    "brabant": { center: [5.05, 51.2], zoom: 9 },
+    "flanders": { center: [3.3, 50.9], zoom: 9 },
+    "artois": { center: [3.3, 50.9], zoom: 9 },
+    "picardy": { center: [3.3, 50.9], zoom: 9 },
+    "hainaut": { center: [4, 50.3], zoom: 9 },
+    "gelderland": { center: [5.6, 52.1], zoom: 9 },
+    "florence": { center: [11.3, 43.7], zoom: 9 },
+    "pisa": { center: [10.4, 43.3], zoom: { mobile: 9, desktop: 9 } },
+    "lucca": { center: [10.4, 44], zoom: { mobile: 9, desktop: 10 } },
+    "carrara": { center: [10.1, 44.1], zoom: 10 },
+    "siena": { center: [11.3, 43], zoom: 9, specialConfig: { mapHeight: "700px" } },
+    "republic-of-florence": { center: [11.3, 43.7], zoom: 9 },
+    "republic-of-pisa": { center: [10.4, 43.1], zoom: 9 },
+    "republic-of-lucca": { center: [10.4, 44], zoom: 10 },
+    "duchy-of-massa-and-carrara": { center: [10.1, 44], zoom: 11 },
+    "republic-of-siena": { center: [11.3, 42.8], zoom: 9 },
+
+    // Austria
+    // "tyrol": { center: [11.4, 47.3], zoom: 9 },
+    // "vorarlberg": { center: [9.7, 47.3], zoom: 9 },
+    "vienna": { center: [16.4, 48.2], zoom: 10 },
+    "eisenwurzen": { center: [14.64, 47.84], zoom: 9 },
+    "forest-district": { center: [15.28, 48.66], zoom: 9 },
+    "wachau": { center: [15.42, 48.2], zoom: 10 },
+    "wine-district": { center: [16.44, 48.6], zoom: 9 },
+    "salzburg": { center: [13.1, 47.8], zoom: 9 },
+    "lower-austria": { center: [15.89, 48.0], zoom: 9 },
+    "upper-austria": { center: [14.3, 48.2], zoom: 9 },
+    // "burgenland": { center: [16.5, 47.5], zoom: 9 }
+    "upper-styria": { center: [15.2, 47.1], zoom: 9 },
+    "lower-styria": { center: [15.4, 46.36], zoom: 9 },
+    "carinthia": { center: [13.9, 46.7], zoom: 9 },
+    "carniola": { center: [14.56, 45.9], zoom: 9 },
+    "imperial-littoral": { center: [14, 45.45], zoom: 9 },
+
+  };
+
+  // Function to apply location-specific map configuration
+  function applyLocationConfig(map, isMobile = false) {
+    const currentUrl = window.location.href;
+    
+    for (const [location, config] of Object.entries(locationConfig)) {
+      if (currentUrl.includes(location)) {
+        const zoom = typeof config.zoom === 'object' 
+          ? (isMobile ? config.zoom.mobile : config.zoom.desktop)
+          : config.zoom;
+          
+        map.setCenter(config.center);
+        map.setZoom(zoom);
+        
+        // Apply any special configuration
+        if (config.specialConfig) {
+          if (config.specialConfig.mapHeight) {
+            document.querySelector(".map").style.height = config.specialConfig.mapHeight;
+          }
+        }
+        
+        break; // Exit after first match
+      }
+    }
+  }
+
+  if (window.innerWidth <= 991) {
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: MOBILE_STYLE,
+      center: [8.8, 52.6],
+      zoom: 4,
+      cooperativeGestures: true,
+      optimizeForTerrain: true,
+      fadeDuration: 300,
+      crossSourceCollisions: true
+    });
+
+    map.on('error', (e) => {
+      console.error('Mobile map error:', e.error);
+    });
+
+    map.on("load", () => {
+      addSources(map);
+      map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 });
+
+      const overlay = document.getElementById("legend-mobile");
+      const legendToggle = document.getElementById("legend-toggle");
+      const legendClose = document.getElementById("legend-close");
+      
+      overlay.innerHTML = getLegend();
+      
+      legendToggle.addEventListener('click', () => {
+        overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+        legendToggle.textContent = overlay.style.display === 'block' ? 'Hide Legend' : 'Show Legend';
+      });
+      
+      legendClose.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        legendToggle.textContent = 'Show Legend';
+      });
+
+      const activeFilters = new Set(['city', 'circle-sm', 'square-sm', 'monument', 'museum', 'crosshammer', 'lookout-360', 'religious-christian', 'religious-jewish', 'mountain', 'food', 'restaurant']);
+      
+      function setupLegendFilters() {
+        const filterItems = overlay.querySelectorAll('.legend-item[data-filter]');
+        filterItems.forEach(item => {
+          item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const filter = item.dataset.filter;
+            
+            const toggleFunc = createLayerToggle(map, filter, overlay);
+            if (toggleFunc) {
+              const newVisibility = toggleFunc();
+              item.classList.toggle('active', newVisibility === 'visible');
+              item.classList.toggle('inactive', newVisibility === 'none');
+            } else {
+              if (activeFilters.has(filter)) {
+                activeFilters.delete(filter);
+                item.classList.remove('active');
+                item.classList.add('inactive');
+              } else {
+                activeFilters.add(filter);
+                item.classList.remove('inactive');
+                item.classList.add('active');
+              }
+              const filterArray = Array.from(activeFilters);
+              if (filterArray.length === 0) {
+                map.setFilter('places-icons', ['==', 'marker-symbol', 'none']);
+              } else {
+                map.setFilter('places-icons', ['in', 'marker-symbol', ...filterArray]);
+              }
+            }
+          });
+        });
+      }
+      
+      // Add cultural landscapes layer (fill)
+      map.addLayer({
+        id: "cultural-landscapes-fill",
+        type: "fill",
+        source: "cultural-landscapes",
+        "source-layer": "Landscapes2-8zz5we", // Adjust this if your source layer name is different
+        layout: {
+          visibility: "none", // Hidden by default
+        },
+        paint: {
+          "fill-color": "#376da1", // Slateblue color
+          "fill-opacity": 0.5,
+        },
+      });
+      
+      // Add cultural landscapes layer (label)
+      map.addLayer({
+        id: "cultural-landscapes-label",
+        type: "symbol",
+        source: "cultural-landscapes",
+        "source-layer": "Landscapes2-8zz5we", // Adjust this if your source layer name is different
+        layout: {
+          visibility: "none", // Hidden by default
+          "text-field": ["get", "NAM"],
+          "text-font": ["Open Sans Semibold Italic", "Arial Unicode MS Bold"],
+          "text-size": 16,
+          "text-anchor": "center",
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": "#376da1",
+          "text-halo-color": "rgba(255, 255, 255, 0.8)",
+          "text-opacity": 0.7,
+          "text-halo-width": 1.5,
+        },
+      });
+      
+      // Add national parks layer (fill)
+      map.addLayer({
+        id: "national-parks-fill",
+        type: "fill",
+        source: "national-parks",
+        "source-layer": "EuropeNationalParks",
+        layout: {
+          visibility: "visible", // Visible by default
+        },
+        paint: {
+          "fill-color": "#285c3a",
+          "fill-opacity": 0.2,
+        },
+      });
+      
+      // Add national parks layer (label)
+      map.addLayer({
+        id: "national-parks-label",
+        type: "symbol",
+        source: "national-parks",
+        "source-layer": "EuropeNationalParks",
+        layout: {
+          visibility: "visible", // Visible by default
+          "text-field": ["get", "NAM"],
+          "text-font": ["Open Sans Semibold Italic", "Arial Unicode MS Bold"],
+          "text-size": 16,
+          "text-anchor": "center",
+          "text-allow-overlap": false,
+          "text-transform": "none"
+        },
+        paint: {
+          "text-color": "#285c3a",
+          "text-opacity": 0.7,
+          "text-halo-color": "rgba(255, 255, 255, 0.8)",
+          "text-halo-width": 1.5,
+        },
+      });
+      
+      map.addLayer({
+        id: "railroads",
+        type: "line",
+        source: "railroads",
+        "source-layer": "EURailwaysComplete-cktonh",
+        layout: {
+          visibility: "visible", 
+        },
+        paint: {
+          "line-color": "#a87348",
+          "line-opacity": 1,
+          "line-width": 2,
+          "line-dasharray": [2, 1], 
+        },
+      });
+      
+      map.addLayer({
+        id: "vineyards",
+        type: "fill",
+        source: "vineyards",
+        "source-layer": "WineTest3-7cv5f4",
+        layout: {
+          visibility: "visible", // Visible by default
+        },
+        paint: {
+          "fill-color": "#7e09a5",
+          "fill-opacity": 0.4,
+        },
+      });
+
+      map.addLayer({
+        id: "places-icons",
+        type: "symbol",
+        source: "places",
+        "source-layer": "PlacesToVisit5",
+        minzoom: 0,
+        maxzoom: 22,
+        layout: {
+          "icon-image": [
+            "match",
+            ["get", "marker-symbol"],
+            "circle-sm", "town-hall",
+            "religious-christian", "religious-christian",
+            "religious-islam", "religious-islam",
+            "religious-jewish", "religious-jewish",
+            "monument", "monument",
+            "museum", "museum",
+            "square-sm", "castle",
+            "city", "border-dot-13",
+            "crosshammer", "industry",
+            "home-2", "highway-rest-area",
+            "home", "highway-rest-area",
+            "lookout-360", "viewpoint",
+            "food", "fast-food",
+            "restaurant", "fast-food",
+            "mountain", "mountain",
+            "dot-11"
+          ],
+          "icon-size": 1.3,
+          "icon-allow-overlap": true,
+          "symbol-sort-key": [
+            "match",
+            ["get", "marker-symbol"],
+            "city", 10,
+            ["circle-sm", "square-sm", "mountain"], 5,
+            ["monument", "museum", "religious-christian", "religious-islam", "religious-jewish"], 3,
+            1
+          ],
+          "text-field": ["get", "title"],
+          "text-font": [
+            "match",
+            ["get", "marker-symbol"],
+            ["crosshammer", "religious-christian", "monument", "square-sm", "museum", "circle-sm", "religious-islam"],
+            ["literal", ["Open Sans Semibold", "Arial Unicode MS Regular"]],
+            ["mountain", "food"],
+            ["literal", ["Open Sans Bold Italic", "Arial Unicode MS Bold"]],
+            "city",
+            ["literal", ["Open Sans Extrabold", "Arial Unicode MS Bold"]],
+            ["literal", ["Open Sans Semibold", "Arial Unicode MS Regular"]]
+          ],
+          "text-size": [
+            "case",
+            ["all",
+              ["==", ["get", "marker-color"], "#a10001"],
+              ["==", ["get", "marker-symbol"], "city"]
+            ],
+            16,
+            ["==", ["get", "marker-color"], "#a10001"],
+            14,
+            12
+          ],
+          "text-anchor": "top",
+          "text-offset": [0, 1.2],
+          "text-optional": false,
+          "text-radial-offset": [
+            "match",
+            ["get", "marker-color"],
+            ["#000000", "#7c0000", "#1e523d"], 1,
+            0.5
+          ],
+          "icon-ignore-placement": true,
+          "icon-padding": 2,
+          "text-padding": 2,
+          "text-variable-anchor": ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"]
+        },
+        paint: {
+          "text-color": [
+            "match",
+            ["get", "marker-color"],
+            ["#005741", "#1e523d", "#1d6b53", "#005943"], "#377632",
+            ["#000000", "#333333", "#7c0000"], "#000000",
+            ["#a10001", "#8f1b11", "#aa3524", "#9b0101", "#a43b2d"], "#a10001",
+            "#fe9900", "#fe9900",
+            "#000000"
+          ],
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1.5
+        }
+      });
+      setupLegendFilters();
+      const filterArray = Array.from(activeFilters);
+      if (filterArray.length === 0) {
+        map.setFilter('places-icons', ['==', 'marker-symbol', 'none']);
+      } else {
+        map.setFilter('places-icons', ['in', 'marker-symbol', ...filterArray]);
+      }
+      
+      map.setPaintProperty('places-icons', 'icon-opacity', [
+        "case",
+        ["==", ["get", "zoom"], "city"],
+        ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, 1, 22, 1],
+        ["interpolate", ["linear"], ["zoom"], 0, 1, 16, 1, 16.5, 0]
+      ]);
+      map.setPaintProperty('places-icons', 'text-opacity', [
+        "case",
+        ["==", ["get", "zoom"], "city"],
+        ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, 1, 22, 1],
+        ["interpolate", ["linear"], ["zoom"], 0, 1, 16, 1, 16.5, 0]
+      ]);
+      map.on("click", "places-icons", (e) => {
+        const feature = e.features[0];
+        const wikipediaUrl = feature.properties.Wikipedia || "";
+        
+        if (wikipediaUrl) {
+          window.open(wikipediaUrl, "_blank");
+        }
+      });
+      map.on("mouseenter", "places-icons", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", "places-icons", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+      map.addControl(new mapboxgl.FullscreenControl(), "top-right");
+      map.addControl(new mapboxgl.GeolocateControl({positionOptions: {enableHighAccuracy: true}, trackUserLocation: true, showUserHeading: true}), "top-right");
+      map.addControl(new mapboxgl.TerrainControl({source: 'mapbox-dem', exaggeration: 1.5}), 'top-right');
+      map.addControl(new mapboxgl.ScaleControl({maxWidth: 100, unit: 'metric'}), 'bottom-right');
+      
+      setTimeout(() => {
+        const controls = {
+          '.mapboxgl-ctrl-fullscreen': 'Toggle fullscreen view',
+          '.mapboxgl-ctrl-geolocate': 'Find my location',
+          '.mapboxgl-ctrl-zoom-in': 'Zoom in',
+          '.mapboxgl-ctrl-zoom-out': 'Zoom out',
+          '.mapboxgl-ctrl-compass': 'Reset map rotation'
+        };
+        
+        Object.entries(controls).forEach(([selector, label]) => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.setAttribute('aria-label', label);
+          }
+        });
+        
+        document.querySelectorAll('#legend-mobile .legend-item').forEach(item => {
+          item.setAttribute('role', 'button');
+          item.setAttribute('tabindex', '0');
+          item.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              item.click();
+            }
+          });
+        });
+      }, 1000);
+    });
+
+    applyLocationConfig(map, true);
+  } else {
+
+    const desktopMapLayer = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
+    const map = new mapboxgl.Map({
+      container: "map", 
+      style: desktopMapLayer, 
+      center: [8.8, 52.4], 
+      zoom: 5.1,
+      optimizeForTerrain: true, 
+      fadeDuration: 300, 
+      crossSourceCollisions: true
+    });
+
+    // Add error handling
+    map.on('error', (e) => {
+      console.error('Desktop map error:', e.error);
+    });
+
+    map.on("load", () => {
+      map.addSource("places", {
+        type: "vector",
+        url: "mapbox://jcbunch3.cmd6clxb92tlo1ns8ro5qgig8-6jlvw",
+      });
+      
+      // Add cultural landscapes source
+      map.addSource("cultural-landscapes", {
+        type: "vector",
+        url: "mapbox://jcbunch3.9b7pcnhy",
+      });
+      
+      // Add national parks source
+      map.addSource("national-parks", {
+        type: "vector",
+        url: "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
+      });
+      
+      map.addSource("railroads", {
+        type: "vector",
+        url: "mapbox://jcbunch3.8o05xvpq",
+      });
+      
+      map.addSource("vineyards", {
+        type: "vector",
+        url: "mapbox://jcbunch3.86vjg7du",
+      });
+      
+      map.addSource('mapbox-dem', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14
+      });
+      
+      map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 });
+      
+      if (!map.getSource('places')) {
+        console.error('Desktop: Places source failed to load');
+      }
+      if (!map.getSource('cultural-landscapes')) {
+        console.error('Desktop: Cultural landscapes source failed to load');
+      }
+      if (!map.getSource('national-parks')) {
+        console.error('Desktop: National parks source failed to load');
+      }
+      if (!map.getSource('railroads')) {
+        console.error('Desktop: Railroads source failed to load');
+      }
+      if (!map.getSource('mapbox-dem')) {
+        console.error('Desktop: Terrain DEM source failed to load');
+      }
+
+      const overlay = document.getElementById("legend");
+      const activeFilters = new Set(['city', 'circle-sm', 'square-sm', 'monument', 'museum', 'crosshammer', 'lookout-360', 'religious-christian', 'religious-jewish', 'mountain', 'food', 'restaurant']);
+      
+      function checkLegendVisibility() {
+        const mapContainer = document.querySelector('.map-container');
+        const mapWidth = mapContainer.offsetWidth;
+        const legendWidth = overlay.offsetWidth;
+        
+        if (legendWidth > mapWidth * 0.5) {
+          overlay.style.display = "none";
+        } else {
+          overlay.style.display = "block";
+        }
+      }
+      
+      function setupLegendFilters() {
+        const filterItems = overlay.querySelectorAll('.legend-item[data-filter]');
+        filterItems.forEach(item => {
+          item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const filter = item.dataset.filter;
+            
+            const toggleFunc = createLayerToggle(map, filter, overlay);
+            if (toggleFunc) {
+              const newVisibility = toggleFunc();
+              item.classList.toggle('active', newVisibility === 'visible');
+              item.classList.toggle('inactive', newVisibility === 'none');
+            } else {
+              if (activeFilters.has(filter)) {
+                activeFilters.delete(filter);
+                item.classList.remove('active');
+                item.classList.add('inactive');
+              } else {
+                activeFilters.add(filter);
+                item.classList.remove('inactive');
+                item.classList.add('active');
+              }
+              const filterArray = Array.from(activeFilters);
+              if (filterArray.length === 0) {
+                map.setFilter('places-icons', ['==', 'marker-symbol', 'none']);
+              } else {
+                map.setFilter('places-icons', ['in', 'marker-symbol', ...filterArray]);
+              }
+            }
+          });
+        });
+      }
+      
+      overlay.style.display = "block";
+      overlay.innerHTML = getLegend();
+      setupLegendFilters();
+      
+      setTimeout(() => {
+        checkLegendVisibility();
+      }, 100);
+      window.addEventListener('resize', checkLegendVisibility);
+      
+      map.addLayer({
+        id: "cultural-landscapes-fill",
+        type: "fill",
+        source: "cultural-landscapes",
+        "source-layer": "Landscapes2-8zz5we", // Adjust this if your source layer name is different
+        layout: {
+          visibility: "none", // Hidden by default
+        },
+        paint: {
+          "fill-color": "#376da1", // Slateblue color
+          "fill-opacity": 0.5,
+        },
+      });
+      
+      map.addLayer({
+        id: "cultural-landscapes-label",
+        type: "symbol",
+        source: "cultural-landscapes",
+        "source-layer": "Landscapes2-8zz5we", // Adjust this if your source layer name is different
+        layout: {
+          visibility: "none", // Hidden by default
+          "text-field": ["get", "NAM"],
+          "text-font": ["Open Sans Semibold Italic", "Arial Unicode MS Bold"],
+          "text-size": 16,
+          "text-anchor": "center",
+          "text-allow-overlap": false,
+        },
+        paint: {
+          "text-color": "#376da1",
+          "text-halo-color": "rgba(255, 255, 255, 0.8)",
+          "text-opacity": 0.7,
+          "text-halo-width": 1.5,
+        },
+      });
+      
+      map.addLayer({
+        id: "national-parks-fill",
+        type: "fill",
+        source: "national-parks",
+        "source-layer": "EuropeNationalParks",
+        layout: {
+          visibility: "visible", // Visible by default
+        },
+        paint: {
+          "fill-color": "#285c3a",
+          "fill-opacity": 0.2,
+        },
+      });
+      
+      map.addLayer({
+        id: "national-parks-label",
+        type: "symbol",
+        source: "national-parks",
+        "source-layer": "EuropeNationalParks",
+        layout: {
+          visibility: "visible", // Visible by default
+          "text-field": ["get", "NAM"],
+          "text-font": ["Open Sans Semibold Italic", "Arial Unicode MS Bold"],
+          "text-size": 16,
+          "text-anchor": "center",
+          "text-allow-overlap": false,
+          "text-transform": "none", // Will handle sentence case in styling
+        },
+        paint: {
+          "text-color": "#285c3a",
+          "text-opacity": 0.7,
+          "text-halo-color": "rgba(255, 255, 255, 0.8)",
+          "text-halo-width": 1.5,
+        },
+      });
+      
+      map.addLayer({
+        id: "railroads",
+        type: "line",
+        source: "railroads",
+        "source-layer": "EURailwaysComplete-cktonh",
+        layout: {
+          visibility: "visible", // Visible by default
+        },
+        paint: {
+          "line-color": "#a87348",
+          "line-opacity": 1,
+          "line-width": 2,
+          "line-dasharray": [2, 1], // 2 dash per 1 gap
+        },
+      });
+      
+      map.addLayer({
+        id: "vineyards",
+        type: "fill",
+        source: "vineyards",
+        "source-layer": "WineTest3-7cv5f4",
+        layout: {
+          visibility: "visible", // Visible by default
+        },
+        paint: {
+          "fill-color": "#7e09a5",
+          "fill-opacity": 0.4,
+        },
+      });
+
+      map.addLayer({
+        id: "places-icons",
+        type: "symbol",
+        source: "places",
+        "source-layer": "PlacesToVisit5",
+        minzoom: 0,
+        maxzoom: 22,
+        layout: {
+          "icon-image": [
+            "match",
+            ["get", "marker-symbol"],
+            "circle-sm", "town-hall",
+            "religious-christian", "religious-christian",
+            "religious-islam", "religious-islam",
+            "religious-jewish", "religious-jewish",
+            "monument", "monument",
+            "museum", "museum",
+            "square-sm", "castle",
+            "city", "border-dot-13",
+            "crosshammer", "industry",
+            "home-2", "highway-rest-area",
+            "home", "highway-rest-area",
+            "lookout-360", "viewpoint",
+            "food", "fast-food",
+            "restaurant", "fast-food",
+            "mountain", "mountain",
+            "dot-11"
+          ],
+          "icon-size": 1.3,
+          "icon-allow-overlap": true,
+          "symbol-sort-key": [
+            "match",
+            ["get", "marker-symbol"],
+            "city", 10,
+            ["circle-sm", "square-sm", "mountain"], 5,
+            ["monument", "museum", "religious-christian", "religious-islam", "religious-jewish"], 3,
+            1
+          ],
+          "text-field": ["get", "title"],
+          "text-font": [
+            "match",
+            ["get", "marker-symbol"],
+            ["crosshammer", "religious-christian", "monument", "square-sm", "museum", "circle-sm", "religious-islam"],
+            ["literal", ["Open Sans Semibold", "Arial Unicode MS Regular"]],
+            ["mountain", "food"],
+            ["literal", ["Open Sans Bold Italic", "Arial Unicode MS Bold"]],
+            "city",
+            ["literal", ["Open Sans Extrabold", "Arial Unicode MS Bold"]],
+            ["literal", ["Open Sans Semibold", "Arial Unicode MS Regular"]]
+          ],
+          "text-size": [
+            "case",
+            ["all",
+              ["==", ["get", "marker-color"], "#a10001"],
+              ["==", ["get", "marker-symbol"], "city"]
+            ],
+            16,
+            ["==", ["get", "marker-color"], "#a10001"],
+            14,
+            12
+          ],
+          "text-anchor": "top",
+          "text-offset": [0, 1.2],
+          "text-optional": false,
+          "text-radial-offset": [
+            "match",
+            ["get", "marker-color"],
+            ["#000000", "#7c0000", "#1e523d"], 1,
+            0.5
+          ],
+          "icon-ignore-placement": true,
+          "icon-padding": 2,
+          "text-padding": 2,
+          "text-variable-anchor": ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"]
+        },
+        paint: {
+          "text-color": [
+            "match",
+            ["get", "marker-color"],
+            ["#005741", "#1e523d", "#1d6b53", "#005943"], "#377632",
+            ["#000000", "#333333", "#7c0000"], "#000000",
+            ["#a10001", "#8f1b11", "#aa3524", "#9b0101", "#a43b2d"], "#a10001",
+            "#fe9900", "#fe9900",
+            "#000000"
+          ],
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1.5
+        }
+      });
+      
+      const filterArray = Array.from(activeFilters);
+      if (filterArray.length === 0) {
+        map.setFilter('places-icons', ['==', 'marker-symbol', 'none']);
+      } else {
+        map.setFilter('places-icons', ['in', 'marker-symbol', ...filterArray]);
+      }
+      
+      map.setPaintProperty('places-icons', 'icon-opacity', [
+        "case",
+        ["==", ["get", "zoom"], "city"],
+        ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, 1, 22, 1],
+        ["interpolate", ["linear"], ["zoom"], 0, 1, 16, 1, 16.5, 0]
+      ]);
+      map.setPaintProperty('places-icons', 'text-opacity', [
+        "case",
+        ["==", ["get", "zoom"], "city"],
+        ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, 1, 22, 1],
+        ["interpolate", ["linear"], ["zoom"], 0, 1, 16, 1, 16.5, 0]
+      ]);
+
+      let popup = null;
+      let popupTimeout = null;
+      let showPopupTimeout = null;
+
+      map.on("mouseenter", "places-icons", (e) => {
+        map.getCanvas().style.cursor = "pointer";
+        
+        if (popupTimeout) {
+          clearTimeout(popupTimeout);
+          popupTimeout = null;
+        }
+        if (showPopupTimeout) {
+          clearTimeout(showPopupTimeout);
+          showPopupTimeout = null;
+        }
+        
+        if (popup) {
+          popup.remove();
+          popup = null;
+          window.currentPopup = null;
+        }
+        
+        const feature = e.features[0];
+        const name = feature.properties.title || feature.properties.name || "Unknown Location";
+        const wikipediaUrl = feature.properties.Wikipedia || "";
+        
+        const buttonDisabled = !wikipediaUrl ? 'disabled' : '';
+        
+        const popupContent = `
+          <div class="popup-content">
+            <button class="popup-close">×</button>
+            <div class="popup-title">${name}</div>
+            <button class="popup-button" ${buttonDisabled} data-wikipedia-url="${wikipediaUrl || ''}">
+              View on Wikipedia
+            </button>
+          </div>
+        `;
+
+        // Add 1-second delay before showing popup
+        showPopupTimeout = setTimeout(() => {
+          popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            offset: [0, -15]
+          })
+          .trackPointer()
+          .setLngLat(e.lngLat)
+          .setHTML(popupContent)
+          .addTo(map);
+          
+          window.currentPopup = popup;
+          
+          const popupElement = popup.getElement();
+          const closeBtn = popupElement.querySelector('.popup-close');
+          const wikiBtn = popupElement.querySelector('.popup-button');
+          
+          if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+              if (popup) {
+                popup.remove();
+                popup = null;
+                window.currentPopup = null;
+              }
+            });
+          }
+          
+          if (wikiBtn && !wikiBtn.disabled) {
+            wikiBtn.addEventListener('click', () => {
+              const url = wikiBtn.getAttribute('data-wikipedia-url');
+              if (url) {
+                window.open(url, '_blank');
+              }
+            });
+          }
+          
+          showPopupTimeout = null;
+        }, 1000);
+      });
+
+      map.on("mouseleave", "places-icons", () => {
+        map.getCanvas().style.cursor = "";
+        
+        if (showPopupTimeout) {
+          clearTimeout(showPopupTimeout);
+          showPopupTimeout = null;
+        }
+        
+        if (popup) {
+          popupTimeout = setTimeout(() => {
+            if (popup) {
+              popup.remove();
+              popup = null;
+              window.currentPopup = null;
+            }
+          }, 1000);
+        }
+      });
+
+      map.on("mouseenter", (e) => {
+        const popupElement = document.querySelector('.mapboxgl-popup');
+        if (popupElement) {
+          popupElement.addEventListener('mouseenter', () => {
+            if (popupTimeout) {
+              clearTimeout(popupTimeout);
+              popupTimeout = null;
+            }
+          });
+          
+          popupElement.addEventListener('mouseleave', () => {
+            popupTimeout = setTimeout(() => {
+              if (popup) {
+                popup.remove();
+                popup = null;
+                window.currentPopup = null;
+              }
+            }, 500);
+          });
+        }
+      });
+
+      map.on("click", "places-icons", (e) => {
+        const wikipediaUrl = e.features[0].properties.Wikipedia;
+        if (wikipediaUrl) {
+          window.open(wikipediaUrl, "_blank");
+        }
+      });
+
+      map.on("click", (e) => {
+        if (!e.originalEvent.target.closest('.mapboxgl-popup')) {
+          if (popup) {
+            popup.remove();
+            popup = null;
+            window.currentPopup = null;
+          }
+        }
+      });
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+      map.addControl(new mapboxgl.FullscreenControl(), "top-right");
+      map.addControl(new mapboxgl.GeolocateControl({positionOptions: {enableHighAccuracy: true}, trackUserLocation: true, showUserHeading: true}), "top-right");
+      map.addControl(new mapboxgl.TerrainControl({source: 'mapbox-dem', exaggeration: 1.5}), 'top-right');
+      map.addControl(new mapboxgl.ScaleControl({maxWidth: 100, unit: 'metric'}), 'bottom-right');
+      
+      setTimeout(() => {
+        const controls = {
+          '.mapboxgl-ctrl-fullscreen': 'Toggle fullscreen view',
+          '.mapboxgl-ctrl-geolocate': 'Find my location',
+          '.mapboxgl-ctrl-zoom-in': 'Zoom in',
+          '.mapboxgl-ctrl-zoom-out': 'Zoom out',
+          '.mapboxgl-ctrl-compass': 'Reset map rotation'
+        };
+        
+        Object.entries(controls).forEach(([selector, label]) => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.setAttribute('aria-label', label);
+          }
+        });
+        
+        document.querySelectorAll('#legend .legend-item').forEach(item => {
+          item.setAttribute('role', 'button');
+          item.setAttribute('tabindex', '0');
+          item.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              item.click();
+            }
+          });
+        });
+      }, 1000);
+    });
+
+    applyLocationConfig(map, false);
+  }
+</script>

@@ -1,0 +1,362 @@
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap">
+<style>*{box-sizing:border-box}body{margin:0;padding:0;height:100%;overflow:hidden;font-family:'Open Sans',sans-serif}#map{position:absolute;top:0;bottom:0;width:100%}.map-overlay{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.95);border-radius:8px;padding:18px 20px;max-width:300px;box-shadow:0 3px 10px rgba(0,0,0,0.15);font-size:14px;z-index:1;max-height:calc(100vh - 60px);overflow-y:auto;overflow-x:hidden}.map-overlay h4{margin:0 0 15px 0;font-size:17px;color:#2c3e50;font-weight:600;border-bottom:2px solid #3498db;padding-bottom:8px}.map-overlay h5{margin:15px 0 10px 0;font-size:14px;color:#34495e;font-weight:600;letter-spacing:0.3px}.legend-section{margin-bottom:18px}.legend-section:last-child{margin-bottom:0}.legend-item{display:flex;align-items:center;margin:8px 0;cursor:pointer;padding:6px 8px;border-radius:5px;transition:background-color 0.2s}.legend-item:hover{background-color:rgba(52,152,219,0.1)}.legend-item.inactive{opacity:0.45;text-decoration:line-through}.legend-item svg,.legend-item .color-indicator{margin-right:12px;flex-shrink:0}.legend-item .color-indicator{width:20px;height:4px;border-radius:2px}.legend-item span{font-size:13px;color:#2c3e50;line-height:1.4}.destination-type{padding:6px 12px;border-radius:4px;color:white;font-weight:600;text-align:center;font-size:12px;width:100%}.destination-type.top{background-color:#a10001}.destination-type.worth{background-color:#7c0000}.destination-type.special{background-color:#1e523d}.destination-type.natural{background-color:#000000}.mapboxgl-popup-content{padding:15px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-family:'Open Sans',sans-serif}.mapboxgl-popup-content h3{margin:0 0 10px 0;font-size:16px;color:#2c3e50;font-weight:600}.mapboxgl-popup-content p{margin:5px 0;font-size:13px;color:#555;line-height:1.5}.mapboxgl-popup-content a{color:#3498db;text-decoration:none;font-weight:600}.mapboxgl-popup-content a:hover{text-decoration:underline}.mapboxgl-popup-close-button{font-size:20px;padding:0 8px;color:#7f8c8d}.mapboxgl-popup-close-button:hover{background-color:rgba(0,0,0,0.05);color:#2c3e50}.mapboxgl-ctrl-attrib{font-size:11px}.mapboxgl-canvas-container.mapboxgl-interactive,.mapboxgl-ctrl-group button.mapboxgl-ctrl-compass{cursor:pointer}@media (max-width:991px){.map-overlay{top:10px;right:10px;max-width:250px;padding:14px 16px;max-height:calc(100vh - 40px)}.map-overlay h4{font-size:15px;margin-bottom:12px}.map-overlay h5{font-size:13px;margin:12px 0 8px 0}.legend-item{margin:6px 0;padding:5px 6px}.legend-item span{font-size:12px}.legend-item svg{margin-right:10px}.destination-type{padding:5px 10px;font-size:11px}.legend-section{margin-bottom:14px}}@media (max-width:575px){.map-overlay{max-width:calc(100vw - 20px)}}</style>
+<div id="map"></div>
+<div class="map-overlay"></div>
+<script>
+  mapboxgl.accessToken=MAPBOX_TOKEN;
+  if (window.innerWidth <= 991) {
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: MOBILE_STYLE,
+      center: [8.8, 52.6],
+      zoom: 4,
+      cooperativeGestures: true,
+      optimizeForTerrain: true,
+      fadeDuration: 300,
+      crossSourceCollisions: true
+    });
+
+    map.on("load", function() {
+      addSources(map);
+
+      map.addLayer({
+        id: "cultural-landscapes-fill",
+        type: "fill",
+        source: "cultural-landscapes",
+        "source-layer": "CulturalLandscapes-31y1li",
+        paint: {"fill-color": "#376da1","fill-opacity": 0.2},
+        layout: {visibility: "none"}
+      });
+
+      map.addLayer({
+        id: "cultural-landscapes-label",
+        type: "symbol",
+        source: "cultural-landscapes",
+        "source-layer": "CulturalLandscapes-31y1li",
+        layout: {
+          "text-field": ["get", "title"],
+          "text-size": 14,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          visibility: "none"
+        },
+        paint: {"text-color": "#376da1","text-halo-color": "#ffffff","text-halo-width": 1}
+      });
+
+      map.addLayer({
+        id: "national-parks-fill",
+        type: "fill",
+        source: "national-parks",
+        "source-layer": "NationalParks-5xc09m",
+        paint: {"fill-color": "#285c3a","fill-opacity": 0.2}
+      });
+
+      map.addLayer({
+        id: "national-parks-label",
+        type: "symbol",
+        source: "national-parks",
+        "source-layer": "NationalParks-5xc09m",
+        layout: {
+          "text-field": ["get", "title"],
+          "text-size": 14,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"]
+        },
+        paint: {"text-color": "#285c3a","text-halo-color": "#ffffff","text-halo-width": 1}
+      });
+
+      map.addLayer({
+        id: "railroads",
+        type: "line",
+        source: "railroads",
+        "source-layer": "TouristRailroads-0umcip",
+        paint: {"line-color": "#a87348","line-width": 3}
+      });
+
+      map.addLayer({
+        id: "vineyards",
+        type: "line",
+        source: "vineyards",
+        "source-layer": "Vineyards-63p43x",
+        paint: {"line-color": "#7e09a5","line-width": 3}
+      });
+
+      map.addLayer({
+        id: "places-icons",
+        type: "symbol",
+        source: "places",
+        "source-layer": "PlacesToVisit5-5qb8o4",
+        layout: {
+          "icon-image": ["get", "marker-symbol"],
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 0, 0.4, 11, 0.6, 16, 0.85],
+          "icon-allow-overlap": true,
+          "icon-ignore-placement": true,
+          "icon-padding": 2,
+          "text-field": ["get", "title"],
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-size": ["case",["all",["==",["get","marker-color"],"#a10001"],["==",["get","marker-symbol"],"city"]],16,["==",["get","marker-color"],"#a10001"],14,12],
+          "text-offset": [0, 0.5],
+          "text-anchor": "top",
+          "text-radial-offset": ["match",["get","marker-color"],["#000000","#7c0000","#1e523d"],1,0.5],
+          "text-padding": 2,
+          "text-variable-anchor": ["top","bottom","left","right","top-left","top-right","bottom-left","bottom-right"],
+          "symbol-sort-key": ["case",["==",["get","marker-color"],"#a10001"],1,["match",["get","marker-symbol"],"city",10,["circle-sm","square-sm","mountain"],5,["museum","crosshammer"],3,1]]
+        },
+        paint: {
+          "icon-color": ["get", "marker-color"],
+          "icon-opacity": ["interpolate",["linear"],["zoom"],0,["case",["==",["get","marker-symbol"],"city"],0,1],13,["case",["==",["get","marker-symbol"],"city"],0,1],13.5,["case",["==",["get","marker-symbol"],"city"],1,1],16,["case",["==",["get","marker-symbol"],"city"],1,1],16.5,["case",["==",["get","marker-symbol"],"city"],1,0],22,["case",["==",["get","marker-symbol"],"city"],1,0]],
+          "text-color": ["get", "marker-color"],
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1.5,
+          "text-opacity": ["interpolate",["linear"],["zoom"],0,["case",["==",["get","marker-symbol"],"city"],0,1],13,["case",["==",["get","marker-symbol"],"city"],0,1],13.5,["case",["==",["get","marker-symbol"],"city"],1,1],16,["case",["==",["get","marker-symbol"],"city"],1,1],16.5,["case",["==",["get","marker-symbol"],"city"],1,0],22,["case",["==",["get","marker-symbol"],"city"],1,0]]
+        }
+      });
+
+      document.querySelector(".map-overlay").innerHTML = getLegend();
+
+      const legendItems = document.querySelectorAll(".legend-item");
+      legendItems.forEach(item => {
+        const filterValue = item.getAttribute("data-filter");
+        if (!filterValue) return;
+
+        item.addEventListener("click", () => {
+          if (["cultural-landscapes","national-parks","railroads","vineyards"].includes(filterValue)) {
+            const toggle = createLayerToggle(map, filterValue);
+            if (toggle) {
+              const newVisibility = toggle();
+              item.classList.toggle("inactive", newVisibility === "none");
+              item.classList.toggle("active", newVisibility === "visible");
+            }
+          } else {
+            const currentFilter = map.getFilter("places-icons") || ["all"];
+            const symbolMatch = ["!=", ["get", "marker-symbol"], filterValue];
+            const hasFilter = JSON.stringify(currentFilter).includes(JSON.stringify(symbolMatch));
+
+            let newFilter;
+            if (hasFilter) {
+              newFilter = currentFilter.filter(f => JSON.stringify(f) !== JSON.stringify(symbolMatch));
+              if (newFilter.length === 1) newFilter = ["all"];
+              item.classList.remove("inactive");
+              item.classList.add("active");
+            } else {
+              if (currentFilter[0] === "all" && currentFilter.length === 1) {
+                newFilter = ["all", symbolMatch];
+              } else {
+                newFilter = [...currentFilter, symbolMatch];
+              }
+              item.classList.add("inactive");
+              item.classList.remove("active");
+            }
+
+            map.setFilter("places-icons", newFilter);
+          }
+        });
+      });
+
+      map.on("click", "places-icons", (e) => {
+        const feature = e.features[0];
+        const props = feature.properties;
+        let popupContent = `<h3>${props.title}</h3>`;
+        if (props.description) popupContent += `<p>${props.description}</p>`;
+        if (props.wikipedia) popupContent += `<p><a href="${props.wikipedia}" target="_blank">Wikipedia</a></p>`;
+        new mapboxgl.Popup().setLngLat(e.lngLat).setHTML(popupContent).addTo(map);
+      });
+
+      map.on("mouseenter", "places-icons", () => {map.getCanvas().style.cursor = "pointer";});
+      map.on("mouseleave", "places-icons", () => {map.getCanvas().style.cursor = "";});
+
+      map.addControl(new mapboxgl.NavigationControl(),"top-left");
+      map.addControl(new mapboxgl.FullscreenControl(),"top-left");
+      map.addControl(new mapboxgl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:true,showUserHeading:true}),"top-left");
+      map.addControl(new mapboxgl.TerrainControl({source:"mapbox-dem",exaggeration:1.5}),"top-left");
+      map.addControl(new mapboxgl.ScaleControl({maxWidth:100,unit:"metric"}),"bottom-left");
+
+      map.getCanvas().setAttribute("role","application");
+      map.getCanvas().setAttribute("aria-label","Interactive map");
+
+      applyLocationConfig(map, true);
+    });
+  } else {
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: DESKTOP_STYLE,
+      center: [8.8, 52.6],
+      zoom: 4,
+      optimizeForTerrain: true,
+      fadeDuration: 300,
+      crossSourceCollisions: true
+    });
+
+    let popup = null;
+
+    map.on("load", function() {
+      addSources(map);
+
+      map.addLayer({
+        id: "cultural-landscapes-fill",
+        type: "fill",
+        source: "cultural-landscapes",
+        "source-layer": "CulturalLandscapes-31y1li",
+        paint: {"fill-color": "#376da1","fill-opacity": 0.2},
+        layout: {visibility: "none"}
+      });
+
+      map.addLayer({
+        id: "cultural-landscapes-label",
+        type: "symbol",
+        source: "cultural-landscapes",
+        "source-layer": "CulturalLandscapes-31y1li",
+        layout: {
+          "text-field": ["get", "title"],
+          "text-size": 14,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          visibility: "none"
+        },
+        paint: {"text-color": "#376da1","text-halo-color": "#ffffff","text-halo-width": 1}
+      });
+
+      map.addLayer({
+        id: "national-parks-fill",
+        type: "fill",
+        source: "national-parks",
+        "source-layer": "NationalParks-5xc09m",
+        paint: {"fill-color": "#285c3a","fill-opacity": 0.2}
+      });
+
+      map.addLayer({
+        id: "national-parks-label",
+        type: "symbol",
+        source: "national-parks",
+        "source-layer": "NationalParks-5xc09m",
+        layout: {
+          "text-field": ["get", "title"],
+          "text-size": 14,
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"]
+        },
+        paint: {"text-color": "#285c3a","text-halo-color": "#ffffff","text-halo-width": 1}
+      });
+
+      map.addLayer({
+        id: "railroads",
+        type: "line",
+        source: "railroads",
+        "source-layer": "TouristRailroads-0umcip",
+        paint: {"line-color": "#a87348","line-width": 3}
+      });
+
+      map.addLayer({
+        id: "vineyards",
+        type: "line",
+        source: "vineyards",
+        "source-layer": "Vineyards-63p43x",
+        paint: {"line-color": "#7e09a5","line-width": 3}
+      });
+
+      map.addLayer({
+        id: "places-icons",
+        type: "symbol",
+        source: "places",
+        "source-layer": "PlacesToVisit5-5qb8o4",
+        layout: {
+          "icon-image": ["get", "marker-symbol"],
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 0, 0.4, 11, 0.6, 16, 0.85],
+          "icon-allow-overlap": true,
+          "icon-ignore-placement": true,
+          "icon-padding": 2,
+          "text-field": ["get", "title"],
+          "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
+          "text-size": ["case",["all",["==",["get","marker-color"],"#a10001"],["==",["get","marker-symbol"],"city"]],16,["==",["get","marker-color"],"#a10001"],14,12],
+          "text-offset": [0, 0.5],
+          "text-anchor": "top",
+          "text-radial-offset": ["match",["get","marker-color"],["#000000","#7c0000","#1e523d"],1,0.5],
+          "text-padding": 2,
+          "text-variable-anchor": ["top","bottom","left","right","top-left","top-right","bottom-left","bottom-right"],
+          "symbol-sort-key": ["case",["==",["get","marker-color"],"#a10001"],1,["match",["get","marker-symbol"],"city",10,["circle-sm","square-sm","mountain"],5,["museum","crosshammer"],3,1]]
+        },
+        paint: {
+          "icon-color": ["get", "marker-color"],
+          "icon-opacity": ["interpolate",["linear"],["zoom"],0,["case",["==",["get","marker-symbol"],"city"],0,1],13,["case",["==",["get","marker-symbol"],"city"],0,1],13.5,["case",["==",["get","marker-symbol"],"city"],1,1],16,["case",["==",["get","marker-symbol"],"city"],1,1],16.5,["case",["==",["get","marker-symbol"],"city"],1,0],22,["case",["==",["get","marker-symbol"],"city"],1,0]],
+          "text-color": ["get", "marker-color"],
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1.5,
+          "text-opacity": ["interpolate",["linear"],["zoom"],0,["case",["==",["get","marker-symbol"],"city"],0,1],13,["case",["==",["get","marker-symbol"],"city"],0,1],13.5,["case",["==",["get","marker-symbol"],"city"],1,1],16,["case",["==",["get","marker-symbol"],"city"],1,1],16.5,["case",["==",["get","marker-symbol"],"city"],1,0],22,["case",["==",["get","marker-symbol"],"city"],1,0]]
+        }
+      });
+
+      document.querySelector(".map-overlay").innerHTML = getLegend();
+
+      const legendItems = document.querySelectorAll(".legend-item");
+      legendItems.forEach(item => {
+        const filterValue = item.getAttribute("data-filter");
+        if (!filterValue) return;
+
+        item.addEventListener("click", () => {
+          if (["cultural-landscapes","national-parks","railroads","vineyards"].includes(filterValue)) {
+            const toggle = createLayerToggle(map, filterValue);
+            if (toggle) {
+              const newVisibility = toggle();
+              item.classList.toggle("inactive", newVisibility === "none");
+              item.classList.toggle("active", newVisibility === "visible");
+            }
+          } else {
+            const currentFilter = map.getFilter("places-icons") || ["all"];
+            const symbolMatch = ["!=", ["get", "marker-symbol"], filterValue];
+            const hasFilter = JSON.stringify(currentFilter).includes(JSON.stringify(symbolMatch));
+
+            let newFilter;
+            if (hasFilter) {
+              newFilter = currentFilter.filter(f => JSON.stringify(f) !== JSON.stringify(symbolMatch));
+              if (newFilter.length === 1) newFilter = ["all"];
+              item.classList.remove("inactive");
+              item.classList.add("active");
+            } else {
+              if (currentFilter[0] === "all" && currentFilter.length === 1) {
+                newFilter = ["all", symbolMatch];
+              } else {
+                newFilter = [...currentFilter, symbolMatch];
+              }
+              item.classList.add("inactive");
+              item.classList.remove("active");
+            }
+
+            map.setFilter("places-icons", newFilter);
+          }
+        });
+      });
+
+      map.on("click", "places-icons", (e) => {
+        const feature = e.features[0];
+        const props = feature.properties;
+        let popupContent = `<h3>${props.title}</h3>`;
+        if (props.description) popupContent += `<p>${props.description}</p>`;
+        if (props.wikipedia) popupContent += `<p><a href="${props.wikipedia}" target="_blank">Wikipedia</a></p>`;
+        new mapboxgl.Popup().setLngLat(e.lngLat).setHTML(popupContent).addTo(map);
+      });
+
+      map.on("mouseenter", "places-icons", (e) => {
+        map.getCanvas().style.cursor = "pointer";
+        const feature = e.features[0];
+        const props = feature.properties;
+        let popupContent = `<h3>${props.title}</h3>`;
+        if (props.description) popupContent += `<p>${props.description}</p>`;
+        popup = new mapboxgl.Popup({closeButton:false,closeOnClick:false}).setLngLat(e.lngLat).setHTML(popupContent).addTo(map);
+      });
+
+      map.on("mouseleave", "places-icons", () => {
+        map.getCanvas().style.cursor = "";
+        if (popup) {popup.remove();popup = null;}
+      });
+
+      map.addControl(new mapboxgl.NavigationControl(),"top-left");
+      map.addControl(new mapboxgl.FullscreenControl(),"top-left");
+      map.addControl(new mapboxgl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:true,showUserHeading:true}),"top-left");
+      map.addControl(new mapboxgl.TerrainControl({source:"mapbox-dem",exaggeration:1.5}),"top-left");
+      map.addControl(new mapboxgl.ScaleControl({maxWidth:100,unit:"metric"}),"bottom-left");
+
+      map.getCanvas().setAttribute("role","application");
+      map.getCanvas().setAttribute("aria-label","Interactive map");
+
+      applyLocationConfig(map, false);
+    });
+  }
+</script>
