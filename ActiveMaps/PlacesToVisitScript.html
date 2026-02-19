@@ -307,17 +307,20 @@ function addPlacesLayers(map) {
   const baseLayout = getPlacesBaseLayout();
   const paint = getPlacesPaint();
 
-  // Layer 1 — Regional (non-red, non-city): full collision detection.
-  // Icon + text are coupled: if text is hidden by collision, icon hides too.
-  // text-variable-anchor requires text-allow-overlap: false.
-  const regionalLayout = Object.assign({}, baseLayout, {
-    "icon-allow-overlap": false,
-    "icon-ignore-placement": false,
+  // Shared text positioning: dynamic via text-variable-anchor.
+  // Requires text-allow-overlap: false. text-optional: true keeps icons visible
+  // even when their label is hidden by collision.
+  const dynamicTextProps = {
+    "icon-allow-overlap": true,
+    "icon-ignore-placement": true,
     "text-allow-overlap": false,
-    "text-optional": false,
+    "text-optional": true,
     "text-variable-anchor": ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
     "text-radial-offset": 1
-  });
+  };
+
+  // Layer 1 — Regional (non-red, non-city): rendered first (behind).
+  const regionalLayout = Object.assign({}, baseLayout, dynamicTextProps);
 
   map.addLayer({
     id: "places-icons-regional",
@@ -335,18 +338,9 @@ function addPlacesLayers(map) {
     paint: paint
   });
 
-  // Layer 2 — Priority (red, non-city): always visible, renders on top of regional.
-  // text/icon-allow-overlap: true ensures red markers are never hidden.
-  // icon/text-ignore-placement: false so red markers still block non-red labels.
-  const priorityLayout = Object.assign({}, baseLayout, {
-    "icon-allow-overlap": true,
-    "icon-ignore-placement": false,
-    "text-allow-overlap": true,
-    "text-ignore-placement": false,
-    "text-optional": false,
-    "text-anchor": "top",
-    "text-offset": [0, 1.2]
-  });
+  // Layer 2 — Priority (red, non-city): rendered second so red icons sit on top.
+  // Same dynamic text positioning — NOT text-allow-overlap: true.
+  const priorityLayout = Object.assign({}, baseLayout, dynamicTextProps);
 
   map.addLayer({
     id: "places-icons-priority",
@@ -364,15 +358,8 @@ function addPlacesLayers(map) {
     paint: paint
   });
 
-  // Layer 3 — City (city-zoom only): always visible, renders on top of everything.
-  const cityLayout = Object.assign({}, baseLayout, {
-    "icon-allow-overlap": true,
-    "icon-ignore-placement": false,
-    "text-allow-overlap": true,
-    "text-optional": false,
-    "text-anchor": "top",
-    "text-offset": [0, 1.2]
-  });
+  // Layer 3 — City (city-zoom only): rendered on top of everything.
+  const cityLayout = Object.assign({}, baseLayout, dynamicTextProps);
 
   map.addLayer({
     id: "places-icons-city",
