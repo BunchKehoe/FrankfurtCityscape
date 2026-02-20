@@ -1,0 +1,3760 @@
+[
+  {
+    "index": 0,
+    "id": "011e5da2e22c1004099db1b0d13eef82",
+    "name": "Inn-Salzach",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 12.056406,
+      "max_lon": 12.057896,
+      "min_lat": 47.618019,
+      "max_lat": 47.619541
+    },
+    "center": {
+      "lon": 12.057151000000001,
+      "lat": 47.61878
+    },
+    "zoom": 18,
+    "bbox_width": 0.001489999999998659,
+    "bbox_height": 0.0015220000000013556
+  },
+  {
+    "index": 1,
+    "id": "04452f9cc593569d41ffecedaf090138",
+    "name": "Carinthia",
+    "region": "Kingdom of Illyria",
+    "bounding_box": {
+      "min_lon": 12.654016,
+      "max_lon": 15.104602,
+      "min_lat": 46.346914,
+      "max_lat": 47.131996
+    },
+    "center": {
+      "lon": 13.879309,
+      "lat": 46.739455
+    },
+    "zoom": 9,
+    "bbox_width": 2.4505859999999995,
+    "bbox_height": 0.7850820000000027,
+    "regional_center": {
+      "lon": 14.1818125,
+      "lat": 45.786336500000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 2,
+    "id": "071af0c6e084dcc621f658102da915b6",
+    "name": "Feature 3",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.061544,
+      "max_lon": 15.064051,
+      "min_lat": 48.152787,
+      "max_lat": 48.152998
+    },
+    "center": {
+      "lon": 15.062797499999999,
+      "lat": 48.15289249999999
+    },
+    "zoom": 18,
+    "bbox_width": 0.002506999999999593,
+    "bbox_height": 0.00021100000000018326
+  },
+  {
+    "index": 3,
+    "id": "089d3825dd834ef125d784299b209664",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.376862,
+      "max_lon": 15.391223,
+      "min_lat": 47.813492,
+      "max_lat": 47.824218
+    },
+    "center": {
+      "lon": 15.3840425,
+      "lat": 47.818855
+    },
+    "zoom": 15,
+    "bbox_width": 0.014361000000000956,
+    "bbox_height": 0.010726000000005342
+  },
+  {
+    "index": 4,
+    "id": "0ae523721246f732786ea95786f0f187",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.50218,
+      "max_lon": 15.50392,
+      "min_lat": 47.768454,
+      "max_lat": 47.768875
+    },
+    "center": {
+      "lon": 15.50305,
+      "lat": 47.7686645
+    },
+    "zoom": 18,
+    "bbox_width": 0.0017400000000016291,
+    "bbox_height": 0.0004210000000028913
+  },
+  {
+    "index": 5,
+    "id": "0e0fe8e273d1ff45990c334c57183cc1",
+    "name": "Nitra",
+    "region": "Western Carpathia",
+    "bounding_box": {
+      "min_lon": 16.833211,
+      "max_lon": 19.072035,
+      "min_lat": 47.731185,
+      "max_lat": 48.878162
+    },
+    "center": {
+      "lon": 17.952623,
+      "lat": 48.30467350000001
+    },
+    "zoom": 9,
+    "bbox_width": 2.238824000000001,
+    "bbox_height": 1.1469769999999997,
+    "regional_center": {
+      "lon": 19.699433,
+      "lat": 48.6724665
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 6,
+    "id": "10d90f23d6e0cdeda8cb71c73fa4ced6",
+    "name": "Küstenland",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.284413,
+      "max_lon": 14.284445,
+      "min_lat": 44.65964,
+      "max_lat": 44.660008
+    },
+    "center": {
+      "lon": 14.284429,
+      "lat": 44.659824
+    },
+    "zoom": 18,
+    "bbox_width": 3.1999999999143824e-05,
+    "bbox_height": 0.0003679999999945949
+  },
+  {
+    "index": 7,
+    "id": "1261c3fe9dd3ea134b36c4768ab918ed",
+    "name": "Lower Bavaria",
+    "region": "Bavaria",
+    "bounding_box": {
+      "min_lon": 11.599314,
+      "max_lon": 13.839807,
+      "min_lat": 48.316967,
+      "max_lat": 49.173276
+    },
+    "center": {
+      "lon": 12.7195605,
+      "lat": 48.745121499999996
+    },
+    "zoom": 9,
+    "bbox_width": 2.2404930000000007,
+    "bbox_height": 0.8563090000000031,
+    "regional_center": {
+      "lon": 12.278361,
+      "lat": 48.72811
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 8,
+    "id": "1827cc30fc75ac488eae87218024d1b5",
+    "name": "Wachau",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 14.924697,
+      "max_lon": 15.731777,
+      "min_lat": 48.152553,
+      "max_lat": 48.489646
+    },
+    "center": {
+      "lon": 15.328237,
+      "lat": 48.3210995
+    },
+    "zoom": 10,
+    "bbox_width": 0.8070799999999991,
+    "bbox_height": 0.337093000000003,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 9,
+    "id": "1daa8d6cd75199aa09984268788dfea4",
+    "name": "Inn District",
+    "region": "Inn-Salzach",
+    "bounding_box": {
+      "min_lon": 11.801458,
+      "max_lon": 13.83742,
+      "min_lat": 47.464109,
+      "max_lat": 48.76179
+    },
+    "center": {
+      "lon": 12.819439,
+      "lat": 48.1129495
+    },
+    "zoom": 8,
+    "bbox_width": 2.0359619999999996,
+    "bbox_height": 1.2976809999999972,
+    "regional_center": {
+      "lon": 12.897388,
+      "lat": 47.853178
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 10,
+    "id": "20d9f4bdda09374c59c9db7ba514d47b",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.010986,
+      "max_lon": 14.055427,
+      "min_lat": 47.667887,
+      "max_lat": 47.700451
+    },
+    "center": {
+      "lon": 14.0332065,
+      "lat": 47.684169
+    },
+    "zoom": 14,
+    "bbox_width": 0.044440999999999065,
+    "bbox_height": 0.032564000000000703
+  },
+  {
+    "index": 11,
+    "id": "22bc12ae8304922c58096d862a80a3a2",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.50392,
+      "max_lon": 15.505216,
+      "min_lat": 47.767879,
+      "max_lat": 47.768454
+    },
+    "center": {
+      "lon": 15.504568,
+      "lat": 47.7681665
+    },
+    "zoom": 18,
+    "bbox_width": 0.0012959999999999638,
+    "bbox_height": 0.0005749999999977717
+  },
+  {
+    "index": 12,
+    "id": "265132a90296334bf184f19014fd7b9e",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.400332,
+      "max_lon": 15.41014,
+      "min_lat": 47.785077,
+      "max_lat": 47.814799
+    },
+    "center": {
+      "lon": 15.405236,
+      "lat": 47.799938
+    },
+    "zoom": 14,
+    "bbox_width": 0.009807999999999595,
+    "bbox_height": 0.029721999999999582
+  },
+  {
+    "index": 13,
+    "id": "26f0cedf6796337c75bea04d6c5cd584",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.309887,
+      "max_lon": 14.326396,
+      "min_lat": 47.60636,
+      "max_lat": 47.6085
+    },
+    "center": {
+      "lon": 14.3181415,
+      "lat": 47.60743
+    },
+    "zoom": 16,
+    "bbox_width": 0.016509000000000995,
+    "bbox_height": 0.002139999999997144
+  },
+  {
+    "index": 14,
+    "id": "295a4fc097066c22c76bc605e1b8772f",
+    "name": "Beskid",
+    "region": "Western Carpathia",
+    "bounding_box": {
+      "min_lon": 19.88391,
+      "max_lon": 22.565655,
+      "min_lat": 48.332469,
+      "max_lat": 49.460834
+    },
+    "center": {
+      "lon": 21.2247825,
+      "lat": 48.896651500000004
+    },
+    "zoom": 9,
+    "bbox_width": 2.6817449999999994,
+    "bbox_height": 1.1283649999999952,
+    "regional_center": {
+      "lon": 19.699433,
+      "lat": 48.6724665
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 15,
+    "id": "359083cb9e295cd5c64b0ffead6390cf",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.505216,
+      "max_lon": 15.505254,
+      "min_lat": 47.767858,
+      "max_lat": 47.767879
+    },
+    "center": {
+      "lon": 15.505235,
+      "lat": 47.7678685
+    },
+    "zoom": 18,
+    "bbox_width": 3.799999999998249e-05,
+    "bbox_height": 2.1000000003823516e-05
+  },
+  {
+    "index": 16,
+    "id": "36aa53806eec139f381920c0f27e265e",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.254498,
+      "max_lon": 14.309162,
+      "min_lat": 47.607887,
+      "max_lat": 47.614523
+    },
+    "center": {
+      "lon": 14.28183,
+      "lat": 47.611205
+    },
+    "zoom": 15,
+    "bbox_width": 0.05466400000000071,
+    "bbox_height": 0.006636000000000308
+  },
+  {
+    "index": 17,
+    "id": "384325b9147d04a806c0c099d86dd898",
+    "name": "Allgaü",
+    "region": "Swabia",
+    "bounding_box": {
+      "min_lon": 9.542971,
+      "max_lon": 10.952898,
+      "min_lat": 47.270835,
+      "max_lat": 48.229723
+    },
+    "center": {
+      "lon": 10.2479345,
+      "lat": 47.750279
+    },
+    "zoom": 9,
+    "bbox_width": 1.4099269999999997,
+    "bbox_height": 0.9588880000000017,
+    "regional_center": {
+      "lon": 9.707377000000001,
+      "lat": 48.0856735
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 18,
+    "id": "391765b478e5918963c2b67ebd35f696",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.484347,
+      "max_lon": 15.48993,
+      "min_lat": 47.768955,
+      "max_lat": 47.770673
+    },
+    "center": {
+      "lon": 15.4871385,
+      "lat": 47.769814
+    },
+    "zoom": 18,
+    "bbox_width": 0.0055829999999996716,
+    "bbox_height": 0.001718000000003883
+  },
+  {
+    "index": 19,
+    "id": "3a7a10edadf962e056ac01934d7f916e",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.449905,
+      "max_lon": 15.453275,
+      "min_lat": 47.77265,
+      "max_lat": 47.773651
+    },
+    "center": {
+      "lon": 15.45159,
+      "lat": 47.7731505
+    },
+    "zoom": 18,
+    "bbox_width": 0.003370000000000317,
+    "bbox_height": 0.00100100000000225
+  },
+  {
+    "index": 20,
+    "id": "45c3437c848384127583f56dfd0711bf",
+    "name": "Vienna",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 16.18183,
+      "max_lon": 16.577513,
+      "min_lat": 48.117906,
+      "max_lat": 48.322667
+    },
+    "center": {
+      "lon": 16.3796715,
+      "lat": 48.2202865
+    },
+    "zoom": 11,
+    "bbox_width": 0.39568299999999823,
+    "bbox_height": 0.20476100000000486,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 21,
+    "id": "47d9cfa0f58ee3a621bfa00aad694951",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.046318,
+      "max_lon": 14.054446,
+      "min_lat": 47.62517,
+      "max_lat": 47.626444
+    },
+    "center": {
+      "lon": 14.050381999999999,
+      "lat": 47.625806999999995
+    },
+    "zoom": 17,
+    "bbox_width": 0.008128000000001023,
+    "bbox_height": 0.0012740000000022178
+  },
+  {
+    "index": 22,
+    "id": "4a6f9ff21b2941fa5420cc4f13aca522",
+    "name": "Küstenland",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.492949,
+      "max_lon": 14.493768,
+      "min_lat": 44.723518,
+      "max_lat": 44.724174
+    },
+    "center": {
+      "lon": 14.4933585,
+      "lat": 44.723845999999995
+    },
+    "zoom": 18,
+    "bbox_width": 0.0008189999999999031,
+    "bbox_height": 0.0006559999999993238
+  },
+  {
+    "index": 23,
+    "id": "5109c4426846ac33d2abe22ecd2656cf",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.375238,
+      "max_lon": 15.376862,
+      "min_lat": 47.823983,
+      "max_lat": 47.82442
+    },
+    "center": {
+      "lon": 15.37605,
+      "lat": 47.8242015
+    },
+    "zoom": 18,
+    "bbox_width": 0.0016239999999996257,
+    "bbox_height": 0.00043700000000512773
+  },
+  {
+    "index": 24,
+    "id": "5d129d62728d75c26d274806e24e3dd4",
+    "name": "Inn-Salzach",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 13.353802,
+      "max_lon": 13.353928,
+      "min_lat": 48.756036,
+      "max_lat": 48.756155
+    },
+    "center": {
+      "lon": 13.353864999999999,
+      "lat": 48.7560955
+    },
+    "zoom": 18,
+    "bbox_width": 0.00012599999999984846,
+    "bbox_height": 0.00011899999999798183
+  },
+  {
+    "index": 25,
+    "id": "60653f9de39be69bb90ef7851a3d8d74",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.372317,
+      "max_lon": 15.375271,
+      "min_lat": 47.82442,
+      "max_lat": 47.82538
+    },
+    "center": {
+      "lon": 15.373794,
+      "lat": 47.8249
+    },
+    "zoom": 18,
+    "bbox_width": 0.002953999999999013,
+    "bbox_height": 0.0009599999999991837
+  },
+  {
+    "index": 26,
+    "id": "6793b2d8dea4d4ed1d107bce1eae5f33",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.223098,
+      "max_lon": 14.254486,
+      "min_lat": 47.614546,
+      "max_lat": 47.642144
+    },
+    "center": {
+      "lon": 14.238792,
+      "lat": 47.628344999999996
+    },
+    "zoom": 14,
+    "bbox_width": 0.03138799999999975,
+    "bbox_height": 0.027598000000004674
+  },
+  {
+    "index": 27,
+    "id": "6dca77608a51ed26f64983c6c964170b",
+    "name": "Imperial Littoral",
+    "region": "Kingdom of Illyria",
+    "bounding_box": {
+      "min_lon": 14.231578,
+      "max_lon": 14.839436,
+      "min_lat": 44.440677,
+      "max_lat": 45.25692
+    },
+    "center": {
+      "lon": 14.535506999999999,
+      "lat": 44.8487985
+    },
+    "zoom": 9,
+    "bbox_width": 0.6078579999999985,
+    "bbox_height": 0.816243,
+    "regional_center": {
+      "lon": 14.1818125,
+      "lat": 45.786336500000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 28,
+    "id": "6eca5d01237122e9f9552757e00f5265",
+    "name": "Lower Styria",
+    "region": "Styria",
+    "bounding_box": {
+      "min_lon": 14.565308,
+      "max_lon": 16.307706,
+      "min_lat": 45.868777,
+      "max_lat": 46.723085
+    },
+    "center": {
+      "lon": 15.436506999999999,
+      "lat": 46.295930999999996
+    },
+    "zoom": 9,
+    "bbox_width": 1.7423979999999997,
+    "bbox_height": 0.8543079999999961,
+    "regional_center": {
+      "lon": 14.934121000000001,
+      "lat": 46.848685
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 29,
+    "id": "7a7b6bf1576d8ae6c025a1dd15da5e91",
+    "name": "Emsland",
+    "region": "Westphalia",
+    "bounding_box": {
+      "min_lon": 6.680888,
+      "max_lon": 8.525434,
+      "min_lat": 52.241249,
+      "max_lat": 53.081254
+    },
+    "center": {
+      "lon": 7.603161,
+      "lat": 52.661251500000006
+    },
+    "zoom": 9,
+    "bbox_width": 1.8445460000000002,
+    "bbox_height": 0.8400049999999979,
+    "regional_center": {
+      "lon": 8.1327865,
+      "lat": 52.365218999999996
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 30,
+    "id": "7d3206188ddef9bdb28a6aac4b6d2be5",
+    "name": "Weser-Engern",
+    "region": "Westphalia",
+    "bounding_box": {
+      "min_lon": 8.064847,
+      "max_lon": 9.878104,
+      "min_lat": 51.295322,
+      "max_lat": 54.044932
+    },
+    "center": {
+      "lon": 8.9714755,
+      "lat": 52.670127
+    },
+    "zoom": 7,
+    "bbox_width": 1.8132570000000001,
+    "bbox_height": 2.749610000000004,
+    "regional_center": {
+      "lon": 8.1327865,
+      "lat": 52.365218999999996
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 31,
+    "id": "83499a217d517619b4186e0594e9d309",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.046318,
+      "max_lon": 14.054446,
+      "min_lat": 47.62517,
+      "max_lat": 47.626444
+    },
+    "center": {
+      "lon": 14.050381999999999,
+      "lat": 47.625806999999995
+    },
+    "zoom": 17,
+    "bbox_width": 0.008128000000001023,
+    "bbox_height": 0.0012740000000022178
+  },
+  {
+    "index": 32,
+    "id": "858c12a317c3d41e15fb896958604c42",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.309167,
+      "max_lon": 14.309842,
+      "min_lat": 47.607295,
+      "max_lat": 47.608121
+    },
+    "center": {
+      "lon": 14.3095045,
+      "lat": 47.607708
+    },
+    "zoom": 18,
+    "bbox_width": 0.000674999999999315,
+    "bbox_height": 0.0008259999999964407
+  },
+  {
+    "index": 33,
+    "id": "85edd03db9e4717a2f0aee7f8fc10ff0",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.010986,
+      "max_lon": 14.055427,
+      "min_lat": 47.667887,
+      "max_lat": 47.700451
+    },
+    "center": {
+      "lon": 14.0332065,
+      "lat": 47.684169
+    },
+    "zoom": 14,
+    "bbox_width": 0.044440999999999065,
+    "bbox_height": 0.032564000000000703
+  },
+  {
+    "index": 34,
+    "id": "85fd67b8f186f7ad339febe2f00d4f0a",
+    "name": "Eisenwurzen",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 13.871424,
+      "max_lon": 15.433764,
+      "min_lat": 47.607121,
+      "max_lat": 48.244421
+    },
+    "center": {
+      "lon": 14.652594,
+      "lat": 47.925771
+    },
+    "zoom": 9,
+    "bbox_width": 1.5623400000000007,
+    "bbox_height": 0.6373000000000033,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 35,
+    "id": "88babff2271fba7adcb1145686e1fb07",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.357213,
+      "max_lon": 15.360411,
+      "min_lat": 47.824594,
+      "max_lat": 47.826094
+    },
+    "center": {
+      "lon": 15.358812,
+      "lat": 47.825344
+    },
+    "zoom": 18,
+    "bbox_width": 0.003197999999999368,
+    "bbox_height": 0.0015000000000000568
+  },
+  {
+    "index": 36,
+    "id": "8a773125a397fa4205059ec1a1607234",
+    "name": "Salzburg",
+    "region": "Inn-Salzach",
+    "bounding_box": {
+      "min_lon": 12.073276,
+      "max_lon": 13.993318,
+      "min_lat": 46.944566,
+      "max_lat": 48.040307
+    },
+    "center": {
+      "lon": 13.033297000000001,
+      "lat": 47.4924365
+    },
+    "zoom": 9,
+    "bbox_width": 1.9200420000000005,
+    "bbox_height": 1.0957409999999967,
+    "regional_center": {
+      "lon": 12.897388,
+      "lat": 47.853178
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 37,
+    "id": "8f69fef98ce8a3f375c244499477e46c",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.459038,
+      "max_lon": 15.484347,
+      "min_lat": 47.769746,
+      "max_lat": 47.772006
+    },
+    "center": {
+      "lon": 15.4716925,
+      "lat": 47.770876
+    },
+    "zoom": 16,
+    "bbox_width": 0.025309000000000026,
+    "bbox_height": 0.0022599999999997067
+  },
+  {
+    "index": 38,
+    "id": "9274acca0cb68162b6786699a44acc55",
+    "name": "Carniola",
+    "region": "Kingdom of Illyria",
+    "bounding_box": {
+      "min_lon": 13.584574,
+      "max_lon": 15.709609,
+      "min_lat": 45.421507,
+      "max_lat": 46.523973
+    },
+    "center": {
+      "lon": 14.6470915,
+      "lat": 45.97274
+    },
+    "zoom": 9,
+    "bbox_width": 2.1250350000000005,
+    "bbox_height": 1.1024659999999997,
+    "regional_center": {
+      "lon": 14.1818125,
+      "lat": 45.786336500000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 39,
+    "id": "94a512aae7958f02350f21685bb1deaa",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.48993,
+      "max_lon": 15.501964,
+      "min_lat": 47.768255,
+      "max_lat": 47.769818
+    },
+    "center": {
+      "lon": 15.495947,
+      "lat": 47.7690365
+    },
+    "zoom": 17,
+    "bbox_width": 0.012033999999999878,
+    "bbox_height": 0.0015629999999973165
+  },
+  {
+    "index": 40,
+    "id": "96934f20807e3f0fa64f3ea877a78aea",
+    "name": "Imperial Littoral",
+    "region": "Kingdom of Illyria",
+    "bounding_box": {
+      "min_lon": 13.232901,
+      "max_lon": 14.478057,
+      "min_lat": 44.766704,
+      "max_lat": 46.444524
+    },
+    "center": {
+      "lon": 13.855478999999999,
+      "lat": 45.605614
+    },
+    "zoom": 8,
+    "bbox_width": 1.2451559999999997,
+    "bbox_height": 1.677820000000004,
+    "regional_center": {
+      "lon": 14.1818125,
+      "lat": 45.786336500000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 41,
+    "id": "9738be75ff2e297be3e4cf7275725e16",
+    "name": "Vogtland ",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 11.482879,
+      "max_lon": 12.583577,
+      "min_lat": 50.171393,
+      "max_lat": 50.977006
+    },
+    "center": {
+      "lon": 12.033228000000001,
+      "lat": 50.574199500000006
+    },
+    "zoom": 9,
+    "bbox_width": 1.1006979999999995,
+    "bbox_height": 0.805613000000001,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 42,
+    "id": "9a70bae6216d383d818410a7dedbaad2",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.050778,
+      "max_lon": 14.232554,
+      "min_lat": 47.615903,
+      "max_lat": 47.652538
+    },
+    "center": {
+      "lon": 14.141666,
+      "lat": 47.6342205
+    },
+    "zoom": 13,
+    "bbox_width": 0.18177600000000105,
+    "bbox_height": 0.036634999999996865
+  },
+  {
+    "index": 43,
+    "id": "9ad99e133d0aa5b9d68feb07ddc6ec58",
+    "name": "Upper Styria",
+    "region": "Styria",
+    "bounding_box": {
+      "min_lon": 13.560536,
+      "max_lon": 16.168983,
+      "min_lat": 46.612702,
+      "max_lat": 47.767292
+    },
+    "center": {
+      "lon": 14.864759500000002,
+      "lat": 47.189997
+    },
+    "zoom": 9,
+    "bbox_width": 2.608447,
+    "bbox_height": 1.154589999999999,
+    "regional_center": {
+      "lon": 14.934121000000001,
+      "lat": 46.848685
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 44,
+    "id": "9c53fbb57fe90683c3b04235d291fd28",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.41014,
+      "max_lon": 15.436603,
+      "min_lat": 47.784373,
+      "max_lat": 47.792235
+    },
+    "center": {
+      "lon": 15.4233715,
+      "lat": 47.788304
+    },
+    "zoom": 16,
+    "bbox_width": 0.02646299999999968,
+    "bbox_height": 0.007861999999995817
+  },
+  {
+    "index": 45,
+    "id": "9d3bd1266d1246e75f6f3883c27fc96c",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.505254,
+      "max_lon": 15.505713,
+      "min_lat": 47.767658,
+      "max_lat": 47.767917
+    },
+    "center": {
+      "lon": 15.5054835,
+      "lat": 47.7677875
+    },
+    "zoom": 18,
+    "bbox_width": 0.00045899999999932106,
+    "bbox_height": 0.0002589999999997872
+  },
+  {
+    "index": 46,
+    "id": "9d494d64a1d5e7b818d470e3575a89a8",
+    "name": "Feature 47",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.952484,
+      "max_lon": 14.953648,
+      "min_lat": 48.21937,
+      "max_lat": 48.220136
+    },
+    "center": {
+      "lon": 14.953066,
+      "lat": 48.219753
+    },
+    "zoom": 18,
+    "bbox_width": 0.0011639999999992767,
+    "bbox_height": 0.0007659999999987122
+  },
+  {
+    "index": 47,
+    "id": "9df4ac57731f8cc828274572206c4ea3",
+    "name": "Forest District",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 14.690222,
+      "max_lon": 15.940933,
+      "min_lat": 48.212931,
+      "max_lat": 49.020516
+    },
+    "center": {
+      "lon": 15.3155775,
+      "lat": 48.6167235
+    },
+    "zoom": 9,
+    "bbox_width": 1.250710999999999,
+    "bbox_height": 0.8075850000000031,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 48,
+    "id": "9f1daebf96eea405786f6f6c9a83bfa9",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.505713,
+      "max_lon": 15.505729,
+      "min_lat": 47.767646,
+      "max_lat": 47.767658
+    },
+    "center": {
+      "lon": 15.505721000000001,
+      "lat": 47.767652
+    },
+    "zoom": 18,
+    "bbox_width": 1.600000000046009e-05,
+    "bbox_height": 1.1999999998124622e-05
+  },
+  {
+    "index": 49,
+    "id": "9f491aaca75462a928426b45b61b99db",
+    "name": "Sauerland",
+    "region": "Westphalia",
+    "bounding_box": {
+      "min_lon": 7.255238,
+      "max_lon": 8.955708,
+      "min_lat": 50.685506,
+      "max_lat": 51.675753
+    },
+    "center": {
+      "lon": 8.105473,
+      "lat": 51.180629499999995
+    },
+    "zoom": 9,
+    "bbox_width": 1.7004699999999993,
+    "bbox_height": 0.9902470000000037,
+    "regional_center": {
+      "lon": 8.1327865,
+      "lat": 52.365218999999996
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 50,
+    "id": "Alsace",
+    "name": "Alsace",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 6.83821,
+      "max_lon": 8.382386,
+      "min_lat": 47.42034,
+      "max_lat": 49.257775
+    },
+    "center": {
+      "lon": 7.610298,
+      "lat": 48.3390575
+    },
+    "zoom": 8,
+    "bbox_width": 1.5441760000000002,
+    "bbox_height": 1.8374349999999993,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 51,
+    "id": "Altmark",
+    "name": "Altmark",
+    "region": "Brandenburg",
+    "bounding_box": {
+      "min_lon": 10.755967,
+      "max_lon": 12.419033,
+      "min_lat": 52.330973,
+      "max_lat": 53.370801
+    },
+    "center": {
+      "lon": 11.5875,
+      "lat": 52.850887
+    },
+    "zoom": 9,
+    "bbox_width": 1.6630660000000006,
+    "bbox_height": 1.039828,
+    "regional_center": {
+      "lon": 12.736215,
+      "lat": 52.7131895
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 52,
+    "id": "Anhalt",
+    "name": "Anhalt",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 11.494403,
+      "max_lon": 12.641943,
+      "min_lat": 51.531135,
+      "max_lat": 52.105501
+    },
+    "center": {
+      "lon": 12.068173,
+      "lat": 51.818318
+    },
+    "zoom": 10,
+    "bbox_width": 1.1475399999999993,
+    "bbox_height": 0.5743659999999977,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 53,
+    "id": "Artois",
+    "name": "Artois",
+    "region": "The Royal Lowlands",
+    "bounding_box": {
+      "min_lon": 1.809266,
+      "max_lon": 3.188197,
+      "min_lat": 49.998711,
+      "max_lat": 50.970007
+    },
+    "center": {
+      "lon": 2.4987315,
+      "lat": 50.484359
+    },
+    "zoom": 9,
+    "bbox_width": 1.3789310000000001,
+    "bbox_height": 0.9712960000000024,
+    "regional_center": {
+      "lon": 2.848501,
+      "lat": 50.4288105
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 54,
+    "id": "Baden",
+    "name": "Baden",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 7.511866,
+      "max_lon": 8.946637,
+      "min_lat": 47.428789,
+      "max_lat": 49.188439
+    },
+    "center": {
+      "lon": 8.2292515,
+      "lat": 48.308614000000006
+    },
+    "zoom": 8,
+    "bbox_width": 1.4347710000000005,
+    "bbox_height": 1.7596500000000006,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 55,
+    "id": "Barrois-Ducal",
+    "name": "Barrois Ducal",
+    "region": "Lotharingia",
+    "bounding_box": {
+      "min_lon": 4.888469,
+      "max_lon": 6.088324,
+      "min_lat": 48.409495,
+      "max_lat": 49.61685
+    },
+    "center": {
+      "lon": 5.4883965,
+      "lat": 49.013172499999996
+    },
+    "zoom": 9,
+    "bbox_width": 1.1998550000000003,
+    "bbox_height": 1.2073549999999997,
+    "regional_center": {
+      "lon": 6.3406915,
+      "lat": 49.1229955
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 56,
+    "id": "Basel",
+    "name": "Basel",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 6.840871,
+      "max_lon": 7.96186,
+      "min_lat": 47.150328,
+      "max_lat": 47.596961
+    },
+    "center": {
+      "lon": 7.4013655,
+      "lat": 47.3736445
+    },
+    "zoom": 10,
+    "bbox_width": 1.1209889999999998,
+    "bbox_height": 0.4466329999999985,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 57,
+    "id": "BergischesLand",
+    "name": "Bergisches Land",
+    "region": "Rhine-Maas",
+    "bounding_box": {
+      "min_lon": 6.79956,
+      "max_lon": 7.792403,
+      "min_lat": 50.624482,
+      "max_lat": 51.381279
+    },
+    "center": {
+      "lon": 7.2959815,
+      "lat": 51.0028805
+    },
+    "zoom": 9,
+    "bbox_width": 0.9928430000000006,
+    "bbox_height": 0.7567969999999988,
+    "regional_center": {
+      "lon": 6.0239355,
+      "lat": 50.845057499999996
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 58,
+    "id": "Bodensee",
+    "name": "Lake Constance",
+    "region": "Swabia",
+    "bounding_box": {
+      "min_lon": 8.61383,
+      "max_lon": 9.744388,
+      "min_lat": 47.552868,
+      "max_lat": 47.942663
+    },
+    "center": {
+      "lon": 9.179109,
+      "lat": 47.7477655
+    },
+    "zoom": 10,
+    "bbox_width": 1.1305580000000006,
+    "bbox_height": 0.38979500000000655,
+    "regional_center": {
+      "lon": 9.707377000000001,
+      "lat": 48.0856735
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 59,
+    "id": "Bornholm",
+    "name": "Bornholm",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 14.576257,
+      "max_lon": 15.272687,
+      "min_lat": 54.905965,
+      "max_lat": 55.372798
+    },
+    "center": {
+      "lon": 14.924472,
+      "lat": 55.1393815
+    },
+    "zoom": 10,
+    "bbox_width": 0.6964299999999994,
+    "bbox_height": 0.46683300000000116,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 60,
+    "id": "Brabant",
+    "name": "Brabant",
+    "region": "The Imperial Lowlands",
+    "bounding_box": {
+      "min_lon": 4.068422,
+      "max_lon": 6.050636,
+      "min_lat": 50.694095,
+      "max_lat": 51.830728
+    },
+    "center": {
+      "lon": 5.0595289999999995,
+      "lat": 51.2624115
+    },
+    "zoom": 9,
+    "bbox_width": 1.982214,
+    "bbox_height": 1.1366330000000033,
+    "regional_center": {
+      "lon": 5.085932,
+      "lat": 51.5140035
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 61,
+    "id": "Brandenburg",
+    "name": "Brandenburg",
+    "region": "Brandenburg",
+    "bounding_box": {
+      "min_lon": 12.142099,
+      "max_lon": 14.716463,
+      "min_lat": 51.867972,
+      "max_lat": 53.321478
+    },
+    "center": {
+      "lon": 13.429281,
+      "lat": 52.594725
+    },
+    "zoom": 8,
+    "bbox_width": 2.574363999999999,
+    "bbox_height": 1.4535059999999973,
+    "regional_center": {
+      "lon": 12.736215,
+      "lat": 52.7131895
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 62,
+    "id": "Brie",
+    "name": "Brie",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 2.385355,
+      "max_lon": 3.167379,
+      "min_lat": 48.369472,
+      "max_lat": 48.900788
+    },
+    "center": {
+      "lon": 2.776367,
+      "lat": 48.635130000000004
+    },
+    "zoom": 10,
+    "bbox_width": 0.7820239999999998,
+    "bbox_height": 0.5313159999999968,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 63,
+    "id": "Central Macedonia",
+    "name": "Central Macedonia",
+    "region": "Macedonia",
+    "bounding_box": {
+      "min_lon": 20.776243,
+      "max_lon": 24.400965,
+      "min_lat": 39.830686,
+      "max_lat": 41.406705
+    },
+    "center": {
+      "lon": 22.588604,
+      "lat": 40.6186955
+    },
+    "zoom": 8,
+    "bbox_width": 3.6247219999999984,
+    "bbox_height": 1.5760190000000023,
+    "regional_center": {
+      "lon": 22.427746499999998,
+      "lat": 41.055194
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 64,
+    "id": "CountyValois",
+    "name": "County of Valois",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 2.362268,
+      "max_lon": 4.076592,
+      "min_lat": 49.070936,
+      "max_lat": 49.736049
+    },
+    "center": {
+      "lon": 3.21943,
+      "lat": 49.4034925
+    },
+    "zoom": 9,
+    "bbox_width": 1.714324,
+    "bbox_height": 0.6651129999999981,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 65,
+    "id": "CountyVexin",
+    "name": "County of Vexin",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 1.60917,
+      "max_lon": 2.65081,
+      "min_lat": 48.998277,
+      "max_lat": 49.667737
+    },
+    "center": {
+      "lon": 2.12999,
+      "lat": 49.333007
+    },
+    "zoom": 9,
+    "bbox_width": 1.04164,
+    "bbox_height": 0.6694600000000008,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 66,
+    "id": "CzechOreMountains",
+    "name": "The Ore Mountains ",
+    "region": "Bohemia",
+    "bounding_box": {
+      "min_lon": 12.382353,
+      "max_lon": 14.652834,
+      "min_lat": 50.048881,
+      "max_lat": 51.055701
+    },
+    "center": {
+      "lon": 13.5175935,
+      "lat": 50.552291
+    },
+    "zoom": 9,
+    "bbox_width": 2.270481,
+    "bbox_height": 1.0068199999999976,
+    "regional_center": {
+      "lon": 13.3717045,
+      "lat": 50.534113
+    },
+    "regional_zoom": 9
+  },
+  {
+    "index": 67,
+    "id": "CzechVogtland",
+    "name": "Vogtland  ",
+    "region": "Bohemia",
+    "bounding_box": {
+      "min_lon": 12.090575,
+      "max_lon": 12.530114,
+      "min_lat": 50.012525,
+      "max_lat": 50.321972
+    },
+    "center": {
+      "lon": 12.3103445,
+      "lat": 50.1672485
+    },
+    "zoom": 10,
+    "bbox_width": 0.4395389999999999,
+    "bbox_height": 0.3094470000000058,
+    "regional_center": {
+      "lon": 13.3717045,
+      "lat": 50.534113
+    },
+    "regional_zoom": 9
+  },
+  {
+    "index": 68,
+    "id": "Dobruja",
+    "name": "Dobruja",
+    "region": "Danube",
+    "bounding_box": {
+      "min_lon": 26.368016,
+      "max_lon": 29.780903,
+      "min_lat": 42.828997,
+      "max_lat": 45.466507
+    },
+    "center": {
+      "lon": 28.0744595,
+      "lat": 44.147752
+    },
+    "zoom": 7,
+    "bbox_width": 3.412886999999998,
+    "bbox_height": 2.637509999999999,
+    "regional_center": {
+      "lon": 26.06904,
+      "lat": 44.087644999999995
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 69,
+    "id": "EastFrisia",
+    "name": "East Frisia",
+    "region": "Frisia",
+    "bounding_box": {
+      "min_lon": 6.542983,
+      "max_lon": 8.270695,
+      "min_lat": 53.014655,
+      "max_lat": 53.852498
+    },
+    "center": {
+      "lon": 7.406839,
+      "lat": 53.4335765
+    },
+    "zoom": 9,
+    "bbox_width": 1.7277119999999995,
+    "bbox_height": 0.8378429999999994,
+    "regional_center": {
+      "lon": 6.760033,
+      "lat": 53.326071
+    },
+    "regional_zoom": 9
+  },
+  {
+    "index": 70,
+    "id": "Eastphalia",
+    "name": "Eastphalia",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 9.625762,
+      "max_lon": 12.332205,
+      "min_lat": 50.938051,
+      "max_lat": 52.535618
+    },
+    "center": {
+      "lon": 10.9789835,
+      "lat": 51.7368345
+    },
+    "zoom": 8,
+    "bbox_width": 2.706443,
+    "bbox_height": 1.597566999999998,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 71,
+    "id": "ElectoralPalatinate",
+    "name": "Electoral Palatinate",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 7.028681,
+      "max_lon": 9.218762,
+      "min_lat": 48.973567,
+      "max_lat": 50.033774
+    },
+    "center": {
+      "lon": 8.1237215,
+      "lat": 49.5036705
+    },
+    "zoom": 9,
+    "bbox_width": 2.190081,
+    "bbox_height": 1.0602069999999983,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 72,
+    "id": "ElectoralSaxony",
+    "name": "Electoral Saxony",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 12.148167,
+      "max_lon": 13.96643,
+      "min_lat": 50.553054,
+      "max_lat": 52.01343
+    },
+    "center": {
+      "lon": 13.057298500000002,
+      "lat": 51.283242
+    },
+    "zoom": 8,
+    "bbox_width": 1.818263,
+    "bbox_height": 1.4603759999999966,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 73,
+    "id": "Flanders",
+    "name": "Flanders",
+    "region": "The Royal Lowlands",
+    "bounding_box": {
+      "min_lon": 2.050315,
+      "max_lon": 4.343333,
+      "min_lat": 50.263987,
+      "max_lat": 51.43134
+    },
+    "center": {
+      "lon": 3.1968240000000003,
+      "lat": 50.847663499999996
+    },
+    "zoom": 9,
+    "bbox_width": 2.2930180000000004,
+    "bbox_height": 1.1673529999999985,
+    "regional_center": {
+      "lon": 2.848501,
+      "lat": 50.4288105
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 74,
+    "id": "Florence",
+    "name": "Republic of Florence",
+    "region": "Tuscany",
+    "bounding_box": {
+      "min_lon": 10.59235,
+      "max_lon": 12.371496,
+      "min_lat": 43.109164,
+      "max_lat": 44.23953
+    },
+    "center": {
+      "lon": 11.481923,
+      "lat": 43.674347
+    },
+    "zoom": 9,
+    "bbox_width": 1.7791460000000008,
+    "bbox_height": 1.1303660000000022,
+    "regional_center": {
+      "lon": 11.074509500000001,
+      "lat": 43.2948025
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 75,
+    "id": "FranconianVogtland",
+    "name": "Vogtland",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 11.525936,
+      "max_lon": 12.275414,
+      "min_lat": 49.970616,
+      "max_lat": 50.424703
+    },
+    "center": {
+      "lon": 11.900675,
+      "lat": 50.1976595
+    },
+    "zoom": 10,
+    "bbox_width": 0.7494779999999999,
+    "bbox_height": 0.45408700000000124,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 76,
+    "id": "Fune",
+    "name": "Fune",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 9.673015,
+      "max_lon": 10.988503,
+      "min_lat": 54.710839,
+      "max_lat": 56.027002
+    },
+    "center": {
+      "lon": 10.330759,
+      "lat": 55.3689205
+    },
+    "zoom": 8,
+    "bbox_width": 1.3154880000000002,
+    "bbox_height": 1.316163000000003,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 77,
+    "id": "Gelderland",
+    "name": "Gelderland",
+    "region": "The Imperial Lowlands",
+    "bounding_box": {
+      "min_lon": 4.793188,
+      "max_lon": 6.834031,
+      "min_lat": 51.733561,
+      "max_lat": 52.655891
+    },
+    "center": {
+      "lon": 5.8136095,
+      "lat": 52.194726
+    },
+    "zoom": 9,
+    "bbox_width": 2.0408430000000006,
+    "bbox_height": 0.9223299999999952,
+    "regional_center": {
+      "lon": 5.085932,
+      "lat": 51.5140035
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 78,
+    "id": "GermanOreMountains",
+    "name": "The Ore Mountains",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 12.457726,
+      "max_lon": 14.402129,
+      "min_lat": 50.39712,
+      "max_lat": 51.089871
+    },
+    "center": {
+      "lon": 13.4299275,
+      "lat": 50.7434955
+    },
+    "zoom": 9,
+    "bbox_width": 1.9444030000000012,
+    "bbox_height": 0.6927510000000012,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 79,
+    "id": "Gâtinais",
+    "name": "Gâtinais",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 2.325528,
+      "max_lon": 3.246636,
+      "min_lat": 47.959341,
+      "max_lat": 48.527768
+    },
+    "center": {
+      "lon": 2.786082,
+      "lat": 48.2435545
+    },
+    "zoom": 10,
+    "bbox_width": 0.9211080000000003,
+    "bbox_height": 0.5684269999999998,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 80,
+    "id": "Hainaut",
+    "name": "Hainaut",
+    "region": "The Imperial Lowlands",
+    "bounding_box": {
+      "min_lon": 3.079246,
+      "max_lon": 5.017749,
+      "min_lat": 49.824286,
+      "max_lat": 50.805953
+    },
+    "center": {
+      "lon": 4.0484975,
+      "lat": 50.3151195
+    },
+    "zoom": 9,
+    "bbox_width": 1.9385030000000003,
+    "bbox_height": 0.9816670000000016,
+    "regional_center": {
+      "lon": 5.085932,
+      "lat": 51.5140035
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 81,
+    "id": "Hessen",
+    "name": "Hessen",
+    "region": "Hessen-Nassau",
+    "bounding_box": {
+      "min_lon": 8.352962,
+      "max_lon": 10.236054,
+      "min_lat": 50.342273,
+      "max_lat": 51.65796
+    },
+    "center": {
+      "lon": 9.294508,
+      "lat": 51.000116500000004
+    },
+    "zoom": 8,
+    "bbox_width": 1.8830919999999995,
+    "bbox_height": 1.315687000000004,
+    "regional_center": {
+      "lon": 8.75879,
+      "lat": 50.7912175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 82,
+    "id": "Hohenlohe",
+    "name": "Hohenlohe",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 9.286393,
+      "max_lon": 10.276099,
+      "min_lat": 49.038077,
+      "max_lat": 49.79762
+    },
+    "center": {
+      "lon": 9.781246,
+      "lat": 49.417848500000005
+    },
+    "zoom": 9,
+    "bbox_width": 0.989706,
+    "bbox_height": 0.7595430000000007,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 83,
+    "id": "Holland",
+    "name": "Holland",
+    "region": "The Imperial Lowlands",
+    "bounding_box": {
+      "min_lon": 3.414955,
+      "max_lon": 5.426569,
+      "min_lat": 51.353655,
+      "max_lat": 53.195704
+    },
+    "center": {
+      "lon": 4.420762,
+      "lat": 52.274679500000005
+    },
+    "zoom": 8,
+    "bbox_width": 2.011614,
+    "bbox_height": 1.8420489999999958,
+    "regional_center": {
+      "lon": 5.085932,
+      "lat": 51.5140035
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 84,
+    "id": "Holstein",
+    "name": "Holstein",
+    "region": "Baltic",
+    "bounding_box": {
+      "min_lon": 8.492937,
+      "max_lon": 11.32832,
+      "min_lat": 53.3947,
+      "max_lat": 54.550475
+    },
+    "center": {
+      "lon": 9.9106285,
+      "lat": 53.9725875
+    },
+    "zoom": 9,
+    "bbox_width": 2.835383,
+    "bbox_height": 1.1557749999999984,
+    "regional_center": {
+      "lon": 11.5306015,
+      "lat": 54.095181
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 85,
+    "id": "Jylland",
+    "name": "Jylland",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 8.038114,
+      "max_lon": 10.984983,
+      "min_lat": 55.297032,
+      "max_lat": 57.763032
+    },
+    "center": {
+      "lon": 9.5115485,
+      "lat": 56.530032000000006
+    },
+    "zoom": 7,
+    "bbox_width": 2.9468689999999995,
+    "bbox_height": 2.466000000000001,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 86,
+    "id": "Lothringen",
+    "name": "Lorraine",
+    "region": "Lotharingia",
+    "bounding_box": {
+      "min_lon": 5.396807,
+      "max_lon": 7.641999,
+      "min_lat": 47.815111,
+      "max_lat": 49.514023
+    },
+    "center": {
+      "lon": 6.5194030000000005,
+      "lat": 48.664567000000005
+    },
+    "zoom": 8,
+    "bbox_width": 2.2451920000000003,
+    "bbox_height": 1.698912,
+    "regional_center": {
+      "lon": 6.3406915,
+      "lat": 49.1229955
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 87,
+    "id": "LowerRhine",
+    "name": "Lower Rhine",
+    "region": "Rhine-Maas",
+    "bounding_box": {
+      "min_lon": 5.867699,
+      "max_lon": 7.209049,
+      "min_lat": 50.332702,
+      "max_lat": 51.904871
+    },
+    "center": {
+      "lon": 6.538374,
+      "lat": 51.1187865
+    },
+    "zoom": 8,
+    "bbox_width": 1.3413500000000003,
+    "bbox_height": 1.5721690000000024,
+    "regional_center": {
+      "lon": 6.0239355,
+      "lat": 50.845057499999996
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 88,
+    "id": "LowerSaxony",
+    "name": "Lower Saxony",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 9.243797,
+      "max_lon": 11.598879,
+      "min_lat": 51.971389,
+      "max_lat": 53.827947
+    },
+    "center": {
+      "lon": 10.421338,
+      "lat": 52.899668000000005
+    },
+    "zoom": 8,
+    "bbox_width": 2.3550819999999995,
+    "bbox_height": 1.8565579999999997,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 89,
+    "id": "Lucca",
+    "name": "Republic of Lucca",
+    "region": "Tuscany",
+    "bounding_box": {
+      "min_lon": 10.133362,
+      "max_lon": 10.737334,
+      "min_lat": 43.749736,
+      "max_lat": 44.286089
+    },
+    "center": {
+      "lon": 10.435348000000001,
+      "lat": 44.017912499999994
+    },
+    "zoom": 10,
+    "bbox_width": 0.6039720000000006,
+    "bbox_height": 0.5363529999999983,
+    "regional_center": {
+      "lon": 11.074509500000001,
+      "lat": 43.2948025
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 90,
+    "id": "Lusatia",
+    "name": "Lusatia",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 13.4107,
+      "max_lon": 15.440931,
+      "min_lat": 50.819242,
+      "max_lat": 52.152315
+    },
+    "center": {
+      "lon": 14.4258155,
+      "lat": 51.4857785
+    },
+    "zoom": 8,
+    "bbox_width": 2.0302310000000006,
+    "bbox_height": 1.3330729999999988,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 91,
+    "id": "Luxembourg",
+    "name": "Luxembourg",
+    "region": "Lotharingia",
+    "bounding_box": {
+      "min_lon": 4.96817,
+      "max_lon": 6.53131,
+      "min_lat": 49.447673,
+      "max_lat": 50.43088
+    },
+    "center": {
+      "lon": 5.74974,
+      "lat": 49.939276500000005
+    },
+    "zoom": 9,
+    "bbox_width": 1.5631400000000006,
+    "bbox_height": 0.9832070000000002,
+    "regional_center": {
+      "lon": 6.3406915,
+      "lat": 49.1229955
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 92,
+    "id": "Maasland",
+    "name": "Mosan Valley",
+    "region": "Rhine-Maas",
+    "bounding_box": {
+      "min_lon": 4.255468,
+      "max_lon": 6.408232,
+      "min_lat": 49.785244,
+      "max_lat": 51.671284
+    },
+    "center": {
+      "lon": 5.331849999999999,
+      "lat": 50.728263999999996
+    },
+    "zoom": 8,
+    "bbox_width": 2.1527640000000003,
+    "bbox_height": 1.8860400000000013,
+    "regional_center": {
+      "lon": 6.0239355,
+      "lat": 50.845057499999996
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 93,
+    "id": "Main-Franconia",
+    "name": "Main-Franconia",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 9.596792,
+      "max_lon": 10.880057,
+      "min_lat": 49.480357,
+      "max_lat": 50.566889
+    },
+    "center": {
+      "lon": 10.2384245,
+      "lat": 50.023623
+    },
+    "zoom": 9,
+    "bbox_width": 1.283265,
+    "bbox_height": 1.0865320000000054,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 94,
+    "id": "MassaCarrara",
+    "name": "Duchy of Massa and Carrara",
+    "region": "Tuscany",
+    "bounding_box": {
+      "min_lon": 9.921568,
+      "max_lon": 10.243341,
+      "min_lat": 43.968545,
+      "max_lat": 44.207703
+    },
+    "center": {
+      "lon": 10.0824545,
+      "lat": 44.088124
+    },
+    "zoom": 11,
+    "bbox_width": 0.32177299999999853,
+    "bbox_height": 0.2391580000000033,
+    "regional_center": {
+      "lon": 11.074509500000001,
+      "lat": 43.2948025
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 95,
+    "id": "Mecklenburg",
+    "name": "Mecklenburg",
+    "region": "Baltic",
+    "bounding_box": {
+      "min_lon": 10.59401,
+      "max_lon": 13.794034,
+      "min_lat": 53.11035,
+      "max_lat": 54.286093
+    },
+    "center": {
+      "lon": 12.194022,
+      "lat": 53.6982215
+    },
+    "zoom": 9,
+    "bbox_width": 3.200023999999999,
+    "bbox_height": 1.1757430000000042,
+    "regional_center": {
+      "lon": 11.5306015,
+      "lat": 54.095181
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 96,
+    "id": "Middle-Franconia",
+    "name": "Middle Franconia",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 10.069672,
+      "max_lon": 11.601912,
+      "min_lat": 48.858746,
+      "max_lat": 49.790158
+    },
+    "center": {
+      "lon": 10.835792000000001,
+      "lat": 49.324451999999994
+    },
+    "zoom": 9,
+    "bbox_width": 1.5322399999999998,
+    "bbox_height": 0.9314120000000017,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 97,
+    "id": "Middle-Rhine",
+    "name": "Middle Rhine",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 7.123746,
+      "max_lon": 8.1858,
+      "min_lat": 49.932158,
+      "max_lat": 50.730984
+    },
+    "center": {
+      "lon": 7.6547730000000005,
+      "lat": 50.331571
+    },
+    "zoom": 9,
+    "bbox_width": 1.0620540000000007,
+    "bbox_height": 0.7988259999999983,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 98,
+    "id": "Mosel-Valley",
+    "name": "Mosel Valley",
+    "region": "Upper Rhine",
+    "bounding_box": {
+      "min_lon": 6.112777,
+      "max_lon": 7.741217,
+      "min_lat": 49.53461,
+      "max_lat": 50.614694
+    },
+    "center": {
+      "lon": 6.926997,
+      "lat": 50.074652
+    },
+    "zoom": 9,
+    "bbox_width": 1.6284399999999994,
+    "bbox_height": 1.0800839999999994,
+    "regional_center": {
+      "lon": 7.6657695,
+      "lat": 48.940656000000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 99,
+    "id": "Northern Bulgaria",
+    "name": "Northern Bulgaria",
+    "region": "Danube",
+    "bounding_box": {
+      "min_lon": 22.357177,
+      "max_lon": 27.423248,
+      "min_lat": 42.708783,
+      "max_lat": 44.21565
+    },
+    "center": {
+      "lon": 24.8902125,
+      "lat": 43.4622165
+    },
+    "zoom": 8,
+    "bbox_width": 5.066071000000001,
+    "bbox_height": 1.5068669999999997,
+    "regional_center": {
+      "lon": 26.06904,
+      "lat": 44.087644999999995
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 100,
+    "id": "Northern Macedonia",
+    "name": "Rumelia",
+    "region": "Macedonia",
+    "bounding_box": {
+      "min_lon": 20.454528,
+      "max_lon": 22.979278,
+      "min_lat": 40.853826,
+      "max_lat": 42.279702
+    },
+    "center": {
+      "lon": 21.716903000000002,
+      "lat": 41.566764
+    },
+    "zoom": 8,
+    "bbox_width": 2.524750000000001,
+    "bbox_height": 1.4258760000000024,
+    "regional_center": {
+      "lon": 22.427746499999998,
+      "lat": 41.055194
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 101,
+    "id": "Oberpfalz",
+    "name": "Upper Palatinate",
+    "region": "Bavaria",
+    "bounding_box": {
+      "min_lon": 11.187442,
+      "max_lon": 13.170941,
+      "min_lat": 48.766922,
+      "max_lat": 50.061588
+    },
+    "center": {
+      "lon": 12.1791915,
+      "lat": 49.414255
+    },
+    "zoom": 8,
+    "bbox_width": 1.9834989999999983,
+    "bbox_height": 1.2946659999999994,
+    "regional_center": {
+      "lon": 12.278361,
+      "lat": 48.72811
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 102,
+    "id": "Oberschwaben",
+    "name": "Upper Swabia",
+    "region": "Swabia",
+    "bounding_box": {
+      "min_lon": 8.2719,
+      "max_lon": 11.306784,
+      "min_lat": 47.678762,
+      "max_lat": 49.060245
+    },
+    "center": {
+      "lon": 9.789342000000001,
+      "lat": 48.3695035
+    },
+    "zoom": 8,
+    "bbox_width": 3.034884,
+    "bbox_height": 1.381483000000003,
+    "regional_center": {
+      "lon": 9.707377000000001,
+      "lat": 48.0856735
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 103,
+    "id": "Odenwald",
+    "name": "Odenwald",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 8.45852,
+      "max_lon": 9.773469,
+      "min_lat": 49.297421,
+      "max_lat": 50.271034
+    },
+    "center": {
+      "lon": 9.1159945,
+      "lat": 49.7842275
+    },
+    "zoom": 9,
+    "bbox_width": 1.3149490000000004,
+    "bbox_height": 0.9736130000000003,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 104,
+    "id": "Oldenburg",
+    "name": "Oldenburger Land",
+    "region": "Frisia",
+    "bounding_box": {
+      "min_lon": 7.696291,
+      "max_lon": 8.692996,
+      "min_lat": 52.799644,
+      "max_lat": 53.743555
+    },
+    "center": {
+      "lon": 8.194643500000002,
+      "lat": 53.2715995
+    },
+    "zoom": 9,
+    "bbox_width": 0.9967050000000004,
+    "bbox_height": 0.943911,
+    "regional_center": {
+      "lon": 6.760033,
+      "lat": 53.326071
+    },
+    "regional_zoom": 9
+  },
+  {
+    "index": 105,
+    "id": "Oversticht",
+    "name": "Oversticht",
+    "region": "The Imperial Lowlands",
+    "bounding_box": {
+      "min_lon": 5.328234,
+      "max_lon": 7.092618,
+      "min_lat": 52.117084,
+      "max_lat": 53.203721
+    },
+    "center": {
+      "lon": 6.210426,
+      "lat": 52.660402500000004
+    },
+    "zoom": 9,
+    "bbox_width": 1.7643839999999997,
+    "bbox_height": 1.0866370000000032,
+    "regional_center": {
+      "lon": 5.085932,
+      "lat": 51.5140035
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 106,
+    "id": "Paris",
+    "name": "Paris",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 2.223112,
+      "max_lon": 2.415907,
+      "min_lat": 48.815891,
+      "max_lat": 48.909853
+    },
+    "center": {
+      "lon": 2.3195094999999997,
+      "lat": 48.862871999999996
+    },
+    "zoom": 12,
+    "bbox_width": 0.19279499999999983,
+    "bbox_height": 0.09396199999999766,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 107,
+    "id": "PaysFrance",
+    "name": "Pays de France",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 2.036995,
+      "max_lon": 2.781673,
+      "min_lat": 48.705364,
+      "max_lat": 49.159024
+    },
+    "center": {
+      "lon": 2.4093340000000003,
+      "lat": 48.932194
+    },
+    "zoom": 10,
+    "bbox_width": 0.744678,
+    "bbox_height": 0.4536599999999993,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 108,
+    "id": "Picardy",
+    "name": "Picardy",
+    "region": "The Royal Lowlands",
+    "bounding_box": {
+      "min_lon": 1.353669,
+      "max_lon": 4.255288,
+      "min_lat": 49.426281,
+      "max_lat": 51.020089
+    },
+    "center": {
+      "lon": 2.8044785,
+      "lat": 50.223185
+    },
+    "zoom": 8,
+    "bbox_width": 2.901619,
+    "bbox_height": 1.5938079999999957,
+    "regional_center": {
+      "lon": 2.848501,
+      "lat": 50.4288105
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 109,
+    "id": "Pirin",
+    "name": "Pirin",
+    "region": "Shopluk / Shopsko",
+    "bounding_box": {
+      "min_lon": 22.863922,
+      "max_lon": 24.115373,
+      "min_lat": 41.316622,
+      "max_lat": 42.182228
+    },
+    "center": {
+      "lon": 23.4896475,
+      "lat": 41.749425
+    },
+    "zoom": 9,
+    "bbox_width": 1.251451000000003,
+    "bbox_height": 0.8656059999999997,
+    "regional_center": {
+      "lon": 22.939623,
+      "lat": 42.3595875
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 110,
+    "id": "Pisa",
+    "name": "Republic of Pisa",
+    "region": "Tuscany",
+    "bounding_box": {
+      "min_lon": 9.777523,
+      "max_lon": 10.943328,
+      "min_lat": 42.303516,
+      "max_lat": 43.829328
+    },
+    "center": {
+      "lon": 10.3604255,
+      "lat": 43.066422
+    },
+    "zoom": 8,
+    "bbox_width": 1.1658049999999989,
+    "bbox_height": 1.5258119999999948,
+    "regional_center": {
+      "lon": 11.074509500000001,
+      "lat": 43.2948025
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 111,
+    "id": "Rhodope Mountains",
+    "name": "Rhodope Mountains",
+    "region": "Thracia",
+    "bounding_box": {
+      "min_lon": 23.623695,
+      "max_lon": 25.94397,
+      "min_lat": 41.084268,
+      "max_lat": 42.247325
+    },
+    "center": {
+      "lon": 24.783832500000003,
+      "lat": 41.6657965
+    },
+    "zoom": 9,
+    "bbox_width": 2.3202749999999988,
+    "bbox_height": 1.163056999999995,
+    "regional_center": {
+      "lon": 25.831266499999998,
+      "lat": 41.8055345
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 112,
+    "id": "Ruhr",
+    "name": "Ruhr",
+    "region": "Westphalia",
+    "bounding_box": {
+      "min_lon": 6.459829,
+      "max_lon": 7.998099,
+      "min_lat": 51.295109,
+      "max_lat": 51.82351
+    },
+    "center": {
+      "lon": 7.2289639999999995,
+      "lat": 51.5593095
+    },
+    "zoom": 10,
+    "bbox_width": 1.5382699999999998,
+    "bbox_height": 0.5284010000000023,
+    "regional_center": {
+      "lon": 8.1327865,
+      "lat": 52.365218999999996
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 113,
+    "id": "Saarland",
+    "name": "Saarland",
+    "region": "Lotharingia",
+    "bounding_box": {
+      "min_lon": 6.355665,
+      "max_lon": 7.792914,
+      "min_lat": 49.053378,
+      "max_lat": 49.710763
+    },
+    "center": {
+      "lon": 7.0742895,
+      "lat": 49.3820705
+    },
+    "zoom": 9,
+    "bbox_width": 1.4372489999999996,
+    "bbox_height": 0.6573849999999979,
+    "regional_center": {
+      "lon": 6.3406915,
+      "lat": 49.1229955
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 114,
+    "id": "Scania",
+    "name": "Scania",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 11.868462,
+      "max_lon": 16.110703,
+      "min_lat": 55.324194,
+      "max_lat": 57.572352
+    },
+    "center": {
+      "lon": 13.989582500000001,
+      "lat": 56.448273
+    },
+    "zoom": 8,
+    "bbox_width": 4.242241000000002,
+    "bbox_height": 2.2481580000000037,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 115,
+    "id": "Schleswig",
+    "name": "Schleswig",
+    "region": "Baltic",
+    "bounding_box": {
+      "min_lon": 8.249737,
+      "max_lon": 10.207656,
+      "min_lat": 54.196105,
+      "max_lat": 55.080012
+    },
+    "center": {
+      "lon": 9.2286965,
+      "lat": 54.6380585
+    },
+    "zoom": 9,
+    "bbox_width": 1.9579190000000004,
+    "bbox_height": 0.8839070000000007,
+    "regional_center": {
+      "lon": 11.5306015,
+      "lat": 54.095181
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 116,
+    "id": "Shopluk",
+    "name": "Shopluk",
+    "region": "Shopluk / Shopsko",
+    "bounding_box": {
+      "min_lon": 21.487037,
+      "max_lon": 24.392209,
+      "min_lat": 41.517804,
+      "max_lat": 43.402553
+    },
+    "center": {
+      "lon": 22.939623,
+      "lat": 42.4601785
+    },
+    "zoom": 8,
+    "bbox_width": 2.9051720000000003,
+    "bbox_height": 1.8847489999999993,
+    "regional_center": {
+      "lon": 22.939623,
+      "lat": 42.3595875
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 117,
+    "id": "Siena",
+    "name": "Republic of Siena",
+    "region": "Tuscany",
+    "bounding_box": {
+      "min_lon": 10.696166,
+      "max_lon": 11.982846,
+      "min_lat": 42.346587,
+      "max_lat": 43.548224
+    },
+    "center": {
+      "lon": 11.339506,
+      "lat": 42.9474055
+    },
+    "zoom": 9,
+    "bbox_width": 1.2866800000000005,
+    "bbox_height": 1.201636999999998,
+    "regional_center": {
+      "lon": 11.074509500000001,
+      "lat": 43.2948025
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 118,
+    "id": "Sjaelland",
+    "name": "Sjaelland",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 10.875787,
+      "max_lon": 12.823347,
+      "min_lat": 54.56162,
+      "max_lat": 56.134788
+    },
+    "center": {
+      "lon": 11.849567,
+      "lat": 55.348203999999996
+    },
+    "zoom": 8,
+    "bbox_width": 1.9475599999999993,
+    "bbox_height": 1.5731680000000026,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 119,
+    "id": "Slesvig",
+    "name": "Slesvig",
+    "region": "Denmark",
+    "bounding_box": {
+      "min_lon": 8.420011,
+      "max_lon": 10.090047,
+      "min_lat": 54.800383,
+      "max_lat": 55.497571
+    },
+    "center": {
+      "lon": 9.255029,
+      "lat": 55.148977
+    },
+    "zoom": 9,
+    "bbox_width": 1.6700359999999996,
+    "bbox_height": 0.6971880000000041,
+    "regional_center": {
+      "lon": 12.0744085,
+      "lat": 56.162326
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 120,
+    "id": "Strandzha",
+    "name": "Strandzha",
+    "region": "Thracia",
+    "bounding_box": {
+      "min_lon": 26.576598,
+      "max_lon": 28.038838,
+      "min_lat": 41.904485,
+      "max_lat": 42.988653
+    },
+    "center": {
+      "lon": 27.307718,
+      "lat": 42.446569
+    },
+    "zoom": 9,
+    "bbox_width": 1.4622399999999978,
+    "bbox_height": 1.0841679999999982,
+    "regional_center": {
+      "lon": 25.831266499999998,
+      "lat": 41.8055345
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 121,
+    "id": "Thracian Valley",
+    "name": "Thracian Valley",
+    "region": "Thracia",
+    "bounding_box": {
+      "min_lon": 23.871095,
+      "max_lon": 27.064676,
+      "min_lat": 41.318096,
+      "max_lat": 43.036222
+    },
+    "center": {
+      "lon": 25.4678855,
+      "lat": 42.177159
+    },
+    "zoom": 8,
+    "bbox_width": 3.1935809999999982,
+    "bbox_height": 1.7181260000000051,
+    "regional_center": {
+      "lon": 25.831266499999998,
+      "lat": 41.8055345
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 122,
+    "id": "Thuringen",
+    "name": "Thüringen",
+    "region": "Saxony",
+    "bounding_box": {
+      "min_lon": 9.877641,
+      "max_lon": 12.019475,
+      "min_lat": 50.088286,
+      "max_lat": 51.60572
+    },
+    "center": {
+      "lon": 10.948558,
+      "lat": 50.847003
+    },
+    "zoom": 8,
+    "bbox_width": 2.1418339999999993,
+    "bbox_height": 1.5174340000000015,
+    "regional_center": {
+      "lon": 12.342364,
+      "lat": 51.9581165
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 123,
+    "id": "Uckermark",
+    "name": "Uckermark",
+    "region": "Brandenburg",
+    "bounding_box": {
+      "min_lon": 13.239476,
+      "max_lon": 14.449161,
+      "min_lat": 52.932745,
+      "max_lat": 53.558407
+    },
+    "center": {
+      "lon": 13.8443185,
+      "lat": 53.245576
+    },
+    "zoom": 9,
+    "bbox_width": 1.2096850000000003,
+    "bbox_height": 0.6256620000000055,
+    "regional_center": {
+      "lon": 12.736215,
+      "lat": 52.7131895
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 124,
+    "id": "Upper-Franconia",
+    "name": "Upper-Franconia",
+    "region": "Franconia",
+    "bounding_box": {
+      "min_lon": 10.375413,
+      "max_lon": 11.913844,
+      "min_lat": 49.589196,
+      "max_lat": 50.524406
+    },
+    "center": {
+      "lon": 11.1446285,
+      "lat": 50.056801
+    },
+    "zoom": 9,
+    "bbox_width": 1.5384309999999992,
+    "bbox_height": 0.9352099999999979,
+    "regional_center": {
+      "lon": 10.366966999999999,
+      "lat": 49.7128175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 125,
+    "id": "Versailles",
+    "name": "Versailles",
+    "region": "Île-de-France",
+    "bounding_box": {
+      "min_lon": 1.304467,
+      "max_lon": 2.581295,
+      "min_lat": 48.413354,
+      "max_lat": 49.085644
+    },
+    "center": {
+      "lon": 1.9428809999999999,
+      "lat": 48.749499
+    },
+    "zoom": 9,
+    "bbox_width": 1.2768279999999999,
+    "bbox_height": 0.6722900000000038,
+    "regional_center": {
+      "lon": 2.6905295,
+      "lat": 48.847695
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 126,
+    "id": "Vorpommern",
+    "name": "Vorpommern",
+    "region": "Baltic",
+    "bounding_box": {
+      "min_lon": 12.274241,
+      "max_lon": 14.811466,
+      "min_lat": 53.256153,
+      "max_lat": 54.704882
+    },
+    "center": {
+      "lon": 13.5428535,
+      "lat": 53.9805175
+    },
+    "zoom": 8,
+    "bbox_width": 2.5372249999999994,
+    "bbox_height": 1.4487290000000002,
+    "regional_center": {
+      "lon": 11.5306015,
+      "lat": 54.095181
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 127,
+    "id": "WestFrisia",
+    "name": "West Frisia",
+    "region": "Frisia",
+    "bounding_box": {
+      "min_lon": 4.82707,
+      "max_lon": 7.227659,
+      "min_lat": 52.800946,
+      "max_lat": 53.609344
+    },
+    "center": {
+      "lon": 6.0273645,
+      "lat": 53.205145
+    },
+    "zoom": 9,
+    "bbox_width": 2.400589,
+    "bbox_height": 0.8083979999999968,
+    "regional_center": {
+      "lon": 6.760033,
+      "lat": 53.326071
+    },
+    "regional_zoom": 9
+  },
+  {
+    "index": 128,
+    "id": "Western Thrace",
+    "name": "Western Thrace",
+    "region": "Thracia",
+    "bounding_box": {
+      "min_lon": 23.838383,
+      "max_lon": 26.635322,
+      "min_lat": 40.711968,
+      "max_lat": 41.748811
+    },
+    "center": {
+      "lon": 25.236852499999998,
+      "lat": 41.2303895
+    },
+    "zoom": 9,
+    "bbox_width": 2.7969389999999983,
+    "bbox_height": 1.0368430000000046,
+    "regional_center": {
+      "lon": 25.831266499999998,
+      "lat": 41.8055345
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 129,
+    "id": "WesternThrace2",
+    "name": "Western Thrace",
+    "region": "Thracia",
+    "bounding_box": {
+      "min_lon": 24.511393,
+      "max_lon": 24.783096,
+      "min_lat": 40.574847,
+      "max_lat": 40.800635
+    },
+    "center": {
+      "lon": 24.6472445,
+      "lat": 40.687741
+    },
+    "zoom": 11,
+    "bbox_width": 0.2717029999999987,
+    "bbox_height": 0.22578800000000143,
+    "regional_center": {
+      "lon": 25.831266499999998,
+      "lat": 41.8055345
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 130,
+    "id": "Westerwald",
+    "name": "Westerwald",
+    "region": "Hessen-Nassau",
+    "bounding_box": {
+      "min_lon": 7.281526,
+      "max_lon": 8.658839,
+      "min_lat": 49.982945,
+      "max_lat": 50.942874
+    },
+    "center": {
+      "lon": 7.9701825,
+      "lat": 50.4629095
+    },
+    "zoom": 9,
+    "bbox_width": 1.377313,
+    "bbox_height": 0.9599290000000025,
+    "regional_center": {
+      "lon": 8.75879,
+      "lat": 50.7912175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 131,
+    "id": "WestphaliProvince",
+    "name": "Westphalia",
+    "region": "Westphalia",
+    "bounding_box": {
+      "min_lon": 6.387469,
+      "max_lon": 9.016491,
+      "min_lat": 51.446791,
+      "max_lat": 52.722912
+    },
+    "center": {
+      "lon": 7.701980000000001,
+      "lat": 52.0848515
+    },
+    "zoom": 8,
+    "bbox_width": 2.629022,
+    "bbox_height": 1.2761210000000034,
+    "regional_center": {
+      "lon": 8.1327865,
+      "lat": 52.365218999999996
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 132,
+    "id": "Wetterau",
+    "name": "Wetterau",
+    "region": "Hessen-Nassau",
+    "bounding_box": {
+      "min_lon": 8.152089,
+      "max_lon": 9.747842,
+      "min_lat": 49.924475,
+      "max_lat": 50.522557
+    },
+    "center": {
+      "lon": 8.949965500000001,
+      "lat": 50.223516000000004
+    },
+    "zoom": 10,
+    "bbox_width": 1.5957530000000002,
+    "bbox_height": 0.598081999999998,
+    "regional_center": {
+      "lon": 8.75879,
+      "lat": 50.7912175
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 133,
+    "id": "Wurttemberg",
+    "name": "Württemberg",
+    "region": "Swabia",
+    "bounding_box": {
+      "min_lon": 8.10797,
+      "max_lon": 10.091134,
+      "min_lat": 47.964998,
+      "max_lat": 49.329714
+    },
+    "center": {
+      "lon": 9.099552,
+      "lat": 48.647356
+    },
+    "zoom": 8,
+    "bbox_width": 1.9831640000000004,
+    "bbox_height": 1.3647160000000014,
+    "regional_center": {
+      "lon": 9.707377000000001,
+      "lat": 48.0856735
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 134,
+    "id": "a19336210625adc635dc87ba4d1ce41b",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.391188,
+      "max_lon": 15.400457,
+      "min_lat": 47.812792,
+      "max_lat": 47.815499
+    },
+    "center": {
+      "lon": 15.3958225,
+      "lat": 47.8141455
+    },
+    "zoom": 17,
+    "bbox_width": 0.00926899999999975,
+    "bbox_height": 0.002707000000000903
+  },
+  {
+    "index": 135,
+    "id": "a5a4979fe4d04543d17fd92e0ad2b9ca",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.223098,
+      "max_lon": 14.254486,
+      "min_lat": 47.614546,
+      "max_lat": 47.642144
+    },
+    "center": {
+      "lon": 14.238792,
+      "lat": 47.628344999999996
+    },
+    "zoom": 14,
+    "bbox_width": 0.03138799999999975,
+    "bbox_height": 0.027598000000004674
+  },
+  {
+    "index": 136,
+    "id": "a6474bab0216cf7bfa2d0ab8fbafacfb",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.436603,
+      "max_lon": 15.449905,
+      "min_lat": 47.773651,
+      "max_lat": 47.791132
+    },
+    "center": {
+      "lon": 15.443254,
+      "lat": 47.7823915
+    },
+    "zoom": 15,
+    "bbox_width": 0.013301999999999481,
+    "bbox_height": 0.017480999999996527
+  },
+  {
+    "index": 137,
+    "id": "aac1458906f5e99aad234900b2122826",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.345888,
+      "max_lon": 15.357213,
+      "min_lat": 47.825676,
+      "max_lat": 47.827282
+    },
+    "center": {
+      "lon": 15.3515505,
+      "lat": 47.826479
+    },
+    "zoom": 17,
+    "bbox_width": 0.011324999999999363,
+    "bbox_height": 0.0016059999999953334
+  },
+  {
+    "index": 138,
+    "id": "b05d02ffbcd756dc9fadfae8de676e22",
+    "name": "North Tyrol",
+    "region": "Tyrol",
+    "bounding_box": {
+      "min_lon": 10.094987,
+      "max_lon": 12.696777,
+      "min_lat": 46.763567,
+      "max_lat": 47.74375
+    },
+    "center": {
+      "lon": 11.395882,
+      "lat": 47.2536585
+    },
+    "zoom": 9,
+    "bbox_width": 2.601790000000001,
+    "bbox_height": 0.9801829999999967,
+    "regional_center": {
+      "lon": 11.529083499999999,
+      "lat": 46.708406
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 139,
+    "id": "b0f7fc99f0571667dad84a4096c85b55",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.501964,
+      "max_lon": 15.50218,
+      "min_lat": 47.768875,
+      "max_lat": 47.768951
+    },
+    "center": {
+      "lon": 15.502071999999998,
+      "lat": 47.768913
+    },
+    "zoom": 18,
+    "bbox_width": 0.00021599999999999397,
+    "bbox_height": 7.599999999996498e-05
+  },
+  {
+    "index": 140,
+    "id": "b4f1e10c3b9116121fb85564fa83654b",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.309167,
+      "max_lon": 14.309842,
+      "min_lat": 47.607295,
+      "max_lat": 47.608121
+    },
+    "center": {
+      "lon": 14.3095045,
+      "lat": 47.607708
+    },
+    "zoom": 18,
+    "bbox_width": 0.000674999999999315,
+    "bbox_height": 0.0008259999999964407
+  },
+  {
+    "index": 141,
+    "id": "b58ffe6f647624e3fafb49b0797b7d46",
+    "name": "Feature 142",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.95358,
+      "max_lon": 14.95427,
+      "min_lat": 48.220242,
+      "max_lat": 48.222218
+    },
+    "center": {
+      "lon": 14.953925,
+      "lat": 48.22123
+    },
+    "zoom": 18,
+    "bbox_width": 0.0006899999999987472,
+    "bbox_height": 0.0019759999999990896
+  },
+  {
+    "index": 142,
+    "id": "b5d48647f81a83132fb5eb52161c100e",
+    "name": "Lower Austria",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 15.166253,
+      "max_lon": 17.068823,
+      "min_lat": 47.422184,
+      "max_lat": 48.388182
+    },
+    "center": {
+      "lon": 16.117538,
+      "lat": 47.905183
+    },
+    "zoom": 9,
+    "bbox_width": 1.902569999999999,
+    "bbox_height": 0.965997999999999,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 143,
+    "id": "bb70046af94fb2cf094575dceba8a03e",
+    "name": "Tatra and Fatra",
+    "region": "Western Carpathia",
+    "bounding_box": {
+      "min_lon": 17.35302,
+      "max_lon": 20.469834,
+      "min_lat": 48.05372,
+      "max_lat": 49.613748
+    },
+    "center": {
+      "lon": 18.911427,
+      "lat": 48.833734
+    },
+    "zoom": 8,
+    "bbox_width": 3.116813999999998,
+    "bbox_height": 1.5600280000000026,
+    "regional_center": {
+      "lon": 19.699433,
+      "lat": 48.6724665
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 144,
+    "id": "bc5d35533e0879735c0a3d844518dd66",
+    "name": "Upper Austria",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 13.270323,
+      "max_lon": 14.992217,
+      "min_lat": 47.461187,
+      "max_lat": 48.772651
+    },
+    "center": {
+      "lon": 14.13127,
+      "lat": 48.116919
+    },
+    "zoom": 8,
+    "bbox_width": 1.7218940000000007,
+    "bbox_height": 1.3114640000000009,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 145,
+    "id": "c4e44df22cb165a0ef07cef7479757e4",
+    "name": "Feature 146",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 11.402765,
+      "max_lon": 11.410396,
+      "min_lat": 46.965524,
+      "max_lat": 46.967839
+    },
+    "center": {
+      "lon": 11.4065805,
+      "lat": 46.9666815
+    },
+    "zoom": 17,
+    "bbox_width": 0.007630999999999943,
+    "bbox_height": 0.002314999999995848
+  },
+  {
+    "index": 146,
+    "id": "c6e904623b402dd93415bb60eee213e2",
+    "name": "Imperial Littoral",
+    "region": "Kingdom of Illyria",
+    "bounding_box": {
+      "min_lon": 13.720134,
+      "max_lon": 13.780215,
+      "min_lat": 44.887563,
+      "max_lat": 44.940205
+    },
+    "center": {
+      "lon": 13.7501745,
+      "lat": 44.913883999999996
+    },
+    "zoom": 13,
+    "bbox_width": 0.06008100000000027,
+    "bbox_height": 0.052641999999998745,
+    "regional_center": {
+      "lon": 14.1818125,
+      "lat": 45.786336500000004
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 147,
+    "id": "c8385636197a1fdfac51bbe1e4873023",
+    "name": "Trentino",
+    "region": "Tyrol",
+    "bounding_box": {
+      "min_lon": 10.452131,
+      "max_lon": 11.962678,
+      "min_lat": 45.673062,
+      "max_lat": 46.532764
+    },
+    "center": {
+      "lon": 11.207404499999999,
+      "lat": 46.102913
+    },
+    "zoom": 9,
+    "bbox_width": 1.5105470000000008,
+    "bbox_height": 0.8597019999999986,
+    "regional_center": {
+      "lon": 11.529083499999999,
+      "lat": 46.708406
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 148,
+    "id": "c9f2028cf87ee80411f5e5fa6ace8c2c",
+    "name": "Upper Bavaria",
+    "region": "Bavaria",
+    "bounding_box": {
+      "min_lon": 10.716915,
+      "max_lon": 12.255299,
+      "min_lat": 47.394632,
+      "max_lat": 49.084507
+    },
+    "center": {
+      "lon": 11.486107,
+      "lat": 48.2395695
+    },
+    "zoom": 8,
+    "bbox_width": 1.5383840000000006,
+    "bbox_height": 1.6898750000000007,
+    "regional_center": {
+      "lon": 12.278361,
+      "lat": 48.72811
+    },
+    "regional_zoom": 7
+  },
+  {
+    "index": 149,
+    "id": "cbaed17fb6da6a76c5f6c18d9cdc07ed",
+    "name": "Tirol",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 10.426187,
+      "max_lon": 10.479186,
+      "min_lat": 47.555388,
+      "max_lat": 47.587848
+    },
+    "center": {
+      "lon": 10.4526865,
+      "lat": 47.571618
+    },
+    "zoom": 14,
+    "bbox_width": 0.052998999999999796,
+    "bbox_height": 0.03246000000000038
+  },
+  {
+    "index": 150,
+    "id": "ce09c88727034e44810bb61b3967c5b2",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.050778,
+      "max_lon": 14.232554,
+      "min_lat": 47.615903,
+      "max_lat": 47.652538
+    },
+    "center": {
+      "lon": 14.141666,
+      "lat": 47.6342205
+    },
+    "zoom": 13,
+    "bbox_width": 0.18177600000000105,
+    "bbox_height": 0.036634999999996865
+  },
+  {
+    "index": 151,
+    "id": "cfa74f0c3e97883bca9dd6fea486cc2f",
+    "name": "Küstenland",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.343764,
+      "max_lon": 14.344534,
+      "min_lat": 44.558428,
+      "max_lat": 44.559127
+    },
+    "center": {
+      "lon": 14.344149,
+      "lat": 44.5587775
+    },
+    "zoom": 18,
+    "bbox_width": 0.0007699999999992713,
+    "bbox_height": 0.0006989999999973406
+  },
+  {
+    "index": 152,
+    "id": "d0e2f8f980c760f4793d1b4394fe8ce6",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.254498,
+      "max_lon": 14.309162,
+      "min_lat": 47.607887,
+      "max_lat": 47.614523
+    },
+    "center": {
+      "lon": 14.28183,
+      "lat": 47.611205
+    },
+    "zoom": 15,
+    "bbox_width": 0.05466400000000071,
+    "bbox_height": 0.006636000000000308
+  },
+  {
+    "index": 153,
+    "id": "d7bad35bf8073af7b2f332887ecc6a01",
+    "name": "Wine District",
+    "region": "Eastern March",
+    "bounding_box": {
+      "min_lon": 15.712506,
+      "max_lon": 16.977421,
+      "min_lat": 48.115094,
+      "max_lat": 48.877546
+    },
+    "center": {
+      "lon": 16.3449635,
+      "lat": 48.49632
+    },
+    "zoom": 9,
+    "bbox_width": 1.2649150000000002,
+    "bbox_height": 0.7624520000000032,
+    "regional_center": {
+      "lon": 15.169573,
+      "lat": 48.22135
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 154,
+    "id": "d7fcc2be5f3ad8b18e77f554d3fe6233",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 13.81294,
+      "max_lon": 13.812997,
+      "min_lat": 48.701531,
+      "max_lat": 48.701628
+    },
+    "center": {
+      "lon": 13.8129685,
+      "lat": 48.7015795
+    },
+    "zoom": 18,
+    "bbox_width": 5.699999999997374e-05,
+    "bbox_height": 9.699999999668307e-05
+  },
+  {
+    "index": 155,
+    "id": "dbc7119f8318cae79a343cc31aadba10",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.453275,
+      "max_lon": 15.459038,
+      "min_lat": 47.770446,
+      "max_lat": 47.772972
+    },
+    "center": {
+      "lon": 15.456156499999999,
+      "lat": 47.771709
+    },
+    "zoom": 17,
+    "bbox_width": 0.005762999999999963,
+    "bbox_height": 0.002526000000003137
+  },
+  {
+    "index": 156,
+    "id": "e248a90e038ad7008c60dd292a2b2b61",
+    "name": "Oberoesterreich",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.309887,
+      "max_lon": 14.326396,
+      "min_lat": 47.60636,
+      "max_lat": 47.6085
+    },
+    "center": {
+      "lon": 14.3181415,
+      "lat": 47.60743
+    },
+    "zoom": 16,
+    "bbox_width": 0.016509000000000995,
+    "bbox_height": 0.002139999999997144
+  },
+  {
+    "index": 157,
+    "id": "e40347a70f67a558bc20fc4538aa210b",
+    "name": "East Tyrol",
+    "region": "Tyrol",
+    "bounding_box": {
+      "min_lon": 12.118351,
+      "max_lon": 12.96318,
+      "min_lat": 46.652082,
+      "max_lat": 47.158559
+    },
+    "center": {
+      "lon": 12.5407655,
+      "lat": 46.9053205
+    },
+    "zoom": 10,
+    "bbox_width": 0.8448289999999989,
+    "bbox_height": 0.5064769999999967,
+    "regional_center": {
+      "lon": 11.529083499999999,
+      "lat": 46.708406
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 158,
+    "id": "e82dd0392c16858546d986c2099ae2f3",
+    "name": "South Tyrol",
+    "region": "Tyrol",
+    "bounding_box": {
+      "min_lon": 10.386105,
+      "max_lon": 12.477704,
+      "min_lat": 46.219772,
+      "max_lat": 47.092861
+    },
+    "center": {
+      "lon": 11.4319045,
+      "lat": 46.6563165
+    },
+    "zoom": 9,
+    "bbox_width": 2.0915989999999987,
+    "bbox_height": 0.8730890000000002,
+    "regional_center": {
+      "lon": 11.529083499999999,
+      "lat": 46.708406
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 159,
+    "id": "ea4fca12d1472c18957d92d45a2dddb5",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 13.811075,
+      "max_lon": 13.811158,
+      "min_lat": 48.703852,
+      "max_lat": 48.703985
+    },
+    "center": {
+      "lon": 13.8111165,
+      "lat": 48.7039185
+    },
+    "zoom": 18,
+    "bbox_width": 8.300000000005525e-05,
+    "bbox_height": 0.0001330000000052678
+  },
+  {
+    "index": 160,
+    "id": "ec49cd609c933e863274e83c6406049a",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.360411,
+      "max_lon": 15.372317,
+      "min_lat": 47.823763,
+      "max_lat": 47.8257
+    },
+    "center": {
+      "lon": 15.366364,
+      "lat": 47.8247315
+    },
+    "zoom": 17,
+    "bbox_width": 0.011906000000001526,
+    "bbox_height": 0.0019369999999980791
+  },
+  {
+    "index": 161,
+    "id": "f1ba00df0f7bf2f2edfb48ad818e4cfa",
+    "name": "Feature 162",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.06051,
+      "max_lon": 15.061261,
+      "min_lat": 48.153022,
+      "max_lat": 48.153085
+    },
+    "center": {
+      "lon": 15.060885500000001,
+      "lat": 48.1530535
+    },
+    "zoom": 18,
+    "bbox_width": 0.00075099999999928,
+    "bbox_height": 6.299999999725969e-05
+  },
+  {
+    "index": 162,
+    "id": "f1f7324b5017b7b8cc536ba607dc3021",
+    "name": "Küstenland",
+    "region": null,
+    "bounding_box": {
+      "min_lon": 14.284413,
+      "max_lon": 14.284445,
+      "min_lat": 44.65964,
+      "max_lat": 44.660008
+    },
+    "center": {
+      "lon": 14.284429,
+      "lat": 44.659824
+    },
+    "zoom": 18,
+    "bbox_width": 3.1999999999143824e-05,
+    "bbox_height": 0.0003679999999945949
+  },
+  {
+    "index": 163,
+    "id": "f7e6a687e9e49e527b03fe5a1e7ad92e",
+    "name": "Eisenwurzen ",
+    "region": "Styria",
+    "bounding_box": {
+      "min_lon": 14.314025,
+      "max_lon": 15.506539,
+      "min_lat": 47.280429,
+      "max_lat": 47.828593
+    },
+    "center": {
+      "lon": 14.910282,
+      "lat": 47.554511
+    },
+    "zoom": 10,
+    "bbox_width": 1.1925139999999992,
+    "bbox_height": 0.5481639999999999,
+    "regional_center": {
+      "lon": 14.934121000000001,
+      "lat": 46.848685
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 164,
+    "id": "f833f7db154a3ba072469875c17dbd62",
+    "name": "Berlin",
+    "region": "Brandenburg",
+    "bounding_box": {
+      "min_lon": 13.088333,
+      "max_lon": 13.760469,
+      "min_lat": 52.338241,
+      "max_lat": 52.674917
+    },
+    "center": {
+      "lon": 13.424401,
+      "lat": 52.506579
+    },
+    "zoom": 10,
+    "bbox_width": 0.6721360000000001,
+    "bbox_height": 0.3366760000000042,
+    "regional_center": {
+      "lon": 12.736215,
+      "lat": 52.7131895
+    },
+    "regional_zoom": 8
+  },
+  {
+    "index": 165,
+    "id": "fdf588b7156139ea8527e2169ba4b973",
+    "name": null,
+    "region": null,
+    "bounding_box": {
+      "min_lon": 15.505729,
+      "max_lon": 15.506611,
+      "min_lat": 47.767292,
+      "max_lat": 47.76794
+    },
+    "center": {
+      "lon": 15.506170000000001,
+      "lat": 47.767616000000004
+    },
+    "zoom": 18,
+    "bbox_width": 0.0008819999999989392,
+    "bbox_height": 0.000648000000005311
+  },
+  {
+    "index": 166,
+    "id": "fecfe7b017e279316e0747b114ecb8c1",
+    "name": "Vorarlberg",
+    "region": "Swabia",
+    "bounding_box": {
+      "min_lon": 9.527906,
+      "max_lon": 10.234189,
+      "min_lat": 46.841633,
+      "max_lat": 47.596818
+    },
+    "center": {
+      "lon": 9.881047500000001,
+      "lat": 47.2192255
+    },
+    "zoom": 9,
+    "bbox_width": 0.7062830000000009,
+    "bbox_height": 0.7551849999999973,
+    "regional_center": {
+      "lon": 9.707377000000001,
+      "lat": 48.0856735
+    },
+    "regional_zoom": 7
+  }
+]

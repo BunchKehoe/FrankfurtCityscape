@@ -1,25 +1,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.4;
-  }
-
   .map-container {
     width: 100%;
     height: 70vh;
     min-height: 600px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+
+  .map-container *,
+  .map-container *::before,
+  .map-container *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .map-container-responsive {
@@ -233,14 +232,14 @@
   }
 
   /* Overlay Content Styles */
-  .overlay-content {
+  .map-overlay .overlay-content {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 15px;
   }
 
-  .overlay-image {
+  .map-overlay .overlay-image {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -249,7 +248,7 @@
     border: 2px solid #f0f0f0;
   }
 
-  .overlay-text {
+  .map-overlay .overlay-text {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -257,15 +256,15 @@
     text-align: left;
   }
 
-  .overlay-text h2,
-  .overlay-text h3 {
+  .map-overlay .overlay-text h2,
+  .map-overlay .overlay-text h3 {
     margin: 0 0 8px 0;
     font-size: 1.6em;
     font-weight: 600;
     color: #333;
   }
 
-  .overlay-text .region-label {
+  .map-overlay .overlay-text .region-label {
     margin: 0 0 4px 0;
     font-size: 0.9em;
     color: #666;
@@ -274,21 +273,21 @@
     letter-spacing: 0.5px;
   }
 
-  .overlay-text .main-title {
+  .map-overlay .overlay-text .main-title {
     margin: 0 0 4px 0;
     font-size: 1.6em;
     font-weight: 600;
     color: #333;
   }
 
-  .overlay-text p {
+  .map-overlay .overlay-text p {
     margin: 0 0 10px 0;
     font-size: 0.9em;
     line-height: 1.4;
     color: #555;
   }
 
-  .overlay-button {
+  .map-overlay .map-overlay .overlay-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -304,50 +303,24 @@
     cursor: pointer;
   }
 
-  .overlay-button:hover {
+  .map-overlay .overlay-button:hover {
     background-color: #087f83;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(10, 147, 150, 0.3);
   }
 
-  .overlay-button:active {
+  .map-overlay .overlay-button:active {
     transform: translateY(0);
   }
 
   /* Utility classes */
-  .center {
+  .map-overlay .center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .left {
-    margin: 0;
-    text-align: left;
-  }
-
-  .regionleft {
-    margin: 0;
-    text-align: left;
-  }
-
-  .row {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .container {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .text {
-    flex: 1;
-  }
-
-  .infoImg {
+  .map-overlay .infoImg {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -537,8 +510,9 @@ async function loadLocationConfig() {
     });
 
     // Compute union bboxes for each region (envelope of all its subregions)
+    // Also store geometries for region highlight outline
     for (const [slug, geometries] of Object.entries(regionGroups)) {
-      locationConfig[slug] = { bbox: computeUnionBbox(geometries) };
+      locationConfig[slug] = { bbox: computeUnionBbox(geometries), geometries: geometries };
     }
 
     // Compute union bboxes for each country (envelope of all its subregions)
@@ -714,6 +688,42 @@ function navigateToFeature(feature, level) {
 function closeMobileSidebar() {
   const overlay = document.getElementById("map-overlay");
   if (overlay) overlay.classList.remove("visible");
+}
+
+// --- Region Highlight (outer boundary only, using turf.union to dissolve internals) ---
+function addRegionHighlight(map) {
+  if (typeof turf === "undefined") return;
+
+  const segments = window.location.pathname.split("/");
+  let matchedGeometries = null;
+  for (const [slug, entry] of Object.entries(locationConfig)) {
+    if (segments.includes(slug) && entry.geometries) {
+      matchedGeometries = entry.geometries;
+      break;
+    }
+  }
+  if (!matchedGeometries || matchedGeometries.length === 0) return;
+
+  try {
+    const fc = turf.featureCollection(matchedGeometries.map(g => turf.feature(g)));
+    const merged = turf.union(fc);
+    if (!merged) return;
+
+    map.addSource("region-highlight", { type: "geojson", data: merged });
+
+    map.addLayer({
+      id: "region-highlight-outline",
+      type: "line",
+      source: "region-highlight",
+      paint: {
+        "line-color": "#c00",
+        "line-width": 2.5,
+        "line-opacity": 0.7
+      }
+    });
+  } catch (e) {
+    console.warn("Could not compute region union for highlight:", e);
+  }
 }
 
 // --- Source & Layer Setup ---
@@ -962,6 +972,7 @@ function initializeMap() {
       addCountrySourceAndLayers(map);
     } else {
       addRegionSourceAndLayers(map);
+      addRegionHighlight(map);
       addCountryMask(map, currentLocation);
     }
 

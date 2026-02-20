@@ -21,7 +21,7 @@ const MAP_STYLE = "mapbox://styles/jcbunch3/cljssqa5h01ch01o4adoyhdlt";
 const DEFAULT_CENTER = [8.8, 52.5];
 const DEFAULT_ZOOM_DESKTOP = 5.1;
 const DEFAULT_ZOOM_MOBILE = 4;
-const DATASET_ID = "cmljrq0xj0pp11mpcywksh76c";
+const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
 const USERNAME = "jcbunch3";
 
 const SOURCES = {
@@ -61,6 +61,19 @@ function computeBbox(geometry) {
   return [[minLng, minLat], [maxLng, maxLat]];
 }
 
+// Compute union bounding box across multiple geometries
+function computeUnionBbox(geometries) {
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  for (const geom of geometries) {
+    const [[gMinLng, gMinLat], [gMaxLng, gMaxLat]] = computeBbox(geom);
+    if (gMinLng < minLng) minLng = gMinLng;
+    if (gMinLat < minLat) minLat = gMinLat;
+    if (gMaxLng > maxLng) maxLng = gMaxLng;
+    if (gMaxLat > maxLat) maxLat = gMaxLat;
+  }
+  return [[minLng, minLat], [maxLng, maxLat]];
+}
+
 // Load location configuration from Historical Regions dataset (paginated)
 async function loadLocationConfig() {
   try {
@@ -83,6 +96,8 @@ async function loadLocationConfig() {
       startId = data.features[data.features.length - 1].id;
     }
 
+    // Group all geometries by URL slug (some regions have multiple polygons)
+    const slugGroups = {};
     allFeatures.forEach(feature => {
       const props = feature.properties;
       const geom = feature.geometry;
@@ -90,10 +105,19 @@ async function loadLocationConfig() {
       if (props.url && geom && (geom.type === "Polygon" || geom.type === "MultiPolygon")) {
         const urlSlug = props.url.split("/").pop();
         if (urlSlug) {
-          locationConfig[urlSlug] = { bbox: computeBbox(geom), geometry: geom };
+          if (!slugGroups[urlSlug]) slugGroups[urlSlug] = [];
+          slugGroups[urlSlug].push(geom);
         }
       }
     });
+
+    // Build locationConfig with union bbox and merged geometry per slug
+    for (const [slug, geometries] of Object.entries(slugGroups)) {
+      locationConfig[slug] = {
+        bbox: computeUnionBbox(geometries),
+        geometries: geometries
+      };
+    }
 
     isLocationConfigLoaded = true;
     console.log("Location config loaded:", Object.keys(locationConfig).length, "regions from dataset");
@@ -115,11 +139,11 @@ function getLocationBbox() {
   return null;
 }
 
-// Return the polygon geometry for the matched region (for map overlay)
-function getLocationGeometry() {
+// Return all polygon geometries for the matched region (for map overlay)
+function getLocationGeometries() {
   const segments = window.location.pathname.split("/");
   for (const [slug, entry] of Object.entries(locationConfig)) {
-    if (segments.includes(slug)) return entry.geometry;
+    if (segments.includes(slug)) return entry.geometries;
   }
   return null;
 }
@@ -236,14 +260,17 @@ function addOverlayLayers(map) {
 }
 
 // --- Region Highlight Layer ---
-// Draws the matched region polygon on the map in red (Feature — region outline)
+// Draws all matched region polygons on the map in red (handles partitioned regions)
 function addRegionHighlight(map) {
-  const geometry = getLocationGeometry();
-  if (!geometry) return;
+  const geometries = getLocationGeometries();
+  if (!geometries || geometries.length === 0) return;
 
   map.addSource("region-highlight", {
     type: "geojson",
-    data: { type: "Feature", geometry: geometry, properties: {} }
+    data: {
+      type: "FeatureCollection",
+      features: geometries.map(g => ({ type: "Feature", geometry: g, properties: {} }))
+    }
   });
 
   map.addLayer({
