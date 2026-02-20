@@ -90,7 +90,7 @@ async function loadLocationConfig() {
       if (props.url && geom && (geom.type === "Polygon" || geom.type === "MultiPolygon")) {
         const urlSlug = props.url.split("/").pop();
         if (urlSlug) {
-          locationConfig[urlSlug] = computeBbox(geom);
+          locationConfig[urlSlug] = { bbox: computeBbox(geom), geometry: geom };
         }
       }
     });
@@ -106,11 +106,20 @@ async function loadLocationConfig() {
 // Match current URL pathname segments against location slugs (fixes partial-match bug)
 function getLocationBbox() {
   const segments = window.location.pathname.split("/");
-  for (const [slug, bbox] of Object.entries(locationConfig)) {
+  for (const [slug, entry] of Object.entries(locationConfig)) {
     if (segments.includes(slug)) {
       console.log("Matched location:", slug);
-      return bbox;
+      return entry.bbox;
     }
+  }
+  return null;
+}
+
+// Return the polygon geometry for the matched region (for map overlay)
+function getLocationGeometry() {
+  const segments = window.location.pathname.split("/");
+  for (const [slug, entry] of Object.entries(locationConfig)) {
+    if (segments.includes(slug)) return entry.geometry;
   }
   return null;
 }
@@ -223,6 +232,39 @@ function addOverlayLayers(map) {
     "source-layer": "WineTest3-7cv5f4",
     layout: { visibility: "visible" },
     paint: { "fill-color": "#7e09a5", "fill-opacity": 0.4 }
+  });
+}
+
+// --- Region Highlight Layer ---
+// Draws the matched region polygon on the map in red (Feature — region outline)
+function addRegionHighlight(map) {
+  const geometry = getLocationGeometry();
+  if (!geometry) return;
+
+  map.addSource("region-highlight", {
+    type: "geojson",
+    data: { type: "Feature", geometry: geometry, properties: {} }
+  });
+
+  map.addLayer({
+    id: "region-highlight-fill",
+    type: "fill",
+    source: "region-highlight",
+    paint: {
+      "fill-color": "#999",
+      "fill-opacity": 0.1
+    }
+  });
+
+  map.addLayer({
+    id: "region-highlight-outline",
+    type: "line",
+    source: "region-highlight",
+    paint: {
+      "line-color": "#c00",
+      "line-width": 2.5,
+      "line-opacity": 0.7
+    }
   });
 }
 
@@ -728,6 +770,7 @@ function initializeMap() {
 
     addSkyLayer(map);
     addOverlayLayers(map);
+    addRegionHighlight(map);
     addPlacesLayers(map);
     addBuildingsLayer(map);
     addMapControls(map);

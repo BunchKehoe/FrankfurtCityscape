@@ -1,0 +1,994 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 70vh;
+    min-height: 600px;
+  }
+
+  .map-container-responsive {
+    height: 100% !important;
+  }
+
+  .map {
+    height: 100%;
+  }
+
+  .map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 350px;
+    top: 20px;
+    left: 20px;
+    padding: 20px;
+    display: none;
+    z-index: 1000;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+
+  .popupgl {
+    max-width: 380px;
+    min-width: 320px;
+    border: 2px solid #0a9396;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 1001;
+  }
+
+  .popupgl.region-colored {
+    border-width: 3px;
+  }
+
+  .popupgl .mapboxgl-popup-content {
+    padding: 12px;
+    border-radius: 6px;
+    background: transparent;
+  }
+
+  .popupgl .popup-layout {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .popupgl .popup-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
+  }
+
+  .popupgl .popup-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .popupgl .popup-region-label {
+    margin: 0 0 4px 0;
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .popupgl .popup-title {
+    margin: 0 0 4px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #333;
+  }
+
+  .popupgl .popup-subtitle {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .popupgl .popup-description {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .popupgl .popup-click-hint {
+    margin: 0;
+    font-size: 0.85em;
+    color: #0a9396;
+    font-style: italic;
+  }
+
+  .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+  .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    display: none;
+  }
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 768px) {
+    .map-container {
+      height: 60vh;
+      min-height: 400px;
+    }
+
+    .map {
+      height: 100%;
+    }
+
+    .map-overlay.visible {
+      display: block !important;
+      transform: translateY(0);
+    }
+
+    .map-overlay {
+      position: fixed !important;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      width: 100% !important;
+      height: auto;
+      max-height: 50vh;
+      border-radius: 12px 12px 0 0;
+      z-index: 9999 !important;
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      overflow-y: auto;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-overlay .close-button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #666;
+      transition: all 0.2s ease;
+      z-index: 10000;
+    }
+
+    .map-overlay .close-button:hover {
+      background: rgba(0, 0, 0, 0.2);
+      color: #333;
+    }
+
+    .map-overlay .close-button::before {
+      content: '×';
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .popupgl {
+      max-width: 60px;
+      min-width: 60px;
+    }
+
+    .popupgl .mapboxgl-popup-content {
+      padding: 0;
+    }
+
+    .popupgl .popup-layout {
+      display: block;
+    }
+
+    .popupgl .popup-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .popupgl .popup-content {
+      display: none;
+    }
+  }
+
+  /* Overlay Content Styles */
+  .overlay-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .overlay-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
+  }
+
+  .overlay-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .overlay-text h2,
+  .overlay-text h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .overlay-text .region-label {
+    margin: 0 0 4px 0;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .overlay-text .main-title {
+    margin: 0 0 4px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .overlay-text p {
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .overlay-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a9396;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .overlay-button:hover {
+    background-color: #087f83;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(10, 147, 150, 0.3);
+  }
+
+  .overlay-button:active {
+    transform: translateY(0);
+  }
+
+  /* Utility classes */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    margin: 0;
+    text-align: left;
+  }
+
+  .regionleft {
+    margin: 0;
+    text-align: left;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .text {
+    flex: 1;
+  }
+
+  .infoImg {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 2px solid #f0f0f0;
+  }
+</style>
+
+<div class="map-container">
+  <div id="map" class="map"></div>
+  <div id="map-overlay" class="map-overlay"></div>
+</div>
+
+<script>
+// ============================================================
+// RegionSelector — Refactored 2026-02-20
+// ============================================================
+
+// --- Constants ---
+const MAPBOX_TOKEN = "pk.eyJ1IjoiamNidW5jaDMiLCJhIjoiY2t6NzM0em9uMGlvbzMwbWdkbmR5N2loaCJ9.eKquRAbhpJDDshFFKtd9Yw";
+const USERNAME = "jcbunch3";
+const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
+
+const MAP_STYLES = {
+  desktop: "mapbox://styles/jcbunch3/clkcgdemj001701pg5l2t71bo",
+  mobile: "mapbox://styles/jcbunch3/clkch6f0s001901ny45c487ne",
+  country: "mapbox://styles/jcbunch3/cljq7s8l500yu01p54jix6dqz"
+};
+
+const DEFAULT_CENTER = [8.8, 52.5];
+const DEFAULT_ZOOM = { mobile: 4, desktop: 5.1 };
+
+// Region border color lookup (keys are lowercase to match case-insensitively)
+const REGION_COLORS = {
+  "baltic": "rgb(10, 147, 150)",
+  "denmark": "rgb(155, 34, 38)",
+  "brandenburg": "rgb(202, 103, 2)",
+  "saxony": "rgb(0, 95, 115)",
+  "hessen-nassau": "rgb(0, 18, 25)",
+  "franconia": "rgb(174, 32, 18)",
+  "bavaria": "rgb(0, 18, 26)",
+  "swabia": "rgb(233, 216, 166)",
+  "lorraine": "rgb(240, 156, 0)",
+  "rhine-maas": "rgb(85, 23, 17)",
+  "upper-rhine": "rgb(148, 210, 189)",
+  "westphalia": "rgb(187, 62, 3)",
+  "the-lowlands": "rgb(41, 82, 117)"
+};
+
+// Country name → URL slug mapping (for dynamic bbox from dataset)
+const COUNTRY_SLUGS = {
+  "Germany": "germany",
+  "Austria": "austria",
+  "Denmark": "denmark",
+  "Bulgaria": "bulgaria",
+  "North Macedonia": "north-macedonia",
+  "France": "france",
+  "Italy": "italy",
+  "Netherlands": "netherlands",
+  "Belgium": "belgium",
+  "Switzerland": "switzerland",
+  "Luxembourg": "luxembourg",
+  "Slovenia": "slovenia",
+  "Croatia": "croatia",
+  "Slovakia": "slovakia",
+  "Poland": "poland",
+  "Czechia": "czechia",
+  "Sweden": "sweden",
+  "Romania": "romania",
+  "Greece": "greece",
+  "Turkey": "turkey"
+};
+
+// Country masks: URL slug → country name for the boundary filter
+const COUNTRY_MASKS = {
+  "germany": "Germany",
+  "bulgaria": "Bulgaria",
+  "north-macedonia": "North Macedonia",
+  "denmark": "Denmark"
+};
+
+// Property name mapping per zoom / interaction level
+const LEVEL_PROPS = {
+  empire:    { name: "empire",  image: "empireIcoUrl",  url: "empireUrl",  subtitle: null,       desc: "empireDesc",  regionLabel: null,     highlightProp: "empire", highlightLayer: "empires-highlighted" },
+  region:    { name: "region",  image: "regionIcoUrl",  url: "regionUrl",  subtitle: "subtitle", desc: "regionDesc",  regionLabel: null,     highlightProp: "region", highlightLayer: "regions-highlighted" },
+  subregion: { name: "name",    image: "icoUrl",        url: "url",        subtitle: "subtitle", desc: "desc",        regionLabel: "region", highlightProp: "name",   highlightLayer: "subregions-highlighted" },
+  country:   { name: "name",    image: "icourl",        url: "url",        subtitle: null,       desc: "desc",        regionLabel: null,     highlightProp: "name",   highlightLayer: "countries-highlighted" }
+};
+
+// Shared highlight paint used by all highlight layers
+const HIGHLIGHT_PAINT = {
+  "fill-outline-color": "#6c757d",
+  "fill-color": "#6c757d",
+  "fill-opacity": 0.7
+};
+
+// --- State ---
+let locationConfig = {};
+let isLocationConfigLoaded = false;
+
+// --- Bounding Box Utilities ---
+
+// Compute bounding box from a single Polygon or MultiPolygon geometry
+function computeBbox(geometry) {
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  const rings = geometry.type === "MultiPolygon"
+    ? geometry.coordinates.flat()
+    : geometry.coordinates;
+  for (const ring of rings) {
+    for (const [lng, lat] of ring) {
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+    }
+  }
+  return [[minLng, minLat], [maxLng, maxLat]];
+}
+
+// Compute union bounding box across multiple geometries
+function computeUnionBbox(geometries) {
+  let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+  for (const geom of geometries) {
+    const [[gMinLng, gMinLat], [gMaxLng, gMaxLat]] = computeBbox(geom);
+    if (gMinLng < minLng) minLng = gMinLng;
+    if (gMinLat < minLat) minLat = gMinLat;
+    if (gMaxLng > maxLng) maxLng = gMaxLng;
+    if (gMaxLat > maxLat) maxLat = gMaxLat;
+  }
+  return [[minLng, minLat], [maxLng, maxLat]];
+}
+
+// Extract the last path segment from a URL as a slug
+function extractSlug(url) {
+  if (!url) return null;
+  const slug = url.replace(/\/$/, "").split("/").pop();
+  return slug || null;
+}
+
+// --- Location Config Loading (from Datasets API, paginated) ---
+async function loadLocationConfig() {
+  try {
+    const limit = 100;
+    let allFeatures = [];
+    let startId = null;
+
+    while (true) {
+      let url = `https://api.mapbox.com/datasets/v1/${USERNAME}/${DATASET_ID}/features?limit=${limit}&access_token=${MAPBOX_TOKEN}`;
+      if (startId) url += `&start=${startId}`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (!data.features || data.features.length === 0) break;
+      allFeatures = allFeatures.concat(data.features);
+      startId = data.features[data.features.length - 1].id;
+    }
+
+    // Group geometries by region URL slug and by country
+    const regionGroups = {};
+    const countryGroups = {};
+
+    allFeatures.forEach(feature => {
+      const props = feature.properties;
+      const geom = feature.geometry;
+      if (!geom || (geom.type !== "Polygon" && geom.type !== "MultiPolygon")) return;
+
+      // Region level: group all subregion polygons that share the same regionUrl
+      const regionSlug = extractSlug(props.regionUrl);
+      if (regionSlug) {
+        if (!regionGroups[regionSlug]) regionGroups[regionSlug] = [];
+        regionGroups[regionSlug].push(geom);
+      }
+
+      // Country level: group by each country in the countries list
+      const countries = props.countries;
+      if (Array.isArray(countries)) {
+        for (const country of countries) {
+          const slug = COUNTRY_SLUGS[country];
+          if (slug) {
+            if (!countryGroups[slug]) countryGroups[slug] = [];
+            countryGroups[slug].push(geom);
+          }
+        }
+      }
+    });
+
+    // Compute union bboxes for each region (envelope of all its subregions)
+    for (const [slug, geometries] of Object.entries(regionGroups)) {
+      locationConfig[slug] = { bbox: computeUnionBbox(geometries) };
+    }
+
+    // Compute union bboxes for each country (envelope of all its subregions)
+    for (const [slug, geometries] of Object.entries(countryGroups)) {
+      locationConfig[slug] = { bbox: computeUnionBbox(geometries) };
+    }
+
+    isLocationConfigLoaded = true;
+    console.log("Location config loaded:", Object.keys(locationConfig).length, "entries from dataset");
+  } catch (error) {
+    console.error("Failed to load location config:", error);
+    isLocationConfigLoaded = true;
+  }
+}
+
+// --- URL Matching ---
+// Match current URL path segments against location config slugs
+function getLocationBbox() {
+  const segments = window.location.pathname.split("/");
+  for (const [slug, entry] of Object.entries(locationConfig)) {
+    if (segments.includes(slug)) {
+      console.log("Matched location:", slug);
+      return entry.bbox;
+    }
+  }
+  return null;
+}
+
+// --- Region Colors ---
+function getRegionColor(feature) {
+  const region = (feature.properties.region || "").toLowerCase();
+  return REGION_COLORS[region] || "rgb(10, 147, 150)";
+}
+
+// --- Interaction Level ---
+// Returns "empire", "region", "subregion", or "country" based on zoom + context
+function getInteractionLevel(zoom, isCountryMap, isMobile) {
+  if (isCountryMap) return "country";
+  if (isMobile) {
+    if (zoom < 4) return "empire";
+    if (zoom <= 5) return "region";
+    return "subregion";
+  }
+  if (zoom <= 5) return "empire";
+  if (zoom <= 6) return "region";
+  return "subregion";
+}
+
+// --- HTML Generators ---
+
+// Popup HTML: desktop shows image + title + subtitle; mobile shows image-only link
+function getPopupHtml(feature, level, isMobile) {
+  const p = feature.properties;
+  if (!p || !p.name) return null;
+
+  const lp = LEVEL_PROPS[level];
+  const name = p[lp.name] || "";
+  const image = p[lp.image] || "";
+
+  // Mobile: just the image wrapped in a link
+  if (isMobile) {
+    const url = p[lp.url] || "";
+    return {
+      html: `<div class="popup-layout"><a href="${url}"><img class="popup-image" src="${image}"/></a></div>`,
+      borderColor: null
+    };
+  }
+
+  // Desktop: full popup with title and subtitle
+  const borderColor = level !== "country" ? getRegionColor(feature) : null;
+  const titleTag = (level === "region" || level === "subregion") ? "h3" : "h2";
+
+  let regionLabel = "";
+  if (level === "subregion") {
+    regionLabel = `<div class="popup-region-label">${p.region || ""}</div>`;
+  }
+
+  let subtitle = "";
+  if (level === "country") {
+    subtitle = `<p class="popup-click-hint">Click on the Map to Learn More</p>`;
+  } else if (level === "empire") {
+    subtitle = `<p class="popup-subtitle">${p.region || ""}</p>`;
+  } else if (lp.subtitle && p[lp.subtitle]) {
+    const cls = level === "subregion" ? "popup-description" : "popup-subtitle";
+    subtitle = `<p class="${cls}">${p[lp.subtitle]}</p>`;
+  }
+
+  return {
+    html: `<div class="popup-layout"><img class="popup-image" src="${image}"/><div class="popup-content">${regionLabel}<${titleTag} class="popup-title">${name}</${titleTag}>${subtitle}</div></div>`,
+    borderColor
+  };
+}
+
+// Sidebar HTML: desktop (no button/close), mobile (with close button + action button)
+function getSidebarHtml(feature, level, isMobile) {
+  const p = feature.properties;
+  if (!p || !p.name) return null;
+
+  const lp = LEVEL_PROPS[level];
+  const name = p[lp.name] || "";
+  const image = p[lp.image] || "";
+  const desc = p[lp.desc] || "";
+  const url = p[lp.url] || "";
+
+  let regionLabel = "";
+  if (lp.regionLabel && p[lp.regionLabel]) {
+    regionLabel = `<div class="region-label">${p[lp.regionLabel]}</div>`;
+  }
+
+  if (isMobile) {
+    const cls = level === "country" ? "" : ' class="main-title"';
+    return `<button class="close-button" onclick="closeMobileSidebar()"></button>` +
+      `<div class="overlay-content"><img class="overlay-image" src="${image}"/>` +
+      `<div class="overlay-text">${regionLabel}<h2${cls}>${name}</h2></div></div>` +
+      `<p class="overlay-text">${desc}</p>` +
+      `<div class="center"><a href="${url}" class="overlay-button">Discover More</a></div>`;
+  }
+
+  // Desktop sidebar: no close button, no action button
+  const cls = level === "country" ? "" : ' class="main-title"';
+  return `<div class="overlay-content"><img class="overlay-image" src="${image}"/>` +
+    `<div class="overlay-text">${regionLabel}<h3${cls}>${name}</h3></div></div>` +
+    `<p class="overlay-text">${desc}</p>`;
+}
+
+// --- Highlight & Filter Helpers ---
+
+function applyHighlight(map, feature, level, isCountryMap) {
+  removeHighlights(map, isCountryMap);
+  const lp = LEVEL_PROPS[level];
+  if (map.getLayer(lp.highlightLayer)) {
+    map.setFilter(lp.highlightLayer, ["in", lp.highlightProp, feature.properties[lp.highlightProp]]);
+  }
+}
+
+function removeHighlights(map, isCountryMap) {
+  if (isCountryMap) {
+    if (map.getLayer("countries-highlighted")) {
+      map.setFilter("countries-highlighted", ["in", "name", ""]);
+    }
+  } else {
+    if (map.getLayer("regions-highlighted")) {
+      map.setFilter("regions-highlighted", ["in", "region", ""]);
+    }
+    if (map.getLayer("subregions-highlighted")) {
+      map.setFilter("subregions-highlighted", ["in", "name", ""]);
+    }
+    if (map.getLayer("empires-highlighted")) {
+      map.setFilter("empires-highlighted", ["in", "empire", ""]);
+    }
+  }
+}
+
+// --- Popup Color ---
+// Apply region-specific border color directly to the popup element
+function applyPopupColor(popup, borderColor) {
+  if (!borderColor) return;
+  const el = popup.getElement();
+  if (el) {
+    el.style.borderColor = borderColor;
+    el.classList.add("region-colored");
+  }
+}
+
+// --- Navigation ---
+function navigateToFeature(feature, level) {
+  const lp = LEVEL_PROPS[level];
+  const url = feature.properties[lp.url];
+  if (url) window.open(url);
+}
+
+// --- Mobile Sidebar ---
+function closeMobileSidebar() {
+  const overlay = document.getElementById("map-overlay");
+  if (overlay) overlay.classList.remove("visible");
+}
+
+// --- Source & Layer Setup ---
+
+function addRegionSourceAndLayers(map) {
+  map.addSource("regions", {
+    type: "vector",
+    url: "mapbox://jcbunch3.ckz73840i06b520t0qegud162-2862c"
+  });
+
+  // Invisible base layer for mouse/click events
+  map.addLayer({
+    id: "regions",
+    type: "fill",
+    source: "regions",
+    "source-layer": "HistoricalRegions",
+    paint: {
+      "fill-outline-color": "rgba(0,0,0,0)",
+      "fill-color": "rgba(0,0,0,0)"
+    }
+  });
+
+  // Highlight layers — initially hidden via empty filter
+  map.addLayer({
+    id: "empires-highlighted",
+    type: "fill",
+    source: "regions",
+    "source-layer": "HistoricalRegions",
+    paint: HIGHLIGHT_PAINT,
+    filter: ["in", "empire", ""]
+  });
+
+  map.addLayer({
+    id: "regions-highlighted",
+    type: "fill",
+    source: "regions",
+    "source-layer": "HistoricalRegions",
+    paint: HIGHLIGHT_PAINT,
+    filter: ["in", "region", ""]
+  });
+
+  map.addLayer({
+    id: "subregions-highlighted",
+    type: "fill",
+    source: "regions",
+    "source-layer": "HistoricalRegions",
+    paint: HIGHLIGHT_PAINT,
+    filter: ["in", "name", ""]
+  });
+}
+
+function addCountrySourceAndLayers(map) {
+  map.addSource("countries", {
+    type: "vector",
+    url: "mapbox://jcbunch3.cljq7ftq50rga2pt6ivoiq1ha-791oe"
+  });
+
+  map.addLayer({
+    id: "countries",
+    type: "fill",
+    source: "countries",
+    "source-layer": "Countries",
+    paint: {
+      "fill-outline-color": "rgba(0,0,0,0)",
+      "fill-color": "rgba(0,0,0,0)"
+    }
+  });
+
+  map.addLayer({
+    id: "countries-highlighted",
+    type: "fill",
+    source: "countries",
+    "source-layer": "Countries",
+    paint: HIGHLIGHT_PAINT,
+    filter: ["in", "name", ""]
+  });
+}
+
+// Add a gray mask over all countries except the specified one
+function addCountryMask(map, currentLocation) {
+  for (const [slug, countryName] of Object.entries(COUNTRY_MASKS)) {
+    if (currentLocation.includes(`exploring-europe-by-country/${slug}`)) {
+      map.addSource("country-boundaries", {
+        type: "vector",
+        url: "mapbox://mapbox.country-boundaries-v1"
+      });
+      map.addLayer({
+        id: "country-mask",
+        type: "fill",
+        source: "country-boundaries",
+        "source-layer": "country_boundaries",
+        paint: {
+          "fill-outline-color": "#6c757d",
+          "fill-color": "#6c757d",
+          "fill-opacity": 0.6
+        },
+        filter: ["!=", "name_en", countryName]
+      });
+      return;
+    }
+  }
+}
+
+// --- Event Setup ---
+
+function setupDesktopEvents(map, overlay, popup, isCountryMap) {
+  const sourceLayer = isCountryMap ? "countries" : "regions";
+  let currentFeatureId = null;
+
+  map.on("mousemove", sourceLayer, (e) => {
+    map.getCanvas().style.cursor = "pointer";
+    const feature = e.features[0];
+
+    // Deduplicate: skip full re-render if hovering the same feature
+    const level = getInteractionLevel(map.getZoom(), isCountryMap, false);
+    const lp = LEVEL_PROPS[level];
+    const featureId = level + ":" + (feature.properties[lp.name] || "");
+
+    if (featureId === currentFeatureId) {
+      // Same feature — just update popup position
+      popup.setLngLat(e.lngLat);
+      return;
+    }
+    currentFeatureId = featureId;
+
+    applyHighlight(map, feature, level, isCountryMap);
+
+    const popupResult = getPopupHtml(feature, level, false);
+    const sidebarContent = getSidebarHtml(feature, level, false);
+
+    if (sidebarContent) {
+      overlay.innerHTML = sidebarContent;
+      overlay.style.display = "block";
+    }
+
+    if (popupResult) {
+      popup.setLngLat(e.lngLat).setHTML(popupResult.html).setMaxWidth("none").addTo(map);
+      applyPopupColor(popup, popupResult.borderColor);
+    }
+  });
+
+  // Navigate on click — no listener stacking
+  map.on("click", sourceLayer, (e) => {
+    const feature = e.features[0];
+    const level = getInteractionLevel(map.getZoom(), isCountryMap, false);
+    navigateToFeature(feature, level);
+  });
+
+  map.on("mouseleave", sourceLayer, () => {
+    map.getCanvas().style.cursor = "";
+    currentFeatureId = null;
+    removeHighlights(map, isCountryMap);
+    popup.remove();
+    overlay.style.display = "none";
+  });
+
+  // Shared clear handler for zoom/move
+  const clearState = () => {
+    map.getCanvas().style.cursor = "";
+    currentFeatureId = null;
+    removeHighlights(map, isCountryMap);
+    popup.remove();
+    overlay.style.display = "none";
+  };
+
+  map.on("zoomstart", clearState);
+  map.on("movestart", clearState);
+}
+
+function setupMobileEvents(map, overlay, popup, isCountryMap) {
+  const sourceLayer = isCountryMap ? "countries" : "regions";
+
+  map.on("click", sourceLayer, (e) => {
+    const feature = e.features[0];
+    const level = getInteractionLevel(map.getZoom(), isCountryMap, true);
+
+    applyHighlight(map, feature, level, isCountryMap);
+
+    const popupResult = getPopupHtml(feature, level, true);
+    const sidebarContent = getSidebarHtml(feature, level, true);
+
+    if (sidebarContent) {
+      overlay.innerHTML = sidebarContent;
+      overlay.classList.add("visible");
+    }
+
+    if (popupResult) {
+      popup.setLngLat(e.lngLat).setHTML(popupResult.html).setMaxWidth("none").addTo(map);
+    }
+  });
+
+  const clearState = () => {
+    removeHighlights(map, isCountryMap);
+    popup.remove();
+    closeMobileSidebar();
+  };
+
+  map.on("zoomstart", clearState);
+  map.on("mousedown", clearState);
+}
+
+// --- Main Initialization ---
+function initializeMap() {
+  mapboxgl.accessToken = MAPBOX_TOKEN;
+  const isMobile = window.innerWidth <= 991;
+  const currentLocation = window.location.href;
+
+  // Country map mode: the "by country" overview page (no specific country selected)
+  const isCountryMap = currentLocation.includes("exploring-europe-by-country") &&
+    !currentLocation.includes("germany") &&
+    !currentLocation.includes("denmark") &&
+    !currentLocation.includes("north-macedonia") &&
+    !currentLocation.includes("bulgaria");
+
+  const style = isCountryMap
+    ? MAP_STYLES.country
+    : (isMobile ? MAP_STYLES.mobile : MAP_STYLES.desktop);
+
+  // Determine initial view: use dynamic bbox from dataset if available
+  const bbox = getLocationBbox();
+
+  const mapOptions = {
+    container: "map",
+    style: style
+  };
+
+  if (bbox) {
+    mapOptions.bounds = bbox;
+    mapOptions.fitBoundsOptions = { padding: isMobile ? 30 : 60 };
+  } else {
+    mapOptions.center = DEFAULT_CENTER;
+    mapOptions.zoom = isMobile ? DEFAULT_ZOOM.mobile : DEFAULT_ZOOM.desktop;
+  }
+
+  const map = new mapboxgl.Map(mapOptions);
+  map.on("error", (e) => console.error("Map error:", e.error));
+
+  map.addControl(new mapboxgl.FullscreenControl(), "bottom-left");
+  map.addControl(new mapboxgl.NavigationControl(), "top-right");
+
+  const overlay = document.getElementById("map-overlay");
+
+  map.on("load", () => {
+    // Add sources and layers based on mode
+    if (isCountryMap) {
+      addCountrySourceAndLayers(map);
+    } else {
+      addRegionSourceAndLayers(map);
+      addCountryMask(map, currentLocation);
+    }
+
+    // Create popup with platform-appropriate options
+    const popupOptions = {
+      closeButton: false,
+      className: "popupgl",
+      closeOnClick: isMobile
+    };
+
+    if (!isMobile) {
+      popupOptions.anchor = "bottom";
+      popupOptions.offset = [0, -15];
+      popupOptions.maxWidth = "300px";
+    }
+
+    const popup = new mapboxgl.Popup(popupOptions);
+
+    // Set up interaction events based on platform
+    if (isMobile) {
+      setupMobileEvents(map, overlay, popup, isCountryMap);
+    } else {
+      setupDesktopEvents(map, overlay, popup, isCountryMap);
+    }
+  });
+}
+
+// --- Boot ---
+loadLocationConfig().then(() => initializeMap());
+</script>

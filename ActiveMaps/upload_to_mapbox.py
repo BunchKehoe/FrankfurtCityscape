@@ -174,9 +174,9 @@ def main():
         sys.exit(1)
     
     # Dataset details
-    DATASET_NAME = "HistoricalRegions_v2.0"
-    DATASET_DESCRIPTION = "Historical regions of Central Europe with detailed properties"
-    GEOJSON_FILE = "HistoricalRegions_filtered.geojson"
+    DATASET_NAME = "HistoricalRegions_v3.0"
+    DATASET_DESCRIPTION = "Historical regions with country assignments"
+    GEOJSON_FILE = "HistoricalRegions_v3.0.geojson"
     
     # Create uploader
     uploader = MapboxDatasetUploader(MAPBOX_USERNAME, MAPBOX_ACCESS_TOKEN)
