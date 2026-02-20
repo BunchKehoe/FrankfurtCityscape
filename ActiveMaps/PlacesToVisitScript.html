@@ -650,6 +650,26 @@ function setupDesktopPopups(map) {
   });
 }
 
+// --- 3D Buildings Layer ---
+function addBuildingsLayer(map) {
+  if (!map.getSource("composite")) return;
+  const layers = map.getStyle().layers;
+  const labelLayerId = (layers.find(l => l.type === "symbol" && l.layout && l.layout["text-field"]) || {}).id;
+  map.addLayer({
+    id: "3d-buildings",
+    source: "composite",
+    "source-layer": "building",
+    type: "fill-extrusion",
+    minzoom: 13,
+    paint: {
+      "fill-extrusion-color": "#aaa",
+      "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, ["get", "height"]],
+      "fill-extrusion-base": ["interpolate", ["linear"], ["zoom"], 13, 0, 13.5, ["get", "min_height"]],
+      "fill-extrusion-opacity": 0.6
+    }
+  }, labelLayerId);
+}
+
 // --- Main Initialization ---
 function initializeMap() {
   mapboxgl.accessToken = MAPBOX_TOKEN;
@@ -662,6 +682,7 @@ function initializeMap() {
   const mapOptions = {
     container: "map",
     style: MAP_STYLE,
+    projection: "globe",
     cooperativeGestures: isMobile,
     optimizeForTerrain: true,
     fadeDuration: 300,
@@ -686,9 +707,29 @@ function initializeMap() {
   map.on("load", () => {
     addSources(map);
     map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+    map.setFog({
+      range: [0.5, 10],
+      color: "#dceaf6",
+      "high-color": "#245bde",
+      "horizon-blend": 0.05,
+      "star-intensity": 0.15
+    });
+
+    // Zoom-dependent terrain exaggeration: dramatic at distance, flatter in cities
+    let _lastExaggeration = 1.5;
+    map.on("zoom", () => {
+      const z = map.getZoom();
+      const ex = z <= 8 ? 1.5 : z >= 13 ? 1.0 : parseFloat((1.5 - ((z - 8) / 5) * 0.5).toFixed(2));
+      if (ex !== _lastExaggeration) {
+        _lastExaggeration = ex;
+        map.setTerrain({ source: "mapbox-dem", exaggeration: ex });
+      }
+    });
+
     addSkyLayer(map);
     addOverlayLayers(map);
     addPlacesLayers(map);
+    addBuildingsLayer(map);
     addMapControls(map);
 
     const activeFilters = new Set(DEFAULT_ACTIVE_FILTERS);
