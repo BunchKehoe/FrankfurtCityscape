@@ -1,11 +1,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
-<style>:root{--primary-red:#c00;--primary-green:#285c3a;--background-white:#fff;--shadow-light:rgba(0,0,0,0.1);--shadow-medium:rgba(0,0,0,0.15);--border-radius:8px;--spacing-xs:4px;--spacing-sm:8px;--spacing-md:12px;--spacing-lg:16px;--spacing-xl:24px;--font-family-primary:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--font-size-sm:0.875rem;--font-size-md:1rem;--font-size-lg:1.125rem;--line-height-normal:1.5;--transition-fast:0.2s ease}*{box-sizing:border-box}@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");.map{width:100%;height:100%;border-radius:var(--border-radius);overflow:visible}.map-container{width:100%;height:700px;position:relative;border-radius:var(--border-radius);overflow:visible;box-shadow:0 4px 12px var(--shadow-medium)}.mapboxgl-popup{max-width:400px;font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal)}.mapboxgl-popup-content{padding:var(--spacing-md);border-radius:var(--border-radius)}.popup-content{text-align:center}.popup-title{font-weight:600;margin-bottom:var(--spacing-sm);color:#333}.popup-button{background:var(--primary-red);color:white;border:none;padding:var(--spacing-xs) var(--spacing-md);border-radius:var(--spacing-xs);font-size:var(--font-size-sm);font-weight:600;cursor:pointer;transition:background-color var(--transition-fast)}.popup-button:hover{background:#a00}.popup-button:disabled{background:#ccc;cursor:not-allowed}.popup-button:disabled:hover{background:#ccc}.popup-close{position:absolute;top:8px;right:8px;background:none;border:none;font-size:18px;cursor:pointer;color:#999;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all var(--transition-fast)}.popup-close:hover{background:#f0f0f0;color:#666}.legend{max-width:280px;width:45%;max-height:90%;overflow-y:auto;display:none;background-color:var(--background-white);border-radius:var(--border-radius);top:var(--spacing-lg);left:var(--spacing-lg);box-shadow:0 4px 12px var(--shadow-medium);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;z-index:1000;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}.legend-mobile{background-color:var(--background-white);display:none;border-radius:var(--border-radius);box-shadow:0 2px 8px var(--shadow-light);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;width:85%;max-height:70vh;overflow-y:auto;left:50%;top:60px;transform:translateX(-50%);z-index:9999;max-width:280px}.legend-toggle-btn{position:absolute;top:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none}.legend-close-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:18px;cursor:pointer;color:#666}.legend h4,.legend-mobile h4{margin:0 0 var(--spacing-md) 0;font-size:var(--font-size-lg);font-weight:700;color:#333;border-bottom:2px solid #f0f0f0;padding-bottom:var(--spacing-xs)}.legend-section{margin-bottom:var(--spacing-md)}.legend-section:last-child{margin-bottom:0}.legend-section h5{margin:0 0 var(--spacing-xs) 0;font-size:var(--font-size-sm);font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.5px}.legend-item{display:flex;align-items:center;margin-bottom:var(--spacing-xs);padding:2px 0;transition:all var(--transition-fast);cursor:pointer;border-radius:var(--spacing-xs)}.legend-item:hover{background-color:#f8f9fa;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.active{background-color:#e3f2fd;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive{opacity:0.4;background-color:#f5f5f5;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive svg{opacity:0.5}.legend-item.inactive .color-indicator{opacity:0.5}.legend-item svg{margin-right:var(--spacing-sm);flex-shrink:0}.legend-item span.color-indicator{display:inline-block;width:15px;height:15px;margin-right:var(--spacing-sm);border-radius:2px;flex-shrink:0}.destination-type{font-weight:600;margin-bottom:2px}.destination-type.top{color:var(--primary-red)}.destination-type.worth{color:var(--primary-red);font-weight:400}.destination-type.special{color:#666;font-weight:300}.destination-type.natural{color:var(--primary-green);font-style:italic;font-weight:600}@media (max-width:991px){.map-container{height:70vh}.legend{max-width:220px;width:40%;padding:var(--spacing-md)}.map-container{border-radius:var(--spacing-xs)}}@media (max-width:576px){.legend{display:none!important}.legend-mobile{display:none}.legend-toggle-btn{display:block}.legend h4{font-size:var(--font-size-md)}}</style>
+<style>:root{--primary-red:#c00;--primary-green:#285c3a;--background-white:#fff;--shadow-light:rgba(0,0,0,0.1);--shadow-medium:rgba(0,0,0,0.15);--border-radius:8px;--spacing-xs:4px;--spacing-sm:8px;--spacing-md:12px;--spacing-lg:16px;--spacing-xl:24px;--font-family-primary:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--font-size-sm:0.875rem;--font-size-md:1rem;--font-size-lg:1.125rem;--line-height-normal:1.5;--transition-fast:0.2s ease}*{box-sizing:border-box}@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");.map{width:100%;height:100%;border-radius:var(--border-radius);overflow:visible}.map-container{width:100%;height:700px;position:relative;border-radius:var(--border-radius);overflow:visible;box-shadow:0 4px 12px var(--shadow-medium)}.mapboxgl-popup{max-width:400px;font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal)}.mapboxgl-popup-content{padding:var(--spacing-md);border-radius:var(--border-radius)}.popup-content{text-align:center}.popup-title{font-weight:600;margin-bottom:var(--spacing-sm);color:#333}.popup-button{background:var(--primary-red);color:white;border:none;padding:var(--spacing-xs) var(--spacing-md);border-radius:var(--spacing-xs);font-size:var(--font-size-sm);font-weight:600;cursor:pointer;transition:background-color var(--transition-fast)}.popup-button:hover{background:#a00}.popup-button:disabled{background:#ccc;cursor:not-allowed}.popup-button:disabled:hover{background:#ccc}.popup-close{position:absolute;top:8px;right:8px;background:none;border:none;font-size:18px;cursor:pointer;color:#999;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all var(--transition-fast)}.popup-close:hover{background:#f0f0f0;color:#666}.legend{max-width:280px;width:45%;max-height:90%;overflow-y:auto;display:none;background-color:var(--background-white);border-radius:var(--border-radius);top:var(--spacing-lg);left:var(--spacing-lg);box-shadow:0 4px 12px var(--shadow-medium);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;z-index:1000;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}.legend-mobile{background-color:var(--background-white);display:none;border-radius:var(--border-radius);box-shadow:0 2px 8px var(--shadow-light);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;width:85%;max-height:70vh;overflow-y:auto;left:50%;top:60px;transform:translateX(-50%);z-index:9999;max-width:280px}.legend-toggle-btn{position:absolute;top:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none}.legend-close-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:18px;cursor:pointer;color:#666}.legend h4,.legend-mobile h4{margin:0 0 var(--spacing-md) 0;font-size:var(--font-size-lg);font-weight:700;color:#333;border-bottom:2px solid #f0f0f0;padding-bottom:var(--spacing-xs)}.legend-section{margin-bottom:var(--spacing-md)}.legend-section:last-child{margin-bottom:0}.legend-section h5{margin:0 0 var(--spacing-xs) 0;font-size:var(--font-size-sm);font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.5px}.legend-item{display:flex;align-items:center;margin-bottom:var(--spacing-xs);padding:2px 0;transition:all var(--transition-fast);cursor:pointer;border-radius:var(--spacing-xs)}.legend-item:hover{background-color:#f8f9fa;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.active{background-color:#e3f2fd;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive{opacity:0.4;background-color:#f5f5f5;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive svg{opacity:0.5}.legend-item.inactive .color-indicator{opacity:0.5}.legend-item svg{margin-right:var(--spacing-sm);flex-shrink:0}.legend-item span.color-indicator{display:inline-block;width:15px;height:15px;margin-right:var(--spacing-sm);border-radius:2px;flex-shrink:0}.destination-type{font-weight:600;margin-bottom:2px}.destination-type.top{color:var(--primary-red)}.destination-type.worth{color:var(--primary-red);font-weight:400}.destination-type.special{color:#666;font-weight:300}.destination-type.natural{color:var(--primary-green);font-style:italic;font-weight:600}@media (max-width:991px){.map-container{height:70vh}.legend{max-width:220px;width:40%;padding:var(--spacing-md)}.map-container{border-radius:var(--spacing-xs)}}.gesture-toggle-btn{position:absolute;bottom:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none;line-height:1}.gesture-toggle-btn.unlocked{background-color:var(--primary-red);color:white}@media (max-width:576px){.legend{display:none!important}.legend-mobile{display:none}.legend-toggle-btn{display:block}.gesture-toggle-btn{display:block}.legend h4{font-size:var(--font-size-md)}}</style>
 <div class="map-container">
 <div id="map" class="map"></div>
 <div id="legend" class="legend"></div>
 <button id="legend-toggle" class="legend-toggle-btn">Show Legend</button>
+<button id="gesture-toggle" class="gesture-toggle-btn" title="Toggle map interaction lock">🔒 Locked</button>
 <div id="legend-mobile" class="legend-mobile">
 <button id="legend-close" class="legend-close-btn">×</button>
 </div>
@@ -25,7 +26,7 @@ const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
 const USERNAME = "jcbunch3";
 
 const SOURCES = {
-  "places": "mapbox://jcbunch3.cmd6clxb92tlo1ns8ro5qgig8-0g7n5",
+  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-4gygt",
   "cultural-landscapes": "mapbox://jcbunch3.9b7pcnhy",
   "national-parks": "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
   "railroads": "mapbox://jcbunch3.8o05xvpq",
@@ -395,7 +396,7 @@ function addPlacesLayers(map) {
     id: "places-icons-regional",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit6",
+    "source-layer": "PlacesToVisit7",
     minzoom: 0,
     maxzoom: 14,
     filter: [
@@ -415,7 +416,7 @@ function addPlacesLayers(map) {
     id: "places-icons-priority",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit6",
+    "source-layer": "PlacesToVisit7",
     minzoom: 0,
     maxzoom: 14,
     filter: [
@@ -434,7 +435,7 @@ function addPlacesLayers(map) {
     id: "places-icons-city",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit6",
+    "source-layer": "PlacesToVisit7",
     minzoom: 12,
     maxzoom: 22,
     filter: ["==", ["get", "zoom"], "city"],
@@ -752,7 +753,7 @@ function initializeMap() {
     container: "map",
     style: MAP_STYLE,
     projection: "globe",
-    cooperativeGestures: isMobile,
+    cooperativeGestures: false,
     optimizeForTerrain: true,
     fadeDuration: 300,
     crossSourceCollisions: true,
@@ -809,6 +810,7 @@ function initializeMap() {
     if (isMobile) {
       setupMobileLegend(map, activeFilters);
       setupMobileClickEvents(map);
+      setupGestureToggle(map);
     } else {
       setupDesktopLegend(map, activeFilters);
       setupDesktopPopups(map);
@@ -816,6 +818,44 @@ function initializeMap() {
 
     // 5. ARIA labels on idle (Feature 3)
     setupAriaLabels(map, isMobile ? "#legend-mobile" : "#legend");
+  });
+}
+
+// --- Gesture Lock Toggle (mobile only) ---
+function setupGestureToggle(map) {
+  const btn = document.getElementById("gesture-toggle");
+  if (!btn) return;
+  let locked = true;
+  const canvas = map.getCanvas();
+
+  function setLocked(isLocked) {
+    if (isLocked) {
+      map.dragPan.disable();
+      map.scrollZoom.disable();
+      map.touchZoomRotate.disable();
+      map.touchPitch.disable();
+      map.doubleClickZoom.disable();
+      canvas.style.touchAction = "auto";
+      btn.textContent = "\uD83D\uDD12 Locked";
+      btn.classList.remove("unlocked");
+    } else {
+      map.dragPan.enable();
+      map.scrollZoom.enable();
+      map.touchZoomRotate.enable();
+      map.touchPitch.enable();
+      map.doubleClickZoom.enable();
+      canvas.style.touchAction = "none";
+      btn.textContent = "\uD83D\uDD13 Unlocked";
+      btn.classList.add("unlocked");
+    }
+  }
+
+  // Start locked so the page scrolls past the map
+  setLocked(true);
+
+  btn.addEventListener("click", () => {
+    locked = !locked;
+    setLocked(locked);
   });
 }
 
