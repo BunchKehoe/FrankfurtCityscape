@@ -1,8 +1,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js"></script>
-<style>:root{--primary-red:#c00;--primary-green:#285c3a;--background-white:#fff;--shadow-light:rgba(0,0,0,0.1);--shadow-medium:rgba(0,0,0,0.15);--border-radius:8px;--spacing-xs:4px;--spacing-sm:8px;--spacing-md:12px;--spacing-lg:16px;--spacing-xl:24px;--font-family-primary:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--font-size-sm:0.875rem;--font-size-md:1rem;--font-size-lg:1.125rem;--line-height-normal:1.5;--transition-fast:0.2s ease}*{box-sizing:border-box}@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");.map{width:100%;height:100%;border-radius:var(--border-radius);overflow:visible}.map-container{width:100%;height:700px;position:relative;border-radius:var(--border-radius);overflow:visible;box-shadow:0 4px 12px var(--shadow-medium)}.mapboxgl-popup{max-width:400px;font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal)}.mapboxgl-popup-content{padding:var(--spacing-md);border-radius:var(--border-radius)}.popup-content{text-align:center}.popup-title{font-weight:600;margin-bottom:var(--spacing-sm);color:#333}.popup-button{background:var(--primary-red);color:white;border:none;padding:var(--spacing-xs) var(--spacing-md);border-radius:var(--spacing-xs);font-size:var(--font-size-sm);font-weight:600;cursor:pointer;transition:background-color var(--transition-fast)}.popup-button:hover{background:#a00}.popup-button:disabled{background:#ccc;cursor:not-allowed}.popup-button:disabled:hover{background:#ccc}.popup-close{position:absolute;top:8px;right:8px;background:none;border:none;font-size:18px;cursor:pointer;color:#999;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all var(--transition-fast)}.popup-close:hover{background:#f0f0f0;color:#666}.legend{max-width:280px;width:45%;max-height:90%;overflow-y:auto;display:none;background-color:var(--background-white);border-radius:var(--border-radius);top:var(--spacing-lg);left:var(--spacing-lg);box-shadow:0 4px 12px var(--shadow-medium);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;z-index:1000;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}.legend-mobile{background-color:var(--background-white);display:none;border-radius:var(--border-radius);box-shadow:0 2px 8px var(--shadow-light);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;width:85%;max-height:70vh;overflow-y:auto;left:50%;top:60px;transform:translateX(-50%);z-index:9999;max-width:280px}.legend-toggle-btn{position:absolute;top:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none}.legend-close-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:18px;cursor:pointer;color:#666}.legend h4,.legend-mobile h4{margin:0 0 var(--spacing-md) 0;font-size:var(--font-size-lg);font-weight:700;color:#333;border-bottom:2px solid #f0f0f0;padding-bottom:var(--spacing-xs)}.legend-section{margin-bottom:var(--spacing-md)}.legend-section:last-child{margin-bottom:0}.legend-section h5{margin:0 0 var(--spacing-xs) 0;font-size:var(--font-size-sm);font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.5px}.legend-item{display:flex;align-items:center;margin-bottom:var(--spacing-xs);padding:2px 0;transition:all var(--transition-fast);cursor:pointer;border-radius:var(--spacing-xs)}.legend-item:hover{background-color:#f8f9fa;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.active{background-color:#e3f2fd;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive{opacity:0.4;background-color:#f5f5f5;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive svg{opacity:0.5}.legend-item.inactive .color-indicator{opacity:0.5}.legend-item svg{margin-right:var(--spacing-sm);flex-shrink:0}.legend-item span.color-indicator{display:inline-block;width:15px;height:15px;margin-right:var(--spacing-sm);border-radius:2px;flex-shrink:0}.destination-type{font-weight:600;margin-bottom:2px}.destination-type.top{color:var(--primary-red)}.destination-type.worth{color:var(--primary-red);font-weight:400}.destination-type.special{color:#666;font-weight:300}.destination-type.natural{color:var(--primary-green);font-style:italic;font-weight:600}@media (max-width:991px){.map-container{height:70vh}.legend{max-width:220px;width:40%;padding:var(--spacing-md)}.map-container{border-radius:var(--spacing-xs)}}.gesture-toggle-btn{position:absolute;bottom:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none;line-height:1}.gesture-toggle-btn.unlocked{background-color:var(--primary-red);color:white}@media (max-width:576px){.legend{display:none!important}.legend-mobile{display:none}.legend-toggle-btn{display:block}.gesture-toggle-btn{display:block}.legend h4{font-size:var(--font-size-md)}}</style>
-<div class="map-container">
+<style>:root{--primary-red:#c00;--primary-green:#285c3a;--background-white:#fff;--shadow-light:rgba(0,0,0,0.1);--shadow-medium:rgba(0,0,0,0.15);--border-radius:8px;--spacing-xs:4px;--spacing-sm:8px;--spacing-md:12px;--spacing-lg:16px;--spacing-xl:24px;--font-family-primary:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--font-size-sm:0.875rem;--font-size-md:1rem;--font-size-lg:1.125rem;--line-height-normal:1.5;--transition-fast:0.2s ease}*{box-sizing:border-box}@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");.maptabconent{overflow:hidden}.maptabconent>.w-tab-pane{height:100%}.maptabconent .map-container{display:flex;flex-direction:column;align-items:stretch}.maptabconent .w-embed{flex:1;min-height:0}.map{width:100%;height:100%;border-radius:var(--border-radius);overflow:visible}.ptv-map-wrapper{width:100%;height:100%;position:relative;border-radius:var(--border-radius);overflow:visible;box-shadow:0 4px 12px var(--shadow-medium)}.mapboxgl-popup{max-width:400px;font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal)}.mapboxgl-popup-content{padding:var(--spacing-md);border-radius:var(--border-radius)}.popup-content{text-align:center}.popup-title{font-weight:600;margin-bottom:var(--spacing-sm);color:#333}.popup-button{background:var(--primary-red);color:white;border:none;padding:var(--spacing-xs) var(--spacing-md);border-radius:var(--spacing-xs);font-size:var(--font-size-sm);font-weight:600;cursor:pointer;transition:background-color var(--transition-fast)}.popup-button:hover{background:#a00}.popup-button:disabled{background:#ccc;cursor:not-allowed}.popup-button:disabled:hover{background:#ccc}.popup-close{position:absolute;top:8px;right:8px;background:none;border:none;font-size:18px;cursor:pointer;color:#999;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all var(--transition-fast)}.popup-close:hover{background:#f0f0f0;color:#666}.legend{max-width:280px;width:45%;max-height:90%;overflow-y:auto;display:none;background-color:var(--background-white);border-radius:var(--border-radius);top:var(--spacing-lg);left:var(--spacing-lg);box-shadow:0 4px 12px var(--shadow-medium);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;z-index:1000;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}.legend-mobile{background-color:var(--background-white);display:none;border-radius:var(--border-radius);box-shadow:0 2px 8px var(--shadow-light);font-family:var(--font-family-primary);font-size:var(--font-size-sm);line-height:var(--line-height-normal);padding:var(--spacing-lg);position:absolute;width:85%;max-height:70vh;overflow-y:auto;left:50%;top:60px;transform:translateX(-50%);z-index:9999;max-width:280px}.legend-toggle-btn{position:absolute;top:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none}.legend-close-btn{position:absolute;top:10px;right:10px;background:none;border:none;font-size:18px;cursor:pointer;color:#666}.legend h4,.legend-mobile h4{margin:0 0 var(--spacing-md) 0;font-size:var(--font-size-lg);font-weight:700;color:#333;border-bottom:2px solid #f0f0f0;padding-bottom:var(--spacing-xs)}.legend-section{margin-bottom:var(--spacing-md)}.legend-section:last-child{margin-bottom:0}.legend-section h5{margin:0 0 var(--spacing-xs) 0;font-size:var(--font-size-sm);font-weight:600;color:#666;text-transform:uppercase;letter-spacing:0.5px}.legend-item{display:flex;align-items:center;margin-bottom:var(--spacing-xs);padding:2px 0;transition:all var(--transition-fast);cursor:pointer;border-radius:var(--spacing-xs)}.legend-item:hover{background-color:#f8f9fa;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.active{background-color:#e3f2fd;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive{opacity:0.4;background-color:#f5f5f5;padding-left:var(--spacing-xs);padding-right:var(--spacing-xs)}.legend-item.inactive svg{opacity:0.5}.legend-item.inactive .color-indicator{opacity:0.5}.legend-item svg{margin-right:var(--spacing-sm);flex-shrink:0}.legend-item span.color-indicator{display:inline-block;width:15px;height:15px;margin-right:var(--spacing-sm);border-radius:2px;flex-shrink:0}.destination-type{font-weight:600;margin-bottom:2px}.destination-type.top{color:var(--primary-red)}.destination-type.worth{color:var(--primary-red);font-weight:400}.destination-type.special{color:#666;font-weight:300}.destination-type.natural{color:var(--primary-green);font-style:italic;font-weight:600}@media (max-width:991px){.legend{max-width:220px;width:40%;padding:var(--spacing-md)}}.gesture-toggle-btn{position:absolute;bottom:10px;left:10px;z-index:9000;background-color:white;border:none;border-radius:var(--border-radius);box-shadow:0 2px 6px var(--shadow-light);padding:8px 12px;font-size:var(--font-size-sm);font-weight:600;cursor:pointer;display:none;line-height:1}.gesture-toggle-btn.unlocked{background-color:var(--primary-red);color:white}@media (max-width:576px){.legend{display:none!important}.legend-mobile{display:none}.legend-toggle-btn{display:block}.gesture-toggle-btn{display:block}.legend h4{font-size:var(--font-size-md)}}</style>
+<div class="ptv-map-wrapper">
 <div id="map" class="map"></div>
 <div id="legend" class="legend"></div>
 <button id="legend-toggle" class="legend-toggle-btn">Show Legend</button>
@@ -26,7 +26,7 @@ const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
 const USERNAME = "jcbunch3";
 
 const SOURCES = {
-  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-4gygt",
+  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-4yhvq",
   "cultural-landscapes": "mapbox://jcbunch3.9b7pcnhy",
   "national-parks": "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
   "railroads": "mapbox://jcbunch3.8o05xvpq",
@@ -373,7 +373,9 @@ function getPlacesPaint() {
   };
 }
 
-function addPlacesLayers(map) {
+function addPlacesLayers(map, initialZoom, isMobile) {
+  const priorityOffset = isMobile ? 0.5 : 0.8;
+  const regionalOffset = isMobile ? 1.0 : 1.6;
   const baseLayout = getPlacesBaseLayout();
   const paint = getPlacesPaint();
 
@@ -389,40 +391,60 @@ function addPlacesLayers(map) {
     "text-radial-offset": 1
   };
 
-  // Layer 1 — Regional (non-red, non-city): rendered first (behind).
+  // Layer 0 — Cities overview (marker-symbol=city): visible from initial zoom
+  const citiesOverviewLayout = Object.assign({}, baseLayout, dynamicTextProps);
+
+  map.addLayer({
+    id: "places-icons-cities-overview",
+    type: "symbol",
+    source: "places",
+    "source-layer": "PlacesToVisit9",
+    minzoom: 0,
+    maxzoom: 14,
+    filter: [
+      "all",
+      ["!=", ["get", "zoom"], "city"],
+      ["==", ["get", "marker-symbol"], "city"]
+    ],
+    layout: citiesOverviewLayout,
+    paint: paint
+  });
+
+  // Layer 1 — Regional (non-red, non-city): visible after zooming in further
   const regionalLayout = Object.assign({}, baseLayout, dynamicTextProps);
 
   map.addLayer({
     id: "places-icons-regional",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit7",
-    minzoom: 0,
+    "source-layer": "PlacesToVisit9",
+    minzoom: Math.round((initialZoom + regionalOffset) * 10) / 10,
     maxzoom: 14,
     filter: [
       "all",
       ["!=", ["get", "zoom"], "city"],
-      ["!", ["in", ["get", "marker-color"], ["literal", RED_COLORS]]]
+      ["!", ["in", ["get", "marker-color"], ["literal", RED_COLORS]]],
+      ["!=", ["get", "marker-symbol"], "city"]
     ],
     layout: regionalLayout,
     paint: paint
   });
 
-  // Layer 2 — Priority (red, non-city): rendered second so red icons sit on top.
-  // Same dynamic text positioning — NOT text-allow-overlap: true.
+  // Layer 2 — Priority (red, non-city): visible after zooming in a little
   const priorityLayout = Object.assign({}, baseLayout, dynamicTextProps);
 
   map.addLayer({
     id: "places-icons-priority",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit7",
-    minzoom: 0,
+    "source-layer": "PlacesToVisit9",
+    minzoom: Math.round((initialZoom + priorityOffset) * 10) / 10,
     maxzoom: 14,
     filter: [
       "all",
       ["!=", ["get", "zoom"], "city"],
-      ["in", ["get", "marker-color"], ["literal", RED_COLORS]]
+      ["in", ["get", "marker-color"], ["literal", RED_COLORS]],
+      ["!=", ["get", "marker-symbol"], "city"]
     ],
     layout: priorityLayout,
     paint: paint
@@ -435,7 +457,7 @@ function addPlacesLayers(map) {
     id: "places-icons-city",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit7",
+    "source-layer": "PlacesToVisit9",
     minzoom: 12,
     maxzoom: 22,
     filter: ["==", ["get", "zoom"], "city"],
@@ -454,6 +476,41 @@ function addMapControls(map) {
     showUserHeading: true
   }), "top-right");
   map.addControl(new mapboxgl.ScaleControl({ maxWidth: 100, unit: "metric" }), "bottom-right");
+}
+
+// --- Show All Icons Control ---
+class ShowAllIconsControl {
+  onAdd(map) {
+    this._map = map;
+    this._active = false;
+    this._container = document.createElement("div");
+    this._container.className = "mapboxgl-ctrl mapboxgl-ctrl-group";
+    this._btn = document.createElement("button");
+    this._btn.type = "button";
+    this._btn.title = "Show all icons at any zoom";
+    this._btn.setAttribute("aria-label", "Show all icons at any zoom");
+    this._btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="4" r="2"/><circle cx="4" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="13" cy="16" r="2"/></svg>';
+    this._btn.style.cssText = "display:flex;align-items:center;justify-content:center;cursor:pointer;";
+    this._btn.addEventListener("click", () => {
+      this._active = !this._active;
+      map._showAllActive = this._active;
+      if (this._active) {
+        map.setLayerZoomRange("places-icons-priority", 0, 14);
+        map.setLayerZoomRange("places-icons-regional", 0, 14);
+        this._btn.style.backgroundColor = "#e3f2fd";
+      } else {
+        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 14);
+        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 14);
+        this._btn.style.backgroundColor = "";
+      }
+    });
+    this._container.appendChild(this._btn);
+    return this._container;
+  }
+  onRemove() {
+    this._container.parentNode.removeChild(this._container);
+    this._map = undefined;
+  }
 }
 
 // --- ARIA Labels (Feature 3: uses map.once('idle') instead of setTimeout) ---
@@ -512,19 +569,28 @@ function createLayerToggle(map, filter) {
 // --- Places Filter ---
 function applyPlacesFilter(map, filters) {
   if (filters.length === 0) {
+    map.setFilter("places-icons-cities-overview", ["==", "marker-symbol", "__none__"]);
     map.setFilter("places-icons-regional", ["==", "marker-symbol", "__none__"]);
     map.setFilter("places-icons-priority", ["==", "marker-symbol", "__none__"]);
   } else {
+    map.setFilter("places-icons-cities-overview", [
+      "all",
+      ["!=", ["get", "zoom"], "city"],
+      ["==", ["get", "marker-symbol"], "city"],
+      ["match", ["get", "marker-symbol"], filters, true, false]
+    ]);
     map.setFilter("places-icons-regional", [
       "all",
       ["!=", ["get", "zoom"], "city"],
       ["!", ["in", ["get", "marker-color"], ["literal", RED_COLORS]]],
+      ["!=", ["get", "marker-symbol"], "city"],
       ["match", ["get", "marker-symbol"], filters, true, false]
     ]);
     map.setFilter("places-icons-priority", [
       "all",
       ["!=", ["get", "zoom"], "city"],
       ["in", ["get", "marker-color"], ["literal", RED_COLORS]],
+      ["!=", ["get", "marker-symbol"], "city"],
       ["match", ["get", "marker-symbol"], filters, true, false]
     ]);
   }
@@ -593,7 +659,7 @@ function setupDesktopLegend(map, activeFilters) {
   overlay.innerHTML = getLegend();
 
   function checkLegendVisibility() {
-    const mapContainer = document.querySelector(".map-container");
+    const mapContainer = document.querySelector(".ptv-map-wrapper");
     const mapWidth = mapContainer.offsetWidth;
     const legendWidth = overlay.offsetWidth;
     overlay.style.display = legendWidth > mapWidth * 0.5 ? "none" : "block";
@@ -607,7 +673,7 @@ function setupDesktopLegend(map, activeFilters) {
 
 // --- Mobile Click Events ---
 function setupMobileClickEvents(map) {
-  ["places-icons-regional", "places-icons-priority", "places-icons-city"].forEach(layerId => {
+  ["places-icons-cities-overview", "places-icons-regional", "places-icons-priority", "places-icons-city"].forEach(layerId => {
     map.on("click", layerId, (e) => {
       const wikipediaUrl = e.features[0].properties.Wikipedia || "";
       if (wikipediaUrl) window.open(wikipediaUrl, "_blank");
@@ -708,6 +774,7 @@ function setupDesktopPopups(map) {
     });
   }
 
+  setupPlacesLayerEvents("places-icons-cities-overview");
   setupPlacesLayerEvents("places-icons-regional");
   setupPlacesLayerEvents("places-icons-priority");
   setupPlacesLayerEvents("places-icons-city");
@@ -799,9 +866,35 @@ function initializeMap() {
     addSkyLayer(map);
     addOverlayLayers(map);
     addRegionHighlight(map);
-    addPlacesLayers(map);
+    const initialZoom = map.getZoom();
+    const priorityOffset = isMobile ? 0.5 : 0.8;
+    const regionalOffset = isMobile ? 1.0 : 1.6;
+    addPlacesLayers(map, initialZoom, isMobile);
+    // Low-water-mark zoom tracking: thresholds = baseZoom + offset.
+    // baseZoom starts at initialZoom and permanently lowers when the user zooms out,
+    // so progressive reveal still works but thresholds adapt to exploration.
+    map._baseZoom = initialZoom;
+    map._priorityOffset = priorityOffset;
+    map._regionalOffset = regionalOffset;
+    map._priorityMinZoom = Math.round((initialZoom + priorityOffset) * 10) / 10;
+    map._regionalMinZoom = Math.round((initialZoom + regionalOffset) * 10) / 10;
+    map._showAllActive = false;
+
+    map.on("zoom", () => {
+      if (map._showAllActive) return;
+      const z = map.getZoom();
+      if (z < map._baseZoom) {
+        map._baseZoom = z;
+        map._priorityMinZoom = Math.round((z + map._priorityOffset) * 10) / 10;
+        map._regionalMinZoom = Math.round((z + map._regionalOffset) * 10) / 10;
+        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 14);
+        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 14);
+      }
+    });
+
     addBuildingsLayer(map);
     addMapControls(map);
+    map.addControl(new ShowAllIconsControl(), "top-right");
 
     const activeFilters = new Set(DEFAULT_ACTIVE_FILTERS);
     applyPlacesFilter(map, Array.from(activeFilters));

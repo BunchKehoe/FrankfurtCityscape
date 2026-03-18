@@ -4,25 +4,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 
 <style>
-  .map-container {
-    width: 100%;
-    height: 70vh;
-    min-height: 600px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.4;
-    box-sizing: border-box;
-  }
-
-  .map-container *,
-  .map-container *::before,
-  .map-container *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .map-container-responsive {
-    height: 100% !important;
+  /* Clip the bordered parent so the map doesn't overflow past the border */
+  .maptabconent {
+    overflow: hidden;
   }
 
   .map {
@@ -142,11 +126,6 @@
 
   /* Mobile Styles */
   @media only screen and (max-width: 768px) {
-    .map-container {
-      height: 60vh;
-      min-height: 400px;
-    }
-
     .map {
       height: 100%;
     }
@@ -368,7 +347,25 @@ const REGION_COLORS = {
   "rhine-maas": "rgb(85, 23, 17)",
   "upper-rhine": "rgb(148, 210, 189)",
   "westphalia": "rgb(187, 62, 3)",
-  "the-lowlands": "rgb(41, 82, 117)"
+  "the-lowlands": "rgb(41, 82, 117)",
+  "southern greece": "rgb(0, 82, 136)",
+  "thracia": "rgb(139, 69, 19)",
+  "macedonia": "rgb(128, 0, 0)",
+  "shopluk / shopsko": "rgb(85, 107, 47)",
+  "danube": "rgb(70, 130, 180)",
+  "kingdom of illyria": "rgb(72, 61, 139)",
+  "western carpathia": "rgb(139, 0, 0)",
+  "eastern march": "rgb(60, 60, 60)",
+  "inn-salzach": "rgb(107, 142, 35)",
+  "styria": "rgb(0, 100, 0)",
+  "bohemia": "rgb(153, 0, 0)",
+  "tuscany": "rgb(178, 34, 34)",
+  "tyrol": "rgb(47, 79, 79)",
+  "frisia": "rgb(0, 105, 148)",
+  "lotharingia": "rgb(240, 156, 0)",
+  "the royal lowlands": "rgb(0, 48, 143)",
+  "the imperial lowlands": "rgb(41, 82, 117)",
+  "île-de-france": "rgb(0, 35, 102)"
 };
 
 // Country name → URL slug mapping (for dynamic bbox from dataset)
@@ -400,7 +397,8 @@ const COUNTRY_MASKS = {
   "germany": "Germany",
   "bulgaria": "Bulgaria",
   "north-macedonia": "North Macedonia",
-  "denmark": "Denmark"
+  "denmark": "Denmark",
+  "greece": "Greece"
 };
 
 // Property name mapping per zoom / interaction level
@@ -731,7 +729,7 @@ function addRegionHighlight(map) {
 function addRegionSourceAndLayers(map) {
   map.addSource("regions", {
     type: "vector",
-    url: "mapbox://jcbunch3.ckz73840i06b520t0qegud162-2862c"
+    url: "mapbox://jcbunch3.cmlv3afruo14h1omkk1qww1kk-8awn0"
   });
 
   // Invisible base layer for mouse/click events
@@ -739,7 +737,7 @@ function addRegionSourceAndLayers(map) {
     id: "regions",
     type: "fill",
     source: "regions",
-    "source-layer": "HistoricalRegions",
+    "source-layer": "HistoricalRegions_v3.0",
     paint: {
       "fill-outline-color": "rgba(0,0,0,0)",
       "fill-color": "rgba(0,0,0,0)"
@@ -751,7 +749,7 @@ function addRegionSourceAndLayers(map) {
     id: "empires-highlighted",
     type: "fill",
     source: "regions",
-    "source-layer": "HistoricalRegions",
+    "source-layer": "HistoricalRegions_v3.0",
     paint: HIGHLIGHT_PAINT,
     filter: ["in", "empire", ""]
   });
@@ -760,7 +758,7 @@ function addRegionSourceAndLayers(map) {
     id: "regions-highlighted",
     type: "fill",
     source: "regions",
-    "source-layer": "HistoricalRegions",
+    "source-layer": "HistoricalRegions_v3.0",
     paint: HIGHLIGHT_PAINT,
     filter: ["in", "region", ""]
   });
@@ -769,7 +767,7 @@ function addRegionSourceAndLayers(map) {
     id: "subregions-highlighted",
     type: "fill",
     source: "regions",
-    "source-layer": "HistoricalRegions",
+    "source-layer": "HistoricalRegions_v3.0",
     paint: HIGHLIGHT_PAINT,
     filter: ["in", "name", ""]
   });
@@ -936,7 +934,8 @@ function initializeMap() {
     !currentLocation.includes("germany") &&
     !currentLocation.includes("denmark") &&
     !currentLocation.includes("north-macedonia") &&
-    !currentLocation.includes("bulgaria");
+    !currentLocation.includes("bulgaria") &&
+    !currentLocation.includes("greece");
 
   const style = isCountryMap
     ? MAP_STYLES.country
