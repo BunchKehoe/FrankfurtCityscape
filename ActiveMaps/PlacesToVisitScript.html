@@ -26,7 +26,7 @@ const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
 const USERNAME = "jcbunch3";
 
 const SOURCES = {
-  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-4yhvq",
+  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-97j57",
   "cultural-landscapes": "mapbox://jcbunch3.9b7pcnhy",
   "national-parks": "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
   "railroads": "mapbox://jcbunch3.8o05xvpq",
@@ -44,6 +44,49 @@ const RED_COLORS = ["#a10001", "#8f1b11", "#aa3524", "#9b0101", "#a43b2d"];
 // --- Location Config (populated from dataset) ---
 let locationConfig = {};
 let isLocationConfigLoaded = false;
+
+// --- City Config (populated from geocoding API) ---
+let cityBbox = null;
+
+function getCitySlugFromUrl() {
+  const match = window.location.pathname.match(/\/cities\/([^\/]+)/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+// Aliases for locations Mapbox geocoding can't resolve by their common name
+const CITY_ALIASES = {
+  "meteora": "kalabaka"
+};
+
+async function loadCityConfig() {
+  const citySlug = getCitySlugFromUrl();
+  if (!citySlug) return;
+  try {
+    const aliasedSlug = CITY_ALIASES[citySlug] || citySlug;
+    const cityName = aliasedSlug.replace(/-/g, " ");
+    const url = "https://api.mapbox.com/geocoding/v5/mapbox.places/"
+      + encodeURIComponent(cityName)
+      + ".json?types=place,locality,poi,region&limit=1&bbox=-25,34,45,72&access_token=" + MAPBOX_TOKEN;
+    const response = await fetch(url);
+    const data = await response.json();
+    if (data.features && data.features.length > 0) {
+      const feature = data.features[0];
+      // Use the geocoded center point (actual city center) rather than bbox midpoint
+      const [cLng, cLat] = feature.center;
+      if (feature.bbox) {
+        // Shrink bbox by 3 zoom levels (8x tighter), anchored on city center
+        const halfLng = (feature.bbox[2] - feature.bbox[0]) / 2 / 8;
+        const halfLat = (feature.bbox[3] - feature.bbox[1]) / 2 / 8;
+        cityBbox = [[cLng - halfLng, cLat - halfLat], [cLng + halfLng, cLat + halfLat]];
+      } else {
+        cityBbox = { center: [cLng, cLat], zoom: 14 };
+      }
+      console.log("City geocoded:", cityName, cityBbox);
+    }
+  } catch (error) {
+    console.error("Failed to geocode city:", error);
+  }
+}
 
 // Compute bounding box from GeoJSON polygon/multipolygon geometry
 function computeBbox(geometry) {
@@ -398,9 +441,8 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-cities-overview",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit9",
+    "source-layer": "PlacesToVisit10",
     minzoom: 0,
-    maxzoom: 14,
     filter: [
       "all",
       ["!=", ["get", "zoom"], "city"],
@@ -417,9 +459,8 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-regional",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit9",
+    "source-layer": "PlacesToVisit10",
     minzoom: Math.round((initialZoom + regionalOffset) * 10) / 10,
-    maxzoom: 14,
     filter: [
       "all",
       ["!=", ["get", "zoom"], "city"],
@@ -437,9 +478,8 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-priority",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit9",
+    "source-layer": "PlacesToVisit10",
     minzoom: Math.round((initialZoom + priorityOffset) * 10) / 10,
-    maxzoom: 14,
     filter: [
       "all",
       ["!=", ["get", "zoom"], "city"],
@@ -457,9 +497,8 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-city",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit9",
+    "source-layer": "PlacesToVisit10",
     minzoom: 12,
-    maxzoom: 22,
     filter: ["==", ["get", "zoom"], "city"],
     layout: cityLayout,
     paint: paint
@@ -495,12 +534,12 @@ class ShowAllIconsControl {
       this._active = !this._active;
       map._showAllActive = this._active;
       if (this._active) {
-        map.setLayerZoomRange("places-icons-priority", 0, 14);
-        map.setLayerZoomRange("places-icons-regional", 0, 14);
+        map.setLayerZoomRange("places-icons-priority", 0, 24);
+        map.setLayerZoomRange("places-icons-regional", 0, 24);
         this._btn.style.backgroundColor = "#e3f2fd";
       } else {
-        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 14);
-        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 14);
+        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 24);
+        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 24);
         this._btn.style.backgroundColor = "";
       }
     });
@@ -822,7 +861,7 @@ function initializeMap() {
     projection: "globe",
     cooperativeGestures: false,
     optimizeForTerrain: true,
-    fadeDuration: 300,
+    fadeDuration: 0,
     crossSourceCollisions: true,
     hash: true
   };
@@ -831,8 +870,17 @@ function initializeMap() {
     // Use fitBounds via constructor — perfectly frames the region (Feature 1)
     mapOptions.bounds = bbox;
     mapOptions.fitBoundsOptions = { padding: isMobile ? 30 : 60 };
+  } else if (cityBbox) {
+    // City detected from URL — use geocoded bounds
+    if (Array.isArray(cityBbox)) {
+      mapOptions.bounds = cityBbox;
+      mapOptions.fitBoundsOptions = { padding: isMobile ? 30 : 60 };
+    } else {
+      mapOptions.center = cityBbox.center;
+      mapOptions.zoom = cityBbox.zoom;
+    }
   } else {
-    // Default view — no region matched
+    // Default view — no region or city matched
     mapOptions.center = DEFAULT_CENTER;
     mapOptions.zoom = isMobile ? DEFAULT_ZOOM_MOBILE : DEFAULT_ZOOM_DESKTOP;
   }
@@ -887,8 +935,8 @@ function initializeMap() {
         map._baseZoom = z;
         map._priorityMinZoom = Math.round((z + map._priorityOffset) * 10) / 10;
         map._regionalMinZoom = Math.round((z + map._regionalOffset) * 10) / 10;
-        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 14);
-        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 14);
+        map.setLayerZoomRange("places-icons-priority", map._priorityMinZoom, 24);
+        map.setLayerZoomRange("places-icons-regional", map._regionalMinZoom, 24);
       }
     });
 
@@ -953,5 +1001,5 @@ function setupGestureToggle(map) {
 }
 
 // --- Boot ---
-loadLocationConfig().then(() => { initializeMap(); });
+Promise.all([loadLocationConfig(), loadCityConfig()]).then(() => { initializeMap(); });
 </script>
