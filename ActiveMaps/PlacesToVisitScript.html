@@ -26,7 +26,7 @@ const DATASET_ID = "cmlv3afruo14h1omkk1qww1kk";
 const USERNAME = "jcbunch3";
 
 const SOURCES = {
-  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-97j57",
+  "places": "mapbox://jcbunch3.cmly68nlq43cg1uo0qdibeqmv-3xlg8",
   "cultural-landscapes": "mapbox://jcbunch3.9b7pcnhy",
   "national-parks": "mapbox://jcbunch3.clkc6qkel2xr42aleuq3sjnsq-0zrfg",
   "railroads": "mapbox://jcbunch3.8o05xvpq",
@@ -441,7 +441,7 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-cities-overview",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit10",
+    "source-layer": "PlacesToVisit11",
     minzoom: 0,
     filter: [
       "all",
@@ -459,7 +459,7 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-regional",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit10",
+    "source-layer": "PlacesToVisit11",
     minzoom: Math.round((initialZoom + regionalOffset) * 10) / 10,
     filter: [
       "all",
@@ -478,7 +478,7 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-priority",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit10",
+    "source-layer": "PlacesToVisit11",
     minzoom: Math.round((initialZoom + priorityOffset) * 10) / 10,
     filter: [
       "all",
@@ -497,7 +497,7 @@ function addPlacesLayers(map, initialZoom, isMobile) {
     id: "places-icons-city",
     type: "symbol",
     source: "places",
-    "source-layer": "PlacesToVisit10",
+    "source-layer": "PlacesToVisit11",
     minzoom: 12,
     filter: ["==", ["get", "zoom"], "city"],
     layout: cityLayout,
